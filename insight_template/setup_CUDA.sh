@@ -43,7 +43,7 @@ if [ $1 = "--cleanup" ]; then
     for BMK in $BENCHMARKS; do
         if [ -f $BMK/gpgpusim.config ]; then
             echo "$BMK"
-            OLD_ICNT=`awk '/-inter_config_file/ { print $3 }' $BMK/gpgpusim.config`
+            OLD_ICNT=`awk '/-inter_config_file/ { print $2 }' $BMK/gpgpusim.config`
             rm $BMK/gpgpusim.config $BMK/$OLD_ICNT
         fi
     done
@@ -58,7 +58,7 @@ else
     exit 0
 fi
 
-ICNT_CONFIG=`awk '/-inter_config_file/ { print $3 }' $GPU_CONFIG_FILE`
+ICNT_CONFIG=`awk '/-inter_config_file/ { print $2 }' $GPU_CONFIG_FILE`
 ICNT_CONFIG=$GPGPUSIM_ROOT/configs/$GPGPUSIM_CONFIG/$ICNT_CONFIG
 if [ -f $GPU_CONFIG_FILE ]; then
     echo "Interconnection config file detected: $ICNT_CONFIG"
@@ -67,7 +67,7 @@ else
     exit 0
 fi
 
-POWER_CONFIG=`awk '/-gpuwattch_xml_file/ { print $3 }' $GPU_CONFIG_FILE`
+POWER_CONFIG=`awk '/-gpuwattch_xml_file/ { print $2 }' $GPU_CONFIG_FILE`
 POWER_CONFIG=$GPGPUSIM_ROOT/configs/$GPGPUSIM_CONFIG/$POWER_CONFIG
 if [ -f $GPU_CONFIG_FILE ]; then
     echo "Power config file detected: $POWER_CONFIG"

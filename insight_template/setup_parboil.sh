@@ -77,4 +77,4 @@ for BMK in cutcp histo mm sad spmv lbm tpacf; do
     fi
 done
 cd ../
-sh gen_pbs_parboil.sh $2
+sh gen_pbs_parboil.sh

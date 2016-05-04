@@ -86,5 +86,5 @@ for BMK in PageViewCount PageViewRank SimilarityScore StringMatch WordCount Inve
 done
 
 cd ../
-sh gen_pbs_mars.sh $2
+sh gen_pbs_mars.sh
 

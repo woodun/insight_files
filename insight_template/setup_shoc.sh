@@ -73,5 +73,5 @@ for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad; do
 done
 
 cd ../
-sh gen_pbs_shoc.sh $2
+sh gen_pbs_shoc.sh
 

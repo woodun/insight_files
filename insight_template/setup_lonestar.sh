@@ -77,5 +77,5 @@ for BMK in bfs bh dmr mst pta sp sssp; do
 done
 
 cd ../
-sh gen_pbs_lonestar.sh $2
+sh gen_pbs_lonestar.sh
 

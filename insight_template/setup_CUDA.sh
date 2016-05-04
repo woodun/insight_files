@@ -87,4 +87,4 @@ for BMK in $BENCHMARKS; do
     fi
 done
 
-sh gen_pbs_CUDA.sh $2
+sh gen_pbs_CUDA.sh

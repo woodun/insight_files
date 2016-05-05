@@ -3,7 +3,7 @@
 mkdir shoc
 cd shoc
 
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad
+for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 		  mkdir $benchmark
 		  cd $benchmark
@@ -25,7 +25,7 @@ fi
 
 if [ $1 = "--cleanup" ]; then
     echo "Removing existing configs in the following directories:"
-    for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad; do
+    for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad BFS; do
         if [ -f $BMK/gpgpusim.config ]; then
             echo "$BMK"
             OLD_ICNT=`awk '/-inter_config_file/ { print $2 }' $BMK/gpgpusim.config`
@@ -61,7 +61,7 @@ else
     exit 0
 fi
 
-for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad; do
+for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad BFS; do
     if [ -f $BMK/gpgpusim.config ]; then
         echo "Existing symbolic-links to config found in $BMK! Skipping... "
     else

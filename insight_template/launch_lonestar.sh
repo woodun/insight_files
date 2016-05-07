@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#dmr
+#7apps
 
 for benchmark in bfs bh dmr mst pta sp sssp 
 do

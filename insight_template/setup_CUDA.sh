@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#21apps
+#20apps, not ready:WP
 
 mkdir CUDA
 cd CUDA
@@ -14,7 +14,7 @@ do
               cd ../
 done
 
-for benchmark in AES BFS MUM NN kmeans WP JPEG BFS2 KMN
+for benchmark in AES BFS MUM NN kmeans JPEG BFS2 KMN
 do
               mkdir $benchmark
               cd $benchmark

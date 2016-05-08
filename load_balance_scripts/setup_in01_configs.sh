@@ -9,4 +9,5 @@ do
 cd $configs_stor1
 cd $stor1_config
 sh setup_ALL.sh $stor1_config
+#sh gen_pbs_all.sh
 done

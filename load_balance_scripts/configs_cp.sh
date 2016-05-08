@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your config path in stor1 and stor2
-configs_results_stor1=/stor1/hwang07/stor1_configs/
-configs_results_stor2=/stor2/hwang07/stor2_configs/
+configs_results_stor1=/stor1/hwang07/stor1_configs
+configs_results_stor2=/stor2/hwang07/stor2_configs
 
 #use this template folder or copy it to your favored location
 template_folder=/stor1/hwang07/insight_files/insight_template

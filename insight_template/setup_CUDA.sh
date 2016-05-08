@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# 18 CUDA benchmarks - running on Inti -- 100hrs max
+#21apps
+
 mkdir CUDA
 cd CUDA
 for benchmark in BlackScholes CP LIB LPS NQU RAY STO SCP SLA CONS FWT TRA

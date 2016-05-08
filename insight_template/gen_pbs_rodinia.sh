@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for benchmark in backprop hotspot pf_naive pf_float heartwall cfd streamcluster nw lud leukocyte srad_v1 srad_v2 pathfinder
+#14apps
+
+for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float pf_naive
 do
 	    cat script_base_rodinia.pbs | sed -e "s/nw/$benchmark/g" | sed -e "s/compute/$machine/g" > rodinia/$benchmark/pbs_$benchmark.pbs
 done

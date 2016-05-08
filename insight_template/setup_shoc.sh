@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#8apps
+
 mkdir shoc
 cd shoc
 

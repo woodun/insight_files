@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#14apps
+
 mkdir rodinia
 cd rodinia
 for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder

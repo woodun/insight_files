@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# 6 Mars benchmarks - running on Inti
+#7apps
+
 mkdir lonestar
 cd lonestar
 

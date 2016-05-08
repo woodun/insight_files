@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# 6 Mars benchmarks - running on Inti
+#8apps
+
 mkdir Mars
 cd Mars
 for benchmark in SimilarityScore Kmeans MatrixMul 

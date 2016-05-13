@@ -1,11 +1,13 @@
 #!/bin/sh
 
-#7apps
+#6apps
+
+#Not working: pta
 
 mkdir lonestar
 cd lonestar
 
-for benchmark in bfs bh dmr mst pta sp sssp 
+for benchmark in bfs bh dmr mst sp sssp 
 do
               mkdir $benchmark
               cd $benchmark

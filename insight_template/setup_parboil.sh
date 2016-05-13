@@ -1,9 +1,10 @@
 #!/bin/sh
 
-#bfs histo mri-gridding mri-q stencil
+#Not working: bfs histo mri-gridding mri-q stencil
 # 7 Parboil benchmarks - running on Inti -- 200hrs maxs
 
-# fft tpacf
+#Not ready: fft 
+
 mkdir parboil
 cd parboil
 for benchmark in cutcp histo mm sad spmv lbm tpacf

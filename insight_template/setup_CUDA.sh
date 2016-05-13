@@ -1,10 +1,10 @@
 #!/bin/sh
 
-#20apps, not ready:WP
+#21apps, not working: WP
 
 mkdir CUDA
 cd CUDA
-for benchmark in BlackScholes CP LIB LPS NQU RAY STO SCP SLA CONS FWT TRA
+for benchmark in BlackScholes CP LIB LPS NQU RAY STO SCP SLA CONS FWT TRA lulesh
 do
               mkdir $benchmark
               cd $benchmark

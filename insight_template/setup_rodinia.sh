@@ -1,6 +1,8 @@
 #!/bin/sh
 
-#14apps
+#13apps
+
+#Not working: pf_naive
 
 mkdir rodinia
 cd rodinia
@@ -39,16 +41,6 @@ do
 			 mkdir $benchmark
 			 cd $benchmark
 			 ln -s $benchmarks/rodinia/cuda/particlefilter/gpgpu_ptx_sim__particlefilter_float .
-             cp $applications/bash-scripts/run_scripts/rodinia/mainscript_$benchmark .
-             chmod 777 mainscript_$benchmark
-             cd ../
-done
-
-for benchmark in pf_naive 
-do
-			 mkdir $benchmark
-			 cd $benchmark
-			 ln -s $benchmarks/rodinia/cuda/particlefilter/gpgpu_ptx_sim__particlefilter_naive .
              cp $applications/bash-scripts/run_scripts/rodinia/mainscript_$benchmark .
              chmod 777 mainscript_$benchmark
              cd ../

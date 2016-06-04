@@ -60,7 +60,7 @@ fi
 
 if [ $1 = "--cleanup" ]; then
     echo "Removing existing configs in the following directories:"
-    for BMK in backprop bfs lud hotspot heartwall cfd streamcluster nw leukocyte srad_v1 srad_v2 pf_naive pf_float pathfinder; do
+    for BMK in backprop bfs lud hotspot heartwall cfd streamcluster nw leukocyte srad_v1 srad_v2 pf_float pathfinder; do
         if [ -f $BMK/gpgpusim.config ]; then
             echo "$BMK"
             OLD_ICNT=`awk '/-inter_config_file/ { print $2 }' $BMK/gpgpusim.config`
@@ -96,7 +96,7 @@ else
     exit 0
 fi
 
-for BMK in backprop bfs lud hotspot heartwall cfd streamcluster nw leukocyte srad_v1 srad_v2 pf_naive pf_float pathfinder; do
+for BMK in backprop bfs lud hotspot heartwall cfd streamcluster nw leukocyte srad_v1 srad_v2 pf_float pathfinder; do
     if [ -f $BMK/gpgpusim.config ]; then
         echo "Existing symbolic-links to config found in $BMK! Skipping... "
     else

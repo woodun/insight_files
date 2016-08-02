@@ -7,7 +7,7 @@ configs_results_stor1=/stor1/hwang07/stor1_configs
 template_folder=/stor1/hwang07/insight_files/insight_template
 
 #modify the configs you want to launch on machine in01
-for stor1_config in h0_t3_swl1 h0_t3_swl2 h0_t3_swl4 h0_t3_swl8 h0_t3_swl16 h0_t3_lrr h0_t3_gto h0_t3_tl201 h0_t3_tl401 h0_t3_tl801
+for stor1_config in h0_t3_swl1 h0_t3_swl2 h0_t3_swl4 h0_t3_swl8 h0_t3_swl16
 do
 cd $configs_results_stor1
 cp -r $template_folder $stor1_config

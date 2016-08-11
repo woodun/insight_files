@@ -1,13 +1,14 @@
 #!/bin/bash
 
 #21apps total, not ready:WP, no global read misses:LIB, NQU, too less misses: AES, CP, STO, bias always high: KMN, FWT, SCP.
+#bias not high, but no less than 5%: BlackScholes, CONS, kmeans, KMN.  SLA(special case, all is in 5% range. so we keep it.)
 #bias doesn't change:CONS, LPS, SLA. bias high but changes:lulesh. less Misses: JPEG, RAY.
-#Good: TRA, BFS, MUM, NN, kmeans, BFS2, BlackScholes, lulesh?.
+#Good(top bias still good) 4: RAY, JPEG, lulesh, LPS
 #bw<15% && ipc>400(not interesting): None.
 #avg bias not change for schedulers: CONS BlackScholes LPS SLA
-#10 for now
+#10 for now(based on avg_bias)
 
-for benchmark in RAY TRA BFS MUM NN kmeans JPEG BFS2 KMN lulesh
+for benchmark in RAY TRA MUM NN JPEG lulesh LPS SLA BFS BFS2
 do
 sh launch_all_configs_per_app.sh $benchmark CUDA
 done

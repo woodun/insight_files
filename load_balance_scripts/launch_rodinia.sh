@@ -6,11 +6,14 @@
 #prediction rate too low: nw
 #bias too high: streamcluster
 #bias high but not all: cfd
-#good: heartwall pathfinder lud srad_v1 srad_v2 pf_float
+#access too few: heartwall
+#bias not high, but no less than 5%: heartwall, pathfinder, lud, srad_v2
+#Good(top bias still good) 2: srad_v1, cfd
 #bw<15% && ipc>400(not interesting): backprop bfs hotspot
-#7 for now
+#3 for now(based on avg_bias)
 
-for benchmark in heartwall pathfinder lud srad_v1 srad_v2 pf_float cfd
+
+for benchmark in srad_v1 pf_float cfd
 do
 sh launch_all_configs_per_app.sh $benchmark rodinia
 done

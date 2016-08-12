@@ -6,9 +6,10 @@
 #Good(top bias still good) 4: RAY, JPEG, lulesh, LPS
 #bw<15% && ipc>400(not interesting): None.
 #avg bias not change for schedulers: CONS BlackScholes LPS SLA
-#10 for now(based on avg_bias)
+#coverage too low: NN
+#9 for now(based on avg_bias)
 
-for benchmark in RAY TRA MUM NN JPEG lulesh LPS SLA BFS BFS2
+for benchmark in RAY TRA JPEG lulesh LPS BFS BFS2 MUM SLA
 do
 sh launch_all_configs_per_app.sh $benchmark CUDA
 done

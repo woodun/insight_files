@@ -8,9 +8,10 @@
 #too few misses: StringMatch
 #good(top bias still good) 4: SimilarityScore, MatrixMul, PageViewRank, PageViewCount
 #bw<15% && ipc>400(not interesting):
-#5 for now(based on avg_bias):
+#coverage too low: WordCount
+#4 for now(based on avg_bias):
 
-for benchmark in SimilarityScore MatrixMul WordCount PageViewRank PageViewCount
+for benchmark in SimilarityScore MatrixMul PageViewRank PageViewCount
 do
 sh launch_all_configs_per_app.sh $benchmark Mars
 done

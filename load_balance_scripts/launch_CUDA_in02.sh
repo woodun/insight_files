@@ -4,7 +4,7 @@
 #Good: TRA, BFS, MUM, NN, kmeans, BFS2, BlackScholes, lulesh?.
 #current:14
 
-for benchmark in LPS RAY SLA CONS TRA BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes lulesh
+for benchmark in LPS lulesh JPEG TRA RAY
 do
 sh launch_all_configs_per_app_in02.sh $benchmark CUDA
 done

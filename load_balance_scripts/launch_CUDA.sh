@@ -9,7 +9,7 @@
 #coverage too low: NN
 #9 for now(based on avg_bias)
 
-for benchmark in RAY TRA JPEG lulesh LPS BFS BFS2 MUM SLA
+for benchmark in RAY TRA lulesh LPS BFS BFS2 MUM SLA JPEG
 do
 sh launch_all_configs_per_app.sh $benchmark CUDA
 done

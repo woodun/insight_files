@@ -1,10 +1,6 @@
 #!/bin/bash
-#21apps total, not ready:WP, no global read misses:LIB, NQU, too less misses: AES, CP, STO, bias always high: KMN, FWT, SCP.
-#bias doesn't change:CONS, LPS, SLA. bias high but changes:lulesh. less Misses: JPEG, RAY.
-#Good: TRA, BFS, MUM, NN, kmeans, BFS2, BlackScholes, lulesh?.
-#current:14
 
-for benchmark in LPS lulesh JPEG TRA RAY
+for benchmark in RAY TRA JPEG lulesh LPS BFS BFS2 MUM SLA
 do
 sh launch_all_configs_per_app_in02.sh $benchmark CUDA
 done

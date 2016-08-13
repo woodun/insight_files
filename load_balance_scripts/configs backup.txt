@@ -1,9 +1,10 @@
 ##########################################################################
 ipc comparison:
 in01:
-pc5_w0_t3_m0_lrrswl1 pc5_w0_t3_lrrswl1 pc5_w0_t3_m0_lrrswl2 pc5_w0_t3_lrrswl2 pc5_w0_t3_m0_lrrswl4 pc5_w0_t3_lrrswl4 pc5_w0_t3_m0_lrrswl8 pc5_w0_t3_lrrswl8 pc5_w0_t3_m0_lrrswl16 pc5_w0_t3_lrrswl16 pc5_w0_t3_m0_swl1 pc5_w0_t3_swl1 pc5_w0_t3_m0_swl2 pc5_w0_t3_swl2 pc5_w0_t3_m0_swl4 pc5_w0_t3_swl4 pc5_w0_t3_m0_swl8 pc5_w0_t3_swl8 pc5_w0_t3_m0_swl16 pc5_w0_t3_swl16 pc5_w0_t3_m0_lrr pc5_w0_t3_lrr pc5_w0_t3_m0_gto pc5_w0_t3_gto pc5_w0_t3_m0_tl101 pc5_w0_t3_tl101 pc5_w0_t3_m0_tl201 pc5_w0_t3_tl201 pc5_w0_t3_m0_tl401 pc5_w0_t3_tl401 pc5_w0_t3_m0_tl801 pc5_w0_t3_tl801 pc5_w0_t3_m0_tl1601 pc5_w0_t3_tl1601
+pc5_w0_t3_m0_lrrswl1 pc5_w0_t3_lrrswl1 pc5_w0_t3_m0_lrrswl2 pc5_w0_t3_lrrswl2 pc5_w0_t3_m0_lrrswl4 pc5_w0_t3_lrrswl4 pc5_w0_t3_m0_lrrswl8 pc5_w0_t3_lrrswl8 pc5_w0_t3_m0_lrrswl16 pc5_w0_t3_lrrswl16 pc5_w0_t3_m0_swl1 pc5_w0_t3_swl1 pc5_w0_t3_m0_swl2 pc5_w0_t3_swl2 pc5_w0_t3_m0_swl4 pc5_w0_t3_swl4 pc5_w0_t3_m0_swl8 pc5_w0_t3_swl8 pc5_w0_t3_m0_swl16 pc5_w0_t3_swl16 pc5_w0_t3_m0_lrr pc5_w0_t3_lrr pc5_w0_t3_m0_gto pc5_w0_t3_gto pc5_w0_t3_m0_tl101 pc5_w0_t3_tl101 pc5_w0_t3_m0_tl201 pc5_w0_t3_tl201 pc5_w0_t3_m0_tl401 pc5_w0_t3_tl401 pc5_w0_t3_m0_tl801 pc5_w0_t3_tl801 pc5_w0_t3_m0_tl1601 pc5_w0_t3_tl1601 pc5_w0_t3_m0_e0_lrrswl1 pc5_w0_t3_m0_e0_lrrswl2 pc5_w0_t3_m0_e0_lrrswl4 pc5_w0_t3_m0_e0_lrrswl8 pc5_w0_t3_m0_e0_lrrswl16 pc5_w0_t3_m0_e0_swl1 pc5_w0_t3_m0_e0_swl2 pc5_w0_t3_m0_e0_swl4 pc5_w0_t3_m0_e0_swl8 pc5_w0_t3_m0_e0_swl16 pc5_w0_t3_m0_e0_lrr pc5_w0_t3_m0_e0_gto pc5_w0_t3_m0_e0_tl101 pc5_w0_t3_m0_e0_tl201 pc5_w0_t3_m0_e0_tl401 pc5_w0_t3_m0_e0_tl801 pc5_w0_t3_m0_e0_tl1601
 	
 in02:
+
 
 in01:
 pc5_w0_t3_m0_lrrswl1 pc5_w0_t3_lrrswl1 pc5_w0_t3_m0_lrrswl2 pc5_w0_t3_lrrswl2 pc5_w0_t3_m0_lrrswl4 pc5_w0_t3_lrrswl4 pc5_w0_t3_m0_lrrswl8 pc5_w0_t3_lrrswl8 pc5_w0_t3_m0_lrrswl16 pc5_w0_t3_lrrswl16 pc5_w0_t3_m0_swl1 pc5_w0_t3_swl1 pc5_w0_t3_m0_swl2 pc5_w0_t3_swl2 pc5_w0_t3_m0_swl4 pc5_w0_t3_swl4 pc5_w0_t3_m0_swl8
@@ -14,8 +15,14 @@ pc5_w0_t3_swl8 pc5_w0_t3_m0_swl16 pc5_w0_t3_swl16 pc5_w0_t3_m0_lrr pc5_w0_t3_lrr
 
 in01:
 
-in02:
+in02:(with prediction without eviction)
 pc5_w0_t3_m0_e0_lrrswl1 pc5_w0_t3_m0_e0_lrrswl2 pc5_w0_t3_m0_e0_lrrswl4 pc5_w0_t3_m0_e0_lrrswl8 pc5_w0_t3_m0_e0_lrrswl16 pc5_w0_t3_m0_e0_swl1 pc5_w0_t3_m0_e0_swl2 pc5_w0_t3_m0_e0_swl4 pc5_w0_t3_m0_e0_swl8 pc5_w0_t3_m0_e0_swl16 pc5_w0_t3_m0_e0_lrr pc5_w0_t3_m0_e0_gto pc5_w0_t3_m0_e0_tl101 pc5_w0_t3_m0_e0_tl201 pc5_w0_t3_m0_e0_tl401 pc5_w0_t3_m0_e0_tl801 pc5_w0_t3_m0_e0_tl1601
+
+in01:(original)
+pc5_w0_t3_pclrrswl1 pc5_w0_t3_pclrrswl2 pc5_w0_t3_pclrrswl4 pc5_w0_t3_pclrrswl8 pc5_w0_t3_pclrrswl16 pc5_w0_t3_pcswl1 pc5_w0_t3_pcswl2 pc5_w0_t3_pcswl4 pc5_w0_t3_pcswl8 pc5_w0_t3_pcswl16 pc5_w0_t3_pclrr pc5_w0_t3_pcgto pc5_w0_t3_pctl101 pc5_w0_t3_pctl201 pc5_w0_t3_pctl401 pc5_w0_t3_pctl801 pc5_w0_t3_pctl1601
+
+in02:(with prediction)
+pc5_w0_t3_m0_pclrrswl1 pc5_w0_t3_m0_pclrrswl2 pc5_w0_t3_m0_pclrrswl4 pc5_w0_t3_m0_pclrrswl8 pc5_w0_t3_m0_pclrrswl16 pc5_w0_t3_m0_pcswl1 pc5_w0_t3_m0_pcswl2 pc5_w0_t3_m0_pcswl4 pc5_w0_t3_m0_pcswl8 pc5_w0_t3_m0_pcswl16 pc5_w0_t3_m0_pclrr pc5_w0_t3_m0_pcgto pc5_w0_t3_m0_pctl101 pc5_w0_t3_m0_pctl201 pc5_w0_t3_m0_pctl401 pc5_w0_t3_m0_pctl801 pc5_w0_t3_m0_pctl1601
 
 ########################################################################
 warp_bits:

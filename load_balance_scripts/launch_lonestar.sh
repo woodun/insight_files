@@ -8,6 +8,7 @@
 #good(top bias still good) 1:sp
 #best: bh
 #bw<15% && ipc>400(not interesting): dmr(also rate too low)
+#walltime: bh: 1 hour, 
 #4 for now(based on avg_bias)
 
 for benchmark in bh mst sssp sp

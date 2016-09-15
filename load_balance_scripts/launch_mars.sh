@@ -9,7 +9,8 @@
 #good(top bias still good) 4: SimilarityScore, MatrixMul, PageViewRank, PageViewCount
 #bw<15% && ipc>400(not interesting):
 #coverage too low: WordCount
-#4 for now(based on avg_bias):
+#walltime:PageViewCount 40 mins, PageViewRank 25 mins, MatrixMul 15mins. SimilarityScore 15mins.
+#4 for now(based on avg_bias):gpgpu_simulation_time
 
 for benchmark in SimilarityScore MatrixMul PageViewRank PageViewCount
 do

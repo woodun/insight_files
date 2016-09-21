@@ -11,6 +11,7 @@
 #coverage too low: WordCount
 #walltime:PageViewCount 40 mins, PageViewRank 25 mins, MatrixMul 15mins. SimilarityScore 15mins.
 #4 for now(based on avg_bias):gpgpu_simulation_time
+#won't finish: SimilarityScore MatrixMul PageViewRank PageViewCount
 
 for benchmark in SimilarityScore MatrixMul PageViewRank PageViewCount
 do

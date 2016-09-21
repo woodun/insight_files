@@ -5,7 +5,7 @@ configs_stor1=/stor1/hwang07/stor1_configs
 configs_stor2=/stor2/hwang07/stor2_configs
 
 #modify the configs you want to launch on machine in01
-for stor1_config in profile
+for stor1_config in GTX480_func_only
 do
 cd $configs_stor1
 cd $stor1_config

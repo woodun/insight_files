@@ -1,7 +1,8 @@
 #!/bin/sh
 
 #specify your config path in stor1 and stor2
-configs_stor1=/stor1/hwang07/stor1_configs
+#configs_stor1=/stor1/hwang07/stor1_configs
+configs_stor1=/stor1/hwang07/functional_only
 configs_stor2=/stor2/hwang07/stor2_configs
 
 #modify the configs you want to launch on machine in01

@@ -11,7 +11,7 @@
 #Good(top bias still good) 2: srad_v1, cfd
 #bw<15% && ipc>400(not interesting): backprop bfs hotspot
 #3 for now(based on avg_bias)
-
+#change input: backprop
 
 for benchmark in srad_v1 pf_float cfd
 do

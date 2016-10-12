@@ -3,22 +3,22 @@ do
 sh launch_all_configs_per_app_profile.sh $benchmark CUDA
 done
 
-for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
-do
-sh launch_all_configs_per_app_profile.sh $benchmark Mars
-done
+#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
+#do
+#sh launch_all_configs_per_app_profile.sh $benchmark Mars
+#done
 
-for benchmark in spmv lbm
-do
-sh launch_all_configs_per_app_profile.sh $benchmark parboil
-done
+#for benchmark in spmv lbm
+#do
+#sh launch_all_configs_per_app_profile.sh $benchmark parboil
+#done
 
-for benchmark in heartwall cfd streamcluster nw pathfinder lud srad_v1 srad_v2 pf_float
-do
-sh launch_all_configs_per_app_profile.sh $benchmark rodinia
-done
+#for benchmark in heartwall cfd streamcluster nw pathfinder lud srad_v1 srad_v2 pf_float
+#do
+#sh launch_all_configs_per_app_profile.sh $benchmark rodinia
+#done
 
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
-do
-sh launch_all_configs_per_app_profile.sh $benchmark shoc
-done
+#for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
+#do
+#sh launch_all_configs_per_app_profile.sh $benchmark shoc
+#done

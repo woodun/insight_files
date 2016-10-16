@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in `seq 1 10`;
+for i in `seq 81743 82054`;
 do
-echo $i
+qdel $i
 done

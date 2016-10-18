@@ -8,7 +8,7 @@ do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark Mars
 done
 
-for benchmark in spmv lbm
+for benchmark in spmv lbm histo
 do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark parboil
 done
@@ -22,3 +22,8 @@ for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark shoc
 done
+
+#for benchmark in bh mst sssp sp bfs
+#do
+#sh launch_all_configs_per_app.sh $benchmark lonestar
+#done

@@ -1,15 +1,16 @@
+#too long: lbm, md, page view rank, page view count
+
 for benchmark in CP LPS RAY STO SCP SLA CONS FWT TRA AES BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes lulesh
 do
 sh launch_all_configs_per_app_profile_in02.sh $benchmark CUDA
 done
 
-#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
+#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex StringMatch WordCount
 #do
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark Mars
 #done
 
-#for benchmark in spmv lbm
-#do
+#for benchmark in spmv
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark parboil
 #done
 
@@ -18,7 +19,7 @@ done
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark rodinia
 #done
 
-#for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
+#for benchmark in QTC Reduction Scan Spmv Stencil2D Triad BFS
 #do
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark shoc
 #done

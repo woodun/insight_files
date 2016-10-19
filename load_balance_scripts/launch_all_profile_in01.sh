@@ -1,6 +1,10 @@
 #too long: lbm, md, page view rank, page view count
 
-for benchmark in NN kmeans JPEG BFS2 KMN BlackScholes lulesh
+#for benchmark in NN kmeans JPEG BFS2 KMN BlackScholes lulesh
+#do
+#sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
+#done
+for benchmark in RAY STO
 do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
 done

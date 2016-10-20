@@ -1,30 +1,26 @@
 #too long: lbm, md, page view rank, page view count
 
-#for benchmark in NN kmeans JPEG BFS2 KMN BlackScholes lulesh
-#do
-#sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
-#done
-
-for benchmark in RAY STO
+for benchmark in CP LPS RAY STO SCP SLA CONS FWT TRA BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes
 do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
 done
+
 ###########################################################filtered
-#for benchmark in CP LPS RAY STO SCP SLA CONS FWT TRA AES BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes lulesh
+#for benchmark in CP LPS RAY STO SCP SLA CONS FWT TRA BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes
 #do
 #sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
 #done
 
-#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex StringMatch WordCount
+#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex WordCount
 #do
 #sh launch_all_configs_per_app_profile_in01.sh $benchmark Mars
 #done
 
-#for benchmark in spmv
+#for benchmark in spmv histo
 #sh launch_all_configs_per_app_profile_in01.sh $benchmark parboil
 #done
 
-#for benchmark in heartwall cfd streamcluster nw pathfinder lud srad_v1 srad_v2 pf_float
+#for benchmark in heartwall streamcluster nw pathfinder lud srad_v1 srad_v2 pf_float
 #do
 #sh launch_all_configs_per_app_profile_in01.sh $benchmark rodinia
 #done

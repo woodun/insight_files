@@ -1,10 +1,10 @@
 #!/bin/bash
 #PBS -l nodes=1:compute:ppn=1
-#PBS -l walltime=02:00:00
-#PBS -N JPEG
+#PBS -l walltime=04:00:00
+#PBS -N LPS
 #PBS -m a
 #PBS -M hwang07@email.wm.edu
-PROG=$applications/bash-scripts/run_scripts/CUDA/mainscript_JPEG
+PROG=$applications/bash-scripts/run_scripts/mars/mainscript_LPS
 ARGS=""
 cd $PBS_O_WORKDIR
 $PROG $ARGS

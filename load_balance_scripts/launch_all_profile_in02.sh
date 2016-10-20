@@ -7,12 +7,13 @@
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark CUDA
 #done
 
-for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex WordCount
-do
-sh launch_all_configs_per_app_profile_in02.sh $benchmark Mars
-done
+#for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex WordCount
+#do
+#sh launch_all_configs_per_app_profile_in02.sh $benchmark Mars
+#done
 
 for benchmark in spmv histo
+do
 sh launch_all_configs_per_app_profile_in02.sh $benchmark parboil
 done
 

@@ -76,4 +76,5 @@ for BMK in $BENCHMARKS; do
 done
 cd ../
 
+pwd
 sh gen_pbs_poly.sh

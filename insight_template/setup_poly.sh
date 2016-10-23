@@ -74,7 +74,7 @@ for BMK in $BENCHMARKS; do
 		ln -v -s $POWER_CONFIG $BMK
     fi
 done
-cd ../
 
-pwd
 sh gen_pbs_poly.sh
+##cd ../
+

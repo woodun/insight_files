@@ -5,3 +5,4 @@ sh setup_parboil.sh $1
 sh setup_mars.sh $1
 sh setup_shoc.sh $1
 sh setup_lonestar.sh $1
+sh setup_poly.sh $1

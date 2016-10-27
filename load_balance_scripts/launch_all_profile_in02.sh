@@ -2,6 +2,11 @@
 
 
 ###########################################################filtered
+#for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG CORR COVAR FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+#do
+#sh launch_all_configs_per_app_profile_in02.sh $benchmark polybench
+#done
+
 #for benchmark in CP LPS RAY STO SCP SLA CONS FWT TRA BFS MUM NN kmeans JPEG BFS2 KMN BlackScholes
 #do
 #sh launch_all_configs_per_app_profile_in02.sh $benchmark CUDA

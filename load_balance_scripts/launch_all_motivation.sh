@@ -12,6 +12,7 @@ done
 
 #2
 for benchmark in lbm histo
+do
 sh launch_all_configs_per_app_profile_in02.sh $benchmark parboil
 done
 

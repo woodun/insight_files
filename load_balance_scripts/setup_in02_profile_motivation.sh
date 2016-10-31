@@ -8,5 +8,5 @@ for stor2_config in motivation_lrrswl1 motivation_lrrswl2 motivation_lrrswl4 mot
 do
 cd $configs_stor2
 cd $stor2_config
-sh setup_ALL.sh $stor1_config
+sh setup_ALL.sh $stor2_config
 done

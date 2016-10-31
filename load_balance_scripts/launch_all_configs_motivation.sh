@@ -1,3 +1,4 @@
+#not in use
 #!/bin/sh
 
 #specify your config path in stor1

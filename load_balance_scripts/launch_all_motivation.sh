@@ -1,5 +1,5 @@
 #17
-for benchmark in LPS RAY SCP SLA CONS FWT RA BFS MUM NN kmeans BFS2 KMN BlackScholes CP STO JPEG
+for benchmark in LPS RAY SCP SLA CONS FWT TRA BFS MUM NN kmeans BFS2 KMN BlackScholes CP STO JPEG
 do
 sh launch_all_configs_per_app_profile_in01.sh $benchmark CUDA
 done

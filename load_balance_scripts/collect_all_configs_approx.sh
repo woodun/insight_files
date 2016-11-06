@@ -68,7 +68,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep -w "bw_util=[0-9\.]" output_* | tail -1 | sed -e "s/[^\(bw_util=[0-9\.]\)]//g" | xargs printf "%s " >> $output
+grep -o "bw_util=[0-9\.]" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -79,5 +79,5 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep -w "bw_util=[0-9\.]" output_* | tail -1 | sed -e "s/[^\(bw_util=[0-9\.]\)]//g" | xargs printf "%s " >> $output
+grep -o "bw_util=[0-9\.]" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "%s " >> $output
 done

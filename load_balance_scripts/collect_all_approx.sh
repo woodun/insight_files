@@ -2,7 +2,7 @@
 #12
 for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
 do
-sh lcollect_all_approx.sh $benchmark polybench
+sh collect_all_approx.sh $benchmark polybench
 done
 
 #2

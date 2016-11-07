@@ -140,7 +140,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep -o "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -151,7 +151,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep -o "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n\n%s" "###################################################gpgpu_simulation_time#######################################################################" >> $output
@@ -164,7 +164,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep -o "gpgpu_simulation_time =" output_* | tail -1 | sed -e "s/gpgpu_simulation_time =//g" | xargs printf "   %s " >> $output
+grep "gpgpu_simulation_time =" output_* | tail -1 | sed -e "s/gpgpu_simulation_time =//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -175,7 +175,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep -o "gpgpu_simulation_time =" output_* | tail -1 | sed -e "s/gpgpu_simulation_time =//g" | xargs printf "   %s " >> $output
+grep "gpgpu_simulation_time =" output_* | tail -1 | sed -e "s/gpgpu_simulation_time =//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n\n%s" "###################################################gpgpu_simulation_rate#######################################################################" >> $output
@@ -188,7 +188,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep -o "gpgpu_simulation_rate =" output_* | tail -1 | sed -e "s/gpgpu_simulation_rate =//g" | xargs printf "   %s " >> $output
+grep "gpgpu_simulation_rate =" output_* | tail -1 | sed -e "s/gpgpu_simulation_rate =//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -199,5 +199,5 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep -o "gpgpu_simulation_rate =" output_* | tail -1 | sed -e "s/gpgpu_simulation_rate =//g" | xargs printf "   %s " >> $output
+grep "gpgpu_simulation_rate =" output_* | tail -1 | sed -e "s/gpgpu_simulation_rate =//g" | xargs printf "   %s " >> $output
 done

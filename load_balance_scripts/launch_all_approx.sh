@@ -1,9 +1,9 @@
 ######################launched
 #12
-for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
-do
-sh launch_all_configs_approx.sh $benchmark polybench
-done
+#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
+#do
+#sh launch_all_configs_approx.sh $benchmark polybench
+#done
 
 #5
 #for benchmark in Triad Scan
@@ -21,9 +21,15 @@ done
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
+
+#1
+for benchmark in JPEG
+do
+sh launch_all_configs_approx.sh $benchmark CUDA
+done
 ######################waiting
-#13
-#for benchmark in LPS RAY CONS FWT BFS MUM NN kmeans BFS2 KMN CP STO JPEG
+#12
+#for benchmark in LPS RAY CONS FWT BFS MUM NN kmeans BFS2 KMN CP STO
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done

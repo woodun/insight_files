@@ -6,16 +6,16 @@ sh collect_all_configs_approx.sh $benchmark polybench
 done
 
 #2
-for benchmark in Triad Scan
-do
-sh collect_all_configs_approx.sh $benchmark shoc
-done
+#for benchmark in Triad Scan
+#do
+#sh collect_all_configs_approx.sh $benchmark shoc
+#done
 
 #4
-for benchmark in SLA TRA SCP BlackScholes
-do
-sh collect_all_configs_approx.sh $benchmark CUDA
-done
+#for benchmark in SLA TRA SCP BlackScholes
+#do
+#sh collect_all_configs_approx.sh $benchmark CUDA
+#done
 ######################waiting
 #13
 #for benchmark in LPS RAY CONS FWT BFS MUM NN kmeans BFS2 KMN CP STO JPEG

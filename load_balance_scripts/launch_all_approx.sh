@@ -16,13 +16,12 @@
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-#4
+#5
 #for benchmark in SLA TRA SCP BlackScholes
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-#1
 for benchmark in JPEG
 do
 sh launch_all_configs_approx.sh $benchmark CUDA

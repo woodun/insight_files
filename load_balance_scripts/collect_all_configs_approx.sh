@@ -131,7 +131,7 @@ grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xarg
 done
 
 printf "\n\n%s" "###################################################Total_core_cache_stats_breakdown[GLOBAL_ACC_R][MISS]#######################################################################" >> $output
-printf "\n%s\n" "coverage:            0%         12.5%           25%           50%           75%          100%" >> $output
+printf "\n%s\n" "coverage:         0%      12.5%        25%        50%        75%       100%" >> $output
 printf "%s" "gtoswl48: " >> $output
 
 #modify the configs you want to launch on machine in01
@@ -179,7 +179,7 @@ grep "gpgpu_simulation_time =" output_* | tail -1 | sed -e "s/gpgpu_simulation_t
 done
 
 printf "\n\n%s" "###################################################gpgpu_simulation_rate#######################################################################" >> $output
-printf "\n%s\n" "coverage:            0%         12.5%           25%           50%           75%          100%" >> $output
+printf "\n%s\n" "coverage:                   0%                12.5%                  25%                  50%                  75%                 100%" >> $output
 printf "%s" "gtoswl48: " >> $output
 
 #modify the configs you want to launch on machine in01

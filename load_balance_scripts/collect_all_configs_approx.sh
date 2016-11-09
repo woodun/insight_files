@@ -2,10 +2,10 @@
 #!/bin/sh
 
 #specify your config path in stor1
-configs_stor1=/stor1/hwang07/profile/
+configs_stor1=/stor1/hwang07/approx/
 
 #specify your config path in stor2
-configs_stor2=/stor2/hwang07/profile/
+configs_stor2=/stor2/hwang07/approx/
 
 #specify your output file
 output=/stor1/hwang07/profile/collect/$2_$1.txt

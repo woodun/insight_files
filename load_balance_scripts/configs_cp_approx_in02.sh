@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your config path in stor2
-configs_results_stor2=/stor2/hwang07/profile/
+configs_results_stor2=/stor2/hwang07/approx/
 
 #use this template folder or copy it to your favored location
 template_folder=/stor1/hwang07/insight_files/insight_template

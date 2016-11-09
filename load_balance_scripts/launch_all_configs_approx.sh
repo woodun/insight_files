@@ -2,10 +2,10 @@
 #!/bin/sh
 
 #specify your config path in stor1
-configs_stor1=/stor1/hwang07/profile/
+configs_stor1=/stor1/hwang07/approx/
 
 #specify your config path in stor2
-configs_stor2=/stor2/hwang07/profile/
+configs_stor2=/stor2/hwang07/approx/
 
 #modify the configs you want to launch on machine in01
 for stor1_config in exp_profile_gtoswl48 approximate_125coverage_gtoswl48 approximate_25coverage_gtoswl48 approximate_50coverage_gtoswl48 approximate_75coverage_gtoswl48 approximate_100coverage_gtoswl48 

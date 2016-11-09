@@ -5,6 +5,11 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
+for benchmark in ATAX
+do
+sh launch_all_configs_approx.sh $benchmark polybench
+done
+
 #5
 #for benchmark in Triad Scan
 #do
@@ -22,10 +27,10 @@
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in JPEG
-do
-sh launch_all_configs_approx.sh $benchmark CUDA
-done
+#for benchmark in JPEG
+#do
+#sh launch_all_configs_approx.sh $benchmark CUDA
+#done
 ######################waiting
 #12
 #for benchmark in LPS RAY CONS FWT BFS MUM NN kmeans BFS2 KMN CP STO

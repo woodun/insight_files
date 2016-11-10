@@ -20,7 +20,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep ACT_percLossInQoR output_* | sed -e "s/ACT_percLossInQoR //g" | xargs printf "%s " >> $output
+grep "ACT_percLossInQoR " output_* | sed -e "s/ACT_percLossInQoR //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -31,7 +31,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep ACT_percLossInQoR output_* | sed -e "s/ACT_percLossInQoR //g" | xargs printf "%s " >> $output
+grep "ACT_percLossInQoR " output_* | sed -e "s/ACT_percLossInQoR //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "###################################################ACT_percRelativeError#######################################################################" >> $output
@@ -44,7 +44,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep ACT_percRelativeError output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -55,7 +55,55 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep ACT_percRelativeError output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+done
+
+printf "\n\n%s" "###################################################ACT_percRelativeError_noskip#######################################################################" >> $output
+printf "\n%s\n" "coverage:           0%        12.5%          25%          50%          75%         100%" >> $output
+printf "%s" "gtoswl48: " >> $output
+
+#modify the configs you want to launch on machine in01
+for stor1_config in exp_profile_gtoswl48 approximate_125coverage_gtoswl48 approximate_25coverage_gtoswl48 approximate_50coverage_gtoswl48 approximate_75coverage_gtoswl48 approximate_100coverage_gtoswl48 
+do
+cd $configs_stor1
+cd $stor1_config
+cd $2/$1/
+grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+done
+
+printf "\n%s" "lrrswl48: " >> $output
+
+#modify the configs you want to launch on machine in02
+for stor2_config in exp_profile_lrrswl48 approximate_125coverage_lrrswl48 approximate_25coverage_lrrswl48 approximate_50coverage_lrrswl48 approximate_75coverage_lrrswl48 approximate_100coverage_lrrswl48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+done
+
+printf "\n\n%s" "###################################################ACT_percRelativeError_skipzero#######################################################################" >> $output
+printf "\n%s\n" "coverage:           0%        12.5%          25%          50%          75%         100%" >> $output
+printf "%s" "gtoswl48: " >> $output
+
+#modify the configs you want to launch on machine in01
+for stor1_config in exp_profile_gtoswl48 approximate_125coverage_gtoswl48 approximate_25coverage_gtoswl48 approximate_50coverage_gtoswl48 approximate_75coverage_gtoswl48 approximate_100coverage_gtoswl48 
+do
+cd $configs_stor1
+cd $stor1_config
+cd $2/$1/
+grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+done
+
+printf "\n%s" "lrrswl48: " >> $output
+
+#modify the configs you want to launch on machine in02
+for stor2_config in exp_profile_lrrswl48 approximate_125coverage_lrrswl48 approximate_25coverage_lrrswl48 approximate_50coverage_lrrswl48 approximate_75coverage_lrrswl48 approximate_100coverage_lrrswl48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "###################################################ACT_percSumDifferent#######################################################################" >> $output
@@ -68,7 +116,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep ACT_percSumDifferent output_* | sed -e "s/ACT_percSumDifferent //g" | xargs printf "%s " >> $output
+grep "ACT_percSumDifferent " output_* | sed -e "s/ACT_percSumDifferent //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -79,7 +127,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep ACT_percSumDifferent output_* | sed -e "s/ACT_percSumDifferent //g" | xargs printf "%s " >> $output
+grep "ACT_percSumDifferent " output_* | sed -e "s/ACT_percSumDifferent //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "###################################################IPC#######################################################################" >> $output

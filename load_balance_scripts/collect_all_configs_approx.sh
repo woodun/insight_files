@@ -68,7 +68,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError_noskip //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -79,7 +79,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_noskip " output_* | sed -e "s/ACT_percRelativeError_noskip //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "###################################################ACT_percRelativeError_skipzero#######################################################################" >> $output
@@ -92,7 +92,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl48: " >> $output
@@ -103,7 +103,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "###################################################ACT_percSumDifferent#######################################################################" >> $output

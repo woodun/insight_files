@@ -16,6 +16,7 @@ cd $configs_stor1
 cd $stor1_config
 cd CUDA/JPEG/
 cp JPEGOUTPUT.bmp $folder/$stor1_config.bmp
+pwd
 done
 
 #modify the configs you want to launch on machine in02
@@ -25,4 +26,5 @@ cd $configs_stor2
 cd $stor2_config
 cd CUDA/JPEG/
 cp JPEGOUTPUT.bmp $folder/$stor2_config.bmp
+pwd
 done

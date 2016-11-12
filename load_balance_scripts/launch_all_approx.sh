@@ -5,10 +5,10 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in ATAX
-do
-sh launch_all_configs_approx.sh $benchmark polybench
-done
+#for benchmark in ATAX
+#do
+#sh launch_all_configs_approx.sh $benchmark polybench
+#done
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -33,16 +33,21 @@ sh launch_all_configs_approx.sh $benchmark CUDA
 done
 
 #1
-#for benchmark in histo
-#do
-#sh launch_all_configs_approx.sh $benchmark parboil
-#done
+for benchmark in histo
+do
+sh launch_all_configs_approx.sh $benchmark parboil
+done
 
-#1
+#2
 #for benchmark in srad_v1 lud
 #do
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done
+
+for benchmark in srad_v1
+do
+sh launch_all_configs_approx.sh $benchmark rodinia
+done
 ######################waiting
 #8
 #for benchmark in RAY BFS MUM NN kmeans BFS2 CP STO

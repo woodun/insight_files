@@ -27,10 +27,10 @@ done
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in JPEG
-do
-sh launch_all_configs_approx.sh $benchmark CUDA
-done
+#for benchmark in JPEG
+#do
+#sh launch_all_configs_approx.sh $benchmark CUDA
+#done
 
 #1
 #for benchmark in histo

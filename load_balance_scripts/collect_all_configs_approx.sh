@@ -22,9 +22,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_lrr1 approx_0coverage_lrr4 approx_0coverage_lrr8 approx_0coverage_lrr16 approx_0coverage_lrr48
+for stor2_config in approx_0coverage_lrrswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -54,7 +54,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48do
+for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -73,9 +74,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_lrr1 approx_125coverage_lrr4 approx_125coverage_lrr8 approx_125coverage_lrr16 approx_125coverage_lrr48
+for stor2_config in approx_125coverage_lrrswl1 approx_125coverage_lrrswl4 approx_125coverage_lrrswl8 approx_125coverage_lrrswl16 approx_125coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -105,7 +106,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48do
+for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -124,9 +126,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_lrr1 approx_25coverage_lrr4 approx_25coverage_lrr8 approx_25coverage_lrr16 approx_25coverage_lrr48
+for stor2_config in approx_25coverage_lrrswl1 approx_25coverage_lrrswl4 approx_25coverage_lrrswl8 approx_25coverage_lrrswl16 approx_25coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -156,7 +158,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48do
+for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -175,9 +178,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_lrr1 approx_50coverage_lrr4 approx_50coverage_lrr8 approx_50coverage_lrr16 approx_50coverage_lrr48
+for stor2_config in approx_50coverage_lrrswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -207,7 +210,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48do
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -226,9 +230,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_lrr1 approx_75coverage_lrr4 approx_75coverage_lrr8 approx_75coverage_lrr16 approx_75coverage_lrr48
+for stor2_config in approx_75coverage_lrrswl1 approx_75coverage_lrrswl4 approx_75coverage_lrrswl8 approx_75coverage_lrrswl16 approx_75coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -258,7 +262,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48do
+for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -277,9 +282,9 @@ cd $2/$1/
 grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_lrr1 approx_100coverage_lrr4 approx_100coverage_lrr8 approx_100coverage_lrr16 approx_100coverage_lrr48
+for stor2_config in approx_100coverage_lrrswl1 approx_100coverage_lrrswl4 approx_100coverage_lrrswl8 approx_100coverage_lrrswl16 approx_100coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -309,7 +314,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48do
+for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -331,9 +337,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_lrr1 approx_0coverage_lrr4 approx_0coverage_lrr8 approx_0coverage_lrr16 approx_0coverage_lrr48
+for stor2_config in approx_0coverage_lrrswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -363,7 +369,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48do
+for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -382,9 +389,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_lrr1 approx_125coverage_lrr4 approx_125coverage_lrr8 approx_125coverage_lrr16 approx_125coverage_lrr48
+for stor2_config in approx_125coverage_lrrswl1 approx_125coverage_lrrswl4 approx_125coverage_lrrswl8 approx_125coverage_lrrswl16 approx_125coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -414,7 +421,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48do
+for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -433,9 +441,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_lrr1 approx_25coverage_lrr4 approx_25coverage_lrr8 approx_25coverage_lrr16 approx_25coverage_lrr48
+for stor2_config in approx_25coverage_lrrswl1 approx_25coverage_lrrswl4 approx_25coverage_lrrswl8 approx_25coverage_lrrswl16 approx_25coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -465,7 +473,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48do
+for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -484,9 +493,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_lrr1 approx_50coverage_lrr4 approx_50coverage_lrr8 approx_50coverage_lrr16 approx_50coverage_lrr48
+for stor2_config in approx_50coverage_lrrswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -516,7 +525,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48do
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -535,9 +545,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_lrr1 approx_75coverage_lrr4 approx_75coverage_lrr8 approx_75coverage_lrr16 approx_75coverage_lrr48
+for stor2_config in approx_75coverage_lrrswl1 approx_75coverage_lrrswl4 approx_75coverage_lrrswl8 approx_75coverage_lrrswl16 approx_75coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -567,7 +577,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48do
+for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -586,9 +597,9 @@ cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_lrr1 approx_100coverage_lrr4 approx_100coverage_lrr8 approx_100coverage_lrr16 approx_100coverage_lrr48
+for stor2_config in approx_100coverage_lrrswl1 approx_100coverage_lrrswl4 approx_100coverage_lrrswl8 approx_100coverage_lrrswl16 approx_100coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -618,7 +629,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48do
+for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -640,9 +652,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_lrr1 approx_0coverage_lrr4 approx_0coverage_lrr8 approx_0coverage_lrr16 approx_0coverage_lrr48
+for stor2_config in approx_0coverage_lrrswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -672,7 +684,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48do
+for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -691,9 +704,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_lrr1 approx_125coverage_lrr4 approx_125coverage_lrr8 approx_125coverage_lrr16 approx_125coverage_lrr48
+for stor2_config in approx_125coverage_lrrswl1 approx_125coverage_lrrswl4 approx_125coverage_lrrswl8 approx_125coverage_lrrswl16 approx_125coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -723,7 +736,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48do
+for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -742,9 +756,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_lrr1 approx_25coverage_lrr4 approx_25coverage_lrr8 approx_25coverage_lrr16 approx_25coverage_lrr48
+for stor2_config in approx_25coverage_lrrswl1 approx_25coverage_lrrswl4 approx_25coverage_lrrswl8 approx_25coverage_lrrswl16 approx_25coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -774,7 +788,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48do
+for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -793,9 +808,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_lrr1 approx_50coverage_lrr4 approx_50coverage_lrr8 approx_50coverage_lrr16 approx_50coverage_lrr48
+for stor2_config in approx_50coverage_lrrswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -825,7 +840,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48do
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -844,9 +860,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_lrr1 approx_75coverage_lrr4 approx_75coverage_lrr8 approx_75coverage_lrr16 approx_75coverage_lrr48
+for stor2_config in approx_75coverage_lrrswl1 approx_75coverage_lrrswl4 approx_75coverage_lrrswl8 approx_75coverage_lrrswl16 approx_75coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -876,7 +892,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48do
+for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -895,9 +912,9 @@ cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_lrr1 approx_100coverage_lrr4 approx_100coverage_lrr8 approx_100coverage_lrr16 approx_100coverage_lrr48
+for stor2_config in approx_100coverage_lrrswl1 approx_100coverage_lrrswl4 approx_100coverage_lrrswl8 approx_100coverage_lrrswl16 approx_100coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -927,7 +944,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48do
+for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -949,9 +967,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_lrr1 approx_0coverage_lrr4 approx_0coverage_lrr8 approx_0coverage_lrr16 approx_0coverage_lrr48
+for stor2_config in approx_0coverage_lrrswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -981,7 +999,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48do
+for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1000,9 +1019,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_lrr1 approx_125coverage_lrr4 approx_125coverage_lrr8 approx_125coverage_lrr16 approx_125coverage_lrr48
+for stor2_config in approx_125coverage_lrrswl1 approx_125coverage_lrrswl4 approx_125coverage_lrrswl8 approx_125coverage_lrrswl16 approx_125coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -1032,7 +1051,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48do
+for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1051,9 +1071,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_lrr1 approx_25coverage_lrr4 approx_25coverage_lrr8 approx_25coverage_lrr16 approx_25coverage_lrr48
+for stor2_config in approx_25coverage_lrrswl1 approx_25coverage_lrrswl4 approx_25coverage_lrrswl8 approx_25coverage_lrrswl16 approx_25coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -1083,7 +1103,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48do
+for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1102,9 +1123,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_lrr1 approx_50coverage_lrr4 approx_50coverage_lrr8 approx_50coverage_lrr16 approx_50coverage_lrr48
+for stor2_config in approx_50coverage_lrrswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1134,7 +1155,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48do
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -1153,9 +1175,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_lrr1 approx_75coverage_lrr4 approx_75coverage_lrr8 approx_75coverage_lrr16 approx_75coverage_lrr48
+for stor2_config in approx_75coverage_lrrswl1 approx_75coverage_lrrswl4 approx_75coverage_lrrswl8 approx_75coverage_lrrswl16 approx_75coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1185,7 +1207,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48do
+for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -1204,9 +1227,9 @@ cd $2/$1/
 grep -o "coverage_any_percent:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/coverage_any_percent://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_lrr1 approx_100coverage_lrr4 approx_100coverage_lrr8 approx_100coverage_lrr16 approx_100coverage_lrr48
+for stor2_config in approx_100coverage_lrrswl1 approx_100coverage_lrrswl4 approx_100coverage_lrrswl8 approx_100coverage_lrrswl16 approx_100coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1236,7 +1259,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48do
+for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -1258,9 +1282,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_lrr1 approx_0coverage_lrr4 approx_0coverage_lrr8 approx_0coverage_lrr16 approx_0coverage_lrr48
+for stor2_config in approx_0coverage_lrrswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -1290,7 +1314,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48do
+for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1309,9 +1334,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_lrr1 approx_125coverage_lrr4 approx_125coverage_lrr8 approx_125coverage_lrr16 approx_125coverage_lrr48
+for stor2_config in approx_125coverage_lrrswl1 approx_125coverage_lrrswl4 approx_125coverage_lrrswl8 approx_125coverage_lrrswl16 approx_125coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -1341,7 +1366,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48do
+for stor2_config in approx_125coverage_tl1 approx_125coverage_tl4 approx_125coverage_tl8 approx_125coverage_tl16 approx_125coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1360,9 +1386,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_lrr1 approx_25coverage_lrr4 approx_25coverage_lrr8 approx_25coverage_lrr16 approx_25coverage_lrr48
+for stor2_config in approx_25coverage_lrrswl1 approx_25coverage_lrrswl4 approx_25coverage_lrrswl8 approx_25coverage_lrrswl16 approx_25coverage_lrrswl48
 do
 cd $configs_stor1
 cd $stor2_config
@@ -1392,7 +1418,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48do
+for stor2_config in approx_25coverage_tl1 approx_25coverage_tl4 approx_25coverage_tl8 approx_25coverage_tl16 approx_25coverage_tl48
+do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
@@ -1411,9 +1438,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_lrr1 approx_50coverage_lrr4 approx_50coverage_lrr8 approx_50coverage_lrr16 approx_50coverage_lrr48
+for stor2_config in approx_50coverage_lrrswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1443,7 +1470,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48do
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -1462,9 +1490,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_lrr1 approx_75coverage_lrr4 approx_75coverage_lrr8 approx_75coverage_lrr16 approx_75coverage_lrr48
+for stor2_config in approx_75coverage_lrrswl1 approx_75coverage_lrrswl4 approx_75coverage_lrrswl8 approx_75coverage_lrrswl16 approx_75coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1494,7 +1522,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48do
+for stor2_config in approx_75coverage_tl1 approx_75coverage_tl4 approx_75coverage_tl8 approx_75coverage_tl16 approx_75coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
@@ -1513,9 +1542,9 @@ cd $2/$1/
 grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
-printf "\n%s" "lrr: " >> $output
+printf "\n%s" "lrrswl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_lrr1 approx_100coverage_lrr4 approx_100coverage_lrr8 approx_100coverage_lrr16 approx_100coverage_lrr48
+for stor2_config in approx_100coverage_lrrswl1 approx_100coverage_lrrswl4 approx_100coverage_lrrswl8 approx_100coverage_lrrswl16 approx_100coverage_lrrswl48
 do
 cd $configs_stor2
 cd $stor2_config
@@ -1545,7 +1574,8 @@ done
 
 printf "\n%s" "tl: " >> $output
 #modify the configs you want to launch on machine in02
-for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48do
+for stor2_config in approx_100coverage_tl1 approx_100coverage_tl4 approx_100coverage_tl8 approx_100coverage_tl16 approx_100coverage_tl48
+do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/

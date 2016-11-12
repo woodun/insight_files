@@ -5,10 +5,10 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-#for benchmark in ATAX
-#do
-#sh launch_all_configs_approx.sh $benchmark polybench
-#done
+for benchmark in GESUMMV
+do
+sh launch_all_configs_approx.sh $benchmark polybench
+done
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -33,10 +33,10 @@
 #done
 
 #1
-for benchmark in histo
-do
-sh launch_all_configs_approx.sh $benchmark parboil
-done
+#for benchmark in histo
+#do
+#sh launch_all_configs_approx.sh $benchmark parboil
+#done
 
 #2
 #for benchmark in srad_v1 lud

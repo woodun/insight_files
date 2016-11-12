@@ -27,10 +27,10 @@
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in JPEG
-do
-sh launch_all_configs_approx.sh $benchmark CUDA
-done
+#for benchmark in JPEG
+#do
+#sh launch_all_configs_approx.sh $benchmark CUDA
+#done
 
 #1
 for benchmark in histo
@@ -44,10 +44,10 @@ done
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done
 
-for benchmark in srad_v1
-do
-sh launch_all_configs_approx.sh $benchmark rodinia
-done
+#for benchmark in srad_v1
+#do
+#sh launch_all_configs_approx.sh $benchmark rodinia
+#done
 ######################waiting
 #8
 #for benchmark in RAY BFS MUM NN kmeans BFS2 CP STO

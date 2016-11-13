@@ -5,7 +5,7 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in GESUMMV
+for benchmark in GRAMSCHM MVT
 do
 sh launch_all_configs_approx.sh $benchmark polybench
 done

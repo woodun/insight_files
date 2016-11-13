@@ -1,5 +1,7 @@
 #run this:
-#sh collect_all_configs_JPEG.sh JPEG CUDA
+#sh collect_all_configs_with_image.sh JPEG CUDA
+#sh collect_all_configs_with_image.sh srad_v1 rodinia
+#sh collect_all_configs_with_image.sh histo parboil
 #!/bin/sh
 
 #specify your config path in stor1
@@ -20,7 +22,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -30,7 +32,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -40,7 +42,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -50,7 +52,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -60,7 +62,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:12.5%######RMSE##########################################################" >> $output
@@ -72,7 +74,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -82,7 +84,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -92,7 +94,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -102,7 +104,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -112,7 +114,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:25%######RMSE##########################################################" >> $output
@@ -124,7 +126,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -134,7 +136,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -144,7 +146,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -154,7 +156,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -164,7 +166,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:50%######RMSE##########################################################" >> $output
@@ -176,7 +178,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -186,7 +188,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -196,7 +198,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -206,7 +208,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -216,7 +218,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:75%######RMSE##########################################################" >> $output
@@ -228,7 +230,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -238,7 +240,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -248,7 +250,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -258,7 +260,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -268,7 +270,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:100%######RMSE##########################################################" >> $output
@@ -280,7 +282,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -290,7 +292,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -300,7 +302,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -310,7 +312,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -320,7 +322,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "\\([0-9\.]*" temp.err | sed -e "s/\\(//g" | xargs printf "%s " >> $output
+grep -o "([0-9\.]*" tmp.err | sed -e "s/(//g" | xargs printf "%s " >> $output
 done
 
 ######################################################################################################################################################################################################

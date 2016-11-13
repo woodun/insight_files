@@ -15,7 +15,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd rodinia/srad_v1/
-cp image_out.pgm $folder/$stor1_config.bmp
+cp image_out.pgm $folder/$stor1_config.pgm
 pwd
 done
 
@@ -25,6 +25,6 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd rodinia/srad_v1/
-cp image_out.pgm $folder/$stor2_config.bmp
+cp image_out.pgm $folder/$stor2_config.pgm
 pwd
 done

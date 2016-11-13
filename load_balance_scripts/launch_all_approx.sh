@@ -5,7 +5,7 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in GRAMSCHM MVT
+for benchmark in 2MM SYRK
 do
 sh launch_all_configs_approx.sh $benchmark polybench
 done

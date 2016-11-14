@@ -14,7 +14,7 @@ for stor1_config in approx_0coverage_gtoswl1 approx_0coverage_gtoswl4 approx_0co
 do
 cd $configs_stor1
 cd $stor1_config
-cd rodinia/srad_v1/
+cd parboil/histo/
 cp ref.bmp $folder/$stor1_config.pgm
 pwd
 done
@@ -24,7 +24,7 @@ for stor2_config in approx_50coverage_gtoswl1 approx_50coverage_gtoswl4 approx_5
 do
 cd $configs_stor2
 cd $stor2_config
-cd rodinia/srad_v1/
+cd parboil/histo/
 cp ref.bmp $folder/$stor2_config.pgm
 pwd
 done

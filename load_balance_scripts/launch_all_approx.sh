@@ -5,7 +5,7 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in 2MM SYRK
+for benchmark in GESUMMV GRAMSCHM MVT 2MM SYRK
 do
 sh launch_all_configs_approx.sh $benchmark polybench
 done
@@ -33,10 +33,10 @@ done
 #done
 
 #1
-#for benchmark in histo
-#do
-#sh launch_all_configs_approx.sh $benchmark parboil
-#done
+for benchmark in histo
+do
+sh launch_all_configs_approx.sh $benchmark parboil
+done
 
 #2
 #for benchmark in srad_v1 lud

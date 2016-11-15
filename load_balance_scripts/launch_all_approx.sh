@@ -5,11 +5,11 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in 2DCONV 3DCONV FDTD-2D GEMM
-do
-sh launch_all_configs_approx.sh $benchmark polybench
-done
-#GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
+#for benchmark in
+#do
+#sh launch_all_configs_approx.sh $benchmark polybench
+#done
+#GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -28,10 +28,11 @@ done
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-#for benchmark in JPEG
-#do
-#sh launch_all_configs_approx.sh $benchmark CUDA
-#done
+for benchmark in SLA TRA SCP BlackScholes
+do
+sh launch_all_configs_approx.sh $benchmark CUDA
+done
+#JPEG
 
 #1
 #for benchmark in histo

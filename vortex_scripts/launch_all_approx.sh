@@ -17,10 +17,10 @@
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in MD Stencil2D
-do
-sh launch_all_configs_approx.sh $benchmark shoc
-done
+#for benchmark in MD Stencil2D
+#do
+#sh launch_all_configs_approx.sh $benchmark shoc
+#done
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
@@ -28,10 +28,11 @@ done
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-#for benchmark in JPEG
-#do
-#sh launch_all_configs_approx.sh $benchmark CUDA
-#done
+for benchmark in KMN
+do
+sh launch_all_configs_approx.sh $benchmark CUDA
+done
+#KMN
 
 #1
 #for benchmark in histo

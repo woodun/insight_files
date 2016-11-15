@@ -5,7 +5,7 @@
 #sh collect_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in ATAX
+for benchmark in GESUMMV GRAMSCHM MVT 2MM SYRK BICG
 do
 sh collect_all_configs_approx.sh $benchmark polybench
 done

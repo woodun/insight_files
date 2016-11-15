@@ -5,11 +5,11 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in 3MM BICG
+for benchmark in 2DCONV 3DCONV FDTD-2D GEMM
 do
 sh launch_all_configs_approx.sh $benchmark polybench
 done
-#GESUMMV GRAMSCHM MVT 2MM SYRK ATAX
+#GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
 
 #5
 #for benchmark in Triad Scan BFS Spmv

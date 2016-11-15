@@ -22,17 +22,17 @@
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-#9
-#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
+#8: JPEG 
+#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in KMN
+for benchmark in LPS CONS FWT
 do
 sh launch_all_configs_approx.sh $benchmark CUDA
 done
-#KMN
+#
 
 #1
 #for benchmark in histo

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your config path
-configs_stor=/sciclone/data20/hwang07/approx
+configs_stor=/sciclone/data20/hwang07/approx/
 
 #use this template folder or copy it to your favored location
 template_folder=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/vortex_template

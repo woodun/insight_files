@@ -5,10 +5,10 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in 3MM BICG
-do
-sh launch_all_configs_approx.sh $benchmark polybench
-done
+#for benchmark in 3MM BICG
+#do
+#sh launch_all_configs_approx.sh $benchmark polybench
+#done
 #GESUMMV GRAMSCHM MVT 2MM SYRK ATAX
 
 #5
@@ -17,10 +17,10 @@ done
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-#for benchmark in MD Stencil2D
-#do
-#sh launch_all_configs_approx.sh $benchmark shoc
-#done
+for benchmark in MD Stencil2D
+do
+sh launch_all_configs_approx.sh $benchmark shoc
+done
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG

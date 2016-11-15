@@ -1,6 +1,6 @@
 ######################launched
-#12
-#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
+#11: GRAMSCHM output NAN always.
+#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
 #do
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done

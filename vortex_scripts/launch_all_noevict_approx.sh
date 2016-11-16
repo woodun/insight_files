@@ -1,15 +1,15 @@
 ######################launched
-#11: GRAMSCHM output NAN always.
-#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
+#12
+#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
 #do
 #sh launch_all_configs_noevict_approx.sh $benchmark polybench
 #done
 
-#for benchmark in
+#for benchmark in 3MM BICG
 #do
 #sh launch_all_configs_noevict_approx.sh $benchmark polybench
 #done
-#GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
+#GESUMMV GRAMSCHM MVT 2MM SYRK ATAX
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -22,17 +22,17 @@
 #sh launch_all_configs_noevict_approx.sh $benchmark shoc
 #done
 
-#9
-#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
+#8: JPEG 
+#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN
 #do
 #sh launch_all_configs_noevict_approx.sh $benchmark CUDA
 #done
 
-for benchmark in SLA TRA SCP BlackScholes
+for benchmark in KMN SLA TRA
 do
 sh launch_all_configs_noevict_approx.sh $benchmark CUDA
 done
-#JPEG
+#LPS CONS FWT
 
 #1
 #for benchmark in histo
@@ -46,7 +46,7 @@ done
 #sh launch_all_configs_noevict_approx.sh $benchmark rodinia
 #done
 
-#for benchmark in srad_v1
+#for benchmark in lud
 #do
 #sh launch_all_configs_noevict_approx.sh $benchmark rodinia
 #done

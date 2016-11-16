@@ -28,7 +28,7 @@
 #sh launch_all_configs_noevict_approx.sh $benchmark CUDA
 #done
 
-for benchmark in KMN SLA TRA
+for benchmark in LPS CONS FWT SLA TRA
 do
 sh launch_all_configs_noevict_approx.sh $benchmark CUDA
 done

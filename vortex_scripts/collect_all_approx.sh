@@ -5,10 +5,10 @@
 #sh collect_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in ATAX
-do
-sh collect_all_configs_approx.sh $benchmark polybench
-done
+#for benchmark in ATAX
+#do
+#sh collect_all_configs_approx.sh $benchmark polybench
+#done
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -27,10 +27,10 @@ done
 #sh collect_all_configs_approx.sh $benchmark CUDA
 #done
 
-#for benchmark in JPEG
-#do
-#sh collect_all_configs_approx.sh $benchmark CUDA
-#done
+for benchmark in LPS CONS FWT
+do
+sh collect_all_configs_approx.sh $benchmark CUDA
+done
 
 #1
 #for benchmark in histo

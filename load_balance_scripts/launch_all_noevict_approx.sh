@@ -12,15 +12,15 @@
 #GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
 
 #5
-#for benchmark in Triad Scan BFS Spmv MD Stencil2D
+#for benchmark in Triad Scan BFS Spmv
 #do
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in Triad Scan BFS Spmv MD Stencil2D
-do
-sh launch_all_configs_approx.sh $benchmark shoc
-done
+#for benchmark in MD Stencil2D
+#do
+#sh launch_all_configs_approx.sh $benchmark shoc
+#done
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
@@ -28,11 +28,11 @@ done
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-#for benchmark in 
-#do
-#sh launch_all_configs_approx.sh $benchmark CUDA
-#done
-#JPEG SLA TRA SCP BlackScholes
+for benchmark in SLA TRA SCP BlackScholes
+do
+sh launch_all_configs_approx.sh $benchmark CUDA
+done
+#JPEG
 
 #1
 #for benchmark in histo

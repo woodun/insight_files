@@ -28,11 +28,11 @@
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in LPS CONS FWT
+for benchmark in KMN SLA TRA
 do
 sh launch_all_configs_approx.sh $benchmark CUDA
 done
-#
+#LPS CONS FWT
 
 #1
 #for benchmark in histo
@@ -46,7 +46,7 @@ done
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done
 
-#for benchmark in srad_v1
+#for benchmark in lud
 #do
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done

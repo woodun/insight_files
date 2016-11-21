@@ -1,6 +1,6 @@
 ######################launched
 #10: GRAMSCHM output NAN always. fdtd-2d assertion failed.
-#for benchmark in 2DCONV 3DCONV GEMM MVT 2MM SYRK 3MM ATAX BICG
+#for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 #do
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
@@ -23,9 +23,9 @@ do
 sh launch_all_configs_approx.sh $benchmark shoc
 done
 
-#6
-#SLA assertion failed. BlackScholes, JPEG not changing.
-#for benchmark in TRA SCP LPS CONS FWT KMN 
+#5
+#SLA assertion failed. BlackScholes, JPEG, KMN not changing.
+#for benchmark in TRA SCP LPS CONS FWT
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done

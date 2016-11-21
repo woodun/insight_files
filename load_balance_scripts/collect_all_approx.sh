@@ -11,16 +11,17 @@
 #done
 
 #5
+#Scan error
 #for benchmark in Triad Scan BFS Spmv
 #do
 #sh collect_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in Triad
+for benchmark in Triad Spmv
 do
 sh collect_all_configs_approx.sh $benchmark shoc
 done
-#MD Stencil2D Triad Scan BFS Spmv
+#MD Stencil2D Triad BFS Spmv
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG

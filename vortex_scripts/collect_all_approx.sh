@@ -27,10 +27,11 @@
 #sh collect_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in LPS CONS FWT
+for benchmark in KMN LPS SLA TRA
 do
 sh collect_all_configs_approx.sh $benchmark CUDA
 done
+#LPS CONS FWT
 
 #1
 #for benchmark in histo

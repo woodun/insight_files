@@ -27,7 +27,7 @@
 #sh collect_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in KMN LPS SLA TRA
+for benchmark in KMN SLA TRA
 do
 sh collect_all_configs_approx.sh $benchmark CUDA
 done

@@ -1,6 +1,6 @@
 ######################launched
-#11: GRAMSCHM output NAN always.
-#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG
+#10: GRAMSCHM output NAN always. fdtd-2d assertion failed.
+#for benchmark in 2DCONV 3DCONV GEMM MVT 2MM SYRK 3MM ATAX BICG
 #do
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
@@ -9,21 +9,23 @@
 #do
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
-#GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
+#GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 
 #5
-#for benchmark in Triad Scan BFS Spmv MD Stencil2D
+#Scan assertion failed. 
+#for benchmark in Triad BFS Spmv MD Stencil2D
 #do
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-#for benchmark in Triad Scan BFS Spmv MD Stencil2D
-#do
-#sh launch_all_configs_approx.sh $benchmark shoc
-#done
+for benchmark in BFS MD Stencil2D
+do
+sh launch_all_configs_approx.sh $benchmark shoc
+done
 
-#9
-#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
+#6
+#SLA assertion failed. BlackScholes, JPEG not changing.
+#for benchmark in TRA SCP LPS CONS FWT KMN 
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
@@ -32,7 +34,7 @@
 #do
 #sh launch_all_configs_approx.sh $benchmark CUDA
 #done
-#JPEG SLA TRA SCP BlackScholes
+#JPEG TRA SCP
 
 #1
 #for benchmark in histo

@@ -16,10 +16,11 @@
 #sh collect_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in MD Stencil2D Triad Scan BFS Spmv
+for benchmark in Triad
 do
 sh collect_all_configs_approx.sh $benchmark shoc
 done
+#MD Stencil2D Triad Scan BFS Spmv
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG

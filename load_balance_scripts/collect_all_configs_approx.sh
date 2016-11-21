@@ -19,7 +19,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -29,7 +29,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -39,7 +39,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -49,7 +49,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -59,7 +59,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:12.5%######ACT_percRelativeError_skipzero##########################################################" >> $output
@@ -71,7 +71,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -81,7 +81,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -91,7 +91,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -101,7 +101,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -111,7 +111,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:25%######ACT_percRelativeError_skipzero##########################################################" >> $output
@@ -123,7 +123,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -133,7 +133,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -143,7 +143,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -153,7 +153,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -163,7 +163,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:50%######ACT_percRelativeError_skipzero##########################################################" >> $output
@@ -175,7 +175,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -185,7 +185,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -195,7 +195,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -205,7 +205,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -215,7 +215,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:75%######ACT_percRelativeError_skipzero##########################################################" >> $output
@@ -227,7 +227,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -237,7 +237,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -247,7 +247,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -257,7 +257,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -267,7 +267,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n\n%s" "#####################################coverage:100%######ACT_percRelativeError_skipzero##########################################################" >> $output
@@ -279,7 +279,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "lrrswl: " >> $output
@@ -289,7 +289,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "RR: " >> $output
@@ -299,7 +299,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "STL: " >> $output
@@ -309,7 +309,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n%s" "tl: " >> $output
@@ -319,7 +319,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 ######################################################################################################################################################################################################

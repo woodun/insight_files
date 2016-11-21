@@ -5,11 +5,11 @@
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
 
-#for benchmark in
+#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM 3MM
 #do
 #sh launch_all_configs_approx.sh $benchmark polybench
 #done
-#GESUMMV GRAMSCHM MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
+#GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV FDTD-2D GEMM
 
 #5
 #for benchmark in Triad Scan BFS Spmv MD Stencil2D
@@ -17,10 +17,10 @@
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in Triad Scan BFS Spmv MD Stencil2D
-do
-sh launch_all_configs_approx.sh $benchmark shoc
-done
+#for benchmark in Triad Scan BFS Spmv MD Stencil2D
+#do
+#sh launch_all_configs_approx.sh $benchmark shoc
+#done
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
@@ -46,10 +46,10 @@ done
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done
 
-#for benchmark in srad_v1
-#do
-#sh launch_all_configs_approx.sh $benchmark rodinia
-#done
+for benchmark in lud
+do
+sh launch_all_configs_approx.sh $benchmark rodinia
+done
 ######################waiting
 #8
 #for benchmark in RAY BFS MUM NN kmeans BFS2 CP STO

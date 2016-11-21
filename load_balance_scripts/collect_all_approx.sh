@@ -5,7 +5,7 @@
 #sh collect_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in GESUMMV GRAMSCHM MVT 2MM SYRK BICG
+for benchmark in 2DCONV 3DCONV FDTD-2D GEMM 3MM
 do
 sh collect_all_configs_approx.sh $benchmark polybench
 done
@@ -27,10 +27,10 @@ done
 #sh collect_all_configs_approx.sh $benchmark CUDA
 #done
 
-#for benchmark in JPEG
-#do
-#sh collect_all_configs_approx.sh $benchmark CUDA
-#done
+for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN
+do
+sh collect_all_configs_approx.sh $benchmark CUDA
+done
 
 #1
 #for benchmark in histo
@@ -39,10 +39,10 @@ done
 #done
 
 #1
-#for benchmark in srad_v1 lud
-#do
-#sh collect_all_configs_approx.sh $benchmark rodinia
-#done
+for benchmark in lud
+do
+sh collect_all_configs_approx.sh $benchmark rodinia
+done
 ######################waiting
 #8
 #for benchmark in RAY BFS MUM NN kmeans BFS2 CP STO

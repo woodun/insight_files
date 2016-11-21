@@ -5,10 +5,10 @@
 #sh collect_all_configs_approx.sh $benchmark polybench
 #done
 
-for benchmark in 2DCONV 3DCONV FDTD-2D GEMM 3MM
-do
-sh collect_all_configs_approx.sh $benchmark polybench
-done
+#for benchmark in 2DCONV 3DCONV FDTD-2D GEMM 3MM
+#do
+#sh collect_all_configs_approx.sh $benchmark polybench
+#done
 
 #5
 #for benchmark in Triad Scan BFS Spmv
@@ -16,10 +16,10 @@ done
 #sh collect_all_configs_approx.sh $benchmark shoc
 #done
 
-#for benchmark in MD Stencil2D
-#do
-#sh collect_all_configs_approx.sh $benchmark shoc
-#done
+for benchmark in MD Stencil2D Triad Scan BFS Spmv
+do
+sh collect_all_configs_approx.sh $benchmark shoc
+done
 
 #9
 #for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN JPEG
@@ -27,10 +27,10 @@ done
 #sh collect_all_configs_approx.sh $benchmark CUDA
 #done
 
-for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN
-do
-sh collect_all_configs_approx.sh $benchmark CUDA
-done
+#for benchmark in SLA TRA SCP BlackScholes LPS CONS FWT KMN
+#do
+#sh collect_all_configs_approx.sh $benchmark CUDA
+#done
 
 #1
 #for benchmark in histo
@@ -39,10 +39,10 @@ done
 #done
 
 #1
-for benchmark in lud
-do
-sh collect_all_configs_approx.sh $benchmark rodinia
-done
+#for benchmark in lud
+#do
+#sh collect_all_configs_approx.sh $benchmark rodinia
+#done
 ######################waiting
 #8
 #for benchmark in RAY BFS MUM NN kmeans BFS2 CP STO

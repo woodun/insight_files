@@ -61,6 +61,7 @@ grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRe
 done
 
 ######################################################################ACT_percRelativeError_skipzero 100%#########################
+printf "\n" >> $output
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_100coverage_gtoswl1 approx_100coverage_gtoswl4 approx_100coverage_gtoswl8 approx_100coverage_gtoswl16 approx_100coverage_gtoswl48
 do

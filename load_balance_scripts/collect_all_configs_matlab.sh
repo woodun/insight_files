@@ -166,7 +166,7 @@ printf "\n" >> $output
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_0coverage_gtoswl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
 grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
@@ -330,7 +330,7 @@ printf "\n" >> $output
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_0coverage_gtoswl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
@@ -392,7 +392,7 @@ printf "\n" >> $output
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_0coverage_gtoswl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
 grep "L1D_total_cache_miss_rate =" output_* | tail -1 | sed -e "s/L1D_total_cache_miss_rate =//g" | xargs printf "   %s " >> $output

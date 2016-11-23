@@ -12,8 +12,3 @@ for benchmark in SCP
 do
 sh collect_all_configs_matlab.sh $benchmark CUDA
 done
-
-for benchmark in histo
-do
-sh collect_all_configs_matlab.sh $benchmark parboil
-done

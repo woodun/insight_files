@@ -10,6 +10,10 @@ configs_stor2=/stor2/hwang07/approx/
 #specify your output file
 output=/stor1/hwang07/profile/collect_matlab/$2_$1.txt
 
+sh collect_all_configs_matlab_MD.sh GRAMSCHM polybench
+sh collect_all_configs_matlab_MD.sh lud rodinia
+sh collect_all_configs_matlab_MD.sh MD shoc
+
 ######################################################################ACT_percRelativeError_skipzero 50%#########################
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_50coverage_gtoswl1 approx_50coverage_gtoswl4 approx_50coverage_gtoswl8 approx_50coverage_gtoswl16 approx_50coverage_gtoswl48

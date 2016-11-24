@@ -466,7 +466,7 @@ printf "\n" >> $output
 #modify the configs you want to launch on machine in01
 for stor1_config in approx_0coverage_gtoswl1 approx_0coverage_gtoswl4 approx_0coverage_gtoswl8 approx_0coverage_gtoswl16 approx_0coverage_gtoswl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
@@ -475,7 +475,7 @@ done
 #modify the configs you want to launch on machine in02
 for stor2_config in approx_0coverage_gtoswl1 approx_0coverage_lrrswl4 approx_0coverage_lrrswl8 approx_0coverage_lrrswl16 approx_0coverage_lrrswl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
@@ -484,7 +484,7 @@ done
 #modify the configs you want to launch on machine in02
 for stor2_config in approx_0coverage_gtoswl1 approx_0coverage_RR4 approx_0coverage_RR8 approx_0coverage_RR16 approx_0coverage_RR48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
@@ -493,7 +493,7 @@ done
 #modify the configs you want to launch on machine in02
 for stor2_config in approx_0coverage_gtoswl1 approx_0coverage_STL4 approx_0coverage_STL8 approx_0coverage_STL16 approx_0coverage_STL48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
@@ -502,7 +502,7 @@ done
 #modify the configs you want to launch on machine in02
 for stor2_config in approx_0coverage_tl1 approx_0coverage_tl4 approx_0coverage_tl8 approx_0coverage_tl16 approx_0coverage_tl48
 do
-cd $configs_stor2
+cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
 grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output

@@ -401,3 +401,65 @@ cd $stor1_config
 cd $2/$1/
 grep "L1D_total_cache_miss_rate =" output_* | tail -1 | sed -e "s/L1D_total_cache_miss_rate =//g" | xargs printf "   %s " >> $output
 done
+
+###############################################################################bw_util 0 coverage GTO48#########################
+printf "\n" >> $output
+#modify the configs you want to launch on machine in01
+for stor1_config in approx_50coverage_gtoswl1 approx_50coverage_gtoswl4 approx_50coverage_gtoswl8 approx_50coverage_gtoswl16 approx_50coverage_gtoswl48
+do
+cd $configs_stor2
+cd $stor1_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done
+
+printf "\n%s" "lrrswl: " >> $output
+#modify the configs you want to launch on machine in02
+for stor2_config in approx_50coverage_gtoswl1 approx_50coverage_lrrswl4 approx_50coverage_lrrswl8 approx_50coverage_lrrswl16 approx_50coverage_lrrswl48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done
+
+printf "\n%s" "RR: " >> $output
+#modify the configs you want to launch on machine in02
+for stor2_config in approx_50coverage_gtoswl1 approx_50coverage_RR4 approx_50coverage_RR8 approx_50coverage_RR16 approx_50coverage_RR48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done
+
+printf "\n%s" "STL: " >> $output
+#modify the configs you want to launch on machine in02
+for stor2_config in approx_50coverage_gtoswl1 approx_50coverage_STL4 approx_50coverage_STL8 approx_50coverage_STL16 approx_50coverage_STL48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done
+
+printf "\n%s" "tl: " >> $output
+#modify the configs you want to launch on machine in02
+for stor2_config in approx_50coverage_tl1 approx_50coverage_tl4 approx_50coverage_tl8 approx_50coverage_tl16 approx_50coverage_tl48
+do
+cd $configs_stor2
+cd $stor2_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done
+
+###############################################################################bw_util 0 coverage GTO48#########################
+printf "\n" >> $output
+#modify the configs you want to launch on machine in01
+for stor1_config in approx_0coverage_gtoswl48
+do
+cd $configs_stor1
+cd $stor1_config
+cd $2/$1/
+grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+done

@@ -12,3 +12,8 @@ for benchmark in SCP
 do
 sh collect_all_configs_matlab.sh $benchmark CUDA
 done
+
+
+sh collect_all_configs_matlab_MD.sh GRAMSCHM polybench
+sh collect_all_configs_matlab_MD.sh lud rodinia
+sh collect_all_configs_matlab_MD.sh MD shoc

@@ -15,7 +15,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | xargs printf "   %s\n" >> $output
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[MISS\] =" output_* | xargs printf "   %s\n" >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\n" >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\n" >> $output
 done
 

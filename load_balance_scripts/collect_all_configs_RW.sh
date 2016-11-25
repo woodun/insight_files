@@ -56,8 +56,8 @@ grep "L2_cache_stats_breakdown\[GLOBAL_ACC_W\]\[RESERVATION_FAIL\] =" output_* |
 done
 
 ###############################################################################Total_core_cache_stats_breakdown 50 coverage GTO48#########################
-printf "$2_$1:\n" >> $output
-printf "GTO48 50 percent prediction:\n" >> $output
+printf "$2_$1:\r\n" >> $output
+printf "GTO48 50 percent prediction:\r\n" >> $output
 for stor1_config in approx_50coverage_gtoswl48
 do
 cd $configs_stor2

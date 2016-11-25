@@ -10,11 +10,6 @@ configs_stor2=/stor2/hwang07/approx/
 #specify your output file
 output=/stor1/hwang07/RW.txt
 
-gpu_tot_ipc =
-gpu_stall_dramfull = 18843363
-gpu_stall_icnt2sh    = 1273357
-gpu_total_sim_rate=54196
-
 ###############################################################################Total_core_cache_stats_breakdown 0 coverage GTO48#########################
 printf "$2_$1:\r\n" >> $output
 printf "GTO48 No prediction:\r\n" >> $output

@@ -1,4 +1,5 @@
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
+#ATAX
+for benchmark in GESUMMV MVT 2MM SYRK 3MM BICG 2DCONV 3DCONV GEMM
 do
 sh collect_all_configs_RW.sh $benchmark polybench
 done

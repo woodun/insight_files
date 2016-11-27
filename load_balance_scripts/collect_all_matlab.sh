@@ -1,19 +1,11 @@
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT SYRK 2MM ATAX BICG 3DCONV GEMM
 do
 sh collect_all_configs_matlab.sh $benchmark polybench
 done
 
-for benchmark in Triad Spmv
-do
-sh collect_all_configs_matlab.sh $benchmark shoc
-done
-
+#CONS and LPS are don vortex.
 for benchmark in SCP
 do
 sh collect_all_configs_matlab.sh $benchmark CUDA
 done
 
-
-sh collect_all_configs_matlab_MD.sh GRAMSCHM polybench
-sh collect_all_configs_matlab_MD.sh lud rodinia
-sh collect_all_configs_matlab_MD.sh MD shoc

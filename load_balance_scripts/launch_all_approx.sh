@@ -18,10 +18,10 @@
 #sh launch_all_configs_approx.sh $benchmark shoc
 #done
 
-for benchmark in BFS MD Stencil2D
-do
-sh launch_all_configs_approx.sh $benchmark shoc
-done
+#for benchmark in BFS MD Stencil2D
+#do
+#sh launch_all_configs_approx.sh $benchmark shoc
+#done
 
 #5
 #SLA assertion failed. BlackScholes, JPEG, KMN not changing.
@@ -48,7 +48,7 @@ done
 #sh launch_all_configs_approx.sh $benchmark rodinia
 #done
 
-for benchmark in lud
+for benchmark in srad_v1
 do
 sh launch_all_configs_approx.sh $benchmark rodinia
 done

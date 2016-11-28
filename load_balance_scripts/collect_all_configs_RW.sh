@@ -33,6 +33,8 @@ grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[HIT_RESERVED\] =" output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[RESERVATION_FAIL\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[HIT\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[HIT_RESERVED\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[RESERVATION_FAIL\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 
@@ -78,6 +80,8 @@ grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[HIT_RESERVED\] =" output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[RESERVATION_FAIL\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[HIT\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[HIT_RESERVED\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[MISS\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_W\]\[RESERVATION_FAIL\] =" output_* | tail -1 | xargs printf "   %s\r\n" >> $output
 

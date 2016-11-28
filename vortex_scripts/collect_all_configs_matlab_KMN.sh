@@ -6,14 +6,14 @@ configs_stor=/sciclone/data20/hwang07/approx/
 #specify your output file
 output=/sciclone/data20/hwang07/collect_matlab/$2_$1.txt
 
-###########################################################################################ACT_percRelativeError_skipzero#########################
-##############################################ACT_percRelativeError_skipzero 0%#########################
+###########################################################################################Root Mean Squared Error:#########################
+##############################################Root Mean Squared Error: 0%#########################
 for stor1_config in approx_0coverage_gtoswl1 approx_0coverage_gtoswl4 approx_0coverage_gtoswl8 approx_0coverage_gtoswl16 approx_0coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -22,7 +22,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -31,7 +31,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -40,7 +40,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -49,17 +49,17 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
-##############################################ACT_percRelativeError_skipzero 12.5%#########################
+##############################################Root Mean Squared Error: 12.5%#########################
 printf "\n" >> $output
 for stor1_config in approx_125coverage_gtoswl1 approx_125coverage_gtoswl4 approx_125coverage_gtoswl8 approx_125coverage_gtoswl16 approx_125coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -68,7 +68,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -77,7 +77,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -86,7 +86,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -95,17 +95,17 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
-##############################################ACT_percRelativeError_skipzero 25%#########################
+##############################################Root Mean Squared Error: 25%#########################
 printf "\n" >> $output
 for stor1_config in approx_25coverage_gtoswl1 approx_25coverage_gtoswl4 approx_25coverage_gtoswl8 approx_25coverage_gtoswl16 approx_25coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -114,7 +114,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -123,7 +123,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -132,7 +132,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -141,17 +141,17 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
-##############################################ACT_percRelativeError_skipzero 50%#########################
+##############################################Root Mean Squared Error: 50%#########################
 printf "\n" >> $output
 for stor1_config in approx_50coverage_gtoswl1 approx_50coverage_gtoswl4 approx_50coverage_gtoswl8 approx_50coverage_gtoswl16 approx_50coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -160,7 +160,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -169,7 +169,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -178,7 +178,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -187,17 +187,17 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
-##############################################ACT_percRelativeError_skipzero 75%#########################
+##############################################Root Mean Squared Error: 75%#########################
 printf "\n" >> $output
 for stor1_config in approx_75coverage_gtoswl1 approx_75coverage_gtoswl4 approx_75coverage_gtoswl8 approx_75coverage_gtoswl16 approx_75coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -206,7 +206,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -215,7 +215,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -224,7 +224,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -233,17 +233,17 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
-##############################################ACT_percRelativeError_skipzero 100%#########################
+##############################################Root Mean Squared Error: 100%#########################
 printf "\n" >> $output
 for stor1_config in approx_100coverage_gtoswl1 approx_100coverage_gtoswl4 approx_100coverage_gtoswl8 approx_100coverage_gtoswl16 approx_100coverage_gtoswl48
 do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -252,7 +252,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -261,7 +261,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -270,7 +270,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -279,7 +279,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
+grep "Root Mean Squared Error: " output_* | tail -1 | sed -e "s/Root Mean Squared Error: //g" | xargs printf "%s " >> $output
 done
 
 #############################################################################################bw_util#####################

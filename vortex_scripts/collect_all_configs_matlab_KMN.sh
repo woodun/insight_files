@@ -1392,6 +1392,7 @@ done
 
 ###########################################################################################Root Mean Squared Error:#########################
 ##############################################Root Mean Squared Error: 0%#########################
+printf "\n" >> $output
 for stor1_config in approx_0coverage_gtoswl1 approx_0coverage_gtoswl4 approx_0coverage_gtoswl8 approx_0coverage_gtoswl16 approx_0coverage_gtoswl48
 do
 cd $configs_stor

@@ -1,8 +1,8 @@
 #CUDA 7, BLK SCP on insight.
-for benchmark in CONS FWT LPS TRA
-do
-sh collect_all_configs_matlab.sh $benchmark CUDA
-done
+#for benchmark in CONS FWT LPS TRA
+#do
+#sh collect_all_configs_matlab.sh $benchmark CUDA
+#done
 ######################################################
 ##applications which needs special care:
 

@@ -1,5 +1,6 @@
 #for swl1 case, only gtoswl1(other ones are same as this one) and tl1(this one is unique) is needed, other ones have been removed.
 #!/bin/sh
+#sh launch_all_configs_approx.sh histo parboil
 
 #specify your config path in stor1
 configs_stor1=/stor1/hwang07/approx/

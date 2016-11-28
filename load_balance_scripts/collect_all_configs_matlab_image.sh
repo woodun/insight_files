@@ -12,7 +12,6 @@ output=/stor1/hwang07/profile/collect_matlab/$2_$1.txt
 
 ###########################################################################################RMSE#########################
 ##########################################RMSE 0%#############
-printf "\n" >> $output
 for stor1_config in approx_0coverage_gtoswl1 approx_0coverage_gtoswl4 approx_0coverage_gtoswl8 approx_0coverage_gtoswl16 approx_0coverage_gtoswl48
 do
 cd $configs_stor1

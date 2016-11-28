@@ -290,7 +290,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -299,7 +299,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -308,7 +308,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -317,7 +317,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -326,7 +326,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #################################################################bw_util 12.5%#####################
@@ -336,7 +336,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -345,7 +345,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -354,7 +354,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -363,7 +363,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -372,7 +372,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #################################################################bw_util 25%#####################
@@ -382,7 +382,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -391,7 +391,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -400,7 +400,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -409,7 +409,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -418,7 +418,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #################################################################bw_util 50%#####################
@@ -428,7 +428,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -437,7 +437,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -446,7 +446,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -455,7 +455,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -464,7 +464,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #################################################################bw_util 75%#####################
@@ -474,7 +474,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -483,7 +483,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -492,7 +492,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -501,7 +501,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -510,7 +510,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #################################################################bw_util 100%#####################
@@ -520,7 +520,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -529,7 +529,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -538,7 +538,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -547,7 +547,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -556,7 +556,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "bw_util=[E\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 done
 
 #############################################################################################avg_line_relativeError 0%####################
@@ -567,7 +567,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -576,7 +576,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -585,7 +585,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -594,7 +594,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -603,7 +603,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 ################################################avg_line_relativeError 12.5%####################
@@ -613,7 +613,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -622,7 +622,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -631,7 +631,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -640,7 +640,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -649,7 +649,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 ################################################avg_line_relativeError 25%####################
@@ -659,7 +659,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -668,7 +668,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -677,7 +677,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -686,7 +686,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -695,7 +695,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 ################################################avg_line_relativeError 50%####################
@@ -705,7 +705,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -714,7 +714,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -723,7 +723,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -732,7 +732,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -741,7 +741,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 ################################################avg_line_relativeError 75%####################
@@ -751,7 +751,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -760,7 +760,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -769,7 +769,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -778,7 +778,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -787,7 +787,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 ################################################avg_line_relativeError 100%####################
@@ -797,7 +797,7 @@ do
 cd $configs_stor
 cd $stor1_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -806,7 +806,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -815,7 +815,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -824,7 +824,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 printf "\n" >> $output
@@ -833,7 +833,7 @@ do
 cd $configs_stor
 cd $stor2_config
 cd $2/$1/
-grep -o "average_avg_bias:[E\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
+grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average_avg_bias://g" | xargs printf "   %s " >> $output
 done
 
 #############################################################################################miss count 0%####################

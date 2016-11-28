@@ -8,7 +8,7 @@ configs_stor1=/stor1/hwang07/approx/
 configs_stor2=/stor2/hwang07/approx/
 
 #specify your output file
-output=/stor1/hwang07/profile/collect/$2_$1.txt
+output=/stor1/hwang07/profile/collect_matlab/$2_$1.txt
 
 ###########################################################################################RMSE#########################
 ##########################################RMSE 0%#############

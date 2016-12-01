@@ -12,3 +12,6 @@ do
 cd $configs_stor
 cp -r $template_folder $stor_config
 done
+
+
+###cp -r /sciclone/data10/hwang07/GPU_RESEARCH/insight_files/vortex_template bypass_0coverage_gtoswl48

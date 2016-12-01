@@ -10,3 +10,6 @@ cd $configs_stor
 cd $stor_config
 sh setup_ALL.sh $stor_config
 done
+
+
+###sh setup_ALL.sh bypass_0coverage_gtoswl48

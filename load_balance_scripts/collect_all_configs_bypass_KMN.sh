@@ -8,7 +8,7 @@ configs_stor1=/stor1/hwang07/bypass/
 configs_stor2=/stor2/hwang07/bypass/
 
 #specify your output file
-output=/stor1/hwang07/profile/collect_bypass/$2_$1.txt
+output=/stor1/hwang07/collect_bypass/$2_$1.txt
 
 #############################################################################################bw_util#####################
 #################################################################bw_util 0%#####################

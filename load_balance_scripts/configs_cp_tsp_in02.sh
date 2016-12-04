@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#specify your config path in stor2
+configs_results_stor2=/stor2/hwang07/tsp/
+
+#use this template folder or copy it to your favored location
+template_folder=/stor1/hwang07/insight_files/insight_template
+
+#modify the configs you want to launch on machine in01
+for stor2_config in tsp_address_exp_gtoswl1 tsp_address_exp_gtoswl4 tsp_address_exp_gtoswl8 tsp_address_exp_gtoswl16 tsp_address_exp_gtoswl48 tsp_address_exp_lrrswl1 tsp_address_exp_lrrswl4 tsp_address_exp_lrrswl8 tsp_address_exp_lrrswl16 tsp_address_exp_lrrswl48 tsp_address_exp_RR1 tsp_address_exp_RR4 tsp_address_exp_RR8 tsp_address_exp_RR16 tsp_address_exp_RR48 nocache_tsp_address_exp_gtoswl1 nocache_tsp_address_exp_gtoswl4 nocache_tsp_address_exp_gtoswl8 nocache_tsp_address_exp_gtoswl16 nocache_tsp_address_exp_gtoswl48 nocache_tsp_address_exp_lrrswl1 nocache_tsp_address_exp_lrrswl4 nocache_tsp_address_exp_lrrswl8 nocache_tsp_address_exp_lrrswl16 nocache_tsp_address_exp_lrrswl48 nocache_tsp_address_exp_RR1 nocache_tsp_address_exp_RR4 nocache_tsp_address_exp_RR8 nocache_tsp_address_exp_RR16 nocache_tsp_address_exp_RR48
+do
+cd $configs_results_stor2
+cp -r $template_folder $stor2_config
+done

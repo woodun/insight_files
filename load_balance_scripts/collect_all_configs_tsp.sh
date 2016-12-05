@@ -235,7 +235,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -244,7 +244,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -253,7 +253,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 #############################################################with cache 100
@@ -262,7 +262,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -271,7 +271,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -280,7 +280,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 #############################################################no cache 0
@@ -289,7 +289,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -298,7 +298,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -307,7 +307,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 #############################################################no cache 100
@@ -316,7 +316,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -325,7 +325,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -334,7 +334,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $outputut
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 done
 
 ###########################################################################################ACT_percRelativeError_skipzero#########################
@@ -344,7 +344,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -353,7 +353,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -362,7 +362,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 #############################################################with cache 100
@@ -371,7 +371,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -380,7 +380,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -389,7 +389,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 #############################################################no cache 0
@@ -398,7 +398,7 @@ do
 cd $configs_stor2
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -407,7 +407,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -416,7 +416,7 @@ do
 cd $configs_stor2
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 #############################################################no cache 100
@@ -425,7 +425,7 @@ do
 cd $configs_stor1
 cd $stor1_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -434,7 +434,7 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done
 
 printf "\n" >> $output
@@ -443,5 +443,5 @@ do
 cd $configs_stor1
 cd $stor2_config
 cd $2/$1/
-grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " 
+grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRelativeError_skipzero //g" | xargs printf "%s " >> $output
 done

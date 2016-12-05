@@ -39,6 +39,7 @@ grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | x
 done
 
 #############################################################with cache 100
+printf "\n" >> $output
 for stor1_config in tsp_address_gtoswl1 tsp_address_gtoswl4 tsp_address_gtoswl8 tsp_address_gtoswl16 tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -66,6 +67,7 @@ grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | x
 done
 
 #############################################################no cache 0
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_exp_gtoswl1 nocache_tsp_address_exp_gtoswl4 nocache_tsp_address_exp_gtoswl8 nocache_tsp_address_exp_gtoswl16 nocache_tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -93,6 +95,7 @@ grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | x
 done
 
 #############################################################no cache 100
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_gtoswl1 nocache_tsp_address_gtoswl4 nocache_tsp_address_gtoswl8 nocache_tsp_address_gtoswl16 nocache_tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -121,6 +124,7 @@ done
 
 #############################################################################################avg_line_relativeError 0%####################
 #############################################################with cache 0
+printf "\n" >> $output
 for stor1_config in tsp_address_exp_gtoswl1 tsp_address_exp_gtoswl4 tsp_address_exp_gtoswl8 tsp_address_exp_gtoswl16 tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -148,6 +152,7 @@ grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average
 done
 
 #############################################################with cache 100
+printf "\n" >> $output
 for stor1_config in tsp_address_gtoswl1 tsp_address_gtoswl4 tsp_address_gtoswl8 tsp_address_gtoswl16 tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -175,6 +180,7 @@ grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average
 done
 
 #############################################################no cache 0
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_exp_gtoswl1 nocache_tsp_address_exp_gtoswl4 nocache_tsp_address_exp_gtoswl8 nocache_tsp_address_exp_gtoswl16 nocache_tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -202,6 +208,7 @@ grep -o "average_avg_bias:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/average
 done
 
 #############################################################no cache 100
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_gtoswl1 nocache_tsp_address_gtoswl4 nocache_tsp_address_gtoswl8 nocache_tsp_address_gtoswl16 nocache_tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -230,6 +237,7 @@ done
 
 ############################################################################################################IPC#####################
 #############################################################with cache 0
+printf "\n" >> $output
 for stor1_config in tsp_address_exp_gtoswl1 tsp_address_exp_gtoswl4 tsp_address_exp_gtoswl8 tsp_address_exp_gtoswl16 tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -257,6 +265,7 @@ grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs pr
 done
 
 #############################################################with cache 100
+printf "\n" >> $output
 for stor1_config in tsp_address_gtoswl1 tsp_address_gtoswl4 tsp_address_gtoswl8 tsp_address_gtoswl16 tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -284,6 +293,7 @@ grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs pr
 done
 
 #############################################################no cache 0
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_exp_gtoswl1 nocache_tsp_address_exp_gtoswl4 nocache_tsp_address_exp_gtoswl8 nocache_tsp_address_exp_gtoswl16 nocache_tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -311,6 +321,7 @@ grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs pr
 done
 
 #############################################################no cache 100
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_gtoswl1 nocache_tsp_address_gtoswl4 nocache_tsp_address_gtoswl8 nocache_tsp_address_gtoswl16 nocache_tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -339,6 +350,7 @@ done
 
 ###########################################################################################ACT_percRelativeError_skipzero#########################
 #############################################################with cache 0
+printf "\n" >> $output
 for stor1_config in tsp_address_exp_gtoswl1 tsp_address_exp_gtoswl4 tsp_address_exp_gtoswl8 tsp_address_exp_gtoswl16 tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -366,6 +378,7 @@ grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRe
 done
 
 #############################################################with cache 100
+printf "\n" >> $output
 for stor1_config in tsp_address_gtoswl1 tsp_address_gtoswl4 tsp_address_gtoswl8 tsp_address_gtoswl16 tsp_address_gtoswl48
 do
 cd $configs_stor1
@@ -393,6 +406,7 @@ grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRe
 done
 
 #############################################################no cache 0
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_exp_gtoswl1 nocache_tsp_address_exp_gtoswl4 nocache_tsp_address_exp_gtoswl8 nocache_tsp_address_exp_gtoswl16 nocache_tsp_address_exp_gtoswl48
 do
 cd $configs_stor2
@@ -420,6 +434,7 @@ grep "ACT_percRelativeError_skipzero " output_* | tail -1 | sed -e "s/ACT_percRe
 done
 
 #############################################################no cache 100
+printf "\n" >> $output
 for stor1_config in nocache_tsp_address_gtoswl1 nocache_tsp_address_gtoswl4 nocache_tsp_address_gtoswl8 nocache_tsp_address_gtoswl16 nocache_tsp_address_gtoswl48
 do
 cd $configs_stor1

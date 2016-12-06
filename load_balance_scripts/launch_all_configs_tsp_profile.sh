@@ -8,6 +8,8 @@
 #specify your config path in stor1
 configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
 
+: <<'END'
+
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
@@ -46,7 +48,7 @@ done
 
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT Blackscholes LPS RAY KMN CP BFS BFS2 NN kmeans
+for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP BFS BFS2 NN kmeans
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -56,6 +58,18 @@ done
 cd $configs_stor1
 cd Mars
 for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
+do
+cd $benchmark
+qsub pbs_$benchmark.pbs
+cd ..
+done
+
+END
+
+
+cd $configs_stor1
+cd CUDA
+for benchmark in BlackScholes LPS RAY KMN CP BFS BFS2 NN kmeans
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

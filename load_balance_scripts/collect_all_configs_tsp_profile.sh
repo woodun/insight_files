@@ -8,6 +8,9 @@
 #specify your config path in stor1
 configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
 
+#specify your output file
+output=/stor1/hwang07/collect_tsp_profile.txt
+
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM

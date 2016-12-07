@@ -18,6 +18,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 
@@ -28,6 +29,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 
@@ -38,6 +40,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 
@@ -48,6 +51,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 
@@ -58,6 +62,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 
@@ -68,6 +73,7 @@ do
 cd $benchmark
 pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+printf "%s" $benchmark >> $output
 cd ..
 done
 ######################################################################################################################################################################

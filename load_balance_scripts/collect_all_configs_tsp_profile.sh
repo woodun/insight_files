@@ -17,6 +17,7 @@ for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDT
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -27,6 +28,7 @@ for benchmark in QTC Spmv BFS MD Triad Stencil2D Scan Reduction
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -37,6 +39,7 @@ for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -47,6 +50,7 @@ for benchmark in lbm spmv histo
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -57,6 +61,7 @@ for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP BFS BFS2 
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -67,6 +72,7 @@ for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex Si
 do
 cd $benchmark
 pwd
+printf "%s" $benchmark >> $output
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done

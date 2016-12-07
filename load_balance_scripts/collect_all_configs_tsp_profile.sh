@@ -16,6 +16,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -25,6 +26,7 @@ cd shoc
 for benchmark in QTC Spmv BFS MD Triad Stencil2D Scan Reduction
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -34,6 +36,7 @@ cd rodinia
 for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -43,6 +46,7 @@ cd parboil
 for benchmark in lbm spmv histo
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -52,6 +56,7 @@ cd CUDA
 for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP BFS BFS2 NN kmeans
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done
@@ -61,6 +66,7 @@ cd Mars
 for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
 do
 cd $benchmark
+pwd
 grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
 cd ..
 done

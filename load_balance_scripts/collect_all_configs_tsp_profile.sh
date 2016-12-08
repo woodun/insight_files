@@ -77,7 +77,6 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
 do
 cd $benchmark
-printf "%s" $benchmark >> $output
 grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
 cd ..
 done

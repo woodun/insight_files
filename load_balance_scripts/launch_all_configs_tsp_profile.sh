@@ -1,8 +1,8 @@
 #!/bin/sh
 
-#cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/tsp_address_exp_gtoswl48_profile
-#cd tsp_address_exp_gtoswl48_profile
-#sh setup_ALL.sh tsp_address_exp_gtoswl48_profile
+#cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/tsp_address_exp_gtoswl48_alloff
+#cd tsp_address_exp_gtoswl48_alloff
+#sh setup_ALL.sh tsp_address_exp_gtoswl48_alloff
 ###################################################################################
 
 #specify your config path in stor1
@@ -65,7 +65,6 @@ cd ..
 done
 
 END
-
 
 cd $configs_stor1
 cd CUDA

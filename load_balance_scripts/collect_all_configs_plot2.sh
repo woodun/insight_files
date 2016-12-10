@@ -9,8 +9,8 @@
 configs_stor11=/stor1/hwang07/approx/approx_125coverage_gtoswl48
 configs_stor12=/stor1/hwang07/approx/approx_25coverage_gtoswl48
 
-configs_stor23=/stor1/hwang07/approx/approx_50coverage_gtoswl48
-configs_stor24=/stor1/hwang07/approx/approx_75coverage_gtoswl48
+configs_stor23=/stor2/hwang07/approx/approx_50coverage_gtoswl48
+configs_stor24=/stor2/hwang07/approx/approx_75coverage_gtoswl48
 
 configs_stor31=/stor1/hwang07/plot2/plot2_125gto48
 configs_stor32=/stor1/hwang07/plot2/plot2_25gto48
@@ -20,7 +20,7 @@ configs_stor34=/stor1/hwang07/plot2/plot2_50gto48
 #specify your output file
 output=/stor1/hwang07/plot2.txt
 
-for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor1/hwang07/approx/approx_50coverage_gtoswl48 /stor1/hwang07/approx/approx_75coverage_gtoswl48
+for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor2/hwang07/approx/approx_50coverage_gtoswl48 /stor2/hwang07/approx/approx_75coverage_gtoswl48
 do
 
 cd $configs_stor1
@@ -79,7 +79,7 @@ done
 ######################################################################################################################################################################
 
 
-for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor1/hwang07/approx/approx_50coverage_gtoswl48 /stor1/hwang07/approx/approx_75coverage_gtoswl48
+for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor2/hwang07/approx/approx_50coverage_gtoswl48 /stor2/hwang07/approx/approx_75coverage_gtoswl48
 do
 
 cd $configs_stor1

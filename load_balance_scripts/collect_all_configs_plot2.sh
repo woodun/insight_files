@@ -6,293 +6,123 @@
 ###################################################################################
 
 #specify your config path in stor1
-configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
+configs_stor11=/stor1/hwang07/approx/approx_125coverage_gtoswl48
+configs_stor12=/stor1/hwang07/approx/approx_25coverage_gtoswl48
+
+configs_stor23=/stor1/hwang07/approx/approx_50coverage_gtoswl48
+configs_stor24=/stor1/hwang07/approx/approx_75coverage_gtoswl48
+
+configs_stor31=/stor1/hwang07/plot2/plot2_125gto48
+configs_stor32=/stor1/hwang07/plot2/plot2_25gto48
+configs_stor33=/stor1/hwang07/plot2/plot2_50gto48
+configs_stor34=/stor1/hwang07/plot2/plot2_50gto48
 
 #specify your output file
-output=/stor1/hwang07/collect_tsp_profile.txt
+output=/stor1/hwang07/plot2.txt
+
+for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor1/hwang07/approx/approx_50coverage_gtoswl48 /stor1/hwang07/approx/approx_75coverage_gtoswl48
+do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM 
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 cd ..
 done
 
 cd $configs_stor1
 cd shoc
-for benchmark in Spmv MD Triad
+for benchmark in Triad
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 cd ..
 done
 
 cd $configs_stor1
 cd rodinia
-for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
+for benchmark in srad_v1
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
 cd ..
 done
 
 cd $configs_stor1
 cd parboil
-for benchmark in lbm spmv histo
+for benchmark in histo
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
+cd ..
+done
+
+printf "\r\n" >> $output
+
+done
+
+#cd $configs_stor1
+#cd CUDA
+#for benchmark in TRA SCP CONS FWT BlackScholes LPS KMN
+#do
+#cd $benchmark
+#pwd
+#grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
+#cd ..
+#done
+######################################################################################################################################################################
+
+
+for configs_stor1 in /stor1/hwang07/approx/approx_125coverage_gtoswl48 /stor1/hwang07/approx/approx_25coverage_gtoswl48 /stor1/hwang07/approx/approx_50coverage_gtoswl48 /stor1/hwang07/approx/approx_75coverage_gtoswl48
+do
+
+cd $configs_stor1
+cd polybench
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM 
+do
+cd $benchmark
+pwd
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
 cd ..
 done
 
 cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP NN kmeans
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
 cd ..
 done
 
 cd $configs_stor1
-cd Mars
-for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
+cd rodinia
+for benchmark in srad_v1
 do
 cd $benchmark
 pwd
-grep -o "bw_util=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/bw_util=//g" | xargs printf "   %s " >> $output
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
 cd ..
+done
+
+cd $configs_stor1
+cd parboil
+for benchmark in histo
+do
+cd $benchmark
+pwd
+grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
+cd ..
+done
+
+printf "\r\n" >> $output
+
 done
 ######################################################################################################################################################################
-printf "\n" >> $output
-cd $configs_stor1
-cd polybench
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd shoc
-for benchmark in Spmv MD Triad
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd rodinia
-for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd parboil
-for benchmark in lbm spmv histo
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP NN kmeans
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd Mars
-for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
-do
-cd $benchmark
-grep -o "n_rd=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_rd=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-######################################################################################################################################################################
-printf "\n" >> $output
-cd $configs_stor1
-cd polybench
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd shoc
-for benchmark in Spmv MD Triad
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd rodinia
-for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd parboil
-for benchmark in lbm spmv histo
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP NN kmeans
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd Mars
-for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
-do
-cd $benchmark
-grep -o "n_write=[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/n_write=//g" | xargs printf "   %s " >> $output
-cd ..
-done
-######################################################################################################################################################################
-printf "\n" >> $output
-cd $configs_stor1
-cd polybench
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd shoc
-for benchmark in Spmv MD Triad
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd rodinia
-for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd parboil
-for benchmark in lbm spmv histo
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP NN kmeans
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd Mars
-for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
-do
-cd $benchmark
-grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs printf "%s " >> $output
-cd ..
-done
-######################################################################################################################################################################
-printf "\n" >> $output
-cd $configs_stor1
-cd polybench
-for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM SYR2K FDTD-2D GRAMSCHM
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd shoc
-for benchmark in Spmv MD Triad
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd rodinia
-for benchmark in nw lud srad_v1 srad_v2 hotspot pf_float backprop
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd parboil
-for benchmark in lbm spmv histo
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA SCP JPEG CONS FWT BlackScholes LPS RAY KMN CP NN kmeans
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done
-
-cd $configs_stor1
-cd Mars
-for benchmark in PageViewCount MatrixMul PageViewRank WordCount InvertedIndex SimilarityScore Kmeans
-do
-cd $benchmark
-pwd
-grep "Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =" output_* | tail -1 | sed -e "s/Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =//g" | xargs printf "   %s " >> $output
-cd ..
-done

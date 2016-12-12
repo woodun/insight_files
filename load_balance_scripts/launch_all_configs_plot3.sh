@@ -14,8 +14,8 @@ do
 #FDTD-2D(good, ready)
 #GRAMSCHM(branch divergence)
 #SYR2K(good, ready)
-#cd $configs_stor1
-#cd polybench
+cd $configs_stor1
+cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark

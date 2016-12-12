@@ -8,7 +8,7 @@
 #specify your config path in stor1
 #configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
 
-for configs_stor1 in /stor1/hwang07/plot3/plot3_gto48 /stor1/hwang07/plot3/plot3_lrr48 /stor1/hwang07/plot3/plot3_RR48
+for configs_stor1 in /stor1/hwang07/plot3/plot3_gto48 /stor2/hwang07/plot3/plot3_lrr48 /stor2/hwang07/plot3/plot3_RR48
 do
 
 #FDTD-2D(good, ready)
@@ -23,9 +23,9 @@ qsub pbs_$benchmark.pbs
 cd ..
 done
 
-#Spmv(unfixable) MD(unfixable) Stencil2D(need metric, only ACT_percLossInQoR NAN now) Reduction(need metric)
+#Spmv(unfixable) MD(unfixable) Stencil2D(need metric, only has ACT_percLossInQoR NAN now) Reduction(need metric)
 #Scan(ERROR: Failed to execute:)
-#QTC(Assertion `pI->get_opcode() == LD_OP' failed.)
+#QTC(corrupted double-linked list:)
 cd $configs_stor1
 cd shoc
 for benchmark in Triad
@@ -36,8 +36,8 @@ cd ..
 done
 
 #srad_v2(need metric)
-#backprop lud hotspot
-#nw(Assertion `pI->get_opcode() == LD_OP' failed.)
+#backprop lud hotspot(not interesting.)
+#nw(good. metric needed.)
 #pf_float(Assertion `t != m_TextureRefToCudaArray.end()' failed.)
 cd $configs_stor1
 cd rodinia

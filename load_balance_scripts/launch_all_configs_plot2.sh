@@ -25,20 +25,22 @@ do
 #done
 
 #Triad Scan(Assertion `pI->get_opcode() == LD_OP' failed.)
-QTC(Assertion `pI->get_opcode() == LD_OP' failed.)
+#QTC(Assertion `pI->get_opcode() == LD_OP' failed.)
 cd $configs_stor1
 cd shoc
-for benchmark in  Spmv MD Stencil2D Reduction
+for benchmark in  Spmv(unfixable) MD(unfixable) Stencil2D(need metric, only ACT_percLossInQoR NAN now) Reduction(need metric)
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
 
-#srad_v1 backprop lud hotspot nw(Assertion `pI->get_opcode() == LD_OP' failed.)
+#srad_v1 backprop lud hotspot
+#nw(Assertion `pI->get_opcode() == LD_OP' failed.)
+#pf_float(Assertion `t != m_TextureRefToCudaArray.end()' failed.)
 cd $configs_stor1
 cd rodinia
-for benchmark in nw srad_v2 pf_float
+for benchmark in srad_v2(need metric)
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -48,7 +50,7 @@ done
 # histo
 cd $configs_stor1
 cd parboil
-for benchmark in lbm spmv
+for benchmark in lbm(segfault, but have output, try to have metric) spmv(Cannot open output file, but it seems fine, see ipc and try metric)
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -58,7 +60,7 @@ done
 #SLA CP TRA SCP CONS FWT LPS KMN NN(Assertion `pI->get_opcode() == LD_OP' failed.)
 cd $configs_stor1
 cd CUDA
-for benchmark in JPEG RAY kmeans BlackScholes
+for benchmark in JPEG(add it to see ipc) RAY(image changes now, GOLDoutput.bmp is missing, try) kmeans(seems good, try) BlackScholes(good, ready)
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -66,14 +68,15 @@ cd ..
 done
 
 #PageViewCount(./Gen: No such file or directory. Assertion `pI->get_opcode() == LD_OP' failed.) 
-#MatrixMul(Assertion `pI->get_opcode() == LD_OP' failed.)Kmeans(Assertion `space.get_type() == global_space' failed.)
+#MatrixMul(Assertion `pI->get_opcode() == LD_OP' failed.)
+#Kmeans(Assertion `space.get_type() == global_space' failed.)
 #InvertedIndex (cat sample/1.html >> data/1.html. cat: sample/1.html: No such file or directory. Assertion `space.get_type() == global_space' failed.)
 #PageViewRank (./Gen: No such file or directory. Assertion `pI->get_opcode() == LD_OP' failed.)
 #SimilarityScore (Assertion `pI->get_opcode() == LD_OP' failed. Illegal instruction)
 #WordCount (cat: sample: No such file or directory)
 cd $configs_stor1
 cd Mars
-for benchmark in Kmeans
+for benchmark in
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

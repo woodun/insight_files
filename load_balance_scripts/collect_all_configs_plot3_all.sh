@@ -63,7 +63,7 @@ grep "gpu_tot_ipc =" output_* | tail -1 | sed -e "s/gpu_tot_ipc =//g" | xargs pr
 cd ..
 done
 
-printf "/r/n" >> $output
+printf "\r\n" >> $output
 done
 ######################################################################################################################################################################
 
@@ -120,7 +120,7 @@ grep -o "coverage_any_percent:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/cov
 cd ..
 done
 
-printf "/r/n" >> $output
+printf "\r\n" >> $output
 done
 ######################################################################################################################################################################
 
@@ -177,7 +177,7 @@ grep -o "evict_count_all:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/evict_co
 cd ..
 done
 
-printf "/r/n" >> $output
+printf "\r\n" >> $output
 done
 ######################################################################################################################################################################
 
@@ -234,7 +234,7 @@ grep -o "update_count_all:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/update_
 cd ..
 done
 
-printf "/r/n" >> $output
+printf "\r\n" >> $output
 done
 ######################################################################################################################################################################
 
@@ -291,5 +291,5 @@ grep "ACT_percRelativeError_skipzero" output_* | tail -1 | sed -e "s/ACT_percRel
 cd ..
 done
 
-printf "/r/n" >> $output
+printf "\r\n" >> $output
 done

@@ -15,7 +15,7 @@ do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 pwd
@@ -55,7 +55,7 @@ done
 
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS KMN BlackScholes
+for benchmark in TRA SCP CONS FWT BlackScholes LPS KMN 
 do
 cd $benchmark
 pwd
@@ -72,7 +72,7 @@ do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 pwd
@@ -129,7 +129,7 @@ do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 pwd
@@ -186,7 +186,7 @@ do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 pwd
@@ -243,7 +243,7 @@ do
 
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM SYRK 3MM ATAX BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 pwd
@@ -283,7 +283,7 @@ done
 
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS KMN BlackScholes
+for benchmark in TRA SCP CONS FWT BlackScholes LPS KMN
 do
 cd $benchmark
 pwd

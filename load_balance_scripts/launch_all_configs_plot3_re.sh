@@ -1,14 +1,14 @@
 #!/bin/sh
 
-#cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/plot2/plot2_125gto48
-#cd tsp_address_exp_gtoswl48_profile
-#sh setup_ALL.sh approx_125coverage_gtoswl48
+#cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/plot3/plot3_gto48
+#cd plot3_gto48
+#sh setup_ALL.sh plot3_gto48
 ###################################################################################
 
 #specify your config path in stor1
 #configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
 
-for configs_stor1 in /stor1/hwang07/plot2/plot2_125gto48 /stor1/hwang07/plot2/plot2_25gto48 /stor1/hwang07/plot2/plot2_50gto48 /stor1/hwang07/plot2/plot2_75gto48
+for configs_stor1 in /stor1/hwang07/plot3/plot3_gto48 /stor2/hwang07/plot3/plot3_lrr48 /stor2/hwang07/plot3/plot3_RR48
 do
 
 #FDTD-2D(good, ready)
@@ -26,10 +26,9 @@ done
 #Spmv(unfixable) MD(unfixable) Stencil2D(need metric, only has ACT_percLossInQoR NAN now, add noskip) Reduction(need metric, already has diff, should be easy)
 #Scan(ready)
 #QTC(corrupted double-linked list:)
-#Spmv MD Stencil2D Reduction
 cd $configs_stor1
 cd shoc
-for benchmark in Scan
+for benchmark in Scan Spmv MD Stencil2D Reduction
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -40,10 +39,9 @@ done
 #backprop lud hotspot(not interesting.)
 #nw(good. metric needed.)
 #pf_float(Assertion `t != m_TextureRefToCudaArray.end()' failed.)
-#srad_v2
 cd $configs_stor1
 cd rodinia
-for benchmark in srad_v1 nw
+for benchmark in srad_v1 nw srad_v2
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -51,10 +49,9 @@ cd ..
 done
 
 #lbm(segfault, but have output, try to have metric) spmv(Cannot open output file, but it seems fine, see ipc and try metric)
-#lbm spmv
 cd $configs_stor1
 cd parboil
-for benchmark in 
+for benchmark in lbm spmv
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -65,10 +62,9 @@ done
 #SLA(good, ready)
 #CP(no metric and not interesting)
 #NN(good, metric needed)
-#JPEG RAY kmeans
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA NN
+for benchmark in SLA NN JPEG RAY kmeans
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

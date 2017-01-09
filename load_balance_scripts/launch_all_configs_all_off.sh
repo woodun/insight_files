@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #cp -r /stor1/hwang07/insight_files/insight_template /stor2/hwang07/all_off_S/all_off_gto48
-#cd dynamic_gto48
+#cd all_off_gto48
 #sh setup_ALL.sh tsp_address_exp_gtoswl48_alloff
 
 ###################################################################################
@@ -64,23 +64,6 @@ done
 cd $configs_stor1
 cd CUDA
 for benchmark in TRA SCP CONS FWT LPS KMN BlackScholes SLA NN JPEG RAY kmeans
-do
-cd $benchmark
-qsub pbs_$benchmark.pbs
-cd ..
-done
-
-#PageViewCount(ERROR * access to memory 'global' is unaligned) 
-
-#Kmeans(Assertion `isspace_shared(smid, addr)' failed.)
-#InvertedIndex (addr_t generic_to_shared(unsigned int, addr_t): Assertion `isspace_shared(smid, addr)' failed.)
-#PageViewRank (Assertion `block_address == line_size_based_tag_func(addr+data_size_coales-1,segment_size)' failed.)
-#SimilarityScore (Assertion `isspace_shared(smid, addr)' failed.)
-#WordCount (Assertion `isspace_shared(smid, addr)' failed.)
-#MatrixMul(Assertion `isspace_shared(smid, addr)' failed)
-cd $configs_stor1
-cd Mars
-for benchmark in
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

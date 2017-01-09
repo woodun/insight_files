@@ -72,21 +72,4 @@ qsub pbs_$benchmark.pbs
 cd ..
 done
 
-#PageViewCount(ERROR * access to memory 'global' is unaligned) 
-
-#Kmeans(Assertion `isspace_shared(smid, addr)' failed.)
-#InvertedIndex (addr_t generic_to_shared(unsigned int, addr_t): Assertion `isspace_shared(smid, addr)' failed.)
-#PageViewRank (Assertion `block_address == line_size_based_tag_func(addr+data_size_coales-1,segment_size)' failed.)
-#SimilarityScore (Assertion `isspace_shared(smid, addr)' failed.)
-#WordCount (seems good)
-#MatrixMul(good)
-cd $configs_stor1
-cd Mars
-for benchmark in MatrixMul WordCount
-do
-cd $benchmark
-qsub pbs_$benchmark.pbs
-cd ..
-done
-
 done

@@ -1,5 +1,11 @@
 #!/bin/sh
 
+ERROR: Failed to execute: $CUDA_INSTALL_PATH/bin/cuobjdump -ptx -elf -sass /stor2/sparsh/applications/benchmarks/shoc/bin/Serial/CUDA/Spmv > _cuobjdump_complete_output_SCtvWZ
+cannot get section: .strtab
+cannot get section: .shstrtab
+cannot get section: .symtab 
+cuobjdump error   : Disassembler for architecture sm_0 could not be found
+
 #cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/dynamic_profile_S/dynamic_on_gto48
 #cp -r /stor1/hwang07/insight_files/insight_template /stor1/hwang07/dynamic_profile_S/dynamic_off_gto48
 #cp -r /stor1/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_profile_S/dynamic_on_RR48

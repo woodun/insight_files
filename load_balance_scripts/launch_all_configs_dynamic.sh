@@ -12,8 +12,6 @@
 ###################################################################################
 
 #specify your config path in stor1
-#configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
-
 for configs_stor1 in /stor1/hwang07/dynamic_S/dynamic_gto48 /stor1/hwang07/dynamic_S/dynamic_lrr48 /stor1/hwang07/dynamic_S/dynamic_RR48
 do
 

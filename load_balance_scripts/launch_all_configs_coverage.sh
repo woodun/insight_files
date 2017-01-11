@@ -20,8 +20,6 @@
 #####################################################
 
 #specify your config path in stor1
-#configs_stor1=/stor1/hwang07/tsp_address_exp_gtoswl48_profile/
-
 for configs_stor1 in /stor2/hwang07/plot2_S/plot2_125coverage_gto48 /stor2/hwang07/plot2_S/plot2_25coverage_gto48 /stor2/hwang07/plot2_S/plot2_50coverage_gto48 /stor2/hwang07/plot2_S/plot2_75coverage_gto48 /stor2/hwang07/plot2_S/plot2_100coverage_gto48
 do
 

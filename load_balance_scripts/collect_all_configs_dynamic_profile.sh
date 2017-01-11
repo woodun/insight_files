@@ -26,7 +26,7 @@ do
 cd $benchmark
 grep -o "sum_count:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/sum_count://g" | xargs printf "0%s " >> $output
 cd ..
-done*
+done
 
 printf "\r\n" >> $output
 done
@@ -55,7 +55,7 @@ do
 cd $benchmark
 grep -o "avg_abs_stride_diff_sn:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_sn://g" | xargs printf "0%s " >> $output
 cd ..
-done*
+done
 
 printf "\r\n" >> $output
 done
@@ -84,7 +84,7 @@ do
 cd $benchmark
 grep -o "avg_abs_stride_diff_s1:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_s1://g" | xargs printf "0%s " >> $output
 cd ..
-done*
+done
 
 printf "\r\n" >> $output
 done

@@ -18,7 +18,6 @@ for configs_stor1 in /stor1/hwang07/dynamic_S/dynamic_gto48 /stor1/hwang07/dynam
 do
 
 #13
-#2DCONV 1s
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K

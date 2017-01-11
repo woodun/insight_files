@@ -3,7 +3,7 @@
 #specify your output file
 output=/stor1/hwang07/all_off.txt
 
-for statistics in 'gpu_tot_ipc:' 'bwutil_global_read=' 'bwutil_global_write=' 'predictable to miss rate:' 'predictable to access rate:' 'evict_to_update_rate_all:' 'evict_to_access_rate_all:' 'miss_count_all:' 'predictable lines:'
+for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write='
 do
 
 #specify your config path in stor1

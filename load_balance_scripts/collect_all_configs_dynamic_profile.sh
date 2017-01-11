@@ -13,7 +13,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-grep -o "sum_count:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/sum_count://g" | xargs printf "0%s " >> $output
+grep -o "sum_count:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/sum_count://g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -24,7 +24,7 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
-grep -o "sum_count:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/sum_count://g" | xargs printf "0%s " >> $output
+grep -o "sum_count:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/sum_count://g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -42,7 +42,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-grep -o "avg_abs_stride_diff_sn:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_sn://g" | xargs printf "0%s " >> $output
+grep -o "avg_abs_stride_diff_sn:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_sn://g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -53,7 +53,7 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
-grep -o "avg_abs_stride_diff_sn:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_sn://g" | xargs printf "0%s " >> $output
+grep -o "avg_abs_stride_diff_sn:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_sn://g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -71,7 +71,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-grep -o "avg_abs_stride_diff_s1:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_s1://g" | xargs printf "0%s " >> $output
+grep -o "avg_abs_stride_diff_s1:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_s1://g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -82,7 +82,7 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
-grep -o "avg_abs_stride_diff_s1:[eE\-\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_s1://g" | xargs printf "0%s " >> $output
+grep -o "avg_abs_stride_diff_s1:[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/avg_abs_stride_diff_s1://g" | xargs printf "0%s " >> $output
 cd ..
 done
 

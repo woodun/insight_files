@@ -33,11 +33,29 @@ qsub pbs_$benchmark.pbs
 cd ..
 done
 
-#figures: JPEG RAY srad_v1 histo
+#figures: srad_v1 histo JPEG RAY
 #7
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
+for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA JPEG RAY
+do
+cd $benchmark
+qsub pbs_$benchmark.pbs
+cd ..
+done
+
+cd $configs_stor1
+cd rodinia
+for benchmark in srad_v1
+do
+cd $benchmark
+qsub pbs_$benchmark.pbs
+cd ..
+done
+
+cd $configs_stor1
+cd parboil
+for benchmark in histo
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

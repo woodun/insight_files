@@ -1,13 +1,13 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/dynamic_profile.txt
+output=/stor1/hwang07/paper_collection/tsp_profile1.txt
 
-for statistics in 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:'
+for statistics in 'gpu_tot_ipc =' 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in /stor1/hwang07/dynamic_profile_S/dynamic_on_gto48 /stor1/hwang07/dynamic_profile_S/dynamic_off_gto48 /stor2/hwang07/dynamic_profile_S/dynamic_on_RR48 /stor2/hwang07/dynamic_profile_S/dynamic_off_RR48
+for configs_stor1 in /stor2/hwang07/tsp_profile_S/tsp_profile_gto48 /stor2/hwang07/tsp_profile_S/tsp_profile_lrr48 /stor2/hwang07/tsp_profile_S/tsp_profile_RR48 /stor2/hwang07/tsp_profile_S/tsp_profile_swl1
 do
 
 #13

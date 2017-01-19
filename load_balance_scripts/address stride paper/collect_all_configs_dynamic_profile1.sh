@@ -1,13 +1,13 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/dynamic.txt
+output=/stor1/hwang07/paper_collection/dynamic_profile1.txt
 
-for statistics in 'gpu_tot_ipc:' 'bwutil_global_read=' 'bwutil_global_write=' 'predictable to miss rate:' 'predictable to access rate:' 'evict_to_update_rate_all:' 'evict_to_access_rate_all:' 'miss_count_all:' 'predictable lines:'
+for statistics in 'gpu_tot_ipc =' 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in /stor1/hwang07/dynamic_S/dynamic_gto48 /stor1/hwang07/dynamic_S/dynamic_lrr48 /stor1/hwang07/dynamic_S/dynamic_RR48
+for configs_stor1 in /stor2/hwang07/dynamic_profile_S/dynamic_profile_gto48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_lrr48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_RR48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_swl1
 do
 
 #13

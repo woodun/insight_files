@@ -17,10 +17,9 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-if [[ -s $benchmark\_CPU.txt ]]; then 
-pwd
-echo 'ok'
+if [[ -s $benchmark\_CPU.txt ]]; then
 else
+pwd
 pwd | xargs printf "%s " >> $output
 fi
 cd ..
@@ -34,9 +33,8 @@ for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then
-pwd
-echo 'ok'
 else
+pwd
 pwd | xargs printf "%s " >> $output
 fi
 cd ..

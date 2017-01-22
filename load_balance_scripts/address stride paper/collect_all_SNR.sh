@@ -11,6 +11,8 @@ mkdir dynamic1
 mkdir spatial_osp1
 mkdir warp_partition_osp1
 
+cd -
+
 sh collect_all_configs_coverage_osp1_SNR.sh
 sh collect_all_configs_coverage_osp3_SNR.sh
 sh collect_all_configs_coverage_tsp1_SNR.sh

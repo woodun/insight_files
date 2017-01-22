@@ -5,7 +5,7 @@
 #sh setup_ALL.sh all_off_lrr48
 
 ###################################################################################
-output=stor1/hwang07/relaunch.txt
+output=/home/hwang07/stor1/relaunch.txt
 
 #specify your config path in stor2
 for configs_stor1 in /stor2/hwang07/all_off_S/all_off_lrr48 /stor2/hwang07/all_off_S/all_off_RR48 /stor2/hwang07/all_off_S/all_off_swl1

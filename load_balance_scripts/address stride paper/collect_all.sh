@@ -1,5 +1,9 @@
 #!/bin/sh
 
+cd /stor1/hwang07/paper_collection
+rm *
+cd..
+
 sh collect_all_configs_all_off1.sh
 sh collect_all_configs_all_off2.sh
 sh collect_all_configs_coverage_osp1.sh

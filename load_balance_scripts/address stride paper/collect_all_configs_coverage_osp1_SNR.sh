@@ -27,8 +27,8 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
-cp $source/$configs_stor1/polybench/$benchmark/*_CPU.txt $output/$configs_stor1/
-cp $source/$configs_stor1/polybench/$benchmark/*_GPU.txt $output/$configs_stor1/
+cp $source/$configs_stor1/CUDA/$benchmark/*_CPU.txt $output/$configs_stor1/
+cp $source/$configs_stor1/CUDA/$benchmark/*_GPU.txt $output/$configs_stor1/
 cd ..
 done
 

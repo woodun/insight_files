@@ -6,7 +6,7 @@ for dirs in `ls`
 do
 
 cd $dirs
-#sh setup_ALL.sh dirs
+sh setup_ALL.sh $dirs
 pwd
 cd ..
 

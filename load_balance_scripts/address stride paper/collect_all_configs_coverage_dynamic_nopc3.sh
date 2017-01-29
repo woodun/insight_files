@@ -7,7 +7,7 @@ for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write=' '
 do
 
 #specify your config path in stor1
-for configs_stor1 in /stor2/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_gto48 /stor2/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_lrr48 /stor2/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_RR48
+for configs_stor1 in /stor1/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_gto48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_lrr48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_RR48
 do
 
 #13

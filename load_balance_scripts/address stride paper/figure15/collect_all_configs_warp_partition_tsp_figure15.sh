@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/collect_all_configs_warp_partition_osp_figure15.txt
+output=/stor1/hwang07/paper_collection/collect_all_configs_warp_partition_tsp_figure15.txt
 
 for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write=' 'Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =' 'predictor coverage0:'
 do

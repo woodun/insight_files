@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sh collect_all_configs_coverage_osp_figure15_SNR.sh
+sh collect_all_configs_coverage_tsp_figure15_SNR.sh
+sh collect_all_configs_coverage_osp_nopc_figure15_SNR.sh
+sh collect_all_configs_coverage_osp_nopc_figure15_SNR.sh
+sh collect_all_configs_warp_partition_osp_figure15_SNR.sh
+sh collect_all_configs_warp_partition_tsp_figure15_SNR.sh

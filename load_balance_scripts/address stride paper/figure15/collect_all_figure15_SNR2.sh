@@ -1,5 +1,23 @@
 #!/bin/sh
 
+cd /stor1/hwang07/SNR_collection
+
+rm -r coverage_osp_fig15
+rm -r coverage_tsp_fig15
+rm -r coverage_osp_nopc_fig15
+rm -r coverage_tsp_nopc_fig15
+rm -r warp_partition_osp_fig15
+rm -r warp_partition_tsp_fig15
+
+mkdir coverage_osp_fig15
+mkdir coverage_tsp_fig15
+mkdir coverage_osp_nopc_fig15
+mkdir coverage_tsp_nopc_fig15
+mkdir warp_partition_osp_fig15
+mkdir warp_partition_tsp_fig15
+
+cd -
+
 sh collect_all_configs_coverage_osp_figure15_SNR.sh
 sh collect_all_configs_coverage_tsp_figure15_SNR.sh
 sh collect_all_configs_coverage_osp_nopc_figure15_SNR.sh

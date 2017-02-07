@@ -3,7 +3,7 @@
 #specify your output file
 output=/stor1/hwang07/paper_collection/coverage_dynamic_nopc4.txt
 
-for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write=' 'Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =' 'predictor coverage0:' 'ACT_percRelativeError ' 'predictable lines:' 'evict_to_update_rate_all:' 'evict_to_access_rate_all:'
+for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write=' 'Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =' 'predictor coverage0:' 'ACT_percRelativeError ' 'average_avg_bias:' 'predictable lines:' 'evict_to_update_rate_all:' 'evict_to_access_rate_all:'
 do
 
 #specify your config path in stor1

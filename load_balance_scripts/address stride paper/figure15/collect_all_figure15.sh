@@ -16,3 +16,6 @@ sh collect_all_configs_coverage_osp_nopc_figure15.sh
 sh collect_all_configs_coverage_tsp_nopc_figure15.sh
 sh collect_all_configs_warp_partition_osp_figure15.sh
 sh collect_all_configs_warp_partition_tsp_figure15.sh
+
+sh collect_all_configs_warp_partition2_osp_figure15.sh
+sh collect_all_configs_warp_partition2_tsp_figure15.sh

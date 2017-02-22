@@ -1,0 +1,23 @@
+#!/bin/sh
+
+cd /stor1/hwang07/paper_collection
+rm *
+cd -
+
+sh collect_all_configs_all_off1.sh
+sh collect_all_configs_all_off2.sh
+sh collect_all_configs_coverage_osp1.sh
+sh collect_all_configs_coverage_osp2.sh
+sh collect_all_configs_coverage_osp3.sh
+sh collect_all_configs_coverage_tsp1.sh
+sh collect_all_configs_dynamic_nopc_profile1.sh
+sh collect_all_configs_dynamic_nopc1.sh
+sh collect_all_configs_dynamic_profile1.sh
+sh collect_all_configs_dynamic_profile2.sh
+sh collect_all_configs_dynamic1.sh
+sh collect_all_configs_osp_profile1.sh
+sh collect_all_configs_spatial_osp_profile1.sh
+sh collect_all_configs_spatial_osp1.sh
+sh collect_all_configs_tsp_profile1.sh
+sh collect_all_configs_warp_partition_osp_profile1.sh
+sh collect_all_configs_warp_partition_osp1.sh

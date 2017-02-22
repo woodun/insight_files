@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#sh launch_all_configs_all_off.sh
+#sh launch_all_configs_dynamic_profile.sh
+#sh launch_all_configs_osp_profile.sh
+#sh launch_all_configs_tsp_profile.sh
+#sh launch_all_configs_spatial_osp_profile.sh
+#sh launch_all_configs_dynamic_nopc_profile.sh
+#sh launch_all_configs_warp_partition_osp_profile.sh
+
+#sh launch_all_configs_dynamic.sh
+#sh launch_all_configs_coverage_osp.sh
+#sh launch_all_configs_coverage_tsp.sh
+#sh launch_all_configs_spatial_osp.sh
+#sh launch_all_configs_dynamic_nopc.sh
+#sh launch_all_configs_warp_partition_osp.sh
+
+sh launch_all_configs_coverage25_dynamic.sh
+sh launch_all_configs_coverage50_dynamic.sh
+sh launch_all_configs_coverage75_dynamic.sh
+
+sh launch_all_configs_coverage25_dynamic_nopc.sh
+sh launch_all_configs_coverage50_dynamic_nopc.sh
+sh launch_all_configs_coverage75_dynamic_nopc.sh

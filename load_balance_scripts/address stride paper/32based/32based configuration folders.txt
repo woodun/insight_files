@@ -1,0 +1,19 @@
+######################stor2
+mkdir 32based_coverage_osp_S
+mkdir 32based_dynamic_profile_S
+mkdir 32based_osp_profile_S
+mkdir 32based_tsp_profile_S
+mkdir 32based_osp_nopc_profile_S
+mkdir 32based_tsp_nopc_profile_S
+mkdir 32based_warp_partition_tsp_profile_S
+mkdir 32based_coverage_dynamic_S
+mkdir 32based_coverage_tsp_S
+mkdir 32based_coverage_osp_nopc_S
+
+######################stor1
+mkdir 32based_dynamic_nopc_profile_S
+mkdir 32based_warp_partition_osp_profile_S
+mkdir 32based_coverage_dynamic_nopc_S
+mkdir 32based_coverage_tsp_nopc_S
+mkdir 32based_warp_partition_osp_S
+mkdir 32based_warp_partition_tsp_S

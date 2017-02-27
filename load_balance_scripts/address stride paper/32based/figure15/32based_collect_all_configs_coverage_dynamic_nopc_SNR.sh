@@ -1,11 +1,11 @@
 #!/bin/sh
 
 #specify your output file
-source=/stor1/hwang07/coverage_dynamic_nopc_S
-output=/stor1/hwang07/SNR_collection/coverage50_dynamic_nopc1
+source=/stor1/hwang07/32based_coverage_dynamic_nopc_S
+output=/stor1/hwang07/32based_SNR_collection/32based_coverage_dynamic_nopc
 
 #specify your config path in stor1
-for configs_stor1 in coverage50_dynamic_nopc_gto48 coverage50_dynamic_nopc_lrr48 coverage50_dynamic_nopc_RR48
+for configs_stor1 in 32based_coverage50_dynamic_nopc_gto48 32based_coverage25_dynamic_nopc_gto48
 do
 
 mkdir $output/$configs_stor1

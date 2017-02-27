@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /stor1/hwang07/SNR_collection
+cd /stor1/hwang07/32based_SNR_collection
 
 rm -r 32based_coverage_dynamic
 mkdir 32based_coverage_dynamic

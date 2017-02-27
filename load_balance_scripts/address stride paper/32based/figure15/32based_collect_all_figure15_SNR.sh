@@ -34,7 +34,8 @@ sh 32based_collect_all_configs_coverage_osp_nopc_SNR.sh
 sh 32based_collect_all_configs_coverage_osp_SNR.sh
 sh 32based_collect_all_configs_coverage_tsp_nopc_SNR.sh
 sh 32based_collect_all_configs_coverage_tsp_SNR.sh
-
+sh 32based_collect_all_configs_warp_partition_osp_SNR.sh
+sh 32based_collect_all_configs_warp_partition_tsp_SNR.sh
 
 
 

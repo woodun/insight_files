@@ -1,7 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-source=/stor1/hwang07/32based_warp_partition_tsp_S
+#source is osp, this is where it is(by earlier mistakes)
+source=/stor1/hwang07/32based_warp_partition_osp_S
 output=/stor1/hwang07/32based_SNR_collection/32based_warp_partition_tsp
 
 #specify your config path in stor1

@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/32based_paper_collection/32based_coverage50.txt
+output=/stor1/hwang07/32based_paper_collection/32based_coverage25.txt
 
 for statistics in 'gpu_tot_ipc =' 'bwutil_global_read=' 'bwutil_global_write=' 'Total_core_cache_stats_breakdown\[GLOBAL_ACC_R\]\[MISS\] =' 'predictor coverage0:' 'ACT_percRelativeError ' 'ACT_percRelativeError_skipzero ' 'average_avg_bias:'
 do
 
 #12 configs total
 #specify your config path in stor1
-for configs_stor1 in /stor2/hwang07/32based_coverage_dynamic_S/32based_coverage50_dynamic_gto48 /stor1/hwang07/32based_coverage_dynamic_nopc_S/32based_coverage50_dynamic_nopc_gto48 /stor2/hwang07/32based_coverage_osp_S/32based_coverage50_osp_gto48 /stor2/hwang07/32based_coverage_osp_nopc_S/32based_coverage50_osp_nopc_gto48 /stor2/hwang07/32based_coverage_tsp_S/32based_coverage50_tsp_gto48 /stor1/hwang07/32based_coverage_tsp_nopc_S/32based_coverage50_tsp_nopc_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp4_osp_coverage50_gto48 /stor1/hwang07/32based_warp_partition_tsp_S/32based_wp4_tsp_coverage50_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp2_osp_coverage50_gto48 /stor1/hwang07/32based_warp_partition_tsp_S/32based_wp2_tsp_coverage50_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp0_osp_coverage50_gto48 /stor1/hwang07/32based_warp_partition_tsp_S/32based_wp0_tsp_coverage50_gto48
+for configs_stor1 in /stor2/hwang07/32based_coverage_dynamic_S/32based_coverage25_dynamic_gto48 /stor1/hwang07/32based_coverage_dynamic_nopc_S/32based_coverage25_dynamic_nopc_gto48 /stor2/hwang07/32based_coverage_osp_S/32based_coverage25_osp_gto48 /stor2/hwang07/32based_coverage_osp_nopc_S/32based_coverage25_osp_nopc_gto48 /stor2/hwang07/32based_coverage_tsp_S/32based_coverage25_tsp_gto48 /stor1/hwang07/32based_coverage_tsp_nopc_S/32based_coverage25_tsp_nopc_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp4_osp_coverage25_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp4_tsp_coverage25_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp2_osp_coverage25_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp2_tsp_coverage25_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp0_osp_coverage25_gto48 /stor1/hwang07/32based_warp_partition_osp_S/32based_wp0_tsp_coverage25_gto48
 do
 
 #13

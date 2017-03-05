@@ -3,7 +3,7 @@
 ###################################################################################
 
 #specify your config path in stor1
-for configs_stor1 in /stor1/hwang07/dynamic_nopc_profile_S/dynamic_nopc_profile_gto48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage50_dynamic_nopc_gto48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage25_dynamic_nopc_gto48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_gto48 /stor1/hwang07/dynamic_nopc_S/dynamic_nopc_gto48
+for configs_stor1 in /stor1/hwang07/dynamic_nopc_profile_S/dynamic_nopc_profile_RR48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage50_dynamic_nopc_RR48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage25_dynamic_nopc_RR48 /stor1/hwang07/coverage_dynamic_nopc_S/coverage75_dynamic_nopc_RR48 /stor1/hwang07/dynamic_nopc_S/dynamic_nopc_RR48
 do
 
 #13

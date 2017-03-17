@@ -1,5 +1,9 @@
 #!/bin/sh
 
+cp -r /stor1/hwang07/insight_files/insight_template dynamic_notop_nopc_gto48
+sh setup_ALL.sh dynamic_notop_nopc_gto48
+
+
 #cp -r /stor1/hwang07/insight_files/insight_template /stor2/hwang07/coverage_osp_S/coverage25_osp_gto48
 cp -r /stor1/hwang07/insight_files/insight_template /stor2/hwang07/coverage_osp_S/coverage40_osp_gto48
 cd /stor2/hwang07/coverage_osp_S/coverage40_osp_gto48

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/dynamic_nopc1.txt
+output=/stor1/hwang07/paper_collection/dynamic_notop_nopc1.txt
 
 for statistics in 'predictor coverage0:'
 do

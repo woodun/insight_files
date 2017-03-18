@@ -7,7 +7,7 @@ for statistics in 'predictor coverage0:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in /stor1/hwang07/dynamic_nopc_S/dynamic_nopc_gto48 /stor1/hwang07/dynamic_nopc_S/dynamic_nopc_lrr48 /stor1/hwang07/dynamic_nopc_S/dynamic_nopc_RR48
+for configs_stor1 in /stor1/hwang07/dynamic_notop_nopc_S/dynamic_notop_nopc_gto48 /stor1/hwang07/dynamic_notop_nopc_S/dynamic_notop_nopc_lrr48 /stor1/hwang07/dynamic_notop_nopc_S/dynamic_notop_nopc_RR48
 do
 
 #13

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/dynamic_tsp_nolong_noold_original_nopc_errors.txt
+output=/stor1/hwang07/paper_collection/dynamic_tsp_nolong_noold_original_nopc_error1.txt
 
-for statistics in 'ACT_percRelativeError ' 'ACT_percRelativeError_skipzero '
+for statistics in 'ACT_percRelativeError '
 do
 
 #specify your config path in stor1

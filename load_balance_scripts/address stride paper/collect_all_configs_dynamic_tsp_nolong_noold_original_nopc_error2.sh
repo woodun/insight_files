@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/dynamic_tsp_nolong_noold_original_nopc_errors.txt
+output=/stor1/hwang07/paper_collection/dynamic_tsp_nolong_noold_original_nopc_error2.txt
 
 for statistics in 'ACT_percRelativeError_skipzero '
 do

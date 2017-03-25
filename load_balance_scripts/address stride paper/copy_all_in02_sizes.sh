@@ -87,10 +87,6 @@ cp -r /stor2/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_tsp_n
 cd /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size20_gto48
 sh setup_ALL.sh dynamic_tsp_nopc_size20_gto48
 
-cp -r /stor2/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size20_gto48
-cd /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size20_gto48
-sh setup_ALL.sh dynamic_tsp_nopc_size20_gto48
-
 cp -r /stor2/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size19_gto48
 cd /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size19_gto48
 sh setup_ALL.sh dynamic_tsp_nopc_size19_gto48
@@ -98,3 +94,7 @@ sh setup_ALL.sh dynamic_tsp_nopc_size19_gto48
 cp -r /stor2/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size18_gto48
 cd /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size18_gto48
 sh setup_ALL.sh dynamic_tsp_nopc_size18_gto48
+
+cp -r /stor2/hwang07/insight_files/insight_template /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size17_gto48
+cd /stor2/hwang07/dynamic_tsp_nopc_S/dynamic_tsp_nopc_size17_gto48
+sh setup_ALL.sh dynamic_tsp_nopc_size17_gto48

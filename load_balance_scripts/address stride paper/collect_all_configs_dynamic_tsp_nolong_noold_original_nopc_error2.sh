@@ -13,7 +13,7 @@ do
 #13
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in GESUMMV MVT SYRK ATAX BICG SYR2K
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -24,7 +24,7 @@ done
 #7
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
+for benchmark in TRA LPS SLA
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

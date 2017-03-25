@@ -1,14 +1,12 @@
 #!/bin/sh
 
 ###################################################################################
-mother_dir=/stor1/hwang07/dynamic_tsp_nopc_S
 
 #specify your config path in stor1
-for configs_stor1 in dynamic_tsp_nopc_gto48 dynamic_tsp_nopc_lrr48 dynamic_tsp_nopc_RR48
+for configs_stor1 in /stor1/hwang07/dynamic_noold_nopc_S/dynamic_noold_nopc_size8_lrr48 /stor1/hwang07/dynamic_noold_nopc_S/dynamic_noold_nopc_size8_RR48
 do
 
 #13
-cd $mother_dir
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
@@ -20,7 +18,6 @@ done
 
 #figures: JPEG RAY srad_v1 histo
 #7
-cd $mother_dir
 cd $configs_stor1
 cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA

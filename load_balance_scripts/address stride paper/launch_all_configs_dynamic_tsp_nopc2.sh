@@ -4,7 +4,7 @@
 mother_dir=/stor1/hwang07/dynamic_tsp_nopc_S
 
 #specify your config path in stor1
-for configs_stor1 in dynamic_tsp_nopc_gto48 dynamic_tsp_nopc_lrr48 dynamic_tsp_nopc_RR48
+for configs_stor1 in dynamic_tsp_nopc_lrr48 dynamic_tsp_nopc_RR48
 do
 
 #13

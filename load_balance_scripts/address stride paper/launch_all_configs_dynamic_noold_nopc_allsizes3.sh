@@ -11,7 +11,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in GESUMMV MVT SYRK ATAX BICG SYR2K
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -23,7 +23,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
+for benchmark in TRA LPS SLA
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

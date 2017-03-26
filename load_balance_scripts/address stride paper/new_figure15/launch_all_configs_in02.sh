@@ -11,7 +11,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT SYRK ATAX BICG GRAMSCHM SYR2K
+for benchmark in GESUMMV MVT SYRK ATAX BICG SYR2K
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

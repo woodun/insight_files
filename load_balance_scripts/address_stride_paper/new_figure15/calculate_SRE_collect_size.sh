@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/RE.txt
-token='RE:'
+output=/stor1/hwang07/paper_collection/output_sizes.txt
+token='all number:'
 
 #cd $1
 cd /stor1/hwang07/coverage_dynamic_nopc_S/

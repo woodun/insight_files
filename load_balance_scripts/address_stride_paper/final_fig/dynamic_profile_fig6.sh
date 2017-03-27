@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/dynamic_nopc_profile_fig6.txt
+output=/stor1/hwang07/paper_collection/dynamic_profile_fig6.txt
 
 for statistics in 'gpu_tot_ipc =' 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
 do

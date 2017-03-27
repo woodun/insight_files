@@ -1,13 +1,12 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/RE.txt
 
 #cd $1
-cd 
+cd /stor1/hwang07/coverage_dynamic_nopc_S/
 
-#for i in $(ls -d *)
-for i in 
+for i in $(ls -d *)
+#for i in 
 do
 
 cd $i

@@ -4,10 +4,10 @@
 output=/stor1/hwang07/paper_collection/RE.txt
 
 #cd $1
-cd 
+cd /stor1/hwang07/coverage_dynamic_nopc_S/
 
 #for i in $(ls -d *)
-for i in 
+for i in coverage25_dynamic_nopc_gto48 coverage50_dynamic_nopc_lrr48 coverage75_dynamic_nopc_gto48  coverage25_dynamic_nopc_lrr48 coverage50_dynamic_nopc_gto48 coverage75_dynamic_nopc_lrr48 coverage25_dynamic_nopc_RR48 coverage50_dynamic_nopc_RR48 coverage75_dynamic_nopc_RR48
 do
 
 cd $i
@@ -33,5 +33,7 @@ cd ..
 
 
 cd ..
+
+printf "\r\n" >> $output
 
 done

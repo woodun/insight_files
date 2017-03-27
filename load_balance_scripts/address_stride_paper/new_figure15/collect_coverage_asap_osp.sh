@@ -1,16 +1,18 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/dynamic_nopc_profile_fig6.txt
+output=/stor1/hwang07/paper_collection/asap_osp_coverages.txt
+mother_dir=/stor2/hwang07/final_coverage_osp/
 
-for statistics in 'gpu_tot_ipc =' 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
+for statistics in 'predictor coverage0:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in /stor2/hwang07/dynamic_profile_S/dynamic_profile_gto48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_lrr48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_RR48 /stor2/hwang07/dynamic_profile_S/dynamic_profile_swl1
+for configs_stor1 in coverage10_osp_gto48 coverage125_osp_gto48 coverage143_osp_gto48 coverage167_osp_gto48 coverage20_osp_gto48 coverage33_osp_gto48 coverage375_osp_gto48 coverage555_osp_gto48 coverage625_osp_gto48 coverage666_osp_gto48 coverage70_osp_gto48 coverage75_osp_gto48 coverage80_osp_gto48 coverage833_osp_gto48 coverage857_osp_gto48 coverage875_osp_gto48 coverage90_osp_gto48
 do
 
 #13
+cd $mother_dir
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT SYRK ATAX BICG GRAMSCHM SYR2K
@@ -22,6 +24,7 @@ done
 
 #figures: JPEG RAY srad_v1 histo
 #7
+cd $mother_dir
 cd $configs_stor1
 cd CUDA
 for benchmark in TRA LPS SLA

@@ -8,7 +8,7 @@ for statistics in 'predictor coverage0:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in dynamic_tsp_nopc_size10_gto48 dynamic_tsp_nopc_size9_gto48 dynamic_tsp_nopc_size8_gto48 dynamic_tsp_nopc_size7_gto48 dynamic_tsp_nopc_size6_gto48 dynamic_tsp_nopc_size5_gto48 dynamic_tsp_nopc_size4_gto48 dynamic_tsp_nopc_size3_gto48 dynamic_tsp_nopc_size2_gto48 dynamic_tsp_nopc_size1_gto48
+for configs_stor1 in dynamic_tsp_nopc_size10_gto48 dynamic_tsp_nopc_size8_gto48 dynamic_tsp_nopc_size4_gto48 dynamic_tsp_nopc_size2_gto48 dynamic_tsp_nopc_size1_gto48
 do
 
 #13

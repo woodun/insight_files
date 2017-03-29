@@ -11,7 +11,7 @@ for i in $(ls -d *)
 do
 
 cd $i
-qsub calculate_SRE_configbase.pbs
+qsub calculate_SRE_configbase_in01.pbs
 cd ..
 
 done

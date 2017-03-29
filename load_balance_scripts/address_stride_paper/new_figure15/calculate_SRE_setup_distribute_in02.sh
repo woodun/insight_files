@@ -11,9 +11,9 @@ for i in $(ls -d *)
 do
 
 cd $i
-cp $source_dir/calculate_SRE_configbase.pbs .
-cp $source_dir/calculate_SRE_configbase_in02.sh .
-chmod +x calculate_SRE_configbase_in02.sh
+cp $source_dir/calculate_SRE_configbase_in02.pbs .
+cp $source_dir/calculate_SRE_configbase.sh .
+chmod +x calculate_SRE_configbase.sh
 cd ..
 
 done

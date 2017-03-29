@@ -12,7 +12,8 @@ do
 
 cd $i
 cp $source_dir/calculate_SRE_configbase.pbs .
-cp $source_dir/calculate_SRE_configbase.sh .
+cp $source_dir/calculate_SRE_configbase_in01.sh .
+chmod +x calculate_SRE_configbase_in01.sh
 cd ..
 
 done

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-########################################input mother dir path
+########################################
 
 #cd $1
-cd /stor1/hwang07/coverage_dynamic_nopc_S/
+cd /stor1/hwang07/final_coverage_osp/
 
 for i in $(ls -d *)
 #for i in 

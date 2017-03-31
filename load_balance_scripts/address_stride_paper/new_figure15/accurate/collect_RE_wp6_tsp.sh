@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/final_wp6_tsp_RE.txt
 mother_dir=/stor2/hwang07/final_accurate_tsp/
 
-for statistics in 'RE:'
+for statistics in 'RE1:'
 do
 
 #specify your config path in stor1

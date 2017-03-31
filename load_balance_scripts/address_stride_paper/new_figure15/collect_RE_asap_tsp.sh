@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor2/hwang07/paper_collection/asap_tsp_RE.txt
+output=/stor1/hwang07/paper_collection/asap_tsp_RE.txt
 mother_dir=/stor2/hwang07/final_coverage_tsp/
 
 for statistics in 'RE:'

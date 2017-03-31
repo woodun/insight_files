@@ -3,7 +3,7 @@
 ########################################
 
 #cd $1
-cd /stor2/hwang07/final_coverage_tsp/
+cd /stor2/hwang07/final_accurate_tsp/
 
 for i in $(ls -d *)
 #for i in 

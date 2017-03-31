@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/wp6_tsp_RE.txt
-mother_dir=/stor2/hwang07/final_coverage_tsp/
+output=/stor1/hwang07/paper_collection/final_wp6_tsp_RE.txt
+mother_dir=/stor2/hwang07/final_accurate_tsp/
 
 for statistics in 'RE:'
 do

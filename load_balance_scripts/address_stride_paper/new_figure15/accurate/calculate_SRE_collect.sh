@@ -1,14 +1,14 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/RE.txt
+output=/stor1/hwang07/paper_collection/coverage10_RE.txt
 token='RE:'
 
 #cd $1
-cd /stor1/hwang07/coverage_dynamic_nopc_S/
+cd /stor1/hwang07/final_accurate_osp/
 
 #for i in $(ls -d *)
-for i in coverage25_dynamic_nopc_gto48 coverage50_dynamic_nopc_lrr48 coverage75_dynamic_nopc_gto48  coverage25_dynamic_nopc_lrr48 coverage50_dynamic_nopc_gto48 coverage75_dynamic_nopc_lrr48 coverage25_dynamic_nopc_RR48 coverage50_dynamic_nopc_RR48 coverage75_dynamic_nopc_RR48
+for i in 
 do
 
 cd $i

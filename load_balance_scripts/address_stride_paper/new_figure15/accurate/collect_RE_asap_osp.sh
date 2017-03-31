@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/asap_osp_RE.txt
-mother_dir=/stor1/hwang07/final_coverage_osp/
+output=/stor1/hwang07/paper_collection/final_asap_osp_RE.txt
+mother_dir=/stor1/hwang07/final_accurate_osp/
 
 for statistics in 'RE:'
 do

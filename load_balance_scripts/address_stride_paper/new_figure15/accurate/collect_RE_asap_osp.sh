@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/final_asap_osp_RE.txt
 mother_dir=/stor1/hwang07/final_accurate_osp/
 
-for statistics in 'RE1:'
+for statistics in $1
 do
 
 #specify your config path in stor1

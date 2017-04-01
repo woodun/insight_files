@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/final_wp4_osp_IPC.txt
+output=/stor1/hwang07/paper_collection/$2
 mother_dir=/stor1/hwang07/final_accurate_osp/
 
 for statistics in $1

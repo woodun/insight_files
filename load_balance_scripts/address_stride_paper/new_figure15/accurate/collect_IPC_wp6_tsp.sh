@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/$2
+output=/stor1/hwang07/paper_collection/final_wp6_tsp_IPC.txt
 mother_dir=/stor2/hwang07/final_accurate_tsp/
 
 for statistics in $1

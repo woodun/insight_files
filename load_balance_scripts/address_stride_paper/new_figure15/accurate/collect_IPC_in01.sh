@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#'gpu_tot_ipc =' 'average_avg_bias:' 'Stall:'
+#'gpu_tot_ipc =' 'average_avg_bias:' 'Stall:' 'predictor coverage0:'
 
 sh collect_IPC_asap_osp.sh 'Stall:' final_asap_osp_stalls.txt
 sh collect_IPC_wp0_osp.sh 'Stall:' final_wp0_osp_stalls.txt

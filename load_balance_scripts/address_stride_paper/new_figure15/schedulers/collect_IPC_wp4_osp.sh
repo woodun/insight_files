@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/stor1/hwang07/paper_collection/"$2"
-mother_dir=/stor1/hwang07/final_accurate_osp/
+mother_dir=/stor1/hwang07/final_schedulers_osp/
 
 for statistics in "$1"
 do

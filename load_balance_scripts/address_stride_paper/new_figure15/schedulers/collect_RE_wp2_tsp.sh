@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/final_wp2_tsp_RE.txt
-mother_dir=/stor2/hwang07/final_accurate_tsp/
+output=/stor1/hwang07/paper_collection/schedulers_wp2_tsp_RE.txt
+mother_dir=/stor2/hwang07/final_schedulers_tsp/
 
 for statistics in $1
 do
 
 #specify your config path in stor1
-for configs_stor1 in wp2_tsp_coverage10_gto48 wp2_tsp_coverage20_gto48 wp2_tsp_coverage30_gto48 wp2_tsp_coverage40_gto48 wp2_tsp_coverage50_gto48
+for configs_stor1 in wp2_tsp_coverage20_lrr48 wp2_tsp_coverage20_RR48
 do
 
 #13

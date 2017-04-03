@@ -3,7 +3,7 @@
 ########################################
 
 #cd $1
-cd /stor1/hwang07/final_accurate_osp/
+cd /stor1/hwang07/final_schedulers_osp/
 
 for i in $(ls -d *)
 #for i in 

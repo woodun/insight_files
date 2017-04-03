@@ -2,13 +2,13 @@
 
 #specify your output file
 output=/stor1/hwang07/paper_collection/"$2"
-mother_dir=/stor1/hwang07/final_accurate_osp/
+mother_dir=/stor1/hwang07/final_schedulers_osp/
 
 for statistics in "$1"
 do
 
 #specify your config path in stor1
-for configs_stor1 in coverage10_dynamic_osp_nopc_size8_gto48 coverage20_dynamic_osp_nopc_size8_gto48 coverage30_dynamic_osp_nopc_size8_gto48 coverage40_dynamic_osp_nopc_size8_gto48 coverage50_dynamic_osp_nopc_size8_gto48
+for configs_stor1 in coverage20_dynamic_osp_nopc_size8_lrr48 coverage20_dynamic_osp_nopc_size8_RR48
 do
 
 #13

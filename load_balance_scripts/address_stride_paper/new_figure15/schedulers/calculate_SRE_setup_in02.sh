@@ -3,7 +3,7 @@
 ########################################
 
 #cd $1
-cd /stor2/hwang07/final_accurate_tsp/
+cd /stor2/hwang07/final_schedulers_tsp/
 
 for i in $(ls -d *)
 #for i in 

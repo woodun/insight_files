@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/final_wp4_osp_RE.txt
-mother_dir=/stor1/hwang07/final_accurate_osp/
+output=/stor1/hwang07/paper_collection/schedulers_wp4_osp_RE.txt
+mother_dir=/stor1/hwang07/final_schedulers_osp/
 
 for statistics in $1
 do

@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/stor1/hwang07/paper_collection/schedulers_asap_tsp_RE.txt
-mother_dir=/stor2/hwang07/final_accurate_tsp/
+mother_dir=/stor2/hwang07/final_schedulers_tsp/
 
 for statistics in $1
 do

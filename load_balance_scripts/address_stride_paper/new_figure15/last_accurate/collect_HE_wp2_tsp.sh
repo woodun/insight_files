@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/last_wp2_tsp_HE.txt
+output=/stor1/hwang07/paper_collection/"$2"
 mother_dir=/stor2/hwang07/last_accurate_tsp/
 
-for statistics in $1
+for statistics in "$1"
 do
 
 #specify your config path in stor1

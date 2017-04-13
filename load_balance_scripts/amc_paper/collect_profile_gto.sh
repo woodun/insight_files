@@ -4,6 +4,8 @@
 output=/stor1/hwang07/amc_collection/profile_gto_ideal.txt
 mother_dir=/stor1/hwang07/AMC_profile
 
+#grep "$ideal case all:[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s\r\n"
+
 for statistics in 'ideal case all:'
 do
 

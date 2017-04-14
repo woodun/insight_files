@@ -4,7 +4,7 @@
 mother_dir=/stor1/hwang07/AMC_profile
 
 #specify your config path in stor1
-for configs_stor1 in AMC_profile_gto48
+for configs_stor1 in AMC_profile_gto48 AMC_profile_inf_gto48
 do
 
 #13

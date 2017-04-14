@@ -5,7 +5,9 @@ template=/stor1/hwang07/insight_files/insight_template
 #####################################################################################
 mother_dir=/stor1/hwang07/AMC_profile
 
-for configs_stor1 in AMC_profile_gto48
+#AMC_profile_gto48
+
+for configs_stor1 in AMC_profile_inf_gto48
 do
 
 cp -r $template $mother_dir/$configs_stor1

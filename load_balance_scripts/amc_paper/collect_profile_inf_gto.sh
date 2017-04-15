@@ -1,16 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/amc_collection/profile_gto_ideal.txt
+output=/stor1/hwang07/amc_collection/profile_inf_gto.txt
 mother_dir=/stor1/hwang07/AMC_profile
 
-#grep "$ideal case all:[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s\r\n"
-
-for statistics in 'ideal case all:'
+for statistics in 'real case 33 all:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_profile_gto48
+for configs_stor1 in AMC_profile_inf_gto48
 do
 
 #13
@@ -20,7 +18,8 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-grep "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s\r\n" >> $output
+grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 
@@ -32,7 +31,8 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
-grep "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s\r\n" >> $output
+grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 

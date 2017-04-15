@@ -4,7 +4,7 @@
 output=/stor1/hwang07/amc_collection/profile_inf_gto.txt
 mother_dir=/stor1/hwang07/AMC_profile
 
-for statistics in 'real case 33 all:'
+for statistics in 'real case 32 all:'
 do
 
 #specify your config path in stor1

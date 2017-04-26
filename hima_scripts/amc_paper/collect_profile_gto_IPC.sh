@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/amc_collection/profile_original_gto.txt
-mother_dir=/stor1/hwang07/AMC_profile
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_gto_real.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
 for statistics in 'real case 32 all:'
 do
@@ -15,7 +15,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
@@ -28,7 +28,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
+for benchmark in TRA SCP CONS FWT LPS BlackScholes
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output

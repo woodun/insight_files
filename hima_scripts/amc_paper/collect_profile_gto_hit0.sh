@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_gto_locality.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_gto_real.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
-for statistics in 'average row locality ='
+for statistics in 'real case 32 all:'
 do
 
 #specify your config path in stor1

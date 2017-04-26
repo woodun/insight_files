@@ -32,7 +32,7 @@ done
 for benchmark in TRA SCP CONS FWT LPS BlackScholes
 do
 
-for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
+for configs_stor1 in AMC_profile_size16_gto48 AMC_profile_size32_gto48 AMC_profile_size64_gto48 AMC_profile_size128_gto48 AMC_profile_sizeinf_gto48
 do
 
 #figures: JPEG RAY srad_v1 histo

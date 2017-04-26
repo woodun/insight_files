@@ -3,9 +3,9 @@
 template=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/hima_template
 
 #####################################################################################
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove
 
-for configs_stor1 in AMC_profile_size16_gto48 AMC_profile_size32_gto48 AMC_profile_size64_gto48 AMC_profile_size128_gto48 AMC_profile_sizeinf_gto48
+for configs_stor1 in AMC_remove_size16_gto48 AMC_remove_size32_gto48 AMC_remove_size64_gto48 AMC_remove_size128_gto48 AMC_remove_sizeinf_gto48
 do
 
 cp -r $template $mother_dir/$configs_stor1

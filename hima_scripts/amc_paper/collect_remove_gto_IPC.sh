@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_gto_real.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove16_gto_ipc.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove
 
-for statistics in 'real case 32 all:'
+for statistics in 'gpu_tot_ipc ='
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_profile_gto48
+for configs_stor1 in AMC_remove_size16_gto48
 do
 
 #13

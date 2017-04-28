@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove16_gto_removed.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/removed
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove
 
 for statistics in 'removed all:'
 do

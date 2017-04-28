@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove16_gto_ipc.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile16_gto_gr_act.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
-for statistics in 'gpu_tot_ipc ='
+for statistics in 'number of global reads only activations:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_remove_size16_gto48
+for configs_stor1 in AMC_profile_size16_gto48
 do
 
 #13

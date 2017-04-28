@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_gto_real.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove16_gto_removed.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/removed
 
-for statistics in 'real case 32 all:'
+for statistics in 'removed all:'
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_profile_gto48
+for configs_stor1 in AMC_remove_size16_gto48
 do
 
 #13
@@ -19,7 +19,6 @@ for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
 cd ..
 done
 
@@ -32,7 +31,6 @@ for benchmark in TRA SCP CONS FWT LPS BlackScholes
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
 cd ..
 done
 

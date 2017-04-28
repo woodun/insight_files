@@ -19,7 +19,6 @@ for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
 cd ..
 done
 
@@ -32,7 +31,6 @@ for benchmark in TRA SCP CONS FWT LPS BlackScholes
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
 cd ..
 done
 

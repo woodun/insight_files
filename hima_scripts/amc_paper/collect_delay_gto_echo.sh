@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delay16_gto_removed.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delay16_gto_echo.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delay
 
 for statistics in 'echo in delay queue all:'

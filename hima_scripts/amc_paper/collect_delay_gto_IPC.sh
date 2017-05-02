@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delay16_gto_gr_act.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delay16_gto_IPC.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delay
 
 for statistics in 'gpu_tot_ipc ='

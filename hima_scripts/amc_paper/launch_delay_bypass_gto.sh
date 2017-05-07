@@ -8,10 +8,11 @@ for configs_stor1 in AMC_size128_delay16_bypass_gto48 AMC_size128_delay32_bypass
 do
 
 #13
+#global read only too few:FDTD-2D
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
+for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -20,10 +21,11 @@ done
 
 #figures: srad_v1 histo JPEG RAY
 #7
+#global read only too few:TRA
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes
+for benchmark in SCP CONS FWT LPS BlackScholes
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_delay_gto_IPC.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delay
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_delayonly_gto_l2mr.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delayonly
 
-for statistics in 'gpu_tot_ipc ='
+for statistics in 'L2_total_cache_miss_rate ='
 do
 
 #############################
@@ -12,7 +12,7 @@ for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_size128_delay16_gto48 AMC_size128_delay32_gto48 AMC_size128_delay64_gto48 AMC_size128_delay128_gto48 AMC_size128_delay256_gto48 AMC_size128_delay512_gto48
+for configs_stor1 in AMC_size128_delayonly16_gto48 AMC_size128_delayonly32_gto48 AMC_size128_delayonly64_gto48 AMC_size128_delayonly128_gto48 AMC_size128_delayonly256_gto48 AMC_size128_delayonly512_gto48
 do
 
 #13
@@ -33,7 +33,7 @@ for benchmark in SCP CONS FWT LPS BlackScholes
 do
 
 #specify your config path in stor1
-for configs_stor1 in AMC_size128_delay16_gto48 AMC_size128_delay32_gto48 AMC_size128_delay64_gto48 AMC_size128_delay128_gto48 AMC_size128_delay256_gto48 AMC_size128_delay512_gto48
+for configs_stor1 in AMC_size128_delayonly16_gto48 AMC_size128_delayonly32_gto48 AMC_size128_delayonly64_gto48 AMC_size128_delayonly128_gto48 AMC_size128_delayonly256_gto48 AMC_size128_delayonly512_gto48
 do
 
 #figures: JPEG RAY srad_v1 histo

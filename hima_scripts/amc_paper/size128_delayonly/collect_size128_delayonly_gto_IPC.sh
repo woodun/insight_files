@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_delayonly_gto_IPC.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delayonly
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/sizes_delayonly
 
 for statistics in 'gpu_tot_ipc ='
 do

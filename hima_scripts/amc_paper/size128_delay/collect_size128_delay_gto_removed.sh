@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_delay_gto_removed.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delay
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/sizes_delay
 
 for statistics in 'removed all:'
 do

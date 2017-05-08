@@ -11,6 +11,7 @@ do
 for configs_stor1 in AMC_size128_delay16_bypass_gto48 AMC_size128_delay32_bypass_gto48 AMC_size128_delay64_bypass_gto48 AMC_size128_delay128_bypass_gto48 AMC_size128_delay256_bypass_gto48 AMC_size128_delay512_bypass_gto48
 do
 
+printf "%s\r\n" $configs_stor1
 printf "%s\r\n" $configs_stor1 >> $output
 
 #13

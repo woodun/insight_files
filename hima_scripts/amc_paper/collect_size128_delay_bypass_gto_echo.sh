@@ -17,7 +17,7 @@ printf "%s\r\n" $configs_stor1 >> $output
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM FDTD-2D
+for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
@@ -29,7 +29,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes
+for benchmark in SCP CONS FWT LPS BlackScholes
 do
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #####################################################
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/noecho_sizes_delay
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/sizes_delay
 
-for configs_stor1 in AMC_noecho_size128_delay1024_gto48
+for configs_stor1 in AMC_size128_delay1024_gto48
 do
 
 #13

@@ -1,0 +1,7 @@
+sh relaunch_delay_bypass_gto.sh
+sh relaunch_sizes_delay_gto.sh
+sh relaunch_sizes_delayonly_gto.sh
+sh launch_noecho_delay_bypass_gto.sh
+sh launch_noecho_sizes_delay_gto.sh
+sh launch_noecho_sizes_delayonly_gto.sh
+

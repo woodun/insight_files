@@ -1,5 +1,2 @@
-sh copy_nocache_noecho_sizes_delay_gto.sh
-sh copy_nocache_noecho_sizes_delayonly_gto.sh
-sh copy_nocache_profile.sh
-sh copy_nocache_sizes_delay_gto.sh
-sh copy_nocache_sizes_delayonly_gto.sh
+sh copy_noecho_sizes_delay_gto.sh
+sh copy_noecho_sizes_delayonly_gto.sh

@@ -1,0 +1,5 @@
+sh collect_nocache_noecho_sizeinf_delay_gto_all.sh
+sh collect_nocache_noecho_sizeinf_delayonly_gto_all.sh
+sh collect_nocache_profile_all.sh
+sh collect_nocache_sizeinf_delay_gto_all.sh
+sh collect_nocache_sizeinf_delayonly_gto_all.sh

@@ -1,0 +1,3 @@
+sh copy_noecho_size512_delay_gto.sh
+sh copy_noecho_size512_delayonly_gto.sh
+sh copy_profile_gto.sh

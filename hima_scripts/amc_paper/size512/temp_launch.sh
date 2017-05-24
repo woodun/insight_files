@@ -1,0 +1,3 @@
+sh launch_noecho_size512_delay_gto.sh
+sh launch_noecho_size512_delayonly_gto.sh
+sh launch_profile_gto.sh

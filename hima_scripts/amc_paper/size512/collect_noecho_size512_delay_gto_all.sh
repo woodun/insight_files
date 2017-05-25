@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/noecho_sizes_delay_all.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/noecho_sizes_delay_512.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/noecho_sizes_delay
 
 for statistics in 'overall accesses all:' 'overall activations all:' 'bw_util=' 'echo in delay queue all:' 'number of global reads only activations:' 'accesses from global reads only activations:' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delay queue full all:' 'row_hit_0 all:'

@@ -1,0 +1,2 @@
+sh launch_noecho_size256_delay_gto.sh
+sh launch_noecho_size256_delayonly_gto.sh

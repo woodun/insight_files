@@ -1,0 +1,3 @@
+sh collect_noecho_size256_delay_gto_all.sh
+sh collect_noecho_size256_delayonly_gto_all.sh
+sh collect_profile_size256.sh

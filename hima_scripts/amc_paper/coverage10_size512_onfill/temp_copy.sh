@@ -1,0 +1,3 @@
+sh copy_coverage10_noecho_size512_delay_gto.sh
+sh copy_coverage10_noecho_size512_delayonly_gto.sh
+sh copy_profile_onmiss_gto.sh

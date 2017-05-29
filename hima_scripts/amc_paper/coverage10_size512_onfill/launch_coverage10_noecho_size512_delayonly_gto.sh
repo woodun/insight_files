@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #####################################################
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/coverage10/coverage10_noecho_sizes_delayonly
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/coverage10_noecho_sizes_delayonly
 
 for configs_stor1 in coverage10_noecho_size512_delayonly16_gto48 coverage10_noecho_size512_delayonly32_gto48 coverage10_noecho_size512_delayonly64_gto48 coverage10_noecho_size512_delayonly128_gto48 coverage10_noecho_size512_delayonly256_gto48 coverage10_noecho_size512_delayonly512_gto48 coverage10_noecho_size512_delayonly1024_gto48 coverage10_noecho_size512_delayonly2048_gto48 coverage10_noecho_size512_delayonly4096_gto48 coverage10_noecho_size512_delayonly8192_gto48 coverage10_noecho_size512_delayonly16384_gto48 coverage10_noecho_size512_delayonly32768_gto48
 do

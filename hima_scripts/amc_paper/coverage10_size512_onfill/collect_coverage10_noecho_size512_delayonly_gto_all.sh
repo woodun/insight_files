@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/sciclone/data10/hwang07/GPU_RESEARCH/coverage10_collection/coverage10_noecho_delayonly_sizes512.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/coverage10/coverage10_noecho_sizes_delayonly
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/coverage10_noecho_sizes_delayonly
 
 for statistics in 'overall accesses all:' 'overall activations all:' 'bw_util=' 'echo in delayonly queue all:' 'number of global reads only activations:' 'accesses from global reads only activations:' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delayonly queue full all:' 'row_hit_0 all:'
 do

@@ -1,0 +1,2 @@
+sh copy_noecho_size128_delay_gto.sh
+sh copy_noecho_size128_delayonly_gto.sh

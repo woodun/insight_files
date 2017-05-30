@@ -13,7 +13,7 @@ printf "%s\r\n" $statistics >> $output
 for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM
 do
 
-printf $benchmark "%s\r\n" >> $output
+printf "%s\r\n" $benchmark >> $output
 
 #specify your config path in stor1
 for configs_stor1 in coverage10_noecho_size512_delay16_gto48 coverage10_noecho_size512_delay32_gto48 coverage10_noecho_size512_delay64_gto48 coverage10_noecho_size512_delay128_gto48 coverage10_noecho_size512_delay256_gto48 coverage10_noecho_size512_delay512_gto48 coverage10_noecho_size512_delay1024_gto48 coverage10_noecho_size512_delay2048_gto48 coverage10_noecho_size512_delay4096_gto48 coverage10_noecho_size512_delay8192_gto48 coverage10_noecho_size512_delay16384_gto48
@@ -37,7 +37,7 @@ done
 for benchmark in SCP CONS FWT LPS BlackScholes
 do
 
-printf $benchmark "%s\r\n" >> $output
+printf "%s\r\n" $benchmark >> $output
 
 #specify your config path in stor1
 for configs_stor1 in coverage10_noecho_size512_delay16_gto48 coverage10_noecho_size512_delay32_gto48 coverage10_noecho_size512_delay64_gto48 coverage10_noecho_size512_delay128_gto48 coverage10_noecho_size512_delay256_gto48 coverage10_noecho_size512_delay512_gto48 coverage10_noecho_size512_delay1024_gto48 coverage10_noecho_size512_delay2048_gto48 coverage10_noecho_size512_delay4096_gto48 coverage10_noecho_size512_delay8192_gto48 coverage10_noecho_size512_delay16384_gto48

@@ -13,7 +13,7 @@ printf "%s\r\n" $statistics >> $output
 for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM
 do
 
-printf $benchmark "%s\r\n" >> $output
+printf "%s\r\n" $benchmark >> $output
 
 #specify your config path in stor1
 for configs_stor1 in coverage10_noecho_size512_delayonly16_gto48 coverage10_noecho_size512_delayonly32_gto48 coverage10_noecho_size512_delayonly64_gto48 coverage10_noecho_size512_delayonly128_gto48 coverage10_noecho_size512_delayonly256_gto48 coverage10_noecho_size512_delayonly512_gto48 coverage10_noecho_size512_delayonly1024_gto48 coverage10_noecho_size512_delayonly2048_gto48 coverage10_noecho_size512_delayonly4096_gto48 coverage10_noecho_size512_delayonly8192_gto48 coverage10_noecho_size512_delayonly16384_gto48
@@ -37,7 +37,7 @@ done
 for benchmark in SCP CONS FWT LPS BlackScholes
 do
 
-printf $benchmark "%s\r\n" >> $output
+printf "%s\r\n" $benchmark >> $output
 
 #specify your config path in stor1
 for configs_stor1 in coverage10_noecho_size512_delayonly16_gto48 coverage10_noecho_size512_delayonly32_gto48 coverage10_noecho_size512_delayonly64_gto48 coverage10_noecho_size512_delayonly128_gto48 coverage10_noecho_size512_delayonly256_gto48 coverage10_noecho_size512_delayonly512_gto48 coverage10_noecho_size512_delayonly1024_gto48 coverage10_noecho_size512_delayonly2048_gto48 coverage10_noecho_size512_delayonly4096_gto48 coverage10_noecho_size512_delayonly8192_gto48 coverage10_noecho_size512_delayonly16384_gto48

@@ -2,9 +2,10 @@
 
 ###################################################################################
 output=/sciclone/data10/hwang07/GPU_RESEARCH/relaunch.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/nocache_noecho_sizes_delay
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
-for configs_stor1 in AMC_nocache_noecho_sizeinf_delay16_gto48 AMC_nocache_noecho_sizeinf_delay32_gto48 AMC_nocache_noecho_sizeinf_delay64_gto48 AMC_nocache_noecho_sizeinf_delay128_gto48 AMC_nocache_noecho_sizeinf_delay256_gto48 AMC_nocache_noecho_sizeinf_delay512_gto48 AMC_nocache_noecho_sizeinf_delay1024_gto48 AMC_nocache_noecho_sizeinf_delay2048_gto48 AMC_nocache_noecho_sizeinf_delay4096_gto48 AMC_nocache_noecho_sizeinf_delay8192_gto48 AMC_nocache_noecho_sizeinf_delay16384_gto48 AMC_nocache_noecho_sizeinf_delay32768_gto48
+#specify your config path in stor1
+for configs_stor1 in AMC_profile_size16_gto48 AMC_profile_size32_gto48 AMC_profile_size64_gto48 AMC_profile_size128_gto48 AMC_profile_size256_gto48 AMC_profile_size512_gto48 AMC_profile_sizeinf_gto48
 do
 
 #13

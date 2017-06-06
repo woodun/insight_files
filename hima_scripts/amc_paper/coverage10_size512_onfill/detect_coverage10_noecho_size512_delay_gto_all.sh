@@ -11,7 +11,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV 2MM 3MM BICG 2DCONV 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then
@@ -28,7 +28,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP CONS FWT LPS BlackScholes
+for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then

@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_overall.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_overall_count.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
-for statistics in 'overall 32 and more all:'
+for statistics in 'overall count 32 and more all:'
 do
 
 #############################

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/amc_collection/profile_overall_gto.txt
-mother_dir=/stor1/hwang07/AMC_profile
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_overall.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile
 
 for statistics in 'overall 32 and more all:'
 do

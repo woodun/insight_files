@@ -1,6 +1,6 @@
 #!/bin/sh
 
-###################################################################################
+###################################################################################if [[ -s FDTD-2D\_CPU.txt ]]; then
 output=/sciclone/data10/hwang07/GPU_RESEARCH/relaunch.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/coverage10_noecho_sizes_delayonly
 

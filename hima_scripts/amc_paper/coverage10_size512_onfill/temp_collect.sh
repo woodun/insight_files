@@ -1,3 +1,7 @@
+rm /sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/coverage10_noecho_delay_sizes512.txt
+rm /sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/coverage10_noecho_delayonly_sizes512.txt
+rm /sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/baseline_size512.txt
+
 sh collect_coverage10_noecho_size512_delay_gto_all.sh
 sh collect_coverage10_noecho_size512_delayonly_gto_all.sh
 sh collect_profile_onmiss_size512.sh

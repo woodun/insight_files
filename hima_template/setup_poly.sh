@@ -6,6 +6,7 @@ for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG CORR COVAR FDTD-2D GEMM GESUMMV
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/polybench/CUDA/$benchmark/gpgpu_ptx_sim__$benchmark .
               cp $applications/bash-scripts/run_scripts/polybench/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark

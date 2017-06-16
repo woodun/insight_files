@@ -8,6 +8,7 @@ for benchmark in SimilarityScore Kmeans MatrixMul
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/Mars/sample_apps/$benchmark/gpgpu_ptx_sim__$benchmark .
               cp $applications/bash-scripts/run_scripts/mars/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark
@@ -18,7 +19,9 @@ for benchmark in InvertedIndex PageViewCount PageViewRank StringMatch WordCount
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/Mars/sample_apps/$benchmark/gpgpu_ptx_sim__$benchmark .
+              rm -r data
               ln -s $benchmarks/Mars/sample_apps/$benchmark/data . 
               cp $applications/bash-scripts/run_scripts/mars/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark

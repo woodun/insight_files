@@ -8,6 +8,7 @@ for benchmark in BlackScholes CP LIB LPS NQU RAY STO SCP SLA CONS FWT TRA lulesh
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/CUDA/$benchmark/gpgpu_ptx_sim__$benchmark .
               cp $applications/bash-scripts/run_scripts/CUDA/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark
@@ -18,7 +19,9 @@ for benchmark in AES BFS MUM NN kmeans JPEG BFS2 KMN
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/CUDA/$benchmark/gpgpu_ptx_sim__$benchmark .
+              rm -r data
               ln -s $benchmarks/CUDA/$benchmark/data . 
               cp $applications/bash-scripts/run_scripts/CUDA/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark
@@ -28,7 +31,9 @@ done
 ##JPEG
               mkdir JPEG_ENCODE
               cd JPEG_ENCODE
+              rm gpgpu_ptx_sim__JPEG
               ln -s $benchmarks/CUDA/JPEG/gpgpu_ptx_sim__JPEG .
+              rm -r data
               ln -s $benchmarks/CUDA/JPEG/data . 
               cp $applications/bash-scripts/run_scripts/CUDA/mainscript_JPEG_ENCODE .
               chmod 777 mainscript_JPEG_ENCODE
@@ -36,7 +41,9 @@ done
 
               mkdir JPEG_DECODE
               cd JPEG_DECODE
+              rm gpgpu_ptx_sim__JPEG
               ln -s $benchmarks/CUDA/JPEG/gpgpu_ptx_sim__JPEG .
+              rm -r data
               ln -s $benchmarks/CUDA/JPEG/data . 
               cp $applications/bash-scripts/run_scripts/CUDA/mainscript_JPEG_DECODE .
               chmod 777 mainscript_JPEG_DECODE

@@ -10,6 +10,7 @@ for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder
 do
               mkdir $benchmark
               cd $benchmark
+              rm gpgpu_ptx_sim__$benchmark
               ln -s $benchmarks/rodinia/cuda/$benchmark/gpgpu_ptx_sim__$benchmark .
               cp $applications/bash-scripts/run_scripts/rodinia/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark

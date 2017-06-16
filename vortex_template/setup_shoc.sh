@@ -9,6 +9,7 @@ for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 		  mkdir $benchmark
 		  cd $benchmark
+                  rm gpgpu_ptx_sim__$benchmark
 		  ln -s $benchmarks/shoc/bin/Serial/CUDA/$benchmark .
 		  cp $applications/bash-scripts/run_scripts/shoc/mainscript_$benchmark .
 		  chmod 777 mainscript_$benchmark

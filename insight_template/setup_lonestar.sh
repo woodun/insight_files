@@ -11,7 +11,9 @@ for benchmark in bfs bh dmr mst sp sssp
 do
               mkdir $benchmark
               cd $benchmark
+              rm $benchmark
               ln -s $benchmarks/lonestar/bin/$benchmark .
+              rm -r inputs
               ln -s $benchmarks/lonestar/inputs . 
               cp $applications/bash-scripts/run_scripts/lonestar/mainscript_$benchmark .
               chmod 777 mainscript_$benchmark

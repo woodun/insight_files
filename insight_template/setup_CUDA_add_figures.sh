@@ -26,8 +26,6 @@ cd CUDA
               cd ../
 ##JPEG
 
-cd ../
-
 GPGPUSIM_CONFIG=$1
 if [ "x$GPGPUSIM_CONFIG" = "x" ]; then 
     echo "Usage: $0 <GPGPU-Sim Config Name | --cleanup>"

@@ -25,6 +25,24 @@ do
               cd ../
 done
 
+##JPEG
+              mkdir JPEG_ENCODE
+              cd JPEG_ENCODE
+              ln -s $benchmarks/CUDA/JPEG/gpgpu_ptx_sim__JPEG .
+              ln -s $benchmarks/CUDA/JPEG/data . 
+              cp $applications/bash-scripts/run_scripts/CUDA/mainscript_JPEG_ENCODE .
+              chmod 777 mainscript_JPEG_ENCODE
+              cd ../
+
+              mkdir JPEG_DECODE
+              cd JPEG_DECODE
+              ln -s $benchmarks/CUDA/JPEG/gpgpu_ptx_sim__JPEG .
+              ln -s $benchmarks/CUDA/JPEG/data . 
+              cp $applications/bash-scripts/run_scripts/CUDA/mainscript_JPEG_DECODE .
+              chmod 777 mainscript_JPEG_DECODE
+              cd ../
+##JPEG
+
 cd ../
 
 GPGPUSIM_CONFIG=$1

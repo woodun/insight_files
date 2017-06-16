@@ -23,7 +23,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in JPEG_ENCODE JPEG_DECODE RAY
+for benchmark in JPEG_ENCODE JPEG_DECODE
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

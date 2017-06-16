@@ -1,4 +1,5 @@
 #!/bin/sh
+#this one use applications_March
 
 template=/stor1/hwang07/insight_files/insight_template
 

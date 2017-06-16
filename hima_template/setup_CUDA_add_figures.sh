@@ -87,4 +87,5 @@ for BMK in $BENCHMARKS; do
     fi
 done
 
+cd ../
 sh gen_pbs_CUDA_add_figures.sh

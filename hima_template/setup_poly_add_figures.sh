@@ -73,6 +73,7 @@ for BMK in $BENCHMARKS; do
     fi
 done
 
+cd ../
 sh gen_pbs_poly_add_figures.sh
-##cd ../
+
 

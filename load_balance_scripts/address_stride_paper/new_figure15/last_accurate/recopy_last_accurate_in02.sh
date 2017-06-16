@@ -1,6 +1,10 @@
 #!/bin/sh
 
 template=/stor1/hwang07/insight_files/insight_template/add_figures.sh
+template2=/stor1/hwang07/insight_files/insight_template/gen_pbs_CUDA_add_figures.sh
+template3=/stor1/hwang07/insight_files/insight_template/gen_pbs_poly_add_figures.sh
+template4=/stor1/hwang07/insight_files/insight_template/setup_CUDA_add_figures.sh
+template5=/stor1/hwang07/insight_files/insight_template/setup_poly_add_figures.sh
 
 #####################################################################################
 mother_dir=/stor2/hwang07/last_accurate_tsp
@@ -9,6 +13,10 @@ for configs_stor1 in coverage10_dynamic_tsp_nopc_size8_gto48 coverage20_dynamic_
 do
 
 cp $template $mother_dir/$configs_stor1
+cp $template2 $mother_dir/$configs_stor1
+cp $template3 $mother_dir/$configs_stor1
+cp $template4 $mother_dir/$configs_stor1
+cp $template5 $mother_dir/$configs_stor1
 cd $mother_dir/$configs_stor1
 sh add_figures.sh $configs_stor1
 

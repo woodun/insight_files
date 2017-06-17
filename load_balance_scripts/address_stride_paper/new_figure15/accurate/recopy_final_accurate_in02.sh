@@ -1,4 +1,5 @@
 #!/bin/sh
+#this one works with applications_modified
 
 template=/stor1/hwang07/insight_files/insight_template/add_figures.sh
 template2=/stor1/hwang07/insight_files/insight_template/gen_pbs_CUDA_add_figures.sh

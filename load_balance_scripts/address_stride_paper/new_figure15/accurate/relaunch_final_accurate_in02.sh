@@ -1,4 +1,5 @@
 #!/bin/sh
+#this one works with applications_modified
 
 #####################################################
 mother_dir=/stor2/hwang07/final_accurate_tsp
@@ -23,7 +24,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in JPEG_ENCODE JPEG_DECODE
+for benchmark in
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

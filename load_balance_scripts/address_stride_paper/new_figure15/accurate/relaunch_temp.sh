@@ -5,7 +5,7 @@
 mother_dir=/stor1/hwang07/final_accurate_osp
 
 #specify your config path in stor1
-for configs_stor1 in coverage10_dynamic_osp_nopc_size8_gto48
+for configs_stor1 in coverage10_dynamic_osp_nopc_size8_gto48 wp0_osp_coverage10_gto48 wp6_osp_coverage10_gto48
 do
 
 #13
@@ -25,7 +25,7 @@ done
 mother_dir=/stor2/hwang07/final_accurate_tsp
 
 #specify your config path in stor1
-for configs_stor1 in coverage10_dynamic_tsp_nopc_size8_gto48
+for configs_stor1 in coverage10_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_gto48 wp6_tsp_coverage10_gto48
 do
 
 #13

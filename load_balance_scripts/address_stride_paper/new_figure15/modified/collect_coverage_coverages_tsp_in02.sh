@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/modified_max_coverage_tsp.txt
 mother_dir=/stor2/hwang07/modified_tsp
 
-for statistics in 'predictor coverage0:'
+for statistics in 'predictable to access rate:'
 do
 
 #specify your config path in stor1

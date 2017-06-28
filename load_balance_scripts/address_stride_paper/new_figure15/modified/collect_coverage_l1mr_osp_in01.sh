@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_max_coverage_osp.txt
+output=/stor1/hwang07/paper_collection/modified_l1mr_osp.txt
 mother_dir=/stor1/hwang07/modified_osp
 
-for statistics in 'predictable to access rate:'
+for statistics in 'L1D_total_cache_miss_rate ='
 do
 
 #specify your config path in stor1

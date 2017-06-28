@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_max_coverage_osp.txt
-mother_dir=/stor1/hwang07/modified_osp
+output=/stor1/hwang07/paper_collection/modified_l1mr_tsp.txt
+mother_dir=/stor2/hwang07/modified_tsp
 
-for statistics in 'predictable to access rate:'
+for statistics in 'L1D_total_cache_miss_rate ='
 do
 
 #specify your config path in stor1
-for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48
+for configs_stor1 in coverage100_dynamic_tsp_nopc_size8_gto48
 do
 
 #13

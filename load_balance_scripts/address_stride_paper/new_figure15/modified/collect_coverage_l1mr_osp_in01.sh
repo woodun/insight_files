@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/modified_l1mr_osp.txt
 mother_dir=/stor1/hwang07/modified_osp
 
-for statistics in 'L1D_total_cache_miss_rate ='
+for statistics in 'miss rate before prediction:'
 do
 
 #specify your config path in stor1

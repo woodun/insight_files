@@ -8,7 +8,6 @@ for statistics in 'gpu_tot_ipc ='
 do
 
 #specify your config path in stor1
-
 for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 
 #13

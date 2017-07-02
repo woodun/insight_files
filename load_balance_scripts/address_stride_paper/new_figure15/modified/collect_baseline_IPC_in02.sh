@@ -9,6 +9,7 @@ do
 
 #specify your config path in stor1
 for configs_stor1 in tsp_address_exp_gtoswl48_alloff
+do
 
 #13
 cd $mother_dir

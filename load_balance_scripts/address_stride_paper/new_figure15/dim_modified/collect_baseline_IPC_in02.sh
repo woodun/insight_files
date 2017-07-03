@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_baseline_IPC.txt
-mother_dir=/stor2/hwang07/modified_baseline
+output=/stor1/hwang07/paper_collection/dim_modified_baseline_IPC.txt
+mother_dir=/stor2/hwang07/dim_modified_baseline
 
 for statistics in 'gpu_tot_ipc ='
 do

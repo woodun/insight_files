@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_l1mr_tsp.txt
-mother_dir=/stor2/hwang07/modified_tsp
+output=/stor1/hwang07/paper_collection/dim_modified_l1mr_tsp.txt
+mother_dir=/stor2/hwang07/dim_modified_tsp
 
 for statistics in 'miss rate before prediction:'
 do

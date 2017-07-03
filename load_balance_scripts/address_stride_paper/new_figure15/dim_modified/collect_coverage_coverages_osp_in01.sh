@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_max_coverage_osp.txt
-mother_dir=/stor1/hwang07/modified_osp
+output=/stor1/hwang07/paper_collection/dim_modified_max_coverage_osp.txt
+mother_dir=/stor1/hwang07/dim_modified_osp
 
 for statistics in 'predictable to access rate:'
 do

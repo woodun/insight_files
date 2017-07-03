@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_max_coverage_tsp.txt
+output=/stor1/hwang07/paper_collection/dim_modified_max_coverage_tsp.txt
 mother_dir=/stor2/hwang07/dim_modified_tsp
 
 for statistics in 'predictable to access rate:'

@@ -19,11 +19,12 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
+#not changed: SLA TRA CONS JPEG_ENCODE
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in JPEG_ENCODE BlackScholes CONS SCP
+for benchmark in BlackScholes SCP
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

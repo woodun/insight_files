@@ -8,12 +8,12 @@ for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 do
 
 #13
-#not changed: ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK
-#tsp not good: FDTD-2D
+#not changed: ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_EMBOSS
+#tsp not good: 
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV_BLUR 2DCONV_EMBOSS 2DCONV 2MM 3DCONV 3MM GEMM
+for benchmark in 2DCONV_BLUR 2DCONV 2MM 3DCONV 3MM GEMM FDTD-2D
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

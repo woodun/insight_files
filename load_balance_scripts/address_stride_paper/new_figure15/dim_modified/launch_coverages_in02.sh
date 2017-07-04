@@ -8,12 +8,12 @@ for configs_stor1 in coverage100_dynamic_tsp_nopc_size8_gto48 coverage10_dynamic
 do
 
 #13
-#not changed: ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_EMBOSS
+#not changed: ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV
 #tsp not good: 
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV_BLUR 2DCONV 2MM 3DCONV 3MM GEMM FDTD-2D
+for benchmark in 2MM 3DCONV 3MM GEMM FDTD-2D
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -22,12 +22,12 @@ done
 
 #figures: srad_v1 histo JPEG RAY
 #not changed: SLA TRA CONS
-#tsp not good: BlackScholes JPEG_ENCODE
+#tsp not good: BlackScholes JPEG_ENCODE SCP
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP
+for benchmark in
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

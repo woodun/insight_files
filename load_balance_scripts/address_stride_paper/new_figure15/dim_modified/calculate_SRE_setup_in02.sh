@@ -3,7 +3,7 @@
 ########################################
 
 #cd $1
-cd /stor2/hwang07/dim_modified_osp/
+cd /stor2/hwang07/dim_modified_tsp/
 
 for i in $(ls -d *)
 #for i in 

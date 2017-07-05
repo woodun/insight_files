@@ -10,7 +10,7 @@ for i in coverage10_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_gto48 wp6_ts
 do
 
 cd $i
-qsub calculate_SRE_configbase_in02.pbs
+qsub calculate_SRE_configbase_in01.pbs
 cd ..
 
 done

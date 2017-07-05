@@ -11,7 +11,13 @@ for i in $(ls -d *)
 do
 
 cd $i
+
+rm $source_dir/calculate_SRE_configbase_in01.pbs
+rm $source_dir/calculate_SRE_configbase_in02.pbs
+rm $source_dir/calculate_SRE_configbase.sh
+
 cp $source_dir/calculate_SRE_configbase_in01.pbs .
+cp $source_dir/calculate_SRE_configbase_in02.pbs .
 cp $source_dir/calculate_SRE_configbase.sh .
 chmod +x calculate_SRE_configbase.sh
 cd ..

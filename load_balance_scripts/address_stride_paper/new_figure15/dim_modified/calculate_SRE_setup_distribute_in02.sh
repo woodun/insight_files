@@ -12,9 +12,9 @@ do
 
 cd $i
 
-rm $source_dir/calculate_SRE_configbase_in01.pbs
-rm $source_dir/calculate_SRE_configbase_in02.pbs
-rm $source_dir/calculate_SRE_configbase.sh
+rm calculate_SRE_configbase_in01.pbs
+rm calculate_SRE_configbase_in02.pbs
+rm calculate_SRE_configbase.sh
 
 cp $source_dir/calculate_SRE_configbase_in01.pbs .
 cp $source_dir/calculate_SRE_configbase_in02.pbs .

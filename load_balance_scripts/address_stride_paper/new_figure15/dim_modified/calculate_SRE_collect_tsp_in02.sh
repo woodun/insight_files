@@ -5,7 +5,7 @@ output=/stor1/hwang07/paper_collection/dim_modified_tsp_coverage10_RE.txt
 token='RE:'
 
 #cd $1
-cd /stor2/hwang07/dim_modified_osp
+cd /stor2/hwang07/dim_modified_tsp
 
 #for i in $(ls -d *)
 for i in coverage10_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_gto48 wp6_tsp_coverage10_gto48

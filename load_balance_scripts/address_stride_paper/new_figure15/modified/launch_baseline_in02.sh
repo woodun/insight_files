@@ -8,10 +8,12 @@ for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 do
 
 #13
+#not changed: 
+#tsp not good: GEMM FDTD-2D 2MM 3MM
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV_BLUR 2DCONV_EDGE 2DCONV_EMBOSS 2DCONV_ENHANCE 2DCONV_SHARPEN 2DCONV 2MM 3DCONV 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+for benchmark in ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -19,11 +21,13 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
+#not changed: 
+#tsp not good: BlackScholes JPEG_ENCODE
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in JPEG_ENCODE JPEG_DECODE RAY BlackScholes CONS SCP SLA TRA
+for benchmark in CONS SLA TRA SCP
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

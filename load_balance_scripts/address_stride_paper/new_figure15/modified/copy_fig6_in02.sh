@@ -4,7 +4,7 @@
 template=/stor1/hwang07/insight_files/insight_template
 
 #####################################################################################
-mother_dir=/stor1/hwang07/modified_fig6
+mother_dir=/stor2/hwang07/modified_fig6
 
 for configs_stor1 in dynamic_nopc_profile_gto48 osp_profile_gto48 dynamic_nolong_nopc_gto48
 do

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd polybench
-for benchmark in ATAX BICG GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV
+for benchmark in ATAX BICG GESUMMV MVT SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV
 do
 cd $benchmark
 ./test *_GPU.txt *_CPU.txt

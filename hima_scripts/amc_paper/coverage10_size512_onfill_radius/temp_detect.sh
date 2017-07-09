@@ -1,0 +1,3 @@
+sh detect_coverage10_noecho_size512_delay_gto_all.sh
+sh detect_coverage10_noecho_size512_delayonly_gto_all.sh
+sh detect_profile.sh

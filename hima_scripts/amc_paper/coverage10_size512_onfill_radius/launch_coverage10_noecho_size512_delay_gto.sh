@@ -3,11 +3,10 @@
 #####################################################
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/coverage10_noecho_sizes_delay
 
-for configs_stor1 in coverage10_noecho_size512_delay16_e1_gto48 coverage10_noecho_size512_delay32_e1_gto48 coverage10_noecho_size512_delay64_e1_gto48 coverage10_noecho_size512_delay128_e1_gto48 coverage10_noecho_size512_delay256_e1_gto48 coverage10_noecho_size512_delay512_e1_gto48 coverage10_noecho_size512_delay1024_e1_gto48 coverage10_noecho_size512_delay2048_e1_gto48 coverage10_noecho_size512_delay4096_e1_gto48
+for configs_stor1 in coverage10_noecho_size512_delay16_gto48 coverage10_noecho_size512_delay32_gto48 coverage10_noecho_size512_delay64_gto48 coverage10_noecho_size512_delay128_gto48 coverage10_noecho_size512_delay256_gto48 coverage10_noecho_size512_delay512_gto48 coverage10_noecho_size512_delay1024_gto48 coverage10_noecho_size512_delay2048_gto48 coverage10_noecho_size512_delay4096_gto48 coverage10_noecho_size512_delay8192_gto48 coverage10_noecho_size512_delay16384_gto48 coverage10_noecho_size512_delay32768_gto48
 do
 
 #13
-#2DCONV_BLUR 2DCONV_EMBOSS
 cd $mother_dir
 cd $configs_stor1
 cd polybench

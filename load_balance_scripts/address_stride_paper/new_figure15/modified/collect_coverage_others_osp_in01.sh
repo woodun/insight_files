@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_coverage_IPC_osp.txt
+output=/stor1/hwang07/paper_collection/modified_coverage_others_osp.txt
 mother_dir=/stor1/hwang07/modified_osp
 
 for statistics in 'bw_util=' 'Stall:' 'predictable lines:' 'average_avg_distance:' 'average_avg_bias:'

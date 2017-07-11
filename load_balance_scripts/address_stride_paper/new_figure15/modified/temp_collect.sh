@@ -14,3 +14,7 @@ sh collect_fig6_in02.sh
 sh collect_baseline_IPC_in02.sh
 sh collect_coverage_IPC_osp_in01.sh
 sh collect_coverage_IPC_tsp_in02.sh
+sh collect_coverage_others_tsp_in02.sh
+sh collect_coverage_others_osp_in01.sh
+sh calculate_SRE_collect_osp_in01.sh
+sh calculate_SRE_collect_tsp_in02.sh

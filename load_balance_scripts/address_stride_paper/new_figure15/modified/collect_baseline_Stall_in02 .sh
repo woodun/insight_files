@@ -1,14 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_rate_osp.txt
-mother_dir=/stor1/hwang07/modified_osp
+output=/stor1/hwang07/paper_collection/modified_baseline_Stall.txt
+mother_dir=/stor2/hwang07/modified_baseline
 
-for statistics in 'predictable to miss rate:'
+for statistics in 'gpu_tot_ipc ='
 do
 
 #specify your config path in stor1
-for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_osp_nopc_size8_RR48
+for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 do
 
 #13

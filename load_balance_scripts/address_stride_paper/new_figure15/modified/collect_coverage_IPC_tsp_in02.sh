@@ -15,7 +15,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in ATAX BICG GESUMMV MVT SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV
+for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

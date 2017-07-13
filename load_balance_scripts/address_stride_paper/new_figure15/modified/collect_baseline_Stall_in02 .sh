@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/modified_baseline_Stall.txt
 mother_dir=/stor2/hwang07/modified_baseline
 
-for statistics in 'gpu_tot_ipc ='
+for statistics in 'Stall:'
 do
 
 #specify your config path in stor1

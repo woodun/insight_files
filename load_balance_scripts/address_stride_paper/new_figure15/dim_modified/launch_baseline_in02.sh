@@ -2,9 +2,9 @@
 #this one works with applications_modified
 
 #####################################################
-mother_dir=/stor1/hwang07/half_bw_osp
+mother_dir=/stor2/hwang07/dim_modified_baseline
 
-for configs_stor1 in halfbw_tsp_address_exp_gtoswl48_alloff
+for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 do
 
 #13
@@ -13,7 +13,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
+for benchmark in GESUMMV SYR2K SYRK
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -27,7 +27,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in SLA TRA CONS
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

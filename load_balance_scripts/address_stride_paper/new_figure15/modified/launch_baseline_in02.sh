@@ -13,7 +13,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV_EMBOSS 2DCONV_BLUR
+for benchmark in
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -27,7 +27,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in
+for benchmark in CONS TRA SLA
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

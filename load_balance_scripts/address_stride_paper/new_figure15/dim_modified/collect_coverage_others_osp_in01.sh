@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/dim_modified_coverage_others_osp.txt
 mother_dir=/stor1/hwang07/dim_modified_osp
 
-for statistics in 'gpu_tot_ipc =' 'bw_util=' 'Stall:' 'predictable lines:' 'average_avg_distance:' 'average_avg_bias:'
+for statistics in 'gpu_tot_ipc =' 'bw_util=' 'Stall:' 'predictable lines:' 'average_avg_distance:' 'average_avg_bias:' 'to access rate:'
 do
 
 printf "%s\r\n" $statistics >> $output

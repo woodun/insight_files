@@ -4,7 +4,8 @@
 #####################################################
 mother_dir=/stor1/hwang07/modified_sizes
 
-for configs_stor1 in dynamic_noold_nopc_size1_gto48 dynamic_noold_nopc_size2_gto48 dynamic_noold_nopc_size3_gto48 dynamic_noold_nopc_size4_gto48 dynamic_noold_nopc_size5_gto48 dynamic_noold_nopc_size6_gto48 dynamic_noold_nopc_size7_gto48 dynamic_noold_nopc_size8_gto48 dynamic_noold_nopc_size9_gto48 dynamic_noold_nopc_size10_gto48
+#dynamic_noold_nopc_size1_gto48 dynamic_noold_nopc_size2_gto48 dynamic_noold_nopc_size3_gto48 dynamic_noold_nopc_size4_gto48 dynamic_noold_nopc_size5_gto48 dynamic_noold_nopc_size6_gto48 dynamic_noold_nopc_size7_gto48 dynamic_noold_nopc_size8_gto48 dynamic_noold_nopc_size9_gto48 dynamic_noold_nopc_size10_gto48
+for configs_stor1 in dynamic_noold_nopc_size4_gto48 dynamic_noold_nopc_size5_gto48 dynamic_noold_nopc_size6_gto48 dynamic_noold_nopc_size7_gto48 dynamic_noold_nopc_size8_gto48 dynamic_noold_nopc_size9_gto48 dynamic_noold_nopc_size10_gto48
 do
 
 #13
@@ -21,13 +22,13 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
-#not changed: CONS TRA SCP SLA
+#not changed: CONS TRA SCP
 #tsp not good: BlackScholes JPEG_ENCODE
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in CONS TRA
+for benchmark in SLA
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

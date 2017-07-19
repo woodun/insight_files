@@ -27,7 +27,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in CONS TRA SLA
+for benchmark in SLA
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

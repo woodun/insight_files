@@ -18,7 +18,7 @@ cd polybench
 for benchmark in
 do
 cd $benchmark
-grep "$statistics[ ]*[ -a-z\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
+grep "$statistics[ ]*[ a-z\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
 cd ..
 done
 
@@ -30,7 +30,7 @@ cd CUDA
 for benchmark in TRA CONS
 do
 cd $benchmark
-grep "$statistics[ ]*[ -a-z\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
+grep "$statistics[ ]*[ a-z\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
 cd ..
 done
 

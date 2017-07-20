@@ -15,10 +15,10 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
+for benchmark in
 do
 cd $benchmark
-grep "$statistics[ ]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep "$statistics[ ]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
 cd ..
 done
 
@@ -27,10 +27,10 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in TRA CONS
 do
 cd $benchmark
-grep "$statistics[ ]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep "$statistics[ ]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s###########" >> $output
 cd ..
 done
 

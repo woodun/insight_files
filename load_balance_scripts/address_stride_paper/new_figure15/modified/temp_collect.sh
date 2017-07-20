@@ -18,3 +18,5 @@ sh collect_coverage_others_tsp_in02.sh
 sh collect_coverage_others_osp_in01.sh
 sh calculate_SRE_collect_osp_in01.sh
 sh calculate_SRE_collect_tsp_in02.sh
+sh calculate_SRE_collect_fig1_osp_in01.sh
+sh calculate_SRE_collect_fig1_tsp_in02.sh

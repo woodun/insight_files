@@ -18,11 +18,11 @@ cd $configs_stor1
 cd polybench
 cd 2DCONV_BLUR
 cp BLUR_GPU.bmp dest_blur
-mv BLUR_GPU.bmp blur_$configs_stor1
+mv blur_$configs_stor1 BLUR_GPU.bmp 
 cd ..
-cd 2DCONV_EMBOSS
-cp BLUR_GPU.bmp dest_emboss
-mv BLUR_GPU.bmp emboss_$configs_stor
+#cd 2DCONV_EMBOSS
+#cp EMBOSS_GPU.bmp dest_emboss
+#mv EMBOSS.bmp emboss_$configs_stor
 
 done
 
@@ -36,11 +36,11 @@ cd $configs_stor2
 cd polybench
 cd 2DCONV_BLUR
 cp BLUR_GPU.bmp dest_blur
-mv BLUR_GPU.bmp blur_$configs_stor1
+mv blur_$configs_stor1 BLUR_GPU.bmp 
 cd ..
-cd 2DCONV_EMBOSS
-cp BLUR_GPU.bmp dest_emboss
-mv BLUR_GPU.bmp emboss_$configs_stor
+#cd 2DCONV_EMBOSS
+#cp EMBOSS_GPU.bmp dest_emboss
+#mv EMBOSS_GPU.bmp emboss_$configs_stor
 
 done
 

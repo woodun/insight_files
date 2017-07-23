@@ -1,8 +1,8 @@
 #!/bin/sh
 #this one use applications_FEB
 
-dest_emboss=/stor1/hwang07/emboss
-dest_blur=/stor1/hwang07/blur
+dest_emboss=/stor1/hwang07/emboss/
+dest_blur=/stor1/hwang07/blur/
 
 #####################################################################################
 mother_dir1=/stor1/hwang07/modified_osp

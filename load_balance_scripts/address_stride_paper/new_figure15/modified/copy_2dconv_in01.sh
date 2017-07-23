@@ -25,7 +25,7 @@ cp EMBOSS_GPU.bmp $dest_emboss
 cd $dest_blur
 mv BLUR_GPU.bmp blur_$configs_stor1.bmp
 cd $dest_emboss
-mv EMBOSS_GPU.bmp emboss_$configs_stor.bmp
+mv EMBOSS_GPU.bmp emboss_$configs_stor1.bmp
 
 
 done
@@ -45,9 +45,9 @@ cd 2DCONV_EMBOSS
 cp EMBOSS_GPU.bmp $dest_emboss
 
 cd $dest_blur
-mv BLUR_GPU.bmp blur_$configs_stor1.bmp
+mv BLUR_GPU.bmp blur_$configs_stor2.bmp
 cd $dest_emboss
-mv EMBOSS_GPU.bmp emboss_$configs_stor.bmp
+mv EMBOSS_GPU.bmp emboss_$configs_stor2.bmp
 
 done
 

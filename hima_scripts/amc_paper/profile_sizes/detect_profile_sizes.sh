@@ -16,6 +16,7 @@ for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2D
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then
+pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd
@@ -33,6 +34,7 @@ for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then
+pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd

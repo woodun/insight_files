@@ -8,7 +8,7 @@ mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile_sizes
 for configs_stor1 in delay0_remove0_e0_r0_size16_gto48_p8192_w8192 delay0_remove0_e0_r0_size32_gto48_p8192_w8192 delay0_remove0_e0_r0_size64_gto48_p8192_w8192 delay0_remove0_e0_r0_size128_gto48_p8192_w8192 delay0_remove0_e0_r0_size256_gto48_p8192_w8192 delay0_remove0_e0_r0_size512_gto48_p8192_w8192 delay0_remove0_e0_r0_size1024_gto48_p8192_w8192 delay0_remove0_e0_r0_sizeinf_gto48_p8192_w8192
 do
 
-#15 3DCONV FDTD-2D GRAMSCHM
+#15
 cd $mother_dir
 cd $configs_stor1
 cd polybench

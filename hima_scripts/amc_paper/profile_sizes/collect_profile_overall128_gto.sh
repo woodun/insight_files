@@ -23,7 +23,7 @@ cd $mother_dir
 cd $configs_stor1
 cd polybench
 cd $benchmark
-pcregrep -A 20000 -M "overall 128 and more all:[ ]*[\+0-9\. ]*GPGPU-Sim: synchronize waiting for inactive GPU simulation\nGPGPU-Sim API: Stream Manager State\n[\+0-9\. ]*" output_* | sed -e "s/overall 128 and more all:[ ]*//g" | sed -e "s/GPGPU-Sim: synchronize waiting for inactive GPU simulation//g" | sed -e "s/GPGPU-Sim API: Stream Manager State//g" | xargs printf "%s " >> $output
+pcregrep -A 20000 -M "overall 128 and more all:[ ]*[0-9 ]*GPGPU-Sim: synchronize waiting for inactive GPU simulation\nGPGPU-Sim API: Stream Manager State\n[0-9 ]*" output_* | sed -e "s/overall 128 and more all:[ ]*//g" | sed -e "s/GPGPU-Sim: synchronize waiting for inactive GPU simulation//g" | sed -e "s/GPGPU-Sim API: Stream Manager State//g" | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 done
 
@@ -45,7 +45,7 @@ cd $configs_stor1
 cd CUDA
 
 cd $benchmark
-pcregrep -A 20000 -M "overall 128 and more all:[ ]*[\+0-9\. ]*GPGPU-Sim: synchronize waiting for inactive GPU simulation\nGPGPU-Sim API: Stream Manager State\n[\+0-9\. ]*" output_* | sed -e "s/overall 128 and more all:[ ]*//g" | sed -e "s/GPGPU-Sim: synchronize waiting for inactive GPU simulation//g" | sed -e "s/GPGPU-Sim API: Stream Manager State//g" | xargs printf "%s " >> $output
+pcregrep -A 20000 -M "overall 128 and more all:[ ]*[0-9 ]*GPGPU-Sim: synchronize waiting for inactive GPU simulation\nGPGPU-Sim API: Stream Manager State\n[0-9 ]*" output_* | sed -e "s/overall 128 and more all:[ ]*//g" | sed -e "s/GPGPU-Sim: synchronize waiting for inactive GPU simulation//g" | sed -e "s/GPGPU-Sim API: Stream Manager State//g" | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output
 done

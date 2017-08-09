@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_sizes_overall.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/profile_sizes_overall_count.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile_sizes
 
 for statistics in 'overall count 128 and more all:'

@@ -47,7 +47,6 @@ cd CUDA
 cd $benchmark
 grep "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
 printf "\r\n" >> $output
-printf "\r\n" >> $output
 done
 
 done

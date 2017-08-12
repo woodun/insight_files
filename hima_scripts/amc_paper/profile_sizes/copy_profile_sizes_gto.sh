@@ -9,7 +9,9 @@ mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/profile_sizes
 
 #delay0_remove0_e0_r0_size512_gto48_p8192_w8192
 
-for configs_stor1 in delay0_remove0_e0_r0_size512_gto48_p16384_w16384 delay0_remove0_e0_r0_size512_gto48_p32768_w32768
+#delay0_remove0_e0_r0_size512_gto48_p16384_w16384 delay0_remove0_e0_r0_size512_gto48_p32768_w32768
+
+for configs_stor1 in delay0_remove0_e0_r0_size512_gto48_p4096_w4096
 do
 
 cp -r $template $mother_dir/$configs_stor1

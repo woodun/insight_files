@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delay_sizes_overall.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delay_sizes
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delayonly_sizes_overall.txt
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delayonly_sizes
 
 for statistics in 'overall 128 and more all:'
 do

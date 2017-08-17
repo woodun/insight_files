@@ -31,7 +31,7 @@ done
 #############################
 
 #############################
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA
+for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA RAY
 do
 
 #specify your config path in stor1

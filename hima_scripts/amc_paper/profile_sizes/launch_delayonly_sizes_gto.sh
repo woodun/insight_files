@@ -10,11 +10,11 @@ do
 
 #15999041539
 #15
-#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+#
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -22,12 +22,12 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
-#SCP FWT LPS BlackScholes SLA
+#TRA CONS RAY
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA CONS RAY
+for benchmark in SCP FWT LPS BlackScholes SLA
 #relaunch ray, do not discard size16 when delaying (since it's there in motivation), adjust input size with size 16 for TRA, CONS and relaunch.
 do
 cd $benchmark

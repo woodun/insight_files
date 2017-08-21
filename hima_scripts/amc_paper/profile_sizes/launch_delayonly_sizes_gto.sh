@@ -22,12 +22,12 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
-#TRA CONS RAY
+#
 #7
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
 #relaunch ray, do not discard size16 when delaying (since it's there in motivation), adjust input size with size 16 for TRA, CONS and relaunch.
 do
 cd $benchmark

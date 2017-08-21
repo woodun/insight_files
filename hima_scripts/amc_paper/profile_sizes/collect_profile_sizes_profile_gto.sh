@@ -22,11 +22,11 @@ cd $mother_dir
 cd $configs_stor1
 cd polybench
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 
-printf "\r\n" >> $output
 done
 #############################
 
@@ -45,11 +45,11 @@ cd $configs_stor1
 cd CUDA
 
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 
-printf "\r\n" >> $output
 done
 #############################
 

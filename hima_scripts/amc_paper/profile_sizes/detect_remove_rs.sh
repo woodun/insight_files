@@ -8,7 +8,8 @@ mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove_rs
 for configs_stor1 in delay0_remove10_e6_r12_size512_gto48_p32768_w32768 delay0_remove10_e6_r13_size512_gto48_p32768_w32768 delay0_remove10_e6_r14_size512_gto48_p32768_w32768 delay0_remove10_e6_r15_size512_gto48_p32768_w32768 delay0_remove10_e6_r16_size512_gto48_p32768_w32768 delay0_remove10_e6_r17_size512_gto48_p32768_w32768 
 do
 
-#13
+#total 23
+#15
 cd $mother_dir
 cd $configs_stor1
 cd polybench
@@ -26,7 +27,7 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
-#7
+#8
 cd $mother_dir
 cd $configs_stor1
 cd CUDA

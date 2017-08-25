@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delayonly_sizes_statistics.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delayonly1024_sizes_statistics.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delayonly_sizes
 
 for statistics in 'overall accesses all:' 'overall activations all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'readonly accesses all:' 'readonly activations all:' 'total global read access:' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delay queue full all:' 'row_hit_0 all:' 'actual coverage all:' 'used row all:' 
@@ -10,7 +10,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in delay4096_remove0_e0_r0_size16_gto48_p8192_w8192 delay4096_remove0_e0_r0_size32_gto48_p8192_w8192 delay4096_remove0_e0_r0_size64_gto48_p8192_w8192 delay4096_remove0_e0_r0_size128_gto48_p8192_w8192 delay4096_remove0_e0_r0_size256_gto48_p8192_w8192 delay4096_remove0_e0_r0_size512_gto48_p8192_w8192 delay4096_remove0_e0_r0_size1024_gto48_p8192_w8192 delay4096_remove0_e0_r0_sizeinf_gto48_p8192_w8192
+for configs_stor1 in delay1024_remove0_e0_r0_size16_gto48_p8192_w8192 delay1024_remove0_e0_r0_size32_gto48_p8192_w8192 delay1024_remove0_e0_r0_size64_gto48_p8192_w8192 delay1024_remove0_e0_r0_size128_gto48_p8192_w8192 delay1024_remove0_e0_r0_size256_gto48_p8192_w8192 delay1024_remove0_e0_r0_size512_gto48_p8192_w8192 delay1024_remove0_e0_r0_size1024_gto48_p8192_w8192 delay1024_remove0_e0_r0_sizeinf_gto48_p8192_w8192
 do
 
 #13

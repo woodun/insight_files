@@ -12,10 +12,11 @@ for configs_stor1 in delay0_remove10_e6_r2_size512_gto48_p262144_w262144 delay0_
 do
 
 #15
+#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -23,11 +24,12 @@ cd ..
 done
 
 #figures: srad_v1 histo JPEG RAY
-#7
+#8
+#SCP FWT LPS BlackScholes SLA TRA CONS RAY
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
+for benchmark in BlackScholes
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

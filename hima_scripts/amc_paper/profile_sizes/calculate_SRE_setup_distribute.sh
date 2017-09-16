@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################
-source_dir=/stor1/hwang07/insight_files/hima_scripts/amc_paper/profile_sizes
+source_dir=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/hima_scripts/amc_paper/profile_sizes
 
 #cd $1
 cd /sciclone/data10/hwang07/GPU_RESEARCH/amc/remove_rs

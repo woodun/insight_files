@@ -30,9 +30,9 @@ cd ..
 done
 
 cd RAY
-
-cd ..
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/cmp_image .
+cd ..
+
 cd ..
 
 cd ..

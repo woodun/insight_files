@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove_RE4.txt
-statistics='RE4:'
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/remove_RE_new.txt
+statistics='RE:'
 
 #cd $1
 cd /sciclone/data10/hwang07/GPU_RESEARCH/amc/remove_rs

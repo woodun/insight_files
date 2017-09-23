@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delayonly_size128_delayauto_statistics.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/delayonly_size128_delayauto_statistics_new.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/delayonly_sizes
 
 for statistics in 'overall accesses all:' 'overall activations all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'readonly accesses all:' 'readonly activations all:' 'total global read access:' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delay queue full all:' 'row_hit_0 all:' 'actual coverage all:' 'used row all:' 'actual delay:' 'profiling done cycle:'
@@ -10,7 +10,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in delayA_remove0_e0_r0_size128_gto48_p32768_w65536_c0_bw90 delayA_remove0_e0_r0_size128_gto48_p16384_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p16384_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p65536_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p8192_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p262144_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p131072_w262144_c0_bw85
+for configs_stor1 in delayA_remove0_e0_r0_size128_gto48_p131072_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p65536_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p65536_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w32768_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p16384_w32768_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p16384_w16384_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w65536_c0_bw90 delayA_remove0_e0_r0_size128_gto48_p16384_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p16384_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p65536_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p8192_w65536_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w131072_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p32768_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p262144_w262144_c0_bw85 delayA_remove0_e0_r0_size128_gto48_p131072_w262144_c0_bw85
 do
 
 #13

@@ -3,6 +3,7 @@
 #13apps
 
 #Not working: pf_naive
+##../../../../data/srad/image.pgm need to be there for srad_v1
 
 mkdir rodinia
 cd rodinia

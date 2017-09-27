@@ -22,7 +22,7 @@ pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd
-pwd | xargs printf "%s " >> $output
+#pwd | xargs printf "%s " >> $output
 fi
 cd ..
 done
@@ -37,7 +37,7 @@ pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd
-pwd | xargs printf "%s " >> $output
+#pwd | xargs printf "%s " >> $output
 fi
 cd ..
 done
@@ -70,7 +70,7 @@ pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd
-pwd | xargs printf "%s " >> $output
+#pwd | xargs printf "%s " >> $output
 fi
 cd ..
 done
@@ -85,7 +85,7 @@ pwd | xargs printf "%s "
 echo 'ok'
 else
 pwd
-pwd | xargs printf "%s " >> $output
+#pwd | xargs printf "%s " >> $output
 fi
 cd ..
 done

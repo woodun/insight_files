@@ -1,7 +1,7 @@
 #!/bin/sh
 #this one use applications_FEB
 
-template=/stor1/hwang07/insight_files/hima_template
+template=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/hima_template
 
 #####################################################################################
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/asap_rebuttal

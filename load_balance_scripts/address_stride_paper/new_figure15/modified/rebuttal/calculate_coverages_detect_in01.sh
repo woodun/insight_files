@@ -17,7 +17,7 @@ cd polybench
 for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
-if [[ -s *_CPU.txt ]]; then
+if [[ -s *\_CPU.txt ]]; then
 pwd | xargs printf "%s "
 echo 'ok'
 else
@@ -28,12 +28,12 @@ cd ..
 done
 cd ..
 
-#TRA CONS SCP
+#
 cd CUDA
-for benchmark in SLA
+for benchmark in SLA TRA CONS SCP
 do
 cd $benchmark
-if [[ -s *_CPU.txt ]]; then
+if [[ -s *\_CPU.txt ]]; then
 pwd | xargs printf "%s "
 echo 'ok'
 else

@@ -17,7 +17,7 @@ cd polybench
 for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
-if [[ -s RMSE.txt ]]; then
+if [[ -s *_CPU.txt ]]; then
 pwd | xargs printf "%s "
 echo 'ok'
 else
@@ -33,7 +33,7 @@ cd CUDA
 for benchmark in SLA
 do
 cd $benchmark
-if [[ -s RMSE.txt ]]; then
+if [[ -s *_CPU.txt ]]; then
 pwd | xargs printf "%s "
 echo 'ok'
 else

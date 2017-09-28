@@ -21,7 +21,7 @@ cd $benchmark
 rm calculate_RMSE_appbase_in01.pbs
 rm calculate_RMSE_appbase_in02.pbs
 cat $source_dir/calculate_RMSE_appbase_in01.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in01.pbs
-cat $source_dir/calculate_RMSE_appbase_in01.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in02.pbs
+cat $source_dir/calculate_RMSE_appbase_in02.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in02.pbs
 chmod +x calculate_RMSE_appbase_in01.pbs
 chmod +x calculate_RMSE_appbase_in02.pbs
 
@@ -39,7 +39,7 @@ cd $benchmark
 rm calculate_RMSE_appbase_in01.pbs
 rm calculate_RMSE_appbase_in02.pbs
 cat $source_dir/calculate_RMSE_appbase_in01.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in01.pbs
-cat $source_dir/calculate_RMSE_appbase_in01.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in02.pbs
+cat $source_dir/calculate_RMSE_appbase_in02.pbs | sed -e "s/appname/$benchmark/g" > calculate_RMSE_appbase_in02.pbs
 chmod +x calculate_RMSE_appbase_in01.pbs
 chmod +x calculate_RMSE_appbase_in02.pbs
 

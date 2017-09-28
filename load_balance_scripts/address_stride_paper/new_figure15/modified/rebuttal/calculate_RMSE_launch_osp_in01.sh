@@ -1,6 +1,6 @@
 #!/bin/sh
 
-########################################
+########################################in01:/stor1/hwang07/modified_osp/coverage5_dynamic_osp_nopc_size8_gto48/CUDA/
 
 cd /stor1/hwang07/modified_osp
 

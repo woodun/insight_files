@@ -20,8 +20,8 @@ cd $benchmark
 
 rm appbase_in01.pbs
 rm appbase_in02.pbs
-cat $source_dir/script_base_in01.pbs | sed -e "s/JPEG/$benchmark/g" > appbase_in01.pbs
-cat $source_dir/script_base_in02.pbs | sed -e "s/JPEG/$benchmark/g" > appbase_in02.pbs
+cat $source_dir/script_base_in01.pbs | sed -e "s/JPEG/$benchmark/g" | sed -e "s/CUDA/polybench/g" > appbase_in01.pbs
+cat $source_dir/script_base_in02.pbs | sed -e "s/JPEG/$benchmark/g" | sed -e "s/CUDA/polybench/g" > appbase_in02.pbs
 chmod +x appbase_in01.pbs
 chmod +x appbase_in02.pbs
 

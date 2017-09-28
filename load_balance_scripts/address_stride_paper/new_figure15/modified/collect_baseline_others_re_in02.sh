@@ -1,9 +1,15 @@
 #!/bin/sh
-#this one works with applications_modified
 
-#####################################################
+#specify your output file
+output=/stor1/hwang07/paper_collection/modified_baseline_others.txt
 mother_dir=/stor2/hwang07/modified_baseline
 
+for statistics in 'gpu_tot_ipc =' 'bw_util=' 'Stall:' 'predictable lines:' 'average_avg_distance:' 'average_avg_bias:' 'to access rate:'
+do
+
+printf "%s\r\n" $statistics >> $output
+
+#specify your config path in stor1
 for configs_stor1 in tsp_address_exp_gtoswl48_alloff
 do
 
@@ -14,7 +20,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in CORR COVAR
+for benchmark in CORR COVAR 2DCONV 3DCONV 2MM 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_BLUR 2DCONV_EDGE 2DCONV_EMBOSS 2DCONV_ENHANCE 2DCONV_SHARPEN
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -86,5 +92,9 @@ cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
+
+printf "\r\n" >> $output
+done
+######################################################################################################################################
 
 done

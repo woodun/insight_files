@@ -28,9 +28,9 @@ cd ..
 done
 cd ..
 
-#SLA TRA CONS SCP
+#
 cd CUDA
-for benchmark in 
+for benchmark in SLA TRA CONS SCP
 do
 cd $benchmark
 if [[ -s $benchmark\_CPU.txt ]]; then

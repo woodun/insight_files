@@ -15,7 +15,7 @@ cd polybench
 for benchmark in 
 do
 cd $benchmark
-qsub calculate_RMSE_appbase_in02.pbs
+qsub calculate_RMSE_appbase_in01.pbs
 cd ..
 done
 cd ..
@@ -25,7 +25,7 @@ cd CUDA
 for benchmark in TRA CONS SCP
 do
 cd $benchmark
-qsub calculate_RMSE_appbase_in02.pbs
+qsub calculate_RMSE_appbase_in01.pbs
 cd ..
 done
 cd ..

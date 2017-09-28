@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/modified_tsp_coverageS_RMSE.txt
+output=/stor1/hwang07/paper_collection/modified_tsp_coverages_RMSE.txt
 statistics='RE:'
 
 #cd $1

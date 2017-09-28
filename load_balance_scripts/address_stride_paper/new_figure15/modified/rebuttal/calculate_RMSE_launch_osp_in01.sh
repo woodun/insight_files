@@ -33,6 +33,4 @@ cd ..
 
 cd ..
 
-printf "\r\n" >> $output
-
 done

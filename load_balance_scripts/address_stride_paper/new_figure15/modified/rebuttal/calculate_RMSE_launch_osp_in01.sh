@@ -20,8 +20,9 @@ cd ..
 done
 cd ..
 
+#SLA
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in TRA CONS SCP
 do
 cd $benchmark
 qsub calculate_RMSE_appbase_in02.pbs

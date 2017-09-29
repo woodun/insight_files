@@ -28,10 +28,11 @@ done
 #7 
 #BlackScholes RAY SCP SLA CONS TRA JPEG_ENCODE JPEG_DECODE
 #CP LIB NQU STO FWT lulesh AES BFS MUM NN kmeans JPEG BFS2 KMN 
+#LPS
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in LPS
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -49,11 +50,12 @@ qsub pbs_$benchmark.pbs
 cd ..
 done
 
-#SimilarityScore Kmeans MatrixMul StringMatch
+#SimilarityScore Kmeans MatrixMul StringMatch 
+#WordCount
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in InvertedIndex PageViewCount PageViewRank WordCount
+for benchmark in InvertedIndex PageViewCount PageViewRank
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -85,10 +87,11 @@ cd ..
 done
 
 #MD QTC Reduction Scan Spmv Triad BFS
+#Stencil2D
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in Stencil2D
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

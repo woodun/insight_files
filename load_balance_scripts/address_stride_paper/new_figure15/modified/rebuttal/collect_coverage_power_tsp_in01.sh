@@ -4,6 +4,8 @@
 output=/stor1/hwang07/paper_collection/rebuttal_coverages_power_tsp.txt
 mother_dir=/stor1/hwang07/rebuttal_tsp
 
+#grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s "
+#grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s "
 for statistics in 'gpu_tot_avg_power ='
 do
 

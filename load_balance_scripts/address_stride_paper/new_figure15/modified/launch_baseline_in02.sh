@@ -51,11 +51,11 @@ cd ..
 done
 
 #SimilarityScore Kmeans MatrixMul StringMatch 
-#WordCount
+#WordCount InvertedIndex PageViewCount PageViewRank
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in InvertedIndex PageViewCount PageViewRank
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

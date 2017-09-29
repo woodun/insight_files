@@ -4,6 +4,9 @@
 output=/sciclone/data10/hwang07/GPU_RESEARCH/rebuttal_collection/bora_rebuttal_coverages_power_osp.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/asap_rebuttal
 
+#grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s\n"
+#ls gpgpusim_power_report* -tr | tail -1 | grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s\n"
+#grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" gpgpusim_power_report* | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s\n" | ls -tr | tail -1
 for statistics in 'gpu_tot_avg_power ='
 do
 
@@ -21,7 +24,7 @@ cd polybench
 for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" gpgpusim_power_report* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s" >> $output
 cd ..
 done
 
@@ -33,7 +36,7 @@ cd CUDA
 for benchmark in SLA TRA CONS SCP
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" gpgpusim_power_report* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s" >> $output
 cd ..
 done
 

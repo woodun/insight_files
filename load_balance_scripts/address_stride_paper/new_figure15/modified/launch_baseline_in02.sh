@@ -11,10 +11,11 @@ do
 #not changed: 2DCONV 3DCONV ATAX BICG GESUMMV MVT SYR2K SYRK
 #tsp not good: GEMM FDTD-2D 2MM 3MM GRAMSCHM
 #2DCONV 3DCONV 2MM 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK 2DCONV_BLUR 2DCONV_EDGE 2DCONV_EMBOSS 2DCONV_ENHANCE 2DCONV_SHARPEN
+#CORR COVAR
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in CORR COVAR
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -25,41 +26,46 @@ done
 #not changed: CONS TRA SCP SLA
 #tsp not good: BlackScholes JPEG_ENCODE
 #7 
-#BlackScholes LPS RAY SCP SLA CONS TRA JPEG_ENCODE JPEG_DECODE
+#BlackScholes RAY SCP SLA CONS TRA JPEG_ENCODE JPEG_DECODE
+#CP LIB NQU STO FWT lulesh AES BFS MUM NN kmeans JPEG BFS2 KMN 
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in CP LIB NQU STO FWT lulesh AES BFS MUM NN kmeans JPEG BFS2 KMN 
+for benchmark in LPS
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
 
+#bfs bh dmr mst sp sssp
 cd $mother_dir
 cd $configs_stor1
 cd lonestar
-for benchmark in bfs bh dmr mst sp sssp
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
 
+#SimilarityScore Kmeans MatrixMul StringMatch
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
+for benchmark in InvertedIndex PageViewCount PageViewRank WordCount
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
 
+#cutcp histo mm sad spmv lbm
+#tpacf
 cd $mother_dir
 cd $configs_stor1
 cd parboil
-for benchmark in cutcp histo mm sad spmv lbm tpacf
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
@@ -67,20 +73,22 @@ cd ..
 done
 
 ##../../../../data/srad/image.pgm needs to be there for srad_v1
+#backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
 cd $mother_dir
 cd $configs_stor1
 cd rodinia
-for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
+for benchmark in 
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs
 cd ..
 done
 
+#MD QTC Reduction Scan Spmv Triad BFS
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
+for benchmark in Stencil2D
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

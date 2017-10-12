@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#####################################################
+#####################################################are these done? collect them.
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/remove_rs
 
 #delay0_remove10_e6_r2_size128_gto48_p65536_w65536_c1024 delay0_remove10_e6_r3_size128_gto48_p65536_w65536_c1024 delay0_remove10_e6_r4_size128_gto48_p65536_w65536_c1024 delay0_remove10_e6_r5_size128_gto48_p65536_w65536_c1024 delay0_remove10_e6_r6_size128_gto48_p65536_w65536_c1024 delay0_remove10_e6_r7_size128_gto48_p65536_w65536_c1024

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/rebuttal_coverages_l1_miss_tsp.txt
+output=/stor1/hwang07/paper_collection/rebuttal_coverages_l2_miss_tsp.txt
 mother_dir=/stor1/hwang07/rebuttal_tsp
 
 #grep -o "gpu_tot_sim_cycle =[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/gpu_tot_sim_cycle =[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

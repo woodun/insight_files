@@ -1,0 +1,11 @@
+sh collect_size128_profile_act_bwutil_gto.sh
+sh collect_size128_profile_act_locality_gto.sh
+sh collect_size128_profile_act_es_gto.sh
+
+sh collect_size128_profile_req_bwutil_gto.sh
+sh collect_size128_profile_req_locality_gto.sh
+sh collect_size128_profile_req_es_gto.sh
+
+sh collect_size128_profile_pf_bwutil_gto.sh
+sh collect_size128_profile_pf_locality_gto.sh
+sh collect_size128_profile_pf_es_gto.sh

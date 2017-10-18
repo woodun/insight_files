@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_profile_pf_es.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_profile_pf_locality.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_profile
 
 #grep -o "#### temp_bwutil:[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/#### temp_bwutil:[ ]*//g" | xargs printf "%s "

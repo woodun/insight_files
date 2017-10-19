@@ -24,7 +24,7 @@ cd $configs_stor1
 cd polybench
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
+printf "0\r\n" >> $output
 cd ..
 
 done
@@ -52,7 +52,7 @@ cd CUDA
 
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/$statistics[ ]*//g" | xargs printf "%s " >> $output
-printf "\r\n" >> $output
+printf "0\r\n" >> $output
 cd ..
 
 done

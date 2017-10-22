@@ -11,4 +11,5 @@ sh collect_size128_profile_pf_locality_gto.sh
 sh collect_size128_profile_pf_es_gto.sh
 
 sh collect_size128_profile_req_activation_gto.sh
+sh collect_size128_profile_act_activation_gto.sh
 sh collect_size128_profile_pf_activation_gto.sh

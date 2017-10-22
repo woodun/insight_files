@@ -6,7 +6,7 @@ mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_profile
 
 #grep -o "#### temp_bwutil:[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/#### temp_bwutil:[ ]*//g" | xargs printf "%s "
 #grep -o "temp_bwutil:[ ]*[-eE\+0-9\.]*" profile_output.txt | sed -e "s/temp_bwutil:[ ]*//g" | xargs printf "%s "
-for statistics in 'temp_bwutil:'
+for statistics in 'pf_bwutil:'
 do
 
 #############################removed: 2DCONV

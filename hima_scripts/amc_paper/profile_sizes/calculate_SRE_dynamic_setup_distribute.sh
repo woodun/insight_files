@@ -15,9 +15,11 @@ cd $i
 
 rm calculate_SRE_configbase.pbs
 rm calculate_SRE_configbase.sh
+rm calculate_SRE_configbase_sciclone.pbs
 
 cp $source_dir/calculate_SRE_configbase.pbs .
 cp $source_dir/calculate_SRE_configbase.sh .
+cp $source_dir/calculate_SRE_configbase_sciclone.pbs .
 chmod +x calculate_SRE_configbase.sh
 cd ..
 

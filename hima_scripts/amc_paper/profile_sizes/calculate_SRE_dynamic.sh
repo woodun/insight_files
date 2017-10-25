@@ -11,7 +11,8 @@ for i in delay0_remove10D_e8_r11_size128_gto48_pw1024_ww8192_c128_bw85_aw1000_rw
 do
 
 cd $i
-qsub calculate_SRE_configbase.pbs
+#qsub calculate_SRE_configbase.pbs
+qsub calculate_SRE_configbase_sciclone.pbs
 cd ..
 
 done

@@ -15,6 +15,13 @@ do
 		cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/in02/g" > polybench/$benchmark/in02_pbs_$benchmark.pbs
 done
 
+#axbench
+for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+do
+	    cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/in01/g" > axbench/$benchmark/in01_pbs_$benchmark.pbs
+		cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/in02/g" > axbench/$benchmark/in02_pbs_$benchmark.pbs
+done
+
 #lonestar
 #6apps
 for benchmark in bfs bh dmr mst sp sssp

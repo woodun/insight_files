@@ -4,7 +4,7 @@
 #PBS -N appname
 #PBS -m a
 #PBS -M hwang07@email.wm.edu
-PROG=$applications/bash-scripts/run_scripts/shoc/mainscript_appname
+PROG=$applications/bash-scripts/run_scripts/benchsuite/mainscript_appname
 ARGS=""
 cd $PBS_O_WORKDIR
 $PROG $ARGS

@@ -110,4 +110,3 @@ done
 
 ln -s $benchmarks/rodinia/data . 
 cd ../
-sh gen_pbs_rodinia.sh

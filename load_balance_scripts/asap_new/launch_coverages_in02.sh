@@ -56,7 +56,7 @@ cd lonestar
 for benchmark in bfs bh dmr mst sp sssp
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -67,7 +67,7 @@ cd Mars
 for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -78,7 +78,7 @@ cd parboil
 for benchmark in cutcp histo mm sad spmv lbm tpacf
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -89,7 +89,7 @@ cd rodinia
 for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -100,7 +100,7 @@ cd shoc
 for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 

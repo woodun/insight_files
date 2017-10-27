@@ -12,7 +12,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+for benchmark in binarization
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs

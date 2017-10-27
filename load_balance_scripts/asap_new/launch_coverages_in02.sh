@@ -12,7 +12,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in laplacian srad meanfilter sobel
+for benchmark in binarization
 do
 cd $benchmark
 qsub in02_pbs_$benchmark.pbs

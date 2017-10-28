@@ -16,7 +16,7 @@ cd polybench
 for benchmark in 
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -31,7 +31,7 @@ cd CUDA
 for benchmark in 
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -44,7 +44,7 @@ cd axbench
 for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 

@@ -1,5 +1,4 @@
 #!/bin/sh
-#this one use applications_FEB
 
 template=/stor1/hwang07/insight_files/insight_template
 

@@ -35,10 +35,11 @@ done
 
 #10
 #binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+#removed: binarization
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in 
+for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
 qsub hi_pbs_$benchmark.pbs

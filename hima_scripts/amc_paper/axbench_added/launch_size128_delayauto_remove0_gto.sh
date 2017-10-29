@@ -45,7 +45,7 @@ cd axbench
 for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 

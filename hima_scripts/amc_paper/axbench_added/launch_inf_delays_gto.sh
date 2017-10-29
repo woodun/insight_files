@@ -9,7 +9,7 @@ do
 #15
 #all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 #removed: 2DCONV FDTD-2D GRAMSCHM SYR2K
-#
+#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
 cd $mother_dir
 cd $configs_stor1
 cd polybench
@@ -24,7 +24,7 @@ done
 #figures: srad_v1 histo JPEG RAY
 #all: SCP FWT LPS BlackScholes SLA TRA CONS RAY
 #removed:
-#
+#TRA SCP CONS FWT LPS BlackScholes SLA RAY
 cd $mother_dir
 cd $configs_stor1
 cd CUDA

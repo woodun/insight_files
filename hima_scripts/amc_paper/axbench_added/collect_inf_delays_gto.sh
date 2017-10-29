@@ -14,12 +14,12 @@ for configs_stor1 in delay4096_remove0_e8_r0_sizeinf_gto48_pb0_pe0_ww0_c128_bw95
 do
 
 #15
-#removed: 2DCONV FDTD-2D GRAMSCHM
-#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM SYR2K
+#removed: 2DCONV FDTD-2D GRAMSCHM SYR2K
+#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -32,7 +32,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in 
+for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA RAY
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

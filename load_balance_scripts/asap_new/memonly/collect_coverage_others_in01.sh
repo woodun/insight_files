@@ -1,11 +1,13 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/axbench_coverage_osp.txt
+output=/stor1/hwang07/paper_collection/axbench_tsp.txt
 mother_dir=/stor1/hwang07/asap/coverages
 
-for statistics in 'predictable to access rate:'
+for statistics in 'gpu_tot_ipc =' 'bw_util=' 'predictable lines:' 'average_avg_distance:' 'average_avg_bias:' 'to access rate:' 'Stall:' 'W0_Idle:' 'W0_Scoreboard:' 'averagemflatency ='
 do
+
+printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
 for configs_stor1 in coverage5_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage5_gto48_wattch1 wp6_tsp_coverage5_gto48_wattch1 coverage10_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage10_gto48_wattch1 wp6_tsp_coverage10_gto48_wattch1 coverage15_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage15_gto48_wattch1 wp6_tsp_coverage15_gto48_wattch1 coverage20_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage20_gto48_wattch1 wp6_tsp_coverage20_gto48_wattch1
@@ -24,7 +26,7 @@ cd ..
 done
 
 #13
-#2DCONV_BLUR 2DCONV_EDGE 2DCONV_EMBOSS 2DCONV_ENHANCE 2DCONV_SHARPEN 2DCONV 2MM 3DCONV 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+#GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 cd $mother_dir
 cd $configs_stor1
 cd polybench
@@ -37,7 +39,7 @@ done
 
 #figures: JPEG RAY srad_v1 histo
 #7
-#JPEG_ENCODE JPEG_DECODE RAY BlackScholes CONS SCP SLA TRA
+#SLA TRA CONS SCP
 cd $mother_dir
 cd $configs_stor1
 cd CUDA

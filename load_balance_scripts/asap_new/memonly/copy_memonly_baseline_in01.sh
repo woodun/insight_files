@@ -4,9 +4,9 @@
 template=/stor1/hwang07/insight_files/insight_template
 
 #####################################################################################
-mother_dir=/stor1/hwang07/asap/baseline
+mother_dir=/stor1/hwang07/memonly_baseline
 
-for configs_stor1 in tsp_address_exp_gtoswl48_alloff_wattch1
+for configs_stor1 in tsp_address_exp_gtoswl48_alloff_wattch_memonly
 do
 
 cp -r $template $mother_dir/$configs_stor1

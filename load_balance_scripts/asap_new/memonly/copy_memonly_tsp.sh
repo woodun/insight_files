@@ -3,7 +3,7 @@
 template=/stor1/hwang07/insight_files/insight_template
 
 #####################################################################################
-mother_dir=/stor1/hwang07/asap/memonly_tsp
+mother_dir=/stor1/hwang07/memonly_tsp
 
 for configs_stor1 in coverage5_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage5_gto48_wattch_memonly wp6_tsp_coverage5_gto48_wattch_memonly coverage10_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage10_gto48_wattch_memonly wp6_tsp_coverage10_gto48_wattch_memonly coverage15_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage15_gto48_wattch_memonly wp6_tsp_coverage15_gto48_wattch_memonly coverage20_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage20_gto48_wattch_memonly wp6_tsp_coverage20_gto48_wattch_memonly
 do

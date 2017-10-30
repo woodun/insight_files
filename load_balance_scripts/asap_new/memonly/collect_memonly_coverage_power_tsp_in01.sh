@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/rebuttal_coverages_power_tsp.txt
-mother_dir=/stor1/hwang07/rebuttal_tsp
+output=/stor1/hwang07/paper_collection/memonly_coverages_power_tsp.txt
+mother_dir=/stor1/hwang07/memonly_tsp
 
 #grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s "
 #grep -o "gpu_tot_avg_power =[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/gpu_tot_avg_power =[ ]*\(-$\)*//g" | xargs printf "0%s "
@@ -12,7 +12,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in coverage5_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage5_gto48_wattch1 wp6_tsp_coverage5_gto48_wattch1 coverage10_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage10_gto48_wattch1 wp6_tsp_coverage10_gto48_wattch1 coverage15_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage15_gto48_wattch1 wp6_tsp_coverage15_gto48_wattch1 coverage20_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage20_gto48_wattch1 wp6_tsp_coverage20_gto48_wattch1
+for configs_stor1 in coverage5_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage5_gto48_wattch_memonly wp6_tsp_coverage5_gto48_wattch_memonly coverage10_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage10_gto48_wattch_memonly wp6_tsp_coverage10_gto48_wattch_memonly coverage15_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage15_gto48_wattch_memonly wp6_tsp_coverage15_gto48_wattch_memonly coverage20_dynamic_tsp_nopc_size8_gto48_wattch_memonly wp0_tsp_coverage20_gto48_wattch_memonly wp6_tsp_coverage20_gto48_wattch_memonly
 do
 
 #13

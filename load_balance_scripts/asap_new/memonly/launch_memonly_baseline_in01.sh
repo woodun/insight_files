@@ -30,7 +30,7 @@ cd polybench
 for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -46,7 +46,7 @@ cd CUDA
 for benchmark in SLA TRA SCP CONS
 do
 cd $benchmark
-qsub in01_pbs_$benchmark.pbs
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 

@@ -8,11 +8,12 @@ for configs_stor1 in tsp_address_exp_gtoswl48_alloff_wattch1
 do
 
 #SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
-#removed: SimilarityScore Kmeans MatrixMul InvertedIndex PageViewRank StringMatch WordCount
+#removed: WordCount
+#SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in PageViewCount WordCount
+for benchmark in 
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -20,11 +21,12 @@ cd ..
 done
 
 #cutcp histo mm sad spmv lbm tpacf
-#removed:
+#removed: cutcp  mm sad  lbm 
+#histo spmv tpacf
 cd $mother_dir
 cd $configs_stor1
 cd parboil
-for benchmark in cutcp histo mm sad spmv lbm tpacf
+for benchmark in histo spmv tpacf
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -32,11 +34,12 @@ cd ..
 done
 
 #backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
-#removed: bfs pf_float
+#removed: backprop bfs hotspot pathfinder leukocyte srad_v1 srad_v2
+#heartwall cfd streamcluster nw lud pf_float
 cd $mother_dir
 cd $configs_stor1
 cd rodinia
-for benchmark in backprop hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2
+for benchmark in heartwall cfd streamcluster nw lud pf_float
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -44,7 +47,8 @@ cd ..
 done
 
 #MD QTC Reduction Scan Spmv Stencil2D Triad BFS
-#removed: QTC BFS Stencil2D Spmv
+#removed: QTC Spmv Stencil2D BFS
+#MD Reduction Scan Triad
 cd $mother_dir
 cd $configs_stor1
 cd shoc

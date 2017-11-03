@@ -26,8 +26,9 @@ grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistic
 cd ..
 done
 
-#figures: JPEG RAY srad_v1 histo
-#7
+#8
+#TRA SCP CONS FWT LPS BlackScholes SLA RAY
+#removed:
 #TRA SCP CONS FWT LPS BlackScholes SLA RAY
 cd $mother_dir
 cd $configs_stor1
@@ -42,6 +43,7 @@ done
 #10
 #binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 #removed: binarization
+#blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 cd $mother_dir
 cd $configs_stor1
 cd axbench

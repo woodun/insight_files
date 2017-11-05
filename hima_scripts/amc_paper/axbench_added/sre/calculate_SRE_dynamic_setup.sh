@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_dynamic_remove
+mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_dynamic_all
 
 #cd $1
 cd $mother_dir

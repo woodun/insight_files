@@ -18,7 +18,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -33,7 +33,7 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA RAY
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 

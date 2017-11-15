@@ -24,7 +24,7 @@ done
 #figures: srad_v1 histo JPEG RAY
 #all: SCP FWT LPS BlackScholes SLA TRA CONS RAY
 #removed: BlackScholes 
-#TRA SCP CONS FWT LPS BlackScholes SLA
+#TRA SCP CONS FWT LPS SLA RAY
 #not changed:
 cd $mother_dir
 cd $configs_stor1

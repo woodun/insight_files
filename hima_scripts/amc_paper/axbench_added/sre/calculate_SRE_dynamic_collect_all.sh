@@ -2,7 +2,7 @@
 
 ########################################input mother dir path
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_dynamic_all
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/RE_all.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/RE_all2.txt
 statistics='RE:'
 
 #cd $1

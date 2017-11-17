@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_all.txt
+output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_all2.txt
 mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc
 
 for statistics in 'overall accesses all:' 'overall activations all:' 'gpu_tot_ipc =' 'n_act=' 'n_rd=' 'n_write=' 'bw_util=' 'dram_eff=' 'readonly accesses all:' 'readonly activations all:' 'total global read access:' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delay queue full all:' 'row_hit_0 all:' 'actual coverage all:' 'used row all:' 'actual delay:' 'profiling done cycle:' 'reprofiling count:'

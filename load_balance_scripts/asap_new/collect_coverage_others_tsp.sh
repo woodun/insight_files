@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/asap_more_apps_tsp.txt
+output=/stor1/hwang07/paper_collection/asap_more_apps_tsp2.txt
 mother_dir=/stor1/hwang07/asap/coverages
 
 for statistics in 'gpu_tot_ipc =' 'to access rate:' 'predictable to miss rate:' 'predictable lines:' 'bw_util=' 'bwutil_global_read=' 'bwutil_global_write=' 'L1D_total_cache_miss_rate =' 'L1D_total_cache_misses =' 'L2_total_cache_miss_rate =' 'L2_total_cache_misses =' 'average_avg_distance:' 'average_avg_bias:' 'Stall:' 'W0_Idle:' 'W0_Scoreboard:' 'averagemflatency ='

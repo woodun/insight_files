@@ -21,12 +21,11 @@ cd ..
 done
 
 #cutcp histo mm sad spmv lbm tpacf
-#removed: cutcp  mm sad  lbm histo tpacf
-#spmv
+#removed: cutcp  mm sad  lbm histo tpacf spmv
 cd $mother_dir
 cd $configs_stor1
 cd parboil
-for benchmark in spmv
+for benchmark in
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -49,10 +48,11 @@ done
 #MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 #removed: QTC Spmv Stencil2D BFS MD
 #Reduction Scan Triad
+#Triad
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in Reduction Scan Triad
+for benchmark in Reduction Scan
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs

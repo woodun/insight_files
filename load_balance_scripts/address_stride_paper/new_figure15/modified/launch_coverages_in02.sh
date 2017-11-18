@@ -1,14 +1,10 @@
 #!/bin/sh
 #this one works with applications_modified
 
-#####################################################
+#####################################################launch in in01?
 mother_dir=/stor2/hwang07/modified_tsp
 
-#coverage100_dynamic_tsp_nopc_size8_gto48 coverage10_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_gto48 wp6_tsp_coverage10_gto48
-#coverage100_dynamic_tsp_nopc_size8_RR48 coverage20_dynamic_tsp_nopc_size8_RR48 coverage10_dynamic_tsp_nopc_size8_RR48 coverage15_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage15_gto48 wp6_tsp_coverage15_gto48 coverage5_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage5_gto48 wp6_tsp_coverage5_gto48
-#coverage20_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage20_gto48 wp6_tsp_coverage20_gto48
-
-for configs_stor1 in coverage100_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_RR48 wp6_tsp_coverage10_RR48 wp0_tsp_coverage20_RR48 wp6_tsp_coverage20_RR48 coverage10_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage10_gto48 wp6_tsp_coverage10_gto48 coverage100_dynamic_tsp_nopc_size8_RR48 coverage20_dynamic_tsp_nopc_size8_RR48 coverage10_dynamic_tsp_nopc_size8_RR48 coverage15_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage15_gto48 wp6_tsp_coverage15_gto48 coverage5_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage5_gto48 wp6_tsp_coverage5_gto48 coverage20_dynamic_tsp_nopc_size8_gto48 wp0_tsp_coverage20_gto48 wp6_tsp_coverage20_gto48
+for configs_stor1 in coverage20_dynamic_tsp_nopc_size8_RR48 coverage10_dynamic_tsp_nopc_size8_RR48 wp0_tsp_coverage20_RR48 wp6_tsp_coverage20_RR48 wp0_tsp_coverage10_RR48 wp6_tsp_coverage10_RR48
 do
 
 #13
@@ -31,7 +27,17 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA
+for benchmark in 
+do
+cd $benchmark
+qsub pbs_$benchmark.pbs
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

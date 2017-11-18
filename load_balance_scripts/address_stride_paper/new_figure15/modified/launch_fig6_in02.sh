@@ -27,7 +27,17 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA
+for benchmark in 
+do
+cd $benchmark
+qsub pbs_$benchmark.pbs
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 qsub pbs_$benchmark.pbs

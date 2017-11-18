@@ -17,7 +17,7 @@ cd Mars
 for benchmark in MatrixMul SimilarityScore Kmeans
 do
 cd $benchmark
-qsub in02_pbs_$benchmark.pbs
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 

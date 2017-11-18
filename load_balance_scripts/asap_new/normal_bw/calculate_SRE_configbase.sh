@@ -18,6 +18,7 @@ cd $benchmark
 ./test *_GPU.txt $baseline/CUDA/$benchmark/*_GPU.txt
 cd ..
 done
+cd ..
 
 cd shoc
 for benchmark in Triad
@@ -26,6 +27,6 @@ cd $benchmark
 ./test *_GPU.txt $baseline/CUDA/$benchmark/*_GPU.txt
 cd ..
 done
-
+cd ..
 
 

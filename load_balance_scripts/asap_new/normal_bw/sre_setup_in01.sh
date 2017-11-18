@@ -1,15 +1,13 @@
 #!/bin/sh
 
 ########################################
+mother_dir=/stor1/hwang07/nb_asap/coverages
+output=/stor1/hwang07/paper_collection/nb_RE.txt
+statistics='RE:'
 
-#cd $1
-cd /stor1/hwang07/nb_asap/coverages
-
-for i in $(ls -d *)
-#for i in coverage20_dynamic_tsp_nopc_size8_gto48_wattch1_nb wp0_tsp_coverage20_gto48_wattch1_nb wp6_tsp_coverage20_gto48_wattch1_nb
+#for configs_stor1 in coverage20_dynamic_tsp_nopc_size8_gto48_wattch1_nb wp0_tsp_coverage20_gto48_wattch1_nb wp6_tsp_coverage20_gto48_wattch1_nb
+for configs_stor1 in $(ls -d *)
 do
-
-cd $i
 
 #13
 #not changed: ATAX BICG GESUMMV MVT SYR2K SYRK 2DCONV 3DCONV
@@ -57,7 +55,5 @@ cd $benchmark
 ln -s /stor1/hwang07/test/test .
 cd ..
 done
-
-cd ..
 
 done

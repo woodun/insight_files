@@ -1,18 +1,12 @@
 #!/bin/sh
 
 ########################################input mother dir path
+mother_dir=/stor1/hwang07/nb_asap/coverages
 output=/stor1/hwang07/paper_collection/nb_RE.txt
 statistics='RE:'
 
-#cd $1
-cd /stor1/hwang07/nb_asap/coverages
-
-#for i in $(ls -d *)
-
-for i in coverage20_dynamic_tsp_nopc_size8_gto48_wattch1_nb wp0_tsp_coverage20_gto48_wattch1_nb wp6_tsp_coverage20_gto48_wattch1_nb
+for configs_stor1 in coverage20_dynamic_tsp_nopc_size8_gto48_wattch1_nb wp0_tsp_coverage20_gto48_wattch1_nb wp6_tsp_coverage20_gto48_wattch1_nb
 do
-
-cd $i
 
 #13
 #not changed: ATAX BICG GESUMMV MVT SYR2K SYRK 2DCONV 3DCONV
@@ -61,8 +55,5 @@ grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[
 cd ..
 done
 
-cd ..
-
 printf "\r\n" >> $output
-
 done

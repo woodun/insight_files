@@ -15,7 +15,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in Kmeans
+for benchmark in MatrixMul
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs

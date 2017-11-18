@@ -13,7 +13,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in 
+for benchmark in MatrixMul SimilarityScore Kmeans
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -38,7 +38,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd rodinia
-for benchmark in nw lud
+for benchmark in 
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -52,7 +52,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in Reduction Scan
+for benchmark in 
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs

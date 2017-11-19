@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_sizes.txt
+output=/stor1/hwang07/paper_collection/asap_sizes.txt
 mother_dir=/stor1/hwang07/modified_sizes
 
 for statistics in 'predictable to miss rate:'

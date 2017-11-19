@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_nolong_rate.txt
+output=/stor1/hwang07/paper_collection/asap_nolong_rate.txt
 mother_dir=/stor2/hwang07/modified_fig6
 
 for statistics in 'predictable to miss rate:'

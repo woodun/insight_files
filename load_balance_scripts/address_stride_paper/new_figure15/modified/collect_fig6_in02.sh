@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/modified_fig6.txt
+output=/stor1/hwang07/paper_collection/asap_fig6.txt
 mother_dir=/stor2/hwang07/modified_fig6
 
 for statistics in 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'

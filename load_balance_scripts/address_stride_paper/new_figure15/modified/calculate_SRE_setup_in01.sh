@@ -13,7 +13,7 @@ cd $i
 
 
 cd polybench
-for benchmark in 2DCONV_BLUR 2DCONV_EDGE 2DCONV_EMBOSS 2DCONV_ENHANCE 2DCONV_SHARPEN 2DCONV 2MM 3DCONV 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV ATAX BICG
 do
 cd $benchmark
 ln -s /stor1/hwang07/test/test .
@@ -21,8 +21,17 @@ cd ..
 done
 cd ..
 
-cd CUDA
-for benchmark in JPEG_ENCODE JPEG_DECODE RAY BlackScholes CONS SCP SLA TRA
+cd CUDA 
+for benchmark in SLA TRA CONS SCP LPS
+do
+cd $benchmark
+ln -s /stor1/hwang07/test/test .
+cd ..
+done
+cd ..
+
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 ln -s /stor1/hwang07/test/test .

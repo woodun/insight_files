@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/modified_tsp_coverage10_RE.txt
+output=/stor1/hwang07/paper_collection/asap_tsp_RE.txt
 statistics='RE:'
 
 #cd $1
@@ -15,7 +15,7 @@ cd $i
 
 
 cd polybench
-for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
+for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV ATAX BICG
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -24,7 +24,16 @@ done
 cd ..
 
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in SLA TRA CONS SCP LPS
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+cd ..
+
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

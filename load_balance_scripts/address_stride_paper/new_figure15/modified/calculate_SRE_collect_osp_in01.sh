@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################input mother dir path
-output=/stor1/hwang07/paper_collection/modified_osp_coverage10_RE.txt
+output=/stor1/hwang07/paper_collection/asap_osp_RE.txt
 statistics='RE:'
 
 #cd $1
@@ -24,7 +24,16 @@ done
 cd ..
 
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in SLA TRA CONS SCP LPS
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+cd ..
+
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

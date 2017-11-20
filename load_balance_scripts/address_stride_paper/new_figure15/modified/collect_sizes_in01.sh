@@ -27,7 +27,17 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in SLA TRA CONS SCP LPS
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd shoc
+for benchmark in Triad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/rebuttal_baseline_power_tsp.txt
+output=/stor1/hwang07/paper_collection/asap_baseline_power.txt
 mother_dir=/stor1/hwang07/rebuttal_baseline
 
 for statistics in 'gpu_tot_avg_power ='
@@ -17,10 +17,10 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
+for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV ATAX BICG
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" gpgpusim_power_report* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
 cd ..
 done
 
@@ -29,10 +29,20 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SLA TRA CONS SCP
+for benchmark in SLA TRA CONS SCP LPS
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" gpgpusim_power_report* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd shoc
+for benchmark in Triad
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" $(ls gpgpusim_power_report* -tr | tail -1) | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
 cd ..
 done
 

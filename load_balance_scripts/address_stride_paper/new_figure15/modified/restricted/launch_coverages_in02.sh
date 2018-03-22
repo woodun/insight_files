@@ -2,7 +2,7 @@
 #this one works with applications_modified
 
 #####################################################launch in in01?
-mother_dir=/stor2/hwang07/
+mother_dir=/stor2/hwang07/restricted_asap
 
 #dynamic_nopc_profile_gto48 osp_profile_gto48
 for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48

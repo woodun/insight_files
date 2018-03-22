@@ -4,8 +4,8 @@
 #####################################################launch in in01?
 mother_dir=/stor2/hwang07/restricted_asap
 
-#dynamic_nopc_profile_gto48 osp_profile_gto48
-for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48
+#osp_profile_gto48
+for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48 dynamic_nopc_profile_gto48
 do
 
 #ATAX BICG GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
@@ -15,7 +15,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in ATAX BICG GESUMMV SYR2K SYRK
+for benchmark in ATAX BICG GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
 qsub in02_pbs_$benchmark.pbs
@@ -30,7 +30,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in LPS
+for benchmark in LPS CONS SCP SLA
 do
 cd $benchmark
 qsub in02_pbs_$benchmark.pbs

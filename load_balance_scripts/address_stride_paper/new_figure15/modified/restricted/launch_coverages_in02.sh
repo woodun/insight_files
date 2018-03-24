@@ -5,7 +5,7 @@
 mother_dir=/stor2/hwang07/restricted_asap
 
 #osp_profile_gto48
-for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48 dynamic_nopc_profile_gto48
+for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48 restricted_nopc_profile_gto48
 do
 
 #ATAX BICG GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV

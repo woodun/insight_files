@@ -1,16 +1,14 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/paper_collection/restricted_asap_fig6.txt
+output=/stor1/hwang07/paper_collection/restricted_asap_rate.txt
 mother_dir=/stor2/hwang07/restricted_asap
 
-for statistics in 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
+for statistics in 'predictable to miss rate:' 'predictable to access rate:'
 do
 
-printf "%s\r\n" $statistics >> $output
-
 #specify your config path in stor1
-for configs_stor1 in restricted_nopc_profile_gto48 osp_profile_gto48
+for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48
 do
 
 #13
@@ -36,8 +34,8 @@ grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistic
 cd ..
 done
 
-######################################################################################################################################
 printf "\r\n" >> $output
 done
+######################################################################################################################################
 
 done

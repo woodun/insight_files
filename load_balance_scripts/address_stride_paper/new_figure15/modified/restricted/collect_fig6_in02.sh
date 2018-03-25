@@ -10,7 +10,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in restricted_nopc_profile_gto48 osp_profile_gto48
+for configs_stor1 in restricted_nopc_profile_gto48 dynamic_nopc_profile_gto48 osp_profile_gto48
 do
 
 #13

@@ -33,7 +33,7 @@ cd CUDA
 for benchmark in LPS CONS SCP SLA
 do
 cd $benchmark
-qsub in02_pbs_$benchmark.pbs
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 

@@ -4,7 +4,7 @@
 template=/stor1/hwang07/insight_files/insight_template
 
 #####################################################################################
-mother_dir=/stor1/hwang07/restricted_asap
+mother_dir=/stor2/hwang07/restricted_asap
 
 #dynamic_noold_nopc_size1_gto48 dynamic_noold_nopc_size2_gto48 dynamic_noold_nopc_size3_gto48 dynamic_noold_nopc_size4_gto48 dynamic_noold_nopc_size5_gto48 dynamic_noold_nopc_size6_gto48 dynamic_noold_nopc_size7_gto48 dynamic_noold_nopc_size8_gto48 dynamic_noold_nopc_size9_gto48 dynamic_noold_nopc_size10_gto48
 

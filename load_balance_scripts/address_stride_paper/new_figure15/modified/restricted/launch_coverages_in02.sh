@@ -4,8 +4,9 @@
 #####################################################launch in in01?
 mother_dir=/stor2/hwang07/restricted_asap
 
-#osp_profile_gto48
-for configs_stor1 in coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48 restricted_nopc_profile_gto48
+#osp_profile_gto48 coverage100_dynamic_osp_nopc_size8_gto48 coverage100_dynamic_tsp_nopc_size8_gto48 
+#git pull and recompile and launch this again to get correct fig6, backup the need of two asap versions, observe the distribution in the restricted address strides.
+for configs_stor1 in restricted_nopc_profile_gto48
 do
 
 #ATAX BICG GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV

@@ -7,6 +7,8 @@ mother_dir=/stor2/hwang07/restricted_asap
 for statistics in 'stride_num1:' 'address_stride:' 'stride_count:'
 do
 
+printf "%s\r\n" $statistics >> $output
+
 #specify your config path in stor1
 for configs_stor1 in dynamic_nopc_profile_gto48
 do
@@ -18,7 +20,9 @@ cd polybench
 for benchmark in ATAX BICG GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
 do
 cd $benchmark
+printf "%s\r\n" $benchmark >> $output
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 
@@ -30,7 +34,9 @@ cd CUDA
 for benchmark in LPS CONS SCP SLA
 do
 cd $benchmark
+printf "%s\r\n" $benchmark >> $output
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+printf "\r\n" >> $output
 cd ..
 done
 

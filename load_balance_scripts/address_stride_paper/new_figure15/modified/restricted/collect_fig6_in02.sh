@@ -4,7 +4,7 @@
 output=/stor1/hwang07/paper_collection/restricted_asap_fig6.txt
 mother_dir=/stor2/hwang07/restricted_asap
 
-for statistics in 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:'
+for statistics in 'sum_count:' 'avg_abs_stride_diff_sn:' 'avg_abs_stride_diff_s1:' 'avg_abs_stride_bias_sn:' 'avg_abs_stride_bias_s1:' 'avg_abs_stride_RE_sn:' 'avg_abs_stride_RE_s1:'
 do
 
 printf "%s\r\n" $statistics >> $output

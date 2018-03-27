@@ -30,7 +30,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in LPS CONS SCP SLA
+for benchmark in LPS SCP SLA
 do
 cd $benchmark
 qsub in02_pbs_$benchmark.pbs

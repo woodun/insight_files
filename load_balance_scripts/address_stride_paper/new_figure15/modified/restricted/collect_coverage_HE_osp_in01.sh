@@ -2,7 +2,7 @@
 
 #specify your output file
 output=/stor1/hwang07/paper_collection/restricted_coverage10_HE.txt
-mother_dir=/stor1/hwang07/restricted_asap
+mother_dir=/stor2/hwang07/restricted_asap
 
 for statistics in 'average_avg_bias:'
 do

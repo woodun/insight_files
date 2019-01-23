@@ -4,31 +4,88 @@
 output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping_ipcs.txt
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
-for statistics in 'gpu_tot_sim_cycle = '
+for statistics in 'gpu_tot_ipc =     '
 do
 
 printf "%s\r\n" $statistics >> $output
 
-for configs_stor1 in coverage5_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage5_gto48_wattch1 wp6_tsp_coverage5_gto48_wattch1 coverage10_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage10_gto48_wattch1 wp6_tsp_coverage10_gto48_wattch1 coverage15_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage15_gto48_wattch1 wp6_tsp_coverage15_gto48_wattch1 coverage20_dynamic_tsp_nopc_size8_gto48_wattch1 wp0_tsp_coverage20_gto48_wattch1 wp6_tsp_coverage20_gto48_wattch1
+for configs_stor1 in mapping0_GTX480 mapping1_GTX480 mapping2_GTX480 mapping3_GTX480
 do
 
-#13
 cd $mother_dir
 cd $configs_stor1
-cd polybench
-for benchmark in GESUMMV SYR2K SYRK 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV
+cd CUDA
+for benchmark in BlackScholes CP LIB LPS NQU RAY STO SCP SLA CONS FWT TRA lulesh AES BFS MUM NN kmeans JPEG BFS2 KMN
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
 cd ..
 done
 
-#figures: JPEG RAY srad_v1 histo
-#7
 cd $mother_dir
 cd $configs_stor1
-cd CUDA
-for benchmark in SLA TRA CONS SCP
+cd polybench
+for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG CORR COVAR FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd axbench
+for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd lonestar
+for benchmark in bfs bh dmr mst sp sssp
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd Mars
+for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd parboil
+for benchmark in cutcp histo mm sad spmv lbm tpacf
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd rodinia
+for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
+do
+cd $benchmark
+grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd shoc
+for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -40,3 +97,6 @@ done
 ######################################################################################################################################
 
 done
+
+
+

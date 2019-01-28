@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping_ipcs.txt
+output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping_6_2_ipcs.txt
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
 for statistics in 'gpu_tot_ipc =     '

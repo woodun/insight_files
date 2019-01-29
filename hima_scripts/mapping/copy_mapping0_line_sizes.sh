@@ -1,6 +1,6 @@
 #!/bin/sh
-#cp -r $template mapping_GTX480_6_2
-#sh setup_ALL.sh mapping_GTX480_6_2
+#cp -r $template mapping0_GTX480_line_size128_test
+#sh setup_ALL.sh mapping0_GTX480_line_size128_test
 
 template=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/hima_template
 

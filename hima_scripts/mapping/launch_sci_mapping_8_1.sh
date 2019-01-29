@@ -1,10 +1,10 @@
 #!/bin/sh
-#this one works with applications_modified
+#this one works with applications_modified //how does mapping work? what is l2 dram correspondance (how is it mapped)? why is blp and rbl decises waste bw?
 
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
-for configs_stor1 in mapping0_GTX480_8_1 mapping1_GTX480_8_1 mapping2_GTX480_8_1 mapping3_GTX480_8_1
+for configs_stor1 in mapping1_GTX480_8_1 mapping2_GTX480_8_1 mapping3_GTX480_8_1
 do
 
 cd $mother_dir

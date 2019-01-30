@@ -1,6 +1,7 @@
 #!/bin/sh
 #this one works with applications_modified //how does mapping work? what is l2 dram correspondance (how is it mapped)? why is blp and rbl decises waste bw?
-
+#-gpgpu_mem_address_mask 1
+#-gpgpu_mem_addr_mapping dramid@8;00000000.00000000.00000000.00000000.0000RRRR.RRRRRRRR.BBBCCCCB.CCSSSSSS
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 

@@ -6,8 +6,8 @@ template=/sciclone/data10/hwang07/GPU_RESEARCH/insight_files/hima_template
 
 #####################################################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
-
-for configs_stor1 in mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+#mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+for configs_stor1 in mapping0_GTX480_line_size512 mapping0_GTX480_line_size256
 do
 
 cp -r $template $mother_dir/$configs_stor1

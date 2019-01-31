@@ -9,7 +9,7 @@ do
 
 printf "%s\r\n" $statistics >> $output
 
-for configs_stor1 in mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+for configs_stor1 in mapping0_GTX480_line_size512 mapping0_GTX480_line_size256 mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
 do
 
 cd $mother_dir

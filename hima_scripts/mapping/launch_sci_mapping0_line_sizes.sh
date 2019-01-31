@@ -3,8 +3,8 @@
 
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
-#mapping0_GTX480_line_size128
-for configs_stor1 in mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+#mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+for configs_stor1 in mapping0_GTX480_line_size512 mapping0_GTX480_line_size256
 do
 
 cd $mother_dir

@@ -1,7 +1,16 @@
 #!/bin/sh
-#this one works with applications_modified //how does mapping work? what is l2 dram correspondance (how is it mapped)? why is blp and rbl decises waste bw?
+#this one works with applications_modified //how does mapping work? what is l2 dram correspondance (how is it mapped)? why is blp and rbl decises waste bw? how to understand waste (waste = n_activity - bwutil)?
+#should the window length related to the dram delays (e.g., RCD)?
 #-gpgpu_mem_address_mask 1
 #-gpgpu_mem_addr_mapping dramid@8;00000000.00000000.00000000.00000000.0000RRRR.RRRRRRRR.BBBCCCCB.CCSSSSSS
+
+#same bank missing && different bank missing = different banks to overlap RCDs.
+#same bank hit && different bank missing = optimal distribution depends on number of requests, RCD, CCD. most likely same bank.
+#same bank missing && different bank hit = different banks.
+#same bank hit && different bank hit = different banks.
+#rows with high entropy should go to channels and banks with high entropy (can we see from the overall entropy figure? windows size (TB or delays) is important.)
+#rows with low entropy should go to channels and banks with low entropy (any on the fly schemes possible?)
+#(overall rows entropy available. After applying scheme is entropy figure there? What about individual high entropy and low entropy rows figure? Are they mapped correctly after applying their scheme?)
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 

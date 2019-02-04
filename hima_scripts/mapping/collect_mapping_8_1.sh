@@ -4,12 +4,12 @@
 output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping_8_1_ipcs.txt
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
-for statistics in 'gpu_tot_ipc =     '
+for statistics in 'gpu_tot_ipc =     ' 'average rbl = ' 'r_waste=' 'r_blp_all=' 'r_eblp_all=' 'r_blc_all=' 'r_eblc_all=' 'r_rblc_all' 'r_clp=' 'r_eclp=' 'r_clc=' 'r_eclc=' 'r_rclc='
 do
 
 printf "%s\r\n" $statistics >> $output
 
-for configs_stor1 in mapping1_GTX480_8_1 mapping2_GTX480_8_1 mapping3_GTX480_8_1
+for configs_stor1 in mapping0_GTX480_line_size128 mapping1_GTX480_8_1 mapping2_GTX480_8_1 mapping3_GTX480_8_1
 do
 
 cd $mother_dir

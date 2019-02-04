@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping0_line_sizes_ipcs.txt
+output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping0_line_sizes_metrics.txt
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
 for statistics in 'gpu_tot_ipc =     ' 'average rbl = ' 'r_waste=' 'r_blp_all=' 'r_eblp_all=' 'r_blc_all=' 'r_eblc_all=' 'r_rblc_all' 'r_clp=' 'r_eclp=' 'r_clc=' 'r_eclc=' 'r_rclc='

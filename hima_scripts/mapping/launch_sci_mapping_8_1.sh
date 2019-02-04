@@ -11,6 +11,8 @@
 #rows with high entropy should go to channels and banks with high entropy (can we see from the overall entropy figure? windows size (TB or delays) is important.)
 #rows with low entropy should go to channels and banks with low entropy (any on the fly schemes possible?)
 #(overall rows entropy available. After applying scheme is entropy figure there? What about individual high entropy and low entropy rows figure? Are they mapped correctly after applying their scheme?)
+#two mappings together?
+#blp & blc & WASTE & waste (cycles) & eblp (effective blp) $ clp & clc & eclp
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 
@@ -27,10 +29,11 @@ qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
+#CORR COVAR
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG CORR COVAR FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs

@@ -9,7 +9,8 @@ do
 
 printf "%s\r\n" $statistics >> $output
 
-for configs_stor1 in mapping0_GTX480_line_size512 mapping0_GTX480_line_size256 mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
+#mapping0_GTX480_line_size512
+for configs_stor1 in mapping0_GTX480_line_size256 mapping0_GTX480_line_size128 mapping0_GTX480_line_size64 mapping0_GTX480_line_size32
 do
 
 cd $mother_dir
@@ -22,10 +23,11 @@ grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistic
 cd ..
 done
 
+#CORR COVAR
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG CORR COVAR FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
+for benchmark in 2DCONV 3DCONV 2MM 3MM ATAX BICG FDTD-2D GEMM GESUMMV GRAMSCHM MVT SYR2K SYRK
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

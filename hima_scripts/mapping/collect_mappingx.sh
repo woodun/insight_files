@@ -108,6 +108,8 @@ printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
 
 done
 

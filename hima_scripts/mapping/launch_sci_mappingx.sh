@@ -15,8 +15,8 @@
 #when is it better to have high/low entropy?(according to dram timing?) when is it better to split high/low entropy bits (by making other bits' entropy higher/lower)?
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
-#mappingx_GTX480_8_1 mapping4_GTX480_8_1
-for configs_stor1 in mapping5_GTX480_8_1
+#mappingx_GTX480_8_1 mapping4_GTX480_8_1 mapping5_GTX480_8_1
+for configs_stor1 in mappingx2_GTX480_8_1 mappingx3_GTX480_8_1
 do
 
 cd $mother_dir

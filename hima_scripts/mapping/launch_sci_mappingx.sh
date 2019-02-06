@@ -12,7 +12,7 @@
 #rows with low entropy should go to channels and banks with low entropy (any on the fly schemes possible?)
 #(overall rows entropy available. After applying scheme is entropy figure there? What about individual high entropy and low entropy rows figure? Are they mapped correctly after applying their scheme?)
 #two mappings together?
-#blp & blc & WASTE & waste (cycles) & eblp (effective blp) $ clp & clc & eclp
+#when is it better to have high/low entropy?(according to dram timing?) when is it better to split high/low entropy bits (by making other bits' entropy higher/lower)?
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 #mappingx_GTX480_8_1

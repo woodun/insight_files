@@ -13,6 +13,11 @@
 #(overall rows entropy available. After applying scheme is entropy figure there? What about individual high entropy and low entropy rows figure? Are they mapped correctly after applying their scheme?)
 #two mappings together?
 #when is it better to have high/low entropy?(according to dram timing?) when is it better to split high/low entropy bits (by making other bits' entropy higher/lower)?
+#could the reverse BIM be used to decrease entropy of row bits?
+#how can we identify high or low entropy at run time. Can we get the entropy per window? is there entropy phase change in run time?
+#how the mapping to L1 is done in mohammed's case?
+#channel imbalance: scheduling policy according to it? 
+#clp is 1: locality is too good? mix column bits as well? both ml and heuristic approach to decide if mix column bits or not?
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 #mappingx_GTX480_8_1 mapping4_GTX480_8_1 mapping5_GTX480_8_1 mappingx2_GTX480_8_1 mappingx3_GTX480_8_1

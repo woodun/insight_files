@@ -18,6 +18,7 @@
 #how the mapping to L1 is done in mohammed's case?
 #channel imbalance: scheduling policy according to it? 
 #clp is 1: locality is too good? mix column bits as well? both ml and heuristic approach to decide if mix column bits or not?
+#applications with high rbl and low clp: what happens if split the rows?
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 #mappingx_GTX480_8_1 mapping4_GTX480_8_1 mapping5_GTX480_8_1 mappingx2_GTX480_8_1 mappingx3_GTX480_8_1

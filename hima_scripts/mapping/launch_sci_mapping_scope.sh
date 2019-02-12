@@ -15,8 +15,8 @@
 #blp & blc & WASTE & waste (cycles) & eblp (effective blp) $ clp & clc & eclp
 #####################################################
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
-
-for configs_stor1 in mapping3_GTX480_8_1 mapping3_GTX480_8_1_bk32 mapping3_GTX480_8_1_infbw mapping3_GTX480_8_1_nodelay mapping3_GTX480_16_1
+#mapping3_GTX480_8_1 mapping3_GTX480_8_1_bk32 mapping3_GTX480_8_1_infbw mapping3_GTX480_8_1_nodelay
+for configs_stor1 in mapping3_GTX480_16_1
 do
 
 cd $mother_dir

@@ -4,7 +4,8 @@
 output=/sciclone/pscr/hwang07/mapping_collection/hima_mapping_scope3_metrics_more3.txt
 mother_dir=/sciclone/pscr/hwang07/mapping_exp
 #'gpu_tot_ipc =' 'average rbl =' 'r_blp_all=' 'r_eblp_all=' 'r_blc_all=' 'r_eblc_all=' 'r_rblc_all=' 'r_clp=' 'r_eclp=' 'r_clc=' 'r_eclc=' 'r_rclc=' 'r_waste_all=' 'dram_eff_all=' 'n_waste_all=' 'bw_util_all='
-for statistics in 'gpu_tot_ipc =' 'average rbl =' 'r_eblp_all=' 'r_eclp=' 'n_waste_all=' 'bw_util_all='
+#'gpu_tot_ipc =' 'average rbl =' 'r_eblp_all=' 'r_eclp=' 'n_waste_all=' 'bw_util_all='
+for statistics in 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate ='
 do
 
 printf "%s\r\n" $statistics >> $output
@@ -142,5 +143,5 @@ printf "\r\n" >> $output
 
 done
 
-
+#AX=I  X = A-1A XA=I
 

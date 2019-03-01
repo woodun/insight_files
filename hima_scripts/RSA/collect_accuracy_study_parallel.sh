@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/pscr/hwang07/RSA_CUDA/accuracy_study_parallel/summary.txt
+output=/sciclone/pscr/hwang07/RSA_CUDA/accuracy_study_parallel/summary_2048_16384.txt
 mother_dir=/sciclone/pscr/hwang07/RSA_CUDA/accuracy_study_parallel
 
 cd $mother_dir

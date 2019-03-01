@@ -14,7 +14,7 @@ for configs_stor1 in `ls 2048_volta_16384*`
 do
 printf "%s\r\n" $configs_stor1
 
-grep "$statistics[ ]*[-eE\+0-9\.]*" $configs_stor1 | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+grep "$statistics[ ]*[-eE\+0-9\.]*" $configs_stor1 | tail -1 | xargs printf "%s " >> $output
 
 printf "\r\n" >> $output
 done

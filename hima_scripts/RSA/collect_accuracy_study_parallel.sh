@@ -16,6 +16,7 @@ printf "%s\r\n" $configs_stor1
 
 grep "$statistics[ ]*[-eE\+0-9\.]*" $configs_stor1 | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
 
+printf "\r\n" >> $output
 done
 ######################################################################################################################################
 printf "\r\n" >> $output

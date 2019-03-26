@@ -24,7 +24,7 @@ cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM ATAX BICG 3DCONV GEMM
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -40,7 +40,7 @@ cd CUDA
 for benchmark in TRA SCP CONS FWT LPS SLA RAY
 do
 cd $benchmark
-qsub hi_pbs_$benchmark.pbs
+qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -51,7 +51,8 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+for benchmark in 
+#blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs

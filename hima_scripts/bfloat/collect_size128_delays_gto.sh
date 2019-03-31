@@ -1,38 +1,39 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/size128_delays.txt
-mother_dir=/sciclone/data10/hwang07/GPU_RESEARCH/amc/size128_delays
+output=/sciclone/data10/hwang07/GPU_RESEARCH/bfloat_collection/scope.txt
+mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 
-for statistics in 'overall accesses all:' 'overall activations all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'readonly accesses all:' 'readonly activations all:' 'total global read access:' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'removed all:' 'delay queue full all:' 'row_hit_0 all:' 'actual coverage all:' 'used row all:' 'actual delay:' 'profiling done cycle:'
+for statistics in 'actual coverage all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'last threshold_length all:'
 do
 
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in delay2048_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64 delay1024_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64 delay512_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64 delay256_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64 delay128_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64 delay64_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64
+for configs_stor1 in sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_baseline sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_removeall
 do
 
 #15
-#removed: 2DCONV FDTD-2D GRAMSCHM SYR2K
-#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
+#all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+#removed:
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
 cd ..
 done
 
-#figures: JPEG RAY srad_v1 histo
-#7
-#TRA SCP CONS FWT LPS BlackScholes SLA RAY
+#8
+#figures: srad_v1 histo JPEG RAY
+#all: SCP FWT LPS BlackScholes SLA TRA CONS RAY
+#removed:
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS BlackScholes SLA RAY
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -40,12 +41,12 @@ cd ..
 done
 
 #10
-#binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
-#removed: binarization
+#all: binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+#removed:
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -55,5 +56,11 @@ done
 printf "\r\n" >> $output
 done
 ######################################################################################################################################
+
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
 
 done

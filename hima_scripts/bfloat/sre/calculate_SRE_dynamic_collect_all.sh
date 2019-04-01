@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ########################################input mother dir path
-mother_dir=/sciclone/pscr/hwang07/dsn_amc
-output=/sciclone/data10/hwang07/GPU_RESEARCH/amc_collection/RE_DSN.txt
+mother_dir=/sciclone/pscr/hwang07/bfloat_exp
+output=/sciclone/data10/hwang07/bfloat_collection/RE_bfloat.txt
 statistics='RE:'
 
 #cd $1
@@ -16,7 +16,7 @@ cd $i
 
 
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM ATAX BICG 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -25,7 +25,7 @@ done
 cd ..
 
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS SLA RAY
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -34,7 +34,7 @@ done
 cd ..
 
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+for benchmark in blackscholes convolution inversek2j jmeint newton-raph srad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

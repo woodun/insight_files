@@ -1,7 +1,7 @@
 #!/bin/sh
 
-########################################delayA_remove10D_e8_r11_size128_gto48_pb4096_pe4096_ww65536_c128_bw95_aw0_rw0_rp32
-mother_dir=/sciclone/pscr/hwang07/dsn_amc
+########################################
+mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 
 #cd $1
 cd $mother_dir
@@ -14,7 +14,7 @@ cd $i
 
 
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM ATAX BICG 3DCONV GEMM
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/test .
@@ -22,8 +22,17 @@ cd ..
 done
 cd ..
 
+cd polybench
+for benchmark in 2DCONV_EMBOSS 2DCONV_BLUR
+do
+cd $benchmark
+ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/cmp_image .
+cd ..
+done
+cd ..
+
 cd CUDA
-for benchmark in TRA SCP CONS FWT LPS SLA
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
 do
 cd $benchmark
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/test .
@@ -46,7 +55,7 @@ done
 cd ..
 
 cd axbench
-for benchmark in laplacian meanfilter sobel srad
+for benchmark in srad
 do
 cd $benchmark
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/cmp_image .

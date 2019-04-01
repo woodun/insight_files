@@ -42,11 +42,11 @@ done
 
 #10
 #all: binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
-#removed:
+#removed: (no float) binarization laplacian meanfilter sobel
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
+for benchmark in blackscholes convolution inversek2j jmeint newton-raph srad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

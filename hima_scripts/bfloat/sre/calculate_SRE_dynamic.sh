@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ########################################
-mother_dir=/sciclone/pscr/hwang07/dsn_amc
+mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 
 #cd $1
 cd $mother_dir

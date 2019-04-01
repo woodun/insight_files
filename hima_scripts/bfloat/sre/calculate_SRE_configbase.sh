@@ -1,6 +1,6 @@
 #!/bin/sh
 
-baseline=/sciclone/pscr/hwang07/dsn_amc/delay0_remove0_e8_r0_size128_gto48_pb0_pe0_ww0_c128_bw95_aw0_rw0_rp64
+baseline=/sciclone/pscr/hwang07/bfloat/sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_baseline
 
 cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM ATAX BICG 3DCONV GEMM

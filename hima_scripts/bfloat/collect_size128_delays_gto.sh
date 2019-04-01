@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/sciclone/data10/hwang07/GPU_RESEARCH/bfloat_collection/scope.txt
+output=/sciclone/data10/hwang07/bfloat_collection/scope.txt
 mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 
 for statistics in 'actual coverage all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'last threshold_length all:'

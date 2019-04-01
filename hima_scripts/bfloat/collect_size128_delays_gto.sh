@@ -4,7 +4,7 @@
 output=/sciclone/data10/hwang07/bfloat_collection/scope.txt
 mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 
-for statistics in 'actual coverage all:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'last threshold_length all:'
+for statistics in 'actual coverage all:' 'approximated_req_count_all:' 'total_access_count_all:' 'total_float_count_all:' 'total_int_count_all:' 'actual_redo:' 'actual_truncate:' 'bw_util=' 'dram_eff=' 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'last threshold_length all:'
 do
 
 printf "%s\r\n" $statistics >> $output

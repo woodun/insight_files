@@ -16,7 +16,7 @@ cd $i
 
 
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -25,7 +25,7 @@ done
 cd ..
 
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -34,7 +34,7 @@ done
 cd ..
 
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint newton-raph srad
+for benchmark in blackscholes convolution jmeint newton-raph srad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" RE.txt | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

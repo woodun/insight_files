@@ -22,15 +22,6 @@ cd ..
 done
 cd ..
 
-cd polybench
-for benchmark in 2DCONV_EMBOSS 2DCONV_BLUR
-do
-cd $benchmark
-ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/cmp_image .
-cd ..
-done
-cd ..
-
 cd CUDA
 for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
 do
@@ -38,15 +29,10 @@ cd $benchmark
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/test .
 cd ..
 done
-
-cd RAY
-ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/cmp_image .
-cd ..
-
 cd ..
 
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint newton-raph
+for benchmark in blackscholes convolution jmeint newton-raph
 do
 cd $benchmark
 ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/test .

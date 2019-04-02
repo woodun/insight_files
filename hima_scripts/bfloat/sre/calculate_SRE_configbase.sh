@@ -11,15 +11,6 @@ cd ..
 done
 cd ..
 
-cd polybench
-for benchmark in 2DCONV_EMBOSS 2DCONV_BLUR
-do
-cd $benchmark
-./cmp_image *_GPU.bmp $baseline/polybench/$benchmark/*_GPU.bmp
-cd ..
-done
-cd ..
-
 cd CUDA
 for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
 do
@@ -27,15 +18,10 @@ cd $benchmark
 ./test *_GPU.txt $baseline/CUDA/$benchmark/*_GPU.txt
 cd ..
 done
-
-cd RAY
-./cmp_image outputFinal.bmp $baseline/CUDA/RAY/outputFinal.bmp
-cd ..
-
 cd ..
 
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint newton-raph
+for benchmark in blackscholes convolution jmeint newton-raph
 do
 cd $benchmark
 ./test *.data $baseline/axbench/$benchmark/*.data

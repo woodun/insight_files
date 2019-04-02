@@ -19,7 +19,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -29,11 +29,11 @@ done
 #8
 #figures: srad_v1 histo JPEG RAY
 #all: SCP FWT LPS BlackScholes SLA TRA CONS RAY
-#removed:
+#removed: (little float) RAY
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
@@ -42,11 +42,11 @@ done
 
 #10
 #all: binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
-#removed: (no float) binarization laplacian meanfilter sobel
+#removed: (little float) binarization laplacian meanfilter sobel inversek2j
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in blackscholes convolution inversek2j jmeint newton-raph srad
+for benchmark in blackscholes convolution jmeint newton-raph srad
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

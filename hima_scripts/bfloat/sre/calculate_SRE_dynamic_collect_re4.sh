@@ -2,7 +2,7 @@
 
 ########################################input mother dir path
 mother_dir=/sciclone/pscr/hwang07/bfloat_exp
-output=/sciclone/data10/hwang07/bfloat_collection/RE_bfloat.txt
+output=/sciclone/data10/hwang07/bfloat_collection/RE_bfloat4.txt
 statistics='RE4:'
 
 #cd $1

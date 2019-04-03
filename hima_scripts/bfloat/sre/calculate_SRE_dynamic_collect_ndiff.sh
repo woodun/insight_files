@@ -3,7 +3,7 @@
 ########################################input mother dir path
 mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 output=/sciclone/data10/hwang07/bfloat_collection/ndiff_bfloat.txt
-statistics='ndiff:'
+statistics='diff3:'
 
 #cd $1
 cd $mother_dir

@@ -10,7 +10,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-for configs_stor1 in sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_baseline sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_removeall
+for configs_stor1 in sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_baseline sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_removeall sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_ratio4_gto48_removeall
 do
 
 #15
@@ -57,6 +57,7 @@ printf "\r\n" >> $output
 done
 ######################################################################################################################################
 
+printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output

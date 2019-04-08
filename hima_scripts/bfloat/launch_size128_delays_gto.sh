@@ -48,7 +48,6 @@ done
 #input cannot be changed: blackscholes convolution jmeint newton-raph srad
 
 #blackscholes convolution jmeint newton-raph srad
-do
 cd $mother_dir
 cd $configs_stor1
 cd axbench
@@ -58,7 +57,7 @@ qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
-do
+
 cd $mother_dir
 cd $configs_stor1
 cd Mars
@@ -70,3 +69,4 @@ cd ..
 done
 
 done
+

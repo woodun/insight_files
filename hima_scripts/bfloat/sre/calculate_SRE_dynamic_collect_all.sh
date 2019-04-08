@@ -10,6 +10,8 @@ do
 #cd $1
 cd $mother_dir
 
+printf "%s\r\n" $statistics >> $output
+
 #for i in $(ls -d *)
 for i in sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_baseline sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_gto48_removeall sm30_cn6_queue128_remove0_thl16_pb4096_distributed1_fillapprox1_cachemode0_ratio4_gto48_removeall
 do

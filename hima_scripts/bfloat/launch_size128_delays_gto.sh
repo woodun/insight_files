@@ -12,10 +12,12 @@ do
 #removed: (input supposed to be int) 2DCONV_EMBOSS 2DCONV_BLUR
 #modified: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 #input cannot be changed: 
+
+#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+for benchmark in 
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs
@@ -28,11 +30,12 @@ done
 #removed: (little float) RAY
 #modified: SCP FWT BlackScholes SLA TRA CONS
 #input cannot be changed: LPS
-#continue: cd /sciclone/data10/hwang07/applications_bfloat/benchmarks/CUDA
+
+#SCP FWT LPS BlackScholes SLA TRA CONS
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS 
+for benchmark in  
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs
@@ -43,10 +46,22 @@ done
 #all: binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 #removed: (little float) binarization laplacian meanfilter sobel inversek2j
 #input cannot be changed: blackscholes convolution jmeint newton-raph srad
+
+#blackscholes convolution jmeint newton-raph srad
+do
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in blackscholes convolution jmeint newton-raph srad
+for benchmark in 
+cd $benchmark
+qsub sci_pbs_$benchmark.pbs
+cd ..
+done
+
+cd $mother_dir
+cd $configs_stor1
+cd Mars
+for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs

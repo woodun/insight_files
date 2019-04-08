@@ -3,7 +3,9 @@
 ########################################input mother dir path
 mother_dir=/sciclone/pscr/hwang07/bfloat_exp
 output=/sciclone/data10/hwang07/bfloat_collection/RE_bfloat.txt
-statistics='RE:'
+
+for statistics in 'RE:' 'RE4:' 'diff:' 'diff3:'
+do
 
 #cd $1
 cd $mother_dir
@@ -44,6 +46,15 @@ cd ..
 
 cd ..
 
+printf "\r\n" >> $output
+
+done
+
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
+printf "\r\n" >> $output
 printf "\r\n" >> $output
 
 done

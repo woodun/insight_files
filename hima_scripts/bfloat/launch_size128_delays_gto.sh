@@ -52,6 +52,7 @@ cd $mother_dir
 cd $configs_stor1
 cd axbench
 for benchmark in 
+do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs
 cd ..

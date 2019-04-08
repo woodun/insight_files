@@ -58,6 +58,7 @@ qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
+do
 cd $mother_dir
 cd $configs_stor1
 cd Mars

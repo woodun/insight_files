@@ -59,6 +59,10 @@ cd ..
 done
 
 #SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
+#has output: PageViewRank WordCount 
+#re: SimilarityScore StringMatch PageViewCount Kmeans MatrixMul InvertedIndex
+#check if rand, run first and see their results, then decide what to print to compare and run again
+#InvertedIndex Kmeans
 cd $mother_dir
 cd $configs_stor1
 cd Mars
@@ -69,11 +73,11 @@ qsub sci_pbs_$benchmark.pbs
 cd ..
 done
 
-
+#run too long: bfs bh dmr mst sp sssp 
 cd $mother_dir
 cd $configs_stor1
 cd lonestar
-for benchmark in bfs bh dmr mst sp sssp 
+for benchmark in 
 do
 cd $benchmark
 qsub sci_pbs_$benchmark.pbs

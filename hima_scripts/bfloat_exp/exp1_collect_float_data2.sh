@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#####################################################
+#####################################################better for visual comparison
 output=/sciclone/pscr/hwang07/bfloat_analysis/collection/all_results.txt
 mother_dir=/sciclone/pscr/hwang07/bfloat_analysis/results
 

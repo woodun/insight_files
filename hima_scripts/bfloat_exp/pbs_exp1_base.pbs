@@ -4,7 +4,7 @@
 #PBS -N bfloat_exp1_TBD
 #PBS -m a
 #PBS -M hwang07@email.wm.edu
-PROG=../exp1 TBD.txt DBT.txt
+PROG=../exp1 ../data/matlab/TBD.txt ../results/DBT.txt
 ARGS=""
 cd $PBS_O_WORKDIR
 $PROG $ARGS

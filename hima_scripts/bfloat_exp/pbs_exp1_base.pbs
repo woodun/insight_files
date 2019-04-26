@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=1:hima:ppn=1
+#PBS -l nodes=1:rhel6:compute:ppn=1
 #PBS -l walltime=72:00:00
 #PBS -N bfloat_exp1_TBD
 #PBS -m a

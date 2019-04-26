@@ -274,20 +274,20 @@ int main ( int argc, char *argv[] ) {
 			
 			/////////////initialize
 			for(int m = 0; m < 32; ++m){
-							unsigned distribution_number_of_ones_array32_float[32];
-			unsigned distribution_number_of_bit_flips_array32_float[32];
-			unsigned distribution_number_of_ones_array32_int[32]; 
-			unsigned distribution_number_of_bit_flips_array32_int[32]; 
-			unsigned distribution_number_of_ones_array32_new[32];
-			unsigned distribution_number_of_bit_flips_array32_new[32];
+				distribution_number_of_ones_array32_float[m] = 0;
+				distribution_number_of_bit_flips_array32_float[m] = 0;
+				distribution_number_of_ones_array32_int[m] = 0;
+				distribution_number_of_bit_flips_array32_int[m] = 0;
+				distribution_number_of_ones_array32_new[m] = 0;
+				distribution_number_of_bit_flips_array32_new[m] = 0;
 			}
 			for(int m = 0; m < 4; ++m){
-							unsigned distribution_number_of_ones_array4_float[4];
-			unsigned distribution_number_of_bit_flips_array4_float[4];
-			unsigned distribution_number_of_ones_array4_int[4]; 
-			unsigned distribution_number_of_bit_flips_array4_int[4]; 
-			unsigned distribution_number_of_ones_array4_new[4];
-			unsigned distribution_number_of_bit_flips_array4_new[4];
+				distribution_number_of_ones_array4_float[m] = 0;
+				distribution_number_of_bit_flips_array4_float[m] = 0;
+				distribution_number_of_ones_array4_int[m] = 0;
+				distribution_number_of_bit_flips_array4_int[m] = 0;
+				distribution_number_of_ones_array4_new[m] = 0;
+				distribution_number_of_bit_flips_array4_new[m] = 0;
 			}				
 			
 			unsigned byte_bits_ones_sum_float[4][8];
@@ -531,6 +531,8 @@ int main ( int argc, char *argv[] ) {
 
 ///////////add high/med/low cache line count?
 ///////////add DBI?
+
+//   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 
 /*
 int endian_test() 

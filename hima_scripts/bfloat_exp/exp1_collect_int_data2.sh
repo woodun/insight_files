@@ -14,28 +14,28 @@ do
 printf "range%s:\r\n" $number >> $output
 
 printf "uniform_int_one_side:\r\n" >> $output
-for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_ones_int:'
+for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_flips_int:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_int_one_side_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 done #for statistics in
 
 printf "normal_int_one_side:\r\n" >> $output
-for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_ones_int:'
+for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_flips_int:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" normal_int_one_side_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 done #for statistics in
 
 printf "uniform_int_two_sides:\r\n" >> $output
-for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_ones_int:'
+for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_flips_int:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_int_two_sides_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 done #for statistics in
 
 printf "normal_int_two_sides:\r\n" >> $output
-for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_ones_int:'
+for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_ones_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'bytes_flips_int:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" normal_int_two_sides_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output

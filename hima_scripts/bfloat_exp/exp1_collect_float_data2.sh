@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #####################################################better for visual comparison
-output=/sciclone/pscr/hwang07/bfloat_analysis/collection/all_results.txt
+output=/sciclone/pscr/hwang07/bfloat_analysis/collection/all_results_float.txt
 mother_dir=/sciclone/pscr/hwang07/bfloat_analysis/results
 
 cd $mother_dir

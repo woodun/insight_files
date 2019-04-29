@@ -8,11 +8,14 @@
 #include <stdlib.h>
 #include <sstream>
 #include <bitset>
+//#include <cstdlib>
 
 
 using namespace std;
 
 int main ( int argc, char *argv[] ) {
+	
+	int DBI_enabled = 0;
 	
 	typedef union {
 		float f_;
@@ -26,6 +29,10 @@ int main ( int argc, char *argv[] ) {
 		
 		printf ("error");
 	}else {
+		
+		if ( argc = 4 ){
+			DBI_enabled = atoi( argv[3] );			
+		}
 		
 		std::FILE * pFile = fopen (argv[2],"w");
 		
@@ -45,28 +52,38 @@ int main ( int argc, char *argv[] ) {
 			float gpu_number_new;
 			
 			///////////////per bit sum array
-			unsigned number_of_ones_array_float[1024]; ///////////////8 bits per byte * 4B per float * 8 float per flit * 4 flits = 1024
-			unsigned number_of_bit_flips_array_float[1024]; ////////////////8 bits per byte * 4B per float * 8 float per flit * 3 flits = 768 (only three flips with four flits)
-			unsigned number_of_ones_array_int[1024]; 
-			unsigned number_of_bit_flips_array_int[1024]; 
-			unsigned number_of_ones_array_new[1024];
-			unsigned number_of_bit_flips_array_new[1024];
+			int number_of_ones_array_float[1024]; ////////8 bits per byte * 4B per float * 8 float per flit * 4 flits = 1024
+			int number_of_bit_flips_array_float[1024]; ///////8 bits per byte * 4B per float * 8 float per flit * 3 flits = 768 (only three flips with four flits)
+			int number_of_ones_array_int[1024]; 
+			int number_of_bit_flips_array_int[1024]; 
+			int number_of_ones_array_new[1024];
+			int number_of_bit_flips_array_new[1024];
+			
+			/////////////////////dbi
+			///////////////reverse per bit sum array per cache line
+			int reverse_number_of_ones_array_float[1024];
+			int reverse_number_of_bit_flips_array_float[1024];
+			int reverse_number_of_ones_array_int[1024];
+			int reverse_number_of_bit_flips_array_int[1024];
+			int reverse_number_of_ones_array_new[1024];
+			int reverse_number_of_bit_flips_array_new[1024];
+			/////////////////////dbi
 			
 			///////////////temp count per cache line
-			unsigned temp_number_of_ones_float = 0; 
-			unsigned temp_number_of_bit_flips_float = 0;
-			unsigned temp_number_of_ones_int = 0; 
-			unsigned temp_number_of_bit_flips_int = 0; 
-			unsigned temp_number_of_ones_new = 0;
-			unsigned temp_number_of_bit_flips_new = 0;
+			int temp_number_of_ones_float = 0; 
+			int temp_number_of_bit_flips_float = 0;
+			int temp_number_of_ones_int = 0; 
+			int temp_number_of_bit_flips_int = 0; 
+			int temp_number_of_ones_new = 0;
+			int temp_number_of_bit_flips_new = 0;
 			
 			///////////////per cache line distribution array
-			unsigned distribution_number_of_ones_array_float[1025];
-			unsigned distribution_number_of_bit_flips_array_float[1025];
-			unsigned distribution_number_of_ones_array_int[1025]; 
-			unsigned distribution_number_of_bit_flips_array_int[1025]; 
-			unsigned distribution_number_of_ones_array_new[1025];
-			unsigned distribution_number_of_bit_flips_array_new[1025];
+			int distribution_number_of_ones_array_float[1025];
+			int distribution_number_of_bit_flips_array_float[1025];
+			int distribution_number_of_ones_array_int[1025]; 
+			int distribution_number_of_bit_flips_array_int[1025]; 
+			int distribution_number_of_ones_array_new[1025];
+			int distribution_number_of_bit_flips_array_new[1025];
 			
 			/////////////initialize
 			for(int m = 0; m < 1024; ++m){
@@ -89,18 +106,38 @@ int main ( int argc, char *argv[] ) {
 				distribution_number_of_bit_flips_array_int[m] = 0;
 				distribution_number_of_bit_flips_array_new[m] = 0;
 			}
+			/////////////////////dbi
+			for(int m = 0; m < 1024; ++m){
+				reverse_number_of_ones_array_float[m] = 0;
+				reverse_number_of_ones_array_int[m] = 0;
+				reverse_number_of_ones_array_new[m] = 0;
+			}
+			for(int m = 0; m < 1024; ++m){
+				reverse_number_of_bit_flips_array_float[m] = 0;
+				reverse_number_of_bit_flips_array_int[m] = 0;
+				reverse_number_of_bit_flips_array_new[m] = 0;
+			}
+			/////////////////////dbi
 			
-			unsigned total_cache_line_count = 0;
-			unsigned total_flit_count = 0;
-			unsigned total_float_count = 0;
+			int total_cache_line_count = 0;
+			int total_flit_count = 0;
+			int total_float_count = 0;
 			
 			std::bitset<32> temp_flit_byte_array_float[8]; //////////////4B per float * 8 float per flit = 32B
 			std::bitset<32> temp_flit_byte_array_int[8]; //////////////4B per float * 8 float per flit = 32B
 			std::bitset<32> temp_flit_byte_array_new[8]; //////////////4B per float * 8 float per flit = 32B
-			unsigned temp_float_count = 0; ///////////float count within flit
-			unsigned temp_flit_count = 0; ///////////flit count within cache line
-			unsigned temp_bit_count = 0; ///////////bit count within cache line
-			std::bitset<32> temp_flit_byte;			
+			int temp_float_count = 0; ///////////float count within flit
+			int temp_flit_count = 0; ///////////flit count within cache line
+			int temp_bit_count = 0; ///////////bit count within cache line
+			std::bitset<32> temp_flit_byte;
+			/////////////////////dbi
+			int temp_ones_count_in_flit_int = 0;
+			int temp_flips_count_in_flit_int = 0;
+			int temp_ones_count_in_flit_float = 0;
+			int temp_flips_count_in_flit_float = 0;
+			int temp_ones_count_in_flit_new = 0;
+			int temp_flips_count_in_flit_new = 0;			
+			/////////////////////dbi
 
 			std::string   gpu_line;
 			
@@ -124,7 +161,13 @@ int main ( int argc, char *argv[] ) {
 						if(temp_flit_byte[i_bit] == 1){ 
 							number_of_ones_array_float[temp_bit_count + 31 - i_bit]++;
 							temp_number_of_ones_float++;
-						}
+						////////////////////////////dbi
+							temp_ones_count_in_flit_float++;///////per flit 
+							reverse_number_of_ones_array_float[temp_bit_count + 31 - i_bit]--;							
+						}else{
+							reverse_number_of_ones_array_float[temp_bit_count + 31 - i_bit]++;
+						}	
+						////////////////////////////dbi
 					}				
 					
 					////////////check bitflips
@@ -133,7 +176,13 @@ int main ( int argc, char *argv[] ) {
 							if(temp_flit_byte[i_bit] != temp_flit_byte_array_float[temp_float_count][i_bit]){
 								number_of_bit_flips_array_float[temp_bit_count + 31 - i_bit]++;
 								temp_number_of_bit_flips_float++;
+							////////////////////////////dbi
+								temp_flips_count_in_flit_int++;///////per flit 
+								reverse_number_of_bit_flips_array_float[temp_bit_count + 31 - i_bit]--;								
+							}else{
+								reverse_number_of_bit_flips_array_float[temp_bit_count + 31 - i_bit]++;
 							}
+							////////////////////////////dbi
 						}
 					}
 
@@ -149,15 +198,22 @@ int main ( int argc, char *argv[] ) {
 					gpu_lineStream_int >> gpu_number_int;
 					
 					bit_converter.i_ = gpu_number_int;
-					temp_flit_byte = bitset<32>(bit_converter.u_);					
+					temp_flit_byte = bitset<32>(bit_converter.u_);
+					
 					
 					////////////check the number of 1s
 					for(int i_bit = 31; i_bit >= 0; --i_bit){ ////////////bitset is little endian
 						if(temp_flit_byte[i_bit] == 1){ 
 							number_of_ones_array_int[temp_bit_count + 31 - i_bit]++;
-							temp_number_of_ones_int++;
-						}
-					}				
+							temp_number_of_ones_int++;/////per cache line
+						////////////////////////////dbi
+							temp_ones_count_in_flit_int++;///////per flit 
+							reverse_number_of_ones_array_int[temp_bit_count + 31 - i_bit]--;							
+						}else{
+							reverse_number_of_ones_array_int[temp_bit_count + 31 - i_bit]++;
+						}	
+						////////////////////////////dbi						
+					}	
 					
 					////////////check bitflips
 					if(temp_flit_count > 0){/////////only flit 1, 2, 3's flip can be counted.
@@ -165,7 +221,13 @@ int main ( int argc, char *argv[] ) {
 							if(temp_flit_byte[i_bit] != temp_flit_byte_array_int[temp_float_count][i_bit]){
 								number_of_bit_flips_array_int[temp_bit_count + 31 - i_bit]++;
 								temp_number_of_bit_flips_int++;
+							////////////////////////////dbi
+								temp_flips_count_in_flit_int++;///////per flit 
+								reverse_number_of_bit_flips_array_int[temp_bit_count + 31 - i_bit]--;								
+							}else{
+								reverse_number_of_bit_flips_array_int[temp_bit_count + 31 - i_bit]++;
 							}
+							////////////////////////////dbi
 						}
 					}
 					
@@ -208,7 +270,13 @@ int main ( int argc, char *argv[] ) {
 						if(temp_flit_byte[i_bit] == 1){
 							number_of_ones_array_new[temp_bit_count + 31 - i_bit]++;
 							temp_number_of_ones_new++;
-						}
+						////////////////////////////dbi
+							temp_ones_count_in_flit_new++;///////per flit 
+							reverse_number_of_ones_array_new[temp_bit_count + 31 - i_bit]--;							
+						}else{
+							reverse_number_of_ones_array_new[temp_bit_count + 31 - i_bit]++;
+						}	
+						////////////////////////////dbi
 					}
 					
 					////////////check bitflips
@@ -217,7 +285,13 @@ int main ( int argc, char *argv[] ) {
 							if(temp_flit_byte[i_bit] != temp_flit_byte_array_new[temp_float_count][i_bit]){
 								number_of_bit_flips_array_new[temp_bit_count + 31 - i_bit]++;
 								temp_number_of_bit_flips_new++;
+							////////////////////////////dbi
+								temp_flips_count_in_flit_new++;///////per flit 
+								reverse_number_of_bit_flips_array_new[temp_bit_count + 31 - i_bit]--;								
+							}else{
+								reverse_number_of_bit_flips_array_new[temp_bit_count + 31 - i_bit]++;
 							}
+							////////////////////////////dbi
 						}
 					}
 
@@ -230,13 +304,80 @@ int main ( int argc, char *argv[] ) {
 					temp_float_count = total_float_count % 8; ///////////float count within flit
 					temp_bit_count = ( total_float_count % 32 ) * 32; ///////////bit count within cache line
 					
-					if(temp_float_count == 0){
+					if(temp_float_count == 0){ ////////////////////////////per flit
+						
+						////////////////////////////dbi
+						if(DBI_enabled){
+							if(temp_ones_count_in_flit_int > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_ones_array_int[256 * temp_flit_count + r_bit] += reverse_number_of_ones_array_int[256 * temp_flit_count + r_bit]; ////////////reverse ones count
+								}
+							}							
+							if(temp_flips_count_in_flit_int > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_bit_flips_array_int[256 * temp_flit_count + r_bit] += reverse_number_of_bit_flips_array_int[256 * temp_flit_count + r_bit]; ////////////reverse flips count
+								}
+								for(int r_float = 7; r_float >= 0; --r_float){								
+									temp_flit_byte_array_int[r_float].flip(); ////////////reverse flit history
+								}
+							}
+							
+							
+							if(temp_ones_count_in_flit_float > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_ones_array_float[256 * temp_flit_count + r_bit] += reverse_number_of_ones_array_float[256 * temp_flit_count + r_bit]; ////////////reverse ones count
+								}
+							}							
+							if(temp_flips_count_in_flit_float > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_bit_flips_array_float[256 * temp_flit_count + r_bit] += reverse_number_of_bit_flips_array_float[256 * temp_flit_count + r_bit]; ////////////reverse flips count
+								}
+								for(int r_float = 7; r_float >= 0; --r_float){								
+									temp_flit_byte_array_float[r_float].flip(); ////////////reverse flit history
+								}
+							}
+							
+							
+						if(temp_ones_count_in_flit_new > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_ones_array_new[256 * temp_flit_count + r_bit] += reverse_number_of_ones_array_new[256 * temp_flit_count + r_bit]; ////////////reverse ones count
+								}
+							}							
+							if(temp_flips_count_in_flit_new > 128){ //////////larger than half of the flit size
+								for(int r_bit = 255; r_bit >= 0; --r_bit){
+									number_of_bit_flips_array_new[256 * temp_flit_count + r_bit] += reverse_number_of_bit_flips_array_new[256 * temp_flit_count + r_bit]; ////////////reverse flips count
+								}
+								for(int r_float = 7; r_float >= 0; --r_float){				
+									temp_flit_byte_array_new[r_float].flip(); ////////////reverse flit history
+								}
+							}						
+						}/////////////////////////////////////end of: if(DBI_enabled){
+						
+						temp_ones_count_in_flit_int = 0;
+						temp_flips_count_in_flit_int = 0;
+						temp_ones_count_in_flit_float = 0;
+						temp_flips_count_in_flit_float = 0;
+						temp_ones_count_in_flit_new = 0;
+						temp_flips_count_in_flit_new = 0;
+						////////////////////////////dbi
+						
 						total_flit_count++;
 						temp_flit_count	= total_flit_count % 4; ///////////flit count within cache line
 					}
 					
-					if(temp_bit_count == 0){
+					if(temp_bit_count == 0){ ////////////////////////////per cache line
 						total_cache_line_count++;
+						
+						////////////////////////////dbi
+						for(int m = 0; m < 1024; ++m){
+							reverse_number_of_ones_array_int[m] = 0;
+							reverse_number_of_bit_flips_array_int[m] = 0;
+							reverse_number_of_ones_array_float[m] = 0;
+							reverse_number_of_bit_flips_array_float[m] = 0;
+							reverse_number_of_ones_array_new[m] = 0;
+							reverse_number_of_bit_flips_array_new[m] = 0;
+						}
+						////////////////////////////dbi
 			
 						///////////////per cache line distribution array
 						distribution_number_of_ones_array_float[temp_number_of_ones_float]++;
@@ -256,21 +397,29 @@ int main ( int argc, char *argv[] ) {
 					}
 				}
 			}////////////////////end of: while( std::getline(GPU_result, gpu_line) ) {
-				
-			//////////////shrinked distribution results
-			unsigned distribution_number_of_ones_array32_float[32];
-			unsigned distribution_number_of_bit_flips_array32_float[32];
-			unsigned distribution_number_of_ones_array32_int[32]; 
-			unsigned distribution_number_of_bit_flips_array32_int[32]; 
-			unsigned distribution_number_of_ones_array32_new[32];
-			unsigned distribution_number_of_bit_flips_array32_new[32];
 			
-			unsigned distribution_number_of_ones_array4_float[4];
-			unsigned distribution_number_of_bit_flips_array4_float[4];
-			unsigned distribution_number_of_ones_array4_int[4]; 
-			unsigned distribution_number_of_bit_flips_array4_int[4]; 
-			unsigned distribution_number_of_ones_array4_new[4];
-			unsigned distribution_number_of_bit_flips_array4_new[4];
+			
+			fprintf (pFile, "total_cache_line_count:%d\n", total_cache_line_count );
+			fprintf (pFile, "total_flit_count:%d\n", total_flit_count );
+			fprintf (pFile, "total_float_count:%d\n", total_float_count );
+				
+			fprintf (pFile, "\n");
+			fprintf (pFile, "#################################distributions32#########################\n");
+			
+			//////////////shrinked distribution results
+			int distribution_number_of_ones_array32_float[32];
+			int distribution_number_of_bit_flips_array32_float[32];
+			int distribution_number_of_ones_array32_int[32]; 
+			int distribution_number_of_bit_flips_array32_int[32]; 
+			int distribution_number_of_ones_array32_new[32];
+			int distribution_number_of_bit_flips_array32_new[32];
+			
+			int distribution_number_of_ones_array4_float[4];
+			int distribution_number_of_bit_flips_array4_float[4];
+			int distribution_number_of_ones_array4_int[4]; 
+			int distribution_number_of_bit_flips_array4_int[4]; 
+			int distribution_number_of_ones_array4_new[4];
+			int distribution_number_of_bit_flips_array4_new[4];
 			
 			/////////////initialize
 			for(int m = 0; m < 32; ++m){
@@ -288,7 +437,122 @@ int main ( int argc, char *argv[] ) {
 				distribution_number_of_bit_flips_array4_int[m] = 0;
 				distribution_number_of_ones_array4_new[m] = 0;
 				distribution_number_of_bit_flips_array4_new[m] = 0;
-			}				
+			}
+			
+			////////////////distribution shrink to 32
+			distribution_number_of_ones_array32_float[0] = distribution_number_of_ones_array_float[0];
+			distribution_number_of_bit_flips_array32_float[0] = distribution_number_of_bit_flips_array_float[0];
+			distribution_number_of_ones_array32_int[0] = distribution_number_of_ones_array_int[0];
+			distribution_number_of_bit_flips_array32_int[0] = distribution_number_of_bit_flips_array_int[0];
+			distribution_number_of_ones_array32_new[0] = distribution_number_of_ones_array_new[0];
+			distribution_number_of_bit_flips_array32_new[0] = distribution_number_of_bit_flips_array_new[0];
+			for(int m = 0; m < 32; ++m){
+				for(int n = 0; n < 32; ++n){
+					distribution_number_of_ones_array32_float[m] += distribution_number_of_ones_array_float[32 * m + n + 1];
+					distribution_number_of_bit_flips_array32_float[m] += distribution_number_of_bit_flips_array_float[32 * m + n + 1];
+					distribution_number_of_ones_array32_int[m] += distribution_number_of_ones_array_int[32 * m + n + 1];
+					distribution_number_of_bit_flips_array32_int[m] += distribution_number_of_bit_flips_array_int[32 * m + n + 1];
+					distribution_number_of_ones_array32_new[m] += distribution_number_of_ones_array_new[32 * m + n + 1];
+					distribution_number_of_bit_flips_array32_new[m] += distribution_number_of_bit_flips_array_new[32 * m + n + 1];
+				}
+			}
+
+			////////////////distribution shrink to 4
+			distribution_number_of_ones_array4_float[0] = distribution_number_of_ones_array_float[0];
+			distribution_number_of_bit_flips_array4_float[0] = distribution_number_of_bit_flips_array_float[0];
+			distribution_number_of_ones_array4_int[0] = distribution_number_of_ones_array_int[0];
+			distribution_number_of_bit_flips_array4_int[0] = distribution_number_of_bit_flips_array_int[0];
+			distribution_number_of_ones_array4_new[0] = distribution_number_of_ones_array_new[0];
+			distribution_number_of_bit_flips_array4_new[0] = distribution_number_of_bit_flips_array_new[0];
+			for(int m = 0; m < 32; ++m){
+				for(int n = 0; n < 32; ++n){
+					distribution_number_of_ones_array4_float[m] += distribution_number_of_ones_array_float[32 * m + n + 1];
+					distribution_number_of_bit_flips_array4_float[m] += distribution_number_of_bit_flips_array_float[32 * m + n + 1];
+					distribution_number_of_ones_array4_int[m] += distribution_number_of_ones_array_int[32 * m + n + 1];
+					distribution_number_of_bit_flips_array4_int[m] += distribution_number_of_bit_flips_array_int[32 * m + n + 1];
+					distribution_number_of_ones_array4_new[m] += distribution_number_of_ones_array_new[32 * m + n + 1];
+					distribution_number_of_bit_flips_array4_new[m] += distribution_number_of_bit_flips_array_new[32 * m + n + 1];
+				}
+			}
+			
+			fprintf (pFile, "distribution32_ones_int: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution32_ones_float: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution32_ones_new: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution32_flips_int: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution32_flips_float: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution32_flips_new: ");
+			for(int m = 0; m < 32; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "\n");
+			fprintf (pFile, "#################################distributions4#########################\n");
+			
+			fprintf (pFile, "distribution4_ones_int: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution4_ones_float: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution4_ones_new: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution4_flips_int: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution4_flips_float: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution4_flips_new: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "\n");
+			fprintf (pFile, "#################################overalls#########################\n");
+			
 			
 			unsigned byte_bits_ones_sum_float[4][8];
 			unsigned byte_bits_flips_sum_float[4][8];
@@ -358,154 +622,148 @@ int main ( int argc, char *argv[] ) {
 				}
 			}
 			
-			fprintf (pFile, "total_cache_line_count:%u\n", total_cache_line_count );
-			fprintf (pFile, "total_flit_count:%u\n", total_flit_count );
-			fprintf (pFile, "total_float_count:%u\n", total_float_count );
-				
-			fprintf (pFile, "\n");
-			fprintf (pFile, "#################################overalls#########################\n");
-			fprintf (pFile, "overall_ones_float: ");
-			for(int m = 0; m < 4; ++m){
-				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_float[m][n] );
-				}
-				fprintf (pFile, "%u ", byte_ones_sum_float[m] );
-			}
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "overall_flips_float: ");
-			for(int m = 0; m < 4; ++m){
-				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_float[m][n] );
-				}
-				fprintf (pFile, "%u ", byte_flips_sum_float[m] );
-			}
-			fprintf (pFile, "\n");
-			
 			fprintf (pFile, "overall_ones_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_int[m][n] );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_int[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_ones_sum_int[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "overall_flips_int: ");
+			fprintf (pFile, "overall_ones_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_int[m][n] );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_float[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_flips_sum_int[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_ones_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_new[m][n] );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_new[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_ones_sum_new[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "overall_flips_int: ");
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 8; ++n){
+					fprintf (pFile, "%d ", byte_bits_flips_sum_int[m][n] );
+				}
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "overall_flips_float: ");
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 8; ++n){
+					fprintf (pFile, "%d ", byte_bits_flips_sum_float[m][n] );
+				}
+				fprintf (pFile, "%d ", byte_flips_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_flips_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_new[m][n] );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_new[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_flips_sum_new[m] );
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "\n");
 			fprintf (pFile, "#################################only bits#########################\n");
-			fprintf (pFile, "bits_ones_float: ");
-			for(int m = 0; m < 4; ++m){
-				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_float[m][n] );
-				}
-			}
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "bits_flips_float: ");
-			for(int m = 0; m < 4; ++m){
-				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_float[m][n] );
-				}
-			}
-			fprintf (pFile, "\n");
-			
 			fprintf (pFile, "bits_ones_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_int[m][n] );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_int[m][n] );
 				}
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "bits_ones_float: ");
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 8; ++n){
+					fprintf (pFile, "%d ", byte_bits_ones_sum_float[m][n] );
+				}
+			}
+			fprintf (pFile, "\n");			
+			
+			fprintf (pFile, "bits_ones_new: ");
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 8; ++n){
+					fprintf (pFile, "%d ", byte_bits_ones_sum_new[m][n] );
+				}
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bits_flips_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_int[m][n] );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_int[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_flips_sum_int[m] );
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "bits_ones_new: ");
+			fprintf (pFile, "bits_flips_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_ones_sum_new[m][n] );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_float[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_ones_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bits_flips_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%u ", byte_bits_flips_sum_new[m][n] );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_new[m][n] );
 				}
-				fprintf (pFile, "%u ", byte_flips_sum_new[m] );
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "\n");
 			fprintf (pFile, "#################################bytes#########################\n");
-			fprintf (pFile, "bytes_ones_float: ");
-			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_ones_sum_float[m] );
-			}
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "bytes_flips_float: ");
-			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_flips_sum_float[m] );
-			}
-			fprintf (pFile, "\n");
-			
 			fprintf (pFile, "bytes_ones_int: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_ones_sum_int[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "bytes_flips_int: ");
+			fprintf (pFile, "bytes_ones_float: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_flips_sum_int[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_ones_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_ones_sum_new[m] );
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "bytes_flips_int: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "bytes_flips_float: ");
+			for(int m = 0; m < 4; ++m){
+				fprintf (pFile, "%d ", byte_flips_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_flips_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%u ", byte_flips_sum_new[m] );
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 		}
@@ -527,11 +785,12 @@ int main ( int argc, char *argv[] ) {
 
 ////////// ./exp1 uniform_float_two_sides_1024.txt result_ut1024.txt 
 
-////////// ./exp1 normal_float_two_sides_1024.txt result_nt1024.txt 
+////////// ./exp1 normal_float_two_sides_1024.txt result_nt1024.txt 1
 
-///////////add high/med/low cache line count?
+///////////add high/med/low cache line count? ##ok
 ///////////add DBI?
-///////////test with int data?
+///////////test with int data? ##ok
+///////////total for all bytes?
 
 //   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 

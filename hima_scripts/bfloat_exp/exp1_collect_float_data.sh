@@ -2,7 +2,7 @@
 
 #####################################################
 output=/sciclone/pscr/hwang07/bfloat_analysis/collection/all_results.txt
-mother_dir=/sciclone/pscr/hwang07/bfloat_analysis/results
+mother_dir=/sciclone/pscr/hwang07/bfloat_analysis/results_float
 
 cd $mother_dir
 

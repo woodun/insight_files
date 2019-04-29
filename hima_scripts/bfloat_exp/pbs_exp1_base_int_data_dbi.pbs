@@ -5,6 +5,6 @@
 #PBS -m a
 #PBS -M hwang07@email.wm.edu
 PROG=MOTHERDIR/exp1
-ARGS="MOTHERDIR/data/matlab_int_dbi/TBD.txt MOTHERDIR/results_int_dbi/DBT.txt 1"
+ARGS="MOTHERDIR/data/matlab_int/TBD.txt MOTHERDIR/results_int_dbi/DBT.txt 1"
 cd $PBS_O_WORKDIR
 $PROG $ARGS

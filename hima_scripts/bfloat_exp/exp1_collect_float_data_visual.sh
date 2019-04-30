@@ -19,32 +19,32 @@ for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_flips_float:'  'b
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_float_one_side_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
-printf "\r\n" >> $output
 done #for statistics in
+printf "\r\n" >> $output
 
 printf "normal_float_one_side:\r\n" >> $output
 for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_flips_float:'  'bytes_flips_new:' 'distribution4_ones_float:' 'distribution4_ones_new:' 'distribution4_flips_float:' 'distribution4_flips_new:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" normal_float_one_side_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
-printf "\r\n" >> $output
 done #for statistics in
+printf "\r\n" >> $output
 
 printf "uniform_float_two_sides:\r\n" >> $output
 for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_flips_float:'  'bytes_flips_new:' 'distribution4_ones_float:' 'distribution4_ones_new:' 'distribution4_flips_float:' 'distribution4_flips_new:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_float_two_sides_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
-printf "\r\n" >> $output
 done #for statistics in
+printf "\r\n" >> $output
 
 printf "normal_float_two_sides:\r\n" >> $output
 for statistics in 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_flips_float:'  'bytes_flips_new:' 'distribution4_ones_float:' 'distribution4_ones_new:' 'distribution4_flips_float:' 'distribution4_flips_new:'
 do
 grep "$statistics[ ]*[-eE\+0-9\.]*" normal_float_two_sides_result$number.txt | xargs printf "%s " >> $output
 printf "\r\n" >> $output
-printf "\r\n" >> $output
 done #for statistics in
+printf "\r\n" >> $output
 
 printf "\r\n" >> $output
 

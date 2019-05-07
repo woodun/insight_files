@@ -30,8 +30,11 @@ int main ( int argc, char *argv[] ) {
 		printf ("error");
 	}else {
 		
-		if ( argc = 4 ){
-			DBI_enabled = atoi( argv[3] );			
+		//printf ("#########debug1: %dn", argc);
+		//fflush(stdout);
+		
+		if ( argc == 4 ){
+			DBI_enabled = atoi( argv[3] );		
 		}
 		
 		std::FILE * pFile = fopen (argv[2],"w");
@@ -464,14 +467,14 @@ int main ( int argc, char *argv[] ) {
 			distribution_number_of_bit_flips_array4_int[0] = distribution_number_of_bit_flips_array_int[0];
 			distribution_number_of_ones_array4_new[0] = distribution_number_of_ones_array_new[0];
 			distribution_number_of_bit_flips_array4_new[0] = distribution_number_of_bit_flips_array_new[0];
-			for(int m = 0; m < 32; ++m){
-				for(int n = 0; n < 32; ++n){
-					distribution_number_of_ones_array4_float[m] += distribution_number_of_ones_array_float[32 * m + n + 1];
-					distribution_number_of_bit_flips_array4_float[m] += distribution_number_of_bit_flips_array_float[32 * m + n + 1];
-					distribution_number_of_ones_array4_int[m] += distribution_number_of_ones_array_int[32 * m + n + 1];
-					distribution_number_of_bit_flips_array4_int[m] += distribution_number_of_bit_flips_array_int[32 * m + n + 1];
-					distribution_number_of_ones_array4_new[m] += distribution_number_of_ones_array_new[32 * m + n + 1];
-					distribution_number_of_bit_flips_array4_new[m] += distribution_number_of_bit_flips_array_new[32 * m + n + 1];
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 256; ++n){
+					distribution_number_of_ones_array4_float[m] += distribution_number_of_ones_array_float[256 * m + n + 1];
+					distribution_number_of_bit_flips_array4_float[m] += distribution_number_of_bit_flips_array_float[256 * m + n + 1];
+					distribution_number_of_ones_array4_int[m] += distribution_number_of_ones_array_int[256 * m + n + 1];
+					distribution_number_of_bit_flips_array4_int[m] += distribution_number_of_bit_flips_array_int[256 * m + n + 1];
+					distribution_number_of_ones_array4_new[m] += distribution_number_of_ones_array_new[256 * m + n + 1];
+					distribution_number_of_bit_flips_array4_new[m] += distribution_number_of_bit_flips_array_new[256 * m + n + 1];
 				}
 			}
 			
@@ -781,6 +784,16 @@ int main ( int argc, char *argv[] ) {
 ////////ln -s /stor1/hwang07/test/test .
 //////////./test *_GPU.txt *_CPU.txt 
 
+/////////// ./exp1 normal_float_two_sides_1024.txt test2.txt
+
+/////////// r normal_float_two_sides_1024.txt test2.txt
+
+/////////PROG=/sciclone/pscr/hwang07/bfloat_analysis/exp1
+/////////ARGS="/sciclone/pscr/hwang07/bfloat_analysis/data/matlab_float/uniform_float_one_side_exp0.txt /////////////sciclone/pscr/hwang07/bfloat_analysis/results_float/uniform_float_one_side_result0.txt"
+
+///////////   /sciclone/pscr/hwang07/bfloat_analysis/exp1 "/sciclone/pscr/hwang07/bfloat_analysis/data/matlab_float/uniform_float_one_side_exp0.txt test3.txt"
+
+
 /////////////ln -s /sciclone/data10/hwang07/GPU_RESEARCH/amc/test .
 
 ////////// ./exp1 uniform_float_two_sides_1024.txt result_ut1024.txt 
@@ -788,9 +801,10 @@ int main ( int argc, char *argv[] ) {
 ////////// ./exp1 normal_float_two_sides_1024.txt result_nt1024.txt 1
 
 ///////////add high/med/low cache line count? ##ok
-///////////add DBI?
+///////////add DBI? ##ok
 ///////////test with int data? ##ok
 ///////////total for all bytes?
+/////////// do a full range study and draw line plot? which data to use? uniform two sides? What is Tango using? 
 
 //   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 

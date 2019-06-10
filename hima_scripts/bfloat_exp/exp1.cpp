@@ -804,7 +804,7 @@ int main ( int argc, char *argv[] ) {
 ///////////add DBI? ##ok
 ///////////test with int data? ##ok
 ///////////total for all bytes?
-/////////// do a full range study and draw line plot? which data to use? uniform two sides? What is Tango using? 
+/////////// do a full range study and draw line plot?
 
 //   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 

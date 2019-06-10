@@ -3,7 +3,11 @@
 #25, 40, 41, 53, 56
 #inference apps: wait for the author or add more inputs by myself?
 #training apps: investigate backprop
-#8apps
+#6apps
+#why can we truncate everything? 1. error is high 2. non-linear distribution of hardware error.
+#For 1, complete experiment for all truncation methods and see error.
+#For 2, This probably needs realistic inputs (images probably will not work because they use integer, unless converted to float). Not sure if intialized input will work. Otherwise currently maybe only Tango has both floating point and realistic inputs.
+#In addition, if using Tango, we need top 1 accuracy. They must add all inputs.
 
 mkdir tango
 cd tango

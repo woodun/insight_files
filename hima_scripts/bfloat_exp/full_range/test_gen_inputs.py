@@ -7,10 +7,12 @@ for exp_name in range(128, 129):
     randrange = -2 ** exp_name;
     random.seed(0)
     
-    for x in range(0, 524288):
-        randfloat = random.uniform(randrange, -randrange)
-#         print("%0.32f " % randfloat, end="", file = f)      
-        f.write(str(randfloat) + " ")
+    for x in range(0, 16384):
+		for y in range(0, 32):
+			randfloat = random.uniform(randrange, -randrange)
+#			print("%0.32f " % randfloat, end="", file = f)      
+			f.write(str(randfloat) + " ")
+		f.write(str(randfloat) + "\n")
     
     f.close()
   
@@ -23,8 +25,11 @@ for exp_name in range(31, 32):
     random.seed(0)
     
     for x in range(0, 524288):
-        randint = random.randint(randrange, -randrange)
-#         print("%0.32f " % randint, end="", file = f)
-        f.write(str(randint) + " ")
-    
+		for y in range(0, 32):
+			randint = random.randint(randrange, -randrange)
+#			print("%0.32f " % randint, end="", file = f)
+			f.write(str(randint) + " ")
+		f.write(str(randfloat) + "\n")
+
     f.close()
+	

@@ -24,7 +24,7 @@ for exp_name in range(31, 32):
     randrange = -2 ** exp_name;
     random.seed(0)
     
-    for x in range(0, 524288):
+    for x in range(0, 16384):
 		for y in range(0, 32):
 			randint = random.randint(randrange, -randrange)
 #			print("%0.32f " % randint, end="", file = f)

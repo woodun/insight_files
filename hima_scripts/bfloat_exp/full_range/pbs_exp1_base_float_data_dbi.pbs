@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l nodes=1:rhel6:compute:ppn=1
+#PBS -l walltime=72:00:00
+#PBS -N bfloat_exp1_TBD
+#PBS -m a
+#PBS -M hwang07@email.wm.edu
+PROG=MOTHERDIR/exp1
+ARGS="MOTHERDIR/data/py_float/TBD.txt MOTHERDIR/results_float_dbi/DBT.txt 1"
+cd $PBS_O_WORKDIR
+$PROG $ARGS

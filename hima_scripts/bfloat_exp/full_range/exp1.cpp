@@ -925,7 +925,7 @@ int main ( int argc, char *argv[] ) {
 	return 0;
 }
 
-/////////g++ -o -g exp1 exp1.cpp
+/////////g++ -o exp1 exp1.cpp
 ////////ln -s /stor1/hwang07/test/test .
 //////////./test *_GPU.txt *_CPU.txt 
 
@@ -949,7 +949,7 @@ int main ( int argc, char *argv[] ) {
 
 ///////////add high/med/low cache line count? ##ok
 ///////////add DBI? ##ok
-/////////////////////////DBI for both number of 1s and number of flips?
+/////////////////////////DBI for both number of 1s and number of flips? #yes
 ///////////test with int data? ##ok
 ///////////total for all bytes?
 /////////// do a full range study and draw line plot?

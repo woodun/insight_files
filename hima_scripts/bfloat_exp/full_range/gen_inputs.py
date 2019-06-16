@@ -1,3 +1,5 @@
+import sys, time, random
+
 for exp_name in range(-126, 129):
     
     f = open("/sciclone/pscr/hwang07/bfloat_analysis/data/py_float/uniform_float_two_sides_exp" + str(exp_name) + ".txt","w")

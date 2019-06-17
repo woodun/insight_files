@@ -1014,7 +1014,8 @@ int main ( int argc, char *argv[] ) {
 /////////////////////////DBI for both number of 1s and number of flips? #yes
 ///////////test with int data? ##ok
 ///////////total for all bytes?
-/////////// do a full range study and draw line plot?
+/////////// do a full range study and draw line plot? 
+/////////// re-generate the plot, do we have the same figure?
 
 //   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 

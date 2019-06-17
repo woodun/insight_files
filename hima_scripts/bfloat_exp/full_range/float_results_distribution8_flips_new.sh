@@ -19,8 +19,6 @@ printf "\r\n" >> $output
 
 done #for statistics in
 
-printf "\r\n" >> $output
-
 done #for number in
 
 

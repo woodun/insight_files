@@ -558,12 +558,19 @@ int main ( int argc, char *argv[] ) {
 			int distribution_number_of_ones_array32_new[32];
 			int distribution_number_of_bit_flips_array32_new[32];
 			
-			int distribution_number_of_ones_array4_float[4];
-			int distribution_number_of_bit_flips_array4_float[4];
-			int distribution_number_of_ones_array4_int[4]; 
-			int distribution_number_of_bit_flips_array4_int[4]; 
-			int distribution_number_of_ones_array4_new[4];
-			int distribution_number_of_bit_flips_array4_new[4];
+			int distribution_number_of_ones_array8_float[8];
+			int distribution_number_of_bit_flips_array8_float[8];
+			int distribution_number_of_ones_array8_int[8]; 
+			int distribution_number_of_bit_flips_array8_int[8]; 
+			int distribution_number_of_ones_array8_new[8];
+			int distribution_number_of_bit_flips_array8_new[8];
+			
+			int distribution_number_of_ones_array4_float[8];
+			int distribution_number_of_bit_flips_array4_float[8];
+			int distribution_number_of_ones_array4_int[8]; 
+			int distribution_number_of_bit_flips_array4_int[8]; 
+			int distribution_number_of_ones_array4_new[8];
+			int distribution_number_of_bit_flips_array4_new[8];
 			
 			/////////////initialize
 			for(int m = 0; m < 32; ++m){
@@ -574,6 +581,16 @@ int main ( int argc, char *argv[] ) {
 				distribution_number_of_ones_array32_new[m] = 0;
 				distribution_number_of_bit_flips_array32_new[m] = 0;
 			}
+			
+			for(int m = 0; m < 8; ++m){
+				distribution_number_of_ones_array8_float[m] = 0;
+				distribution_number_of_bit_flips_array8_float[m] = 0;
+				distribution_number_of_ones_array8_int[m] = 0;
+				distribution_number_of_bit_flips_array8_int[m] = 0;
+				distribution_number_of_ones_array8_new[m] = 0;
+				distribution_number_of_bit_flips_array8_new[m] = 0;
+			}
+			
 			for(int m = 0; m < 4; ++m){
 				distribution_number_of_ones_array4_float[m] = 0;
 				distribution_number_of_bit_flips_array4_float[m] = 0;
@@ -600,24 +617,30 @@ int main ( int argc, char *argv[] ) {
 					distribution_number_of_bit_flips_array32_new[m] += distribution_number_of_bit_flips_array_new[32 * m + n + 1];
 				}
 			}
-
-			////////////////distribution shrink to 4
-			distribution_number_of_ones_array4_float[0] = distribution_number_of_ones_array_float[0];
-			distribution_number_of_bit_flips_array4_float[0] = distribution_number_of_bit_flips_array_float[0];
-			distribution_number_of_ones_array4_int[0] = distribution_number_of_ones_array_int[0];
-			distribution_number_of_bit_flips_array4_int[0] = distribution_number_of_bit_flips_array_int[0];
-			distribution_number_of_ones_array4_new[0] = distribution_number_of_ones_array_new[0];
-			distribution_number_of_bit_flips_array4_new[0] = distribution_number_of_bit_flips_array_new[0];
-			for(int m = 0; m < 4; ++m){
-				for(int n = 0; n < 256; ++n){
-					distribution_number_of_ones_array4_float[m] += distribution_number_of_ones_array_float[256 * m + n + 1];
-					distribution_number_of_bit_flips_array4_float[m] += distribution_number_of_bit_flips_array_float[256 * m + n + 1];
-					distribution_number_of_ones_array4_int[m] += distribution_number_of_ones_array_int[256 * m + n + 1];
-					distribution_number_of_bit_flips_array4_int[m] += distribution_number_of_bit_flips_array_int[256 * m + n + 1];
-					distribution_number_of_ones_array4_new[m] += distribution_number_of_ones_array_new[256 * m + n + 1];
-					distribution_number_of_bit_flips_array4_new[m] += distribution_number_of_bit_flips_array_new[256 * m + n + 1];
+			
+			////////////////distribution shrink to 8
+			for(int m = 0; m < 8; ++m){
+				for(int n = 0; n < 4; ++n){
+					distribution_number_of_ones_array8_float[m] += distribution_number_of_ones_array32_float[4 * m + n];
+					distribution_number_of_bit_flips_array8_float[m] += distribution_number_of_bit_flips_array32_float[4 * m + n];
+					distribution_number_of_ones_array8_int[m] += distribution_number_of_ones_array32_int[4 * m + n];
+					distribution_number_of_bit_flips_array8_int[m] += distribution_number_of_bit_flips_array32_int[4 * m + n];
+					distribution_number_of_ones_array8_new[m] += distribution_number_of_ones_array32_new[4 * m + n];
+					distribution_number_of_bit_flips_array8_new[m] += distribution_number_of_bit_flips_array32_new[4 * m + n];
 				}
 			}
+
+			////////////////distribution shrink to 4
+			for(int m = 0; m < 4; ++m){
+				for(int n = 0; n < 2; ++n){
+					distribution_number_of_ones_array4_float[m] += distribution_number_of_ones_array8_float[2 * m + n];
+					distribution_number_of_bit_flips_array4_float[m] += distribution_number_of_bit_flips_array8_float[2 * m + n];
+					distribution_number_of_ones_array4_int[m] += distribution_number_of_ones_array8_int[2 * m + n];
+					distribution_number_of_bit_flips_array4_int[m] += distribution_number_of_bit_flips_array8_int[2 * m + n];
+					distribution_number_of_ones_array4_new[m] += distribution_number_of_ones_array8_new[2 * m + n];
+					distribution_number_of_bit_flips_array4_new[m] += distribution_number_of_bit_flips_array8_new[2 * m + n];
+				}
+			}			
 			
 			///////////////////per cache line distributions
 			fprintf (pFile, "distribution32_ones_int: ");
@@ -653,6 +676,45 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "distribution32_flips_new: ");
 			for(int m = 0; m < 32; ++m){
 				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "\n");
+			fprintf (pFile, "#################################distributions8#########################\n");
+			
+			fprintf (pFile, "distribution8_ones_int: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution8_ones_float: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution8_ones_new: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_new[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution8_flips_int: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_int[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution8_flips_float: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_float[m] );
+			}
+			fprintf (pFile, "\n");
+			
+			fprintf (pFile, "distribution8_flips_new: ");
+			for(int m = 0; m < 8; ++m){
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_new[m] );
 			}
 			fprintf (pFile, "\n");
 			

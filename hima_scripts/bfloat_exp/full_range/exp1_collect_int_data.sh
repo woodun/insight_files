@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #####################################################better for visual comparison
-output=/sciclone/pscr/hwang07/bfloat_analysis/collection/visual_all_results_int_dbi.txt
+output=/sciclone/pscr/hwang07/bfloat_analysis/collection/all_results_int_dbi.txt
 mother_dir=/sciclone/pscr/hwang07/bfloat_analysis/results_int_dbi
 
 rm $output
@@ -16,7 +16,7 @@ printf "#############################################range%s:\r\n" $number >> $o
 for statistics in 'bytes_ones_int:' 'bytes_ones_float:' 'bytes_ones_new:' 'bytes_flips_int:' 'bytes_flips_float:'  'bytes_flips_new:' 'distribution8_ones_float:' 'distribution8_ones_int:' 'distribution8_ones_new:' 'distribution8_flips_int:' 'distribution8_flips_float:' 'distribution8_flips_new:'
 do
 
-grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_int_two_sides_result$number.txt | xargs printf "%s " >> $output
+grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_int_two_sides_result$number.txt | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 
 done #for statistics in

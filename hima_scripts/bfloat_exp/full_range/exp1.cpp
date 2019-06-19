@@ -1015,7 +1015,13 @@ int main ( int argc, char *argv[] ) {
 ///////////test with int data? ##ok
 ///////////total for all bytes?
 /////////// do a full range study and draw line plot? 
-/////////// re-generate the plot, do we have the same figure?
+/////////// re-generate the plot, do we have the same figure? #yes
+/////////// for new, why it is not symmetric around 0?
+
+/////////// study on realistic data
+
+/////////// /sciclone/data10/hwang07/Tango/GPU/AlexNet/data/out_AlexNet
+
 
 //   /sciclone/pscr/hwang07/bfloat_analysis/exp1 /sciclone/pscr/hwang07/bfloat_analysis/data/matlab/normal_float_one_side_exp0.txt /sciclone/pscr/hwang07/bfloat_analysis/results/normal_float_one_side_result0.txt
 

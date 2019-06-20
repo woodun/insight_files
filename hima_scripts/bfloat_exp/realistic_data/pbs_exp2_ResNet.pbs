@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l nodes=1:rhel6:compute:ppn=1
+#PBS -l walltime=72:00:00
+#PBS -N bfloat_exp2
+#PBS -m a
+#PBS -M hwang07@email.wm.edu
+PROG=/sciclone/pscr/hwang07/bfloat_analysis/exp1
+ARGS="/sciclone/pscr/hwang07/bfloat_analysis/tango_data/out_ResNet /sciclone/pscr/hwang07/bfloat_analysis/tango_data/no_dbi_result_ResNet.txt"
+cd $PBS_O_WORKDIR
+$PROG $ARGS

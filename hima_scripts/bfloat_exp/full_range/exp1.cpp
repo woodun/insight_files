@@ -1018,7 +1018,12 @@ int main ( int argc, char *argv[] ) {
 /////////// re-generate the plot, do we have the same figure? #yes
 /////////// for new, why it is not symmetric around 0?
 
-/////////// study on realistic data
+/////////// study on realistic data #ok
+/////////// add truncate and distribution of error
+/////////// disable dbi and see the distribution?
+/////////// test for cat image only?
+/////////// bit flips for the first byte only?
+/////////// write extract_mnist.cc
 
 /////////// /sciclone/data10/hwang07/Tango/GPU/AlexNet/data/out_AlexNet
 

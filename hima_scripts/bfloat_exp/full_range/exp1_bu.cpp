@@ -145,10 +145,8 @@ int main ( int argc, char *argv[] ) {
 			///////////////error counter for all cache lines
 			double sum_per_line_distance_float_F16 = 0;
 			double sum_per_line_RE_float_F16 = 0;
-			int sum_per_line_nan_float_F16 = 0; /////////////todo: add this?
 			double sum_per_line_distance_float_F8 = 0;
 			double sum_per_line_RE_float_F8 = 0;
-			int sum_per_line_nan_float_F8 = 0;
 			
 			double sum_per_line_distance_float_B16 = 0;
 			double sum_per_line_RE_float_B16 = 0;
@@ -218,157 +216,15 @@ int main ( int argc, char *argv[] ) {
 			int F16_RE_distribution_000001 = 0;
 			int F16_RE_distribution_0000001 = 0;
 			int F16_RE_distribution_0 = 0;
-			int F16_RE_nan_count = 0;
-			
-			int F8_RE_distribution_1000 = 0;
-			int F8_RE_distribution_100 = 0;
-			int F8_RE_distribution_10 = 0;
-			int F8_RE_distribution_1 = 0;
-			int F8_RE_distribution_01 = 0;
-			int F8_RE_distribution_001 = 0;
-			int F8_RE_distribution_0001 = 0;
-			int F8_RE_distribution_00001 = 0;
-			int F8_RE_distribution_000001 = 0;
-			int F8_RE_distribution_0000001 = 0;
-			int F8_RE_distribution_0 = 0;
-			int F8_RE_nan_count = 0;
-			
-			int B16_RE_distribution_1000 = 0;
-			int B16_RE_distribution_100 = 0;
-			int B16_RE_distribution_10 = 0;
-			int B16_RE_distribution_1 = 0;
-			int B16_RE_distribution_01 = 0;
-			int B16_RE_distribution_001 = 0;
-			int B16_RE_distribution_0001 = 0;
-			int B16_RE_distribution_00001 = 0;
-			int B16_RE_distribution_000001 = 0;
-			int B16_RE_distribution_0000001 = 0;
-			int B16_RE_distribution_0 = 0;
-			int B16_RE_nan_count = 0;
-			
-			int B8_RE_distribution_1000 = 0;
-			int B8_RE_distribution_100 = 0;
-			int B8_RE_distribution_10 = 0;
-			int B8_RE_distribution_1 = 0;
-			int B8_RE_distribution_01 = 0;
-			int B8_RE_distribution_001 = 0;
-			int B8_RE_distribution_0001 = 0;
-			int B8_RE_distribution_00001 = 0;
-			int B8_RE_distribution_000001 = 0;
-			int B8_RE_distribution_0000001 = 0;
-			int B8_RE_distribution_0 = 0;
-			int B8_RE_nan_count = 0;
-			
-			int NF16_RE_distribution_1000 = 0;
-			int NF16_RE_distribution_100 = 0;
-			int NF16_RE_distribution_10 = 0;
-			int NF16_RE_distribution_1 = 0;
-			int NF16_RE_distribution_01 = 0;
-			int NF16_RE_distribution_001 = 0;
-			int NF16_RE_distribution_0001 = 0;
-			int NF16_RE_distribution_00001 = 0;
-			int NF16_RE_distribution_000001 = 0;
-			int NF16_RE_distribution_0000001 = 0;
-			int NF16_RE_distribution_0 = 0;
-			int NF16_RE_nan_count = 0;
-			
-			int NF8_RE_distribution_1000 = 0;
-			int NF8_RE_distribution_100 = 0;
-			int NF8_RE_distribution_10 = 0;
-			int NF8_RE_distribution_1 = 0;
-			int NF8_RE_distribution_01 = 0;
-			int NF8_RE_distribution_001 = 0;
-			int NF8_RE_distribution_0001 = 0;
-			int NF8_RE_distribution_00001 = 0;
-			int NF8_RE_distribution_000001 = 0;
-			int NF8_RE_distribution_0000001 = 0;
-			int NF8_RE_distribution_0 = 0;
-			int NF8_RE_nan_count = 0;
-			
-			int NB16_RE_distribution_1000 = 0;
-			int NB16_RE_distribution_100 = 0;
-			int NB16_RE_distribution_10 = 0;
-			int NB16_RE_distribution_1 = 0;
-			int NB16_RE_distribution_01 = 0;
-			int NB16_RE_distribution_001 = 0;
-			int NB16_RE_distribution_0001 = 0;
-			int NB16_RE_distribution_00001 = 0;
-			int NB16_RE_distribution_000001 = 0;
-			int NB16_RE_distribution_0000001 = 0;
-			int NB16_RE_distribution_0 = 0;
-			int NB16_RE_nan_count = 0;
-			
-			int NB8_RE_distribution_1000 = 0;
-			int NB8_RE_distribution_100 = 0;
-			int NB8_RE_distribution_10 = 0;
-			int NB8_RE_distribution_1 = 0;
-			int NB8_RE_distribution_01 = 0;
-			int NB8_RE_distribution_001 = 0;
-			int NB8_RE_distribution_0001 = 0;
-			int NB8_RE_distribution_00001 = 0;
-			int NB8_RE_distribution_000001 = 0;
-			int NB8_RE_distribution_0000001 = 0;
-			int NB8_RE_distribution_0 = 0;
-			int NB8_RE_nan_count = 0;
-			
-			int IL16_RE_distribution_1000 = 0;
-			int IL16_RE_distribution_100 = 0;
-			int IL16_RE_distribution_10 = 0;
-			int IL16_RE_distribution_1 = 0;
-			int IL16_RE_distribution_01 = 0;
-			int IL16_RE_distribution_001 = 0;
-			int IL16_RE_distribution_0001 = 0;
-			int IL16_RE_distribution_00001 = 0;
-			int IL16_RE_distribution_000001 = 0;
-			int IL16_RE_distribution_0000001 = 0;
-			int IL16_RE_distribution_0 = 0;
-			int IL16_RE_nan_count = 0;
-			
-			int IL8_RE_distribution_1000 = 0;
-			int IL8_RE_distribution_100 = 0;
-			int IL8_RE_distribution_10 = 0;
-			int IL8_RE_distribution_1 = 0;
-			int IL8_RE_distribution_01 = 0;
-			int IL8_RE_distribution_001 = 0;
-			int IL8_RE_distribution_0001 = 0;
-			int IL8_RE_distribution_00001 = 0;
-			int IL8_RE_distribution_000001 = 0;
-			int IL8_RE_distribution_0000001 = 0;
-			int IL8_RE_distribution_0 = 0;
-			int IL8_RE_nan_count = 0;
-			
-			int IR16_RE_distribution_1000 = 0;
-			int IR16_RE_distribution_100 = 0;
-			int IR16_RE_distribution_10 = 0;
-			int IR16_RE_distribution_1 = 0;
-			int IR16_RE_distribution_01 = 0;
-			int IR16_RE_distribution_001 = 0;
-			int IR16_RE_distribution_0001 = 0;
-			int IR16_RE_distribution_00001 = 0;
-			int IR16_RE_distribution_000001 = 0;
-			int IR16_RE_distribution_0000001 = 0;
-			int IR16_RE_distribution_0 = 0;
-			int IR16_RE_nan_count = 0;
-			
-			int IR8_RE_distribution_1000 = 0;
-			int IR8_RE_distribution_100 = 0;
-			int IR8_RE_distribution_10 = 0;
-			int IR8_RE_distribution_1 = 0;
-			int IR8_RE_distribution_01 = 0;
-			int IR8_RE_distribution_001 = 0;
-			int IR8_RE_distribution_0001 = 0;
-			int IR8_RE_distribution_00001 = 0;
-			int IR8_RE_distribution_000001 = 0;
-			int IR8_RE_distribution_0000001 = 0;
-			int IR8_RE_distribution_0 = 0;
-			int IR8_RE_nan_count = 0;
 			/////////////////////////////////error distribution
 			
 			///////////////error counter per data			
 			double abs_distance = 0;
 			double abs_RE = 0;
-
-			std::bitset<32> truncated_flit_bytes;			
+			int read_count_nan = 0;
+			
+			unsinged temp_truncated_data_bytes = 0;
+			std::bitset<32> truncated_flit_bytes;					
 			
 			std::string   gpu_line;
 			
@@ -387,11 +243,9 @@ int main ( int argc, char *argv[] ) {
 					bit_converter.f_ = gpu_number_float;
 					temp_flit_byte = bitset<32>(bit_converter.u_);					
 					
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-					/////////////////////truncation error float
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> F16 (1, 5, 10) -> F8 (1, 4, 3): 
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> F16 (1, 5, 10):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
+					/////////////////////truncation error
+					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> F16 (1, 5, 10) -> F8 (1, 4, 3): /////31 - 24, 23 - 16, 15 - 8, 7 - 0
+					truncated_flit_bytes = temp_flit_byte;
 					for(int i_bit = 30; i_bit >= 28; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
 						truncated_flit_bytes[i_bit] = 0;
 					}
@@ -408,85 +262,14 @@ int main ( int argc, char *argv[] ) {
 						abs_RE = 0;
 					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
 						abs_RE = 10000001;			
-						F16_RE_nan_count++;					
+						read_count_nan++;					
 					}					
 					
 					temp_per_line_distance_float_F16 += abs_distance;
-					temp_per_line_RE_float_F16 += abs_RE;	
-					
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> F16 (1, 5, 10) -> F8 (1, 4, 3): 
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> F8 (1, 4, 3): 
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 30; i_bit >= 27; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					for(int i_bit = 19; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( gpu_number_float - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_float );
-					
-					if( bit_converter.f_ == 0 && gpu_number_float == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						F8_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_F8 += abs_distance;
-					temp_per_line_RE_float_F8 += abs_RE;
-					
+					temp_per_line_RE_float_F16 += abs_RE;			
 					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B16 (1, 8, 7):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
 					
-					for(int i_bit = 15; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( gpu_number_float - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_float );
-					
-					if( bit_converter.f_ == 0 && gpu_number_float == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						B16_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_B16 += abs_distance;
-					temp_per_line_RE_float_B16 += abs_RE;
-					
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B8 (1, 5, 2):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 30; i_bit >= 28; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					for(int i_bit = 20; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( gpu_number_float - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_float );
-					
-					if( bit_converter.f_ == 0 && gpu_number_float == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						B8_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_B8 += abs_distance;
-					temp_per_line_RE_float_B8 += abs_RE;					
-					/////////////////////truncation error float
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					/////////////////////truncation error
 					
 					////////////check the number of 1s
 					for(int i_bit = 31; i_bit >= 0; --i_bit){ ////////////bitset is little endian
@@ -532,93 +315,6 @@ int main ( int argc, char *argv[] ) {
 					bit_converter.i_ = gpu_number_int;
 					temp_flit_byte = bitset<32>(bit_converter.u_);
 					
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-					/////////////////////truncation error float
-					/////////// I32 -> IL16 -> IL8 (left remained): 
-					/////////// I32 -> IL16:
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 15; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////right bits are truncated
-						truncated_flit_bytes[i_bit] = 0;
-					}	
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( (double) gpu_number_int - (double) bit_converter.i_ );
-					abs_RE = std::abs( abs_distance / (double) gpu_number_int );
-					
-					if( bit_converter.i_ == 0 && gpu_number_int == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						IL16_RE_nan_count++;				
-					}					
-					
-					temp_per_line_distance_float_IL16 += abs_distance;
-					temp_per_line_RE_float_IL16 += abs_RE;
-					
-					/////////// I32 -> IL16 -> IL8 (left remained): 
-					/////////// I32 -> IL8:
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 23; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////right bits are truncated
-						truncated_flit_bytes[i_bit] = 0;
-					}	
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( (double) gpu_number_int - (double) bit_converter.i_ );
-					abs_RE = std::abs( abs_distance / (double) gpu_number_int );
-					
-					if( bit_converter.i_ == 0 && gpu_number_int == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						IL8_RE_nan_count++;				
-					}
-					
-					temp_per_line_distance_float_IL8 += abs_distance;
-					temp_per_line_RE_float_IL8 += abs_RE;
-					
-					/////////// I32 -> IR16 -> IR8 (right remained):
-					/////////// I32 -> IR16:
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 30; i_bit >= 15; --i_bit){ ////////////bitset is little endian //////left bits are truncated
-						truncated_flit_bytes[i_bit] = 0;
-					}	
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( (double) gpu_number_int - (double) bit_converter.i_ );
-					abs_RE = std::abs( abs_distance / (double) gpu_number_int );
-					
-					if( bit_converter.i_ == 0 && gpu_number_int == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						IR16_RE_nan_count++;			
-					}					
-					
-					temp_per_line_distance_float_IR16 += abs_distance;
-					temp_per_line_RE_float_IR16 += abs_RE;
-					
-					/////////// I32 -> IR16 -> IR8 (right remained):
-					/////////// I32 -> IR8:
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 30; i_bit >= 7; --i_bit){ ////////////bitset is little endian //////left bits are truncated
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					abs_distance = std::abs( (double) gpu_number_int - (double) bit_converter.i_ );
-					abs_RE = std::abs( abs_distance / (double) gpu_number_int );
-					
-					if( bit_converter.i_ == 0 && gpu_number_int == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						IR8_RE_nan_count++;			
-					}					
-					
-					temp_per_line_distance_float_IR8 += abs_distance;
-					temp_per_line_RE_float_IR8 += abs_RE;
-					/////////////////////truncation error float
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 					
 					////////////check the number of 1s
 					for(int i_bit = 31; i_bit >= 0; --i_bit){ ////////////bitset is little endian
@@ -683,204 +379,7 @@ int main ( int argc, char *argv[] ) {
 					bit_converter.u_ = (bit_converter.u_ & 0b00000000111111111111111111111111) | (first_byte << 24);///////////first_byte type auto changed to unsign
 					bit_converter.u_ = (bit_converter.u_ & 0b11111111000000001111111111111111) | (second_byte << 16);///////////second_byte type auto changed to unsign
 				
-					temp_flit_byte = bitset<32>(bit_converter.u_);
-
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-					/////////////////////truncation error new
-					//////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3):
-					/////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NF16 (1, 5, 10):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 29; i_bit >= 27; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					for(int i_bit = 12; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					
-					//////////////////////////////////////////////covert back to original float for comparison
-					first_byte = bit_converter.u_ >> 24;/////////////little endian
-					second_byte = ( bit_converter.u_ >> 16 ) & 255;/////////////little endian
-					exp_byte = (first_byte << 1 ) | ( second_byte >> 7 );
-					///////normal float exp range: 127 to -126 (254 to 128, 127 to 1), new float exp range: 127 to 1, -0 to -126 (127 to 1, 128 to 254)
-					///////currently we use 0 (0) and -127 (255) for subnormal and inf
-					unsigned char exp_byte_original = 0;
-					if(exp_byte == 255){
-						exp_byte_original = 0b11111111;/////inf
-					}else if(exp_byte == 0){
-						exp_byte_original = 0b00000000;/////subnormal
-					}else if(exp_byte >= 128){
-						exp_byte_original = 255 - exp_byte;//////////negative**
-					}else{
-						exp_byte_original = exp_byte + 127;//////////positive**
-					}
-					
-					first_byte = (first_byte & 0b10000000) | (exp_byte_original >> 1);
-					second_byte = (second_byte & 0b01111111) | (exp_byte_original << 7);
-					bit_converter.u_ = (bit_converter.u_ & 0b00000000111111111111111111111111) | (first_byte << 24);///////////first_byte type auto changed to unsign
-					bit_converter.u_ = (bit_converter.u_ & 0b11111111000000001111111111111111) | (second_byte << 16);///////////second_byte type auto changed to unsign
-					//////////////////////////////////////////////covert back to original float for comparison
-					
-					abs_distance = std::abs( gpu_number_new - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_new );
-					
-					if( bit_converter.f_ == 0 && gpu_number_new == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						NF16_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_NF16 += abs_distance;
-					temp_per_line_RE_float_NF16 += abs_RE;
-					
-					/////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3): 
-					/////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NF8 (1, 4, 3):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 29; i_bit >= 26; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					for(int i_bit = 19; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					
-					//////////////////////////////////////////////covert back to original float for comparison
-					first_byte = bit_converter.u_ >> 24;/////////////little endian
-					second_byte = ( bit_converter.u_ >> 16 ) & 255;/////////////little endian
-					exp_byte = (first_byte << 1 ) | ( second_byte >> 7 );
-					///////normal float exp range: 127 to -126 (254 to 128, 127 to 1), new float exp range: 127 to 1, -0 to -126 (127 to 1, 128 to 254)
-					///////currently we use 0 (0) and -127 (255) for subnormal and inf
-					exp_byte_original = 0;
-					if(exp_byte == 255){
-						exp_byte_original = 0b11111111;/////inf
-					}else if(exp_byte == 0){
-						exp_byte_original = 0b00000000;/////subnormal
-					}else if(exp_byte >= 128){
-						exp_byte_original = 255 - exp_byte;//////////negative**
-					}else{
-						exp_byte_original = exp_byte + 127;//////////positive**
-					}
-					
-					first_byte = (first_byte & 0b10000000) | (exp_byte_original >> 1);
-					second_byte = (second_byte & 0b01111111) | (exp_byte_original << 7);
-					bit_converter.u_ = (bit_converter.u_ & 0b00000000111111111111111111111111) | (first_byte << 24);///////////first_byte type auto changed to unsign
-					bit_converter.u_ = (bit_converter.u_ & 0b11111111000000001111111111111111) | (second_byte << 16);///////////second_byte type auto changed to unsign
-					//////////////////////////////////////////////covert back to original float for comparison
-					
-					abs_distance = std::abs( gpu_number_new - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_new );
-					
-					if( bit_converter.f_ == 0 && gpu_number_new == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						NF8_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_NF8 += abs_distance;
-					temp_per_line_RE_float_NF8 += abs_RE;
-					
-					/////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NB16 (1, 8, 7)  -> NB8 (1, 5, 2):
-					/////////// NF32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> NB16 (1, 8, 7):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					
-					for(int i_bit = 15; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					
-					//////////////////////////////////////////////covert back to original float for comparison
-					first_byte = bit_converter.u_ >> 24;/////////////little endian
-					second_byte = ( bit_converter.u_ >> 16 ) & 255;/////////////little endian
-					exp_byte = (first_byte << 1 ) | ( second_byte >> 7 );
-					///////normal float exp range: 127 to -126 (254 to 128, 127 to 1), new float exp range: 127 to 1, -0 to -126 (127 to 1, 128 to 254)
-					///////currently we use 0 (0) and -127 (255) for subnormal and inf
-					exp_byte_original = 0;
-					if(exp_byte == 255){
-						exp_byte_original = 0b11111111;/////inf
-					}else if(exp_byte == 0){
-						exp_byte_original = 0b00000000;/////subnormal
-					}else if(exp_byte >= 128){
-						exp_byte_original = 255 - exp_byte;//////////negative**
-					}else{
-						exp_byte_original = exp_byte + 127;//////////positive**
-					}
-					
-					first_byte = (first_byte & 0b10000000) | (exp_byte_original >> 1);
-					second_byte = (second_byte & 0b01111111) | (exp_byte_original << 7);
-					bit_converter.u_ = (bit_converter.u_ & 0b00000000111111111111111111111111) | (first_byte << 24);///////////first_byte type auto changed to unsign
-					bit_converter.u_ = (bit_converter.u_ & 0b11111111000000001111111111111111) | (second_byte << 16);///////////second_byte type auto changed to unsign
-					//////////////////////////////////////////////covert back to original float for comparison
-					
-					abs_distance = std::abs( gpu_number_new - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_new );
-					
-					if( bit_converter.f_ == 0 && gpu_number_new == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						NB16_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_NB16 += abs_distance;
-					temp_per_line_RE_float_NB16 += abs_RE;
-					
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-					/////////// F32 (1, 8, 23) (31, 30 - 23, 22 - 0) -> B8 (1, 5, 2):
-					truncated_flit_bytes = temp_flit_byte; /////31 - 24, 23 - 16, 15 - 8, 7 - 0
-					for(int i_bit = 29; i_bit >= 27; --i_bit){ ////////////bitset is little endian //////high bits are truncated in exp bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					for(int i_bit = 20; i_bit >= 0; --i_bit){ ////////////bitset is little endian //////low bits are truncated in significand bits
-						truncated_flit_bytes[i_bit] = 0;
-					}
-					
-					bit_converter.u_ = truncated_flit_bytes.to_ulong();
-					
-					//////////////////////////////////////////////covert back to original float for comparison
-					first_byte = bit_converter.u_ >> 24;/////////////little endian
-					second_byte = ( bit_converter.u_ >> 16 ) & 255;/////////////little endian
-					exp_byte = (first_byte << 1 ) | ( second_byte >> 7 );
-					///////normal float exp range: 127 to -126 (254 to 128, 127 to 1), new float exp range: 127 to 1, -0 to -126 (127 to 1, 128 to 254)
-					///////currently we use 0 (0) and -127 (255) for subnormal and inf
-					exp_byte_original = 0;
-					if(exp_byte == 255){
-						exp_byte_original = 0b11111111;/////inf
-					}else if(exp_byte == 0){
-						exp_byte_original = 0b00000000;/////subnormal
-					}else if(exp_byte >= 128){
-						exp_byte_original = 255 - exp_byte;//////////negative**
-					}else{
-						exp_byte_original = exp_byte + 127;//////////positive**
-					}
-					
-					first_byte = (first_byte & 0b10000000) | (exp_byte_original >> 1);
-					second_byte = (second_byte & 0b01111111) | (exp_byte_original << 7);
-					bit_converter.u_ = (bit_converter.u_ & 0b00000000111111111111111111111111) | (first_byte << 24);///////////first_byte type auto changed to unsign
-					bit_converter.u_ = (bit_converter.u_ & 0b11111111000000001111111111111111) | (second_byte << 16);///////////second_byte type auto changed to unsign
-					//////////////////////////////////////////////covert back to original float for comparison
-					
-					abs_distance = std::abs( gpu_number_new - bit_converter.f_ );
-					abs_RE = std::abs( abs_distance / gpu_number_new );
-					
-					if( bit_converter.f_ == 0 && gpu_number_new == 0 ){					
-						abs_RE = 0;
-					}else if ( isnan(abs_RE) || isinf(abs_RE) ){						
-						abs_RE = 10000001;			
-						NB8_RE_nan_count++;					
-					}					
-					
-					temp_per_line_distance_float_NB8 += abs_distance;
-					temp_per_line_RE_float_NB8 += abs_RE;			
-					/////////////////////truncation error new
-					//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////					
+					temp_flit_byte = bitset<32>(bit_converter.u_);					
 					
 					////////////check the number of 1s
 					for(int i_bit = 31; i_bit >= 0; --i_bit){ ////////////bitset is little endian
@@ -1028,7 +527,7 @@ int main ( int argc, char *argv[] ) {
 							F16_RE_distribution_10++;
 						}else if( temp_per_line_RE_float_F16 > 1 ){							
 							F16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_F16 > 0.1 ){					
+						}else if( temp_per_line_RE_float_F16 > 0.1 ){							
 							F16_RE_distribution_01++;
 						}else if( temp_per_line_RE_float_F16 > 0.01 ){							
 							F16_RE_distribution_001++;
@@ -1049,336 +548,6 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_F16 = 0;
 						temp_per_line_RE_float_F16 = 0;
-						
-						if( temp_per_line_RE_float_F8 > 1000 ){							
-							F8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_F8 > 100 ){							
-							F8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_F8 > 10 ){							
-							F8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_F8 > 1 ){							
-							F8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_F8 > 0.1 ){					
-							F8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_F8 > 0.01 ){							
-							F8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_F8 > 0.001 ){							
-							F8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_F8 > 0.0001 ){							
-							F8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_F8 > 0.00001 ){							
-							F8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_F8 > 0.000001 ){							
-							F8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_F8 == 0 ){							
-							F8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_F8 += temp_per_line_RE_float_F8;
-						sum_per_line_distance_float_F8 += temp_per_line_distance_float_F8;
-						
-						temp_per_line_distance_float_F8 = 0;
-						temp_per_line_RE_float_F8 = 0;
-						
-						if( temp_per_line_RE_float_B16 > 1000 ){							
-							B16_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_B16 > 100 ){							
-							B16_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_B16 > 10 ){							
-							B16_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_B16 > 1 ){							
-							B16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_B16 > 0.1 ){					
-							B16_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_B16 > 0.01 ){							
-							B16_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_B16 > 0.001 ){							
-							B16_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_B16 > 0.0001 ){							
-							B16_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_B16 > 0.00001 ){							
-							B16_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_B16 > 0.000001 ){							
-							B16_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_B16 == 0 ){							
-							B16_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_B16 += temp_per_line_RE_float_B16;
-						sum_per_line_distance_float_B16 += temp_per_line_distance_float_B16;
-						
-						temp_per_line_distance_float_B16 = 0;
-						temp_per_line_RE_float_B16 = 0;
-						
-						if( temp_per_line_RE_float_B8 > 1000 ){							
-							B8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_B8 > 100 ){							
-							B8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_B8 > 10 ){							
-							B8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_B8 > 1 ){							
-							B8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_B8 > 0.1 ){					
-							B8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_B8 > 0.01 ){							
-							B8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_B8 > 0.001 ){							
-							B8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_B8 > 0.0001 ){							
-							B8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_B8 > 0.00001 ){							
-							B8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_B8 > 0.000001 ){							
-							B8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_B8 == 0 ){							
-							B8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_B8 += temp_per_line_RE_float_B8;
-						sum_per_line_distance_float_B8 += temp_per_line_distance_float_B8;
-						
-						temp_per_line_distance_float_B8 = 0;
-						temp_per_line_RE_float_B8 = 0;
-						
-						if( temp_per_line_RE_float_NF16 > 1000 ){				
-							NF16_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_NF16 > 100 ){							
-							NF16_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_NF16 > 10 ){							
-							NF16_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_NF16 > 1 ){							
-							NF16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_NF16 > 0.1 ){					
-							NF16_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_NF16 > 0.01 ){							
-							NF16_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_NF16 > 0.001 ){							
-							NF16_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_NF16 > 0.0001 ){							
-							NF16_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_NF16 > 0.00001 ){							
-							NF16_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_NF16 > 0.000001 ){							
-							NF16_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_NF16 == 0 ){							
-							NF16_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_NF16 += temp_per_line_RE_float_NF16;
-						sum_per_line_distance_float_NF16 += temp_per_line_distance_float_NF16;
-						
-						temp_per_line_distance_float_NF16 = 0;
-						temp_per_line_RE_float_NF16 = 0;
-						
-						if( temp_per_line_RE_float_NF8 > 1000 ){							
-							NF8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_NF8 > 100 ){							
-							NF8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_NF8 > 10 ){							
-							NF8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_NF8 > 1 ){							
-							NF8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_NF8 > 0.1 ){					
-							NF8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_NF8 > 0.01 ){							
-							NF8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_NF8 > 0.001 ){							
-							NF8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_NF8 > 0.0001 ){							
-							NF8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_NF8 > 0.00001 ){							
-							NF8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_NF8 > 0.000001 ){							
-							NF8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_NF8 == 0 ){							
-							NF8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_NF8 += temp_per_line_RE_float_NF8;
-						sum_per_line_distance_float_NF8 += temp_per_line_distance_float_NF8;
-						
-						temp_per_line_distance_float_NF8 = 0;
-						temp_per_line_RE_float_NF8 = 0;
-						
-						if( temp_per_line_RE_float_NB16 > 1000 ){							
-							NB16_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_NB16 > 100 ){							
-							NB16_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_NB16 > 10 ){							
-							NB16_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_NB16 > 1 ){							
-							NB16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_NB16 > 0.1 ){					
-							NB16_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_NB16 > 0.01 ){							
-							NB16_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_NB16 > 0.001 ){							
-							NB16_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_NB16 > 0.0001 ){							
-							NB16_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_NB16 > 0.00001 ){							
-							NB16_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_NB16 > 0.000001 ){							
-							NB16_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_NB16 == 0 ){							
-							NB16_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_NB16 += temp_per_line_RE_float_NB16;
-						sum_per_line_distance_float_NB16 += temp_per_line_distance_float_NB16;
-						
-						temp_per_line_distance_float_NB16 = 0;
-						temp_per_line_RE_float_NB16 = 0;
-						
-						if( temp_per_line_RE_float_NB8 > 1000 ){							
-							NB8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_NB8 > 100 ){							
-							NB8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_NB8 > 10 ){							
-							NB8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_NB8 > 1 ){							
-							NB8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_NB8 > 0.1 ){					
-							NB8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_NB8 > 0.01 ){							
-							NB8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_NB8 > 0.001 ){							
-							NB8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_NB8 > 0.0001 ){							
-							NB8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_NB8 > 0.00001 ){							
-							NB8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_NB8 > 0.000001 ){							
-							NB8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_NB8 == 0 ){							
-							NB8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_NB8 += temp_per_line_RE_float_NB8;
-						sum_per_line_distance_float_NB8 += temp_per_line_distance_float_NB8;
-						
-						temp_per_line_distance_float_NB8 = 0;
-						temp_per_line_RE_float_NB8 = 0;
-						
-						if( temp_per_line_RE_float_IL16 > 1000 ){							
-							IL16_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_IL16 > 100 ){							
-							IL16_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_IL16 > 10 ){							
-							IL16_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_IL16 > 1 ){							
-							IL16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_IL16 > 0.1 ){					
-							IL16_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_IL16 > 0.01 ){							
-							IL16_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_IL16 > 0.001 ){							
-							IL16_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_IL16 > 0.0001 ){							
-							IL16_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_IL16 > 0.00001 ){							
-							IL16_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_IL16 > 0.000001 ){							
-							IL16_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_IL16 == 0 ){							
-							IL16_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_IL16 += temp_per_line_RE_float_IL16;
-						sum_per_line_distance_float_IL16 += temp_per_line_distance_float_IL16;
-						
-						temp_per_line_distance_float_IL16 = 0;
-						temp_per_line_RE_float_IL16 = 0;
-						
-						if( temp_per_line_RE_float_IL8 > 1000 ){							
-							IL8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_IL8 > 100 ){							
-							IL8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_IL8 > 10 ){							
-							IL8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_IL8 > 1 ){							
-							IL8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_IL8 > 0.1 ){					
-							IL8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_IL8 > 0.01 ){							
-							IL8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_IL8 > 0.001 ){							
-							IL8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_IL8 > 0.0001 ){							
-							IL8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_IL8 > 0.00001 ){							
-							IL8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_IL8 > 0.000001 ){							
-							IL8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_IL8 == 0 ){							
-							IL8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_IL8 += temp_per_line_RE_float_IL8;
-						sum_per_line_distance_float_IL8 += temp_per_line_distance_float_IL8;
-						
-						temp_per_line_distance_float_IL8 = 0;
-						temp_per_line_RE_float_IL8 = 0;
-						
-						if( temp_per_line_RE_float_IR16 > 1000 ){							
-							IR16_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_IR16 > 100 ){							
-							IR16_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_IR16 > 10 ){							
-							IR16_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_IR16 > 1 ){							
-							IR16_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_IR16 > 0.1 ){					
-							IR16_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_IR16 > 0.01 ){							
-							IR16_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_IR16 > 0.001 ){							
-							IR16_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_IR16 > 0.0001 ){							
-							IR16_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_IR16 > 0.00001 ){							
-							IR16_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_IR16 > 0.000001 ){							
-							IR16_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_IR16 == 0 ){							
-							IR16_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_IR16 += temp_per_line_RE_float_IR16;
-						sum_per_line_distance_float_IR16 += temp_per_line_distance_float_IR16;
-						
-						temp_per_line_distance_float_IR16 = 0;
-						temp_per_line_RE_float_IR16 = 0;
-						
-						if( temp_per_line_RE_float_IR8 > 1000 ){							
-							IR8_RE_distribution_1000++;							
-						}else if( temp_per_line_RE_float_IR8 > 100 ){							
-							IR8_RE_distribution_100++;
-						}else if( temp_per_line_RE_float_IR8 > 10 ){							
-							IR8_RE_distribution_10++;
-						}else if( temp_per_line_RE_float_IR8 > 1 ){							
-							IR8_RE_distribution_1++;
-						}else if( temp_per_line_RE_float_IR8 > 0.1 ){					
-							IR8_RE_distribution_01++;
-						}else if( temp_per_line_RE_float_IR8 > 0.01 ){							
-							IR8_RE_distribution_001++;
-						}else if( temp_per_line_RE_float_IR8 > 0.001 ){							
-							IR8_RE_distribution_0001++;
-						}else if( temp_per_line_RE_float_IR8 > 0.0001 ){							
-							IR8_RE_distribution_00001++;
-						}else if( temp_per_line_RE_float_IR8 > 0.00001 ){							
-							IR8_RE_distribution_000001++;
-						}else if( temp_per_line_RE_float_IR8 > 0.000001 ){							
-							IR8_RE_distribution_0000001++;
-						}else if( temp_per_line_RE_float_IR8 == 0 ){							
-							IR8_RE_distribution_0++;
-						}
-						
-						sum_per_line_RE_float_IR8 += temp_per_line_RE_float_IR8;
-						sum_per_line_distance_float_IR8 += temp_per_line_distance_float_IR8;
-						
-						temp_per_line_distance_float_IR8 = 0;
-						temp_per_line_RE_float_IR8 = 0;
 						/////////////////////////////////per cache line error distribution
 						
 						
@@ -1953,116 +1122,6 @@ int main ( int argc, char *argv[] ) {
 				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
-			
-			////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			///////////////////////////error outputs		
-			fprintf (pFile, "\n");
-			fprintf (pFile, "#################################Errors#########################\n");			
-			/////////// F32 (1, 8, 23) -> F16 (1, 5, 10) -> F8 (1, 4, 3):
-			fprintf (pFile, "sum_per_line_distance_float_F16: %f\n", sum_per_line_distance_float_F16);
-			fprintf (pFile, "sum_per_line_RE_float_F16: %f\n", sum_per_line_RE_float_F16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_F8: %f\n", sum_per_line_distance_float_F8);
-			fprintf (pFile, "sum_per_line_RE_float_F8: %f\n", sum_per_line_RE_float_F8);
-			fprintf (pFile, "\n");
-			
-			/////////// F32 (1, 8, 23) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-			fprintf (pFile, "sum_per_line_distance_float_B16: %f\n", sum_per_line_distance_float_B16);
-			fprintf (pFile, "sum_per_line_RE_float_B16: %f\n", sum_per_line_RE_float_B16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_B8: %f\n", sum_per_line_distance_float_B8);
-			fprintf (pFile, "sum_per_line_RE_float_B8: %f\n", sum_per_line_RE_float_B8);
-			fprintf (pFile, "\n");
-			
-			/////////// NF32 (1, 8, 23) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3):
-			fprintf (pFile, "sum_per_line_distance_float_NF16: %f\n", sum_per_line_distance_float_NF16);
-			fprintf (pFile, "sum_per_line_RE_float_NF16: %f\n", sum_per_line_RE_float_NF16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_NF8: %f\n", sum_per_line_distance_float_NF8);
-			fprintf (pFile, "sum_per_line_RE_float_NF8: %f\n", sum_per_line_RE_float_NF8);
-			fprintf (pFile, "\n");
-			
-			/////////// NF32 (1, 8, 23) -> NB16 (1, 8, 7)  -> NB8 (1, 5, 2):
-			fprintf (pFile, "sum_per_line_distance_float_NB16: %f\n", sum_per_line_distance_float_NB16);
-			fprintf (pFile, "sum_per_line_RE_float_NB16: %f\n", sum_per_line_RE_float_NB16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_NB8: %f\n", sum_per_line_distance_float_NB8);
-			fprintf (pFile, "sum_per_line_RE_float_NB8: %f\n", sum_per_line_RE_float_NB8);
-			fprintf (pFile, "\n");
-			
-			/////////// I32 -> IL16 -> IL8 (left remained):
-			fprintf (pFile, "sum_per_line_distance_float_IL16: %f\n", sum_per_line_distance_float_IL16);
-			fprintf (pFile, "sum_per_line_RE_float_IL16: %f\n", sum_per_line_RE_float_IL16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_IL8: %f\n", sum_per_line_distance_float_IL8);
-			fprintf (pFile, "sum_per_line_RE_float_IL8: %f\n", sum_per_line_RE_float_IL8);
-			fprintf (pFile, "\n");
-			
-			/////////// I32 -> IR16 -> IR8 (right remained):
-			fprintf (pFile, "sum_per_line_distance_float_IR16: %f\n", sum_per_line_distance_float_IR16);
-			fprintf (pFile, "sum_per_line_RE_float_IR16: %f\n", sum_per_line_RE_float_IR16);
-			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_IR8: %f\n", sum_per_line_distance_float_IR8);
-			fprintf (pFile, "sum_per_line_RE_float_IR8: %f\n", sum_per_line_RE_float_IR8);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "\n");
-			fprintf (pFile, "#################################Error_distributions#########################\n");
-
-			//////////////////////currently 11 categories
-			fprintf (pFile, "F16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F16_RE_distribution_1000, F16_RE_distribution_100, F16_RE_distribution_10,
-			F16_RE_distribution_1, F16_RE_distribution_01, F16_RE_distribution_001, F16_RE_distribution_001, F16_RE_distribution_0001, F16_RE_distribution_000001,
-			F16_RE_distribution_0000001, F16_RE_distribution_0);
-			
-			fprintf (pFile, "F8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F8_RE_distribution_1000, F8_RE_distribution_100, F8_RE_distribution_10,
-			F8_RE_distribution_1, F8_RE_distribution_01, F8_RE_distribution_001, F8_RE_distribution_001, F8_RE_distribution_0001, F8_RE_distribution_000001,
-			F8_RE_distribution_0000001, F8_RE_distribution_0);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "B16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", B16_RE_distribution_1000, B16_RE_distribution_100, B16_RE_distribution_10,
-			B16_RE_distribution_1, B16_RE_distribution_01, B16_RE_distribution_001, B16_RE_distribution_001, B16_RE_distribution_0001, B16_RE_distribution_000001,
-			B16_RE_distribution_0000001, B16_RE_distribution_0);
-			
-			fprintf (pFile, "B8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", B8_RE_distribution_1000, B8_RE_distribution_100, B8_RE_distribution_10,
-			B8_RE_distribution_1, B8_RE_distribution_01, B8_RE_distribution_001, B8_RE_distribution_001, B8_RE_distribution_0001, B8_RE_distribution_000001,
-			B8_RE_distribution_0000001, B8_RE_distribution_0);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "NF16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NF16_RE_distribution_1000, NF16_RE_distribution_100, NF16_RE_distribution_10,
-			NF16_RE_distribution_1, NF16_RE_distribution_01, NF16_RE_distribution_001, NF16_RE_distribution_001, NF16_RE_distribution_0001, NF16_RE_distribution_000001,
-			NF16_RE_distribution_0000001, NF16_RE_distribution_0);
-			
-			fprintf (pFile, "NF8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NF8_RE_distribution_1000, NF8_RE_distribution_100, NF8_RE_distribution_10,
-			NF8_RE_distribution_1, NF8_RE_distribution_01, NF8_RE_distribution_001, NF8_RE_distribution_001, NF8_RE_distribution_0001, NF8_RE_distribution_000001,
-			NF8_RE_distribution_0000001, NF8_RE_distribution_0);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "NB16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NB16_RE_distribution_1000, NB16_RE_distribution_100, NB16_RE_distribution_10,
-			NB16_RE_distribution_1, NB16_RE_distribution_01, NB16_RE_distribution_001, NB16_RE_distribution_001, NB16_RE_distribution_0001, NB16_RE_distribution_000001,
-			NB16_RE_distribution_0000001, NB16_RE_distribution_0);
-			
-			fprintf (pFile, "NB8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NB8_RE_distribution_1000, NB8_RE_distribution_100, NB8_RE_distribution_10,
-			NB8_RE_distribution_1, NB8_RE_distribution_01, NB8_RE_distribution_001, NB8_RE_distribution_001, NB8_RE_distribution_0001, NB8_RE_distribution_000001,
-			NB8_RE_distribution_0000001, NB8_RE_distribution_0);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "IL16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IL16_RE_distribution_1000, IL16_RE_distribution_100, IL16_RE_distribution_10,
-			IL16_RE_distribution_1, IL16_RE_distribution_01, IL16_RE_distribution_001, IL16_RE_distribution_001, IL16_RE_distribution_0001, IL16_RE_distribution_000001,
-			IL16_RE_distribution_0000001, IL16_RE_distribution_0);
-			
-			fprintf (pFile, "IL8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IL8_RE_distribution_1000, IL8_RE_distribution_100, IL8_RE_distribution_10,
-			IL8_RE_distribution_1, IL8_RE_distribution_01, IL8_RE_distribution_001, IL8_RE_distribution_001, IL8_RE_distribution_0001, IL8_RE_distribution_000001,
-			IL8_RE_distribution_0000001, IL8_RE_distribution_0);
-			fprintf (pFile, "\n");
-			
-			fprintf (pFile, "IR16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IR16_RE_distribution_1000, IR16_RE_distribution_100, IR16_RE_distribution_10,
-			IR16_RE_distribution_1, IR16_RE_distribution_01, IR16_RE_distribution_001, IR16_RE_distribution_001, IR16_RE_distribution_0001, IR16_RE_distribution_000001,
-			IR16_RE_distribution_0000001, IR16_RE_distribution_0);
-			
-			fprintf (pFile, "IR8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IR8_RE_distribution_1000, IR8_RE_distribution_100, IR8_RE_distribution_10,
-			IR8_RE_distribution_1, IR8_RE_distribution_01, IR8_RE_distribution_001, IR8_RE_distribution_001, IR8_RE_distribution_0001, IR8_RE_distribution_000001,
-			IR8_RE_distribution_0000001, IR8_RE_distribution_0);
-			fprintf (pFile, "\n");
 		}
 		
 		
@@ -2113,15 +1172,12 @@ int main ( int argc, char *argv[] ) {
 /////////// bit flips for the first byte only? ##Maybe it is too small to consider.
 /////////// add truncation and distribution of error ##truncation error is only related to the flit itself
 /////////// write extract_mnist.cc 
-/////////// redo 1s and flips exp since new format has been changed
 
 /////////// truncation schemes: 
 /////////// F32 (1, 8, 23) -> F16 (1, 5, 10) -> F8 (1, 4, 3):
 /////////// F32 (1, 8, 23) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-/////////// NF32 (1, 8, 23) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3): 
-/////////// NF32 (1, 8, 23) -> NB16 (1, 8, 7) -> NB8 (1, 5, 2):
-/////////// I32 -> IL16 -> IL8 (left)
-/////////// I32 -> IR16 -> IR8 (right)
+/////////// N32 (1, 8, 23) -> N16 (1, 8, 7) -> N8 (1, 5, 2):
+/////////// N32 (1, 8, 23) -> N16 (1, 5, 10) -> N8 (1, 4, 3): 
 
 /////// F32: 127 to 1, 0 to -126 (254 to 128, 127 to 1), 0 is subnormal, 255 is inf
 /////// F16: 15 to 1, 0 to -14 (30 to 16, 15 to 1), 0 is subnormal, 31 is inf
@@ -2131,13 +1187,13 @@ int main ( int argc, char *argv[] ) {
 /////// B16: 127 to 1, 0 to -126 (254 to 128, 127 to 1), 0 is subnormal, 255 is inf
 /////// B8: 15 to 1, 0 to -14 (30 to 16, 15 to 1), 0 is subnormal, 31 is inf
 
-/////// NF32: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
-/////// NF16: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
-/////// NF8: 7 to 1, 0 to -6 (7 to 1, -0 to -6), 0 is subnormal, 15 is inf
+/////// N32: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
+/////// N16: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
+/////// N8: 7 to 1, 0 to -6 (7 to 1, -0 to -6), 0 is subnormal, 15 is inf
 
-/////// NF32: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
-/////// NB16: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
-/////// NB8: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
+/////// N32: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
+/////// N16: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
+/////// N8: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
 
 
 /////////// Steve Canon --- If BFloat16 is a good idea, BFloat8 is even better (just take the top half of a Float16).

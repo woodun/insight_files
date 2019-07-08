@@ -1622,37 +1622,37 @@ int main ( int argc, char *argv[] ) {
 			///////////////////per cache line distributions
 			fprintf (pFile, "distribution32_ones_int: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array32_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution32_ones_float: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array32_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution32_ones_new: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array32_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array32_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution32_flips_int: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array32_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution32_flips_float: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array32_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution32_flips_new: ");
 			for(int m = 0; m < 32; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array32_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array32_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1661,37 +1661,37 @@ int main ( int argc, char *argv[] ) {
 			
 			fprintf (pFile, "distribution8_ones_int: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array8_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution8_ones_float: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array8_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution8_ones_new: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array8_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array8_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution8_flips_int: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array8_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution8_flips_float: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array8_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution8_flips_new: ");
 			for(int m = 0; m < 8; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array8_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array8_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1700,37 +1700,37 @@ int main ( int argc, char *argv[] ) {
 			
 			fprintf (pFile, "distribution4_ones_int: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array4_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution4_ones_float: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array4_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution4_ones_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_ones_array4_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_ones_array4_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution4_flips_int: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array4_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution4_flips_float: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array4_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "distribution4_flips_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", distribution_number_of_bit_flips_array4_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", distribution_number_of_bit_flips_array4_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1810,54 +1810,54 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "overall_ones_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_int[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_int[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_ones_sum_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_ones_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_float[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_float[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_ones_sum_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_ones_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_new[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_new[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_ones_sum_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_flips_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_int[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_int[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_flips_sum_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_flips_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_float[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_float[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_flips_sum_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "overall_flips_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_new[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_new[m][n] );
 				}
-				fprintf (pFile, "%f ", byte_flips_sum_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1867,7 +1867,7 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "bits_ones_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_int[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_int[m][n] );
 				}
 			}
 			fprintf (pFile, "\n");
@@ -1875,7 +1875,7 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "bits_ones_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_float[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_float[m][n] );
 				}
 			}
 			fprintf (pFile, "\n");			
@@ -1883,23 +1883,25 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "bits_ones_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_ones_sum_new[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_ones_sum_new[m][n] );
 				}
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bits_flips_int: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_int[m][n] / (float) total_cache_line_count );
-				}				
+					fprintf (pFile, "%d ", byte_bits_flips_sum_int[m][n] );
+				}
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bits_flips_float: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_float[m][n] / (float) total_cache_line_count );
+					fprintf (pFile, "%d ", byte_bits_flips_sum_float[m][n] );
 				}
 			}
 			fprintf (pFile, "\n");
@@ -1907,8 +1909,9 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "bits_flips_new: ");
 			for(int m = 0; m < 4; ++m){
 				for(int n = 0; n < 8; ++n){
-					fprintf (pFile, "%f ", byte_bits_flips_sum_new[m][n] / (float) total_cache_line_count );
-				}				
+					fprintf (pFile, "%d ", byte_bits_flips_sum_new[m][n] );
+				}
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1917,37 +1920,37 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "#################################bytes#########################\n");
 			fprintf (pFile, "bytes_ones_int: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_ones_sum_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_ones_float: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_ones_sum_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_ones_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_ones_sum_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_ones_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_flips_int: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_flips_sum_int[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_int[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_flips_float: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_flips_sum_float[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_float[m] );
 			}
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "bytes_flips_new: ");
 			for(int m = 0; m < 4; ++m){
-				fprintf (pFile, "%f ", byte_flips_sum_new[m] / (float) total_cache_line_count );
+				fprintf (pFile, "%d ", byte_flips_sum_new[m] );
 			}
 			fprintf (pFile, "\n");
 			
@@ -1956,217 +1959,109 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "\n");
 			fprintf (pFile, "#################################Errors#########################\n");			
 			/////////// F32 (1, 8, 23) -> F16 (1, 5, 10) -> F8 (1, 4, 3):
-			fprintf (pFile, "sum_per_line_distance_float_F16: %f\n", sum_per_line_distance_float_F16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_F16: %f\n", sum_per_line_RE_float_F16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_F16: %f\n", sum_per_line_distance_float_F16);
+			fprintf (pFile, "sum_per_line_RE_float_F16: %f\n", sum_per_line_RE_float_F16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_F8: %f\n", sum_per_line_distance_float_F8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_F8: %f\n", sum_per_line_RE_float_F8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_F8: %f\n", sum_per_line_distance_float_F8);
+			fprintf (pFile, "sum_per_line_RE_float_F8: %f\n", sum_per_line_RE_float_F8);
 			fprintf (pFile, "\n");
 			
 			/////////// F32 (1, 8, 23) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
-			fprintf (pFile, "sum_per_line_distance_float_B16: %f\n", sum_per_line_distance_float_B16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_B16: %f\n", sum_per_line_RE_float_B16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_B16: %f\n", sum_per_line_distance_float_B16);
+			fprintf (pFile, "sum_per_line_RE_float_B16: %f\n", sum_per_line_RE_float_B16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_B8: %f\n", sum_per_line_distance_float_B8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_B8: %f\n", sum_per_line_RE_float_B8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_B8: %f\n", sum_per_line_distance_float_B8);
+			fprintf (pFile, "sum_per_line_RE_float_B8: %f\n", sum_per_line_RE_float_B8);
 			fprintf (pFile, "\n");
 			
 			/////////// NF32 (1, 8, 23) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3):
-			fprintf (pFile, "sum_per_line_distance_float_NF16: %f\n", sum_per_line_distance_float_NF16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_NF16: %f\n", sum_per_line_RE_float_NF16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_NF16: %f\n", sum_per_line_distance_float_NF16);
+			fprintf (pFile, "sum_per_line_RE_float_NF16: %f\n", sum_per_line_RE_float_NF16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_NF8: %f\n", sum_per_line_distance_float_NF8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_NF8: %f\n", sum_per_line_RE_float_NF8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_NF8: %f\n", sum_per_line_distance_float_NF8);
+			fprintf (pFile, "sum_per_line_RE_float_NF8: %f\n", sum_per_line_RE_float_NF8);
 			fprintf (pFile, "\n");
 			
 			/////////// NF32 (1, 8, 23) -> NB16 (1, 8, 7)  -> NB8 (1, 5, 2):
-			fprintf (pFile, "sum_per_line_distance_float_NB16: %f\n", sum_per_line_distance_float_NB16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_NB16: %f\n", sum_per_line_RE_float_NB16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_NB16: %f\n", sum_per_line_distance_float_NB16);
+			fprintf (pFile, "sum_per_line_RE_float_NB16: %f\n", sum_per_line_RE_float_NB16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_NB8: %f\n", sum_per_line_distance_float_NB8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_NB8: %f\n", sum_per_line_RE_float_NB8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_NB8: %f\n", sum_per_line_distance_float_NB8);
+			fprintf (pFile, "sum_per_line_RE_float_NB8: %f\n", sum_per_line_RE_float_NB8);
 			fprintf (pFile, "\n");
 			
 			/////////// I32 -> IL16 -> IL8 (left remained):
-			fprintf (pFile, "sum_per_line_distance_float_IL16: %f\n", sum_per_line_distance_float_IL16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_IL16: %f\n", sum_per_line_RE_float_IL16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_IL16: %f\n", sum_per_line_distance_float_IL16);
+			fprintf (pFile, "sum_per_line_RE_float_IL16: %f\n", sum_per_line_RE_float_IL16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_IL8: %f\n", sum_per_line_distance_float_IL8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_IL8: %f\n", sum_per_line_RE_float_IL8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_IL8: %f\n", sum_per_line_distance_float_IL8);
+			fprintf (pFile, "sum_per_line_RE_float_IL8: %f\n", sum_per_line_RE_float_IL8);
 			fprintf (pFile, "\n");
 			
 			/////////// I32 -> IR16 -> IR8 (right remained):
-			fprintf (pFile, "sum_per_line_distance_float_IR16: %f\n", sum_per_line_distance_float_IR16 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_IR16: %f\n", sum_per_line_RE_float_IR16 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_IR16: %f\n", sum_per_line_distance_float_IR16);
+			fprintf (pFile, "sum_per_line_RE_float_IR16: %f\n", sum_per_line_RE_float_IR16);
 			fprintf (pFile, "\n");
-			fprintf (pFile, "sum_per_line_distance_float_IR8: %f\n", sum_per_line_distance_float_IR8 / (double) total_cache_line_count );
-			fprintf (pFile, "sum_per_line_RE_float_IR8: %f\n", sum_per_line_RE_float_IR8 / (double) total_cache_line_count );
+			fprintf (pFile, "sum_per_line_distance_float_IR8: %f\n", sum_per_line_distance_float_IR8);
+			fprintf (pFile, "sum_per_line_RE_float_IR8: %f\n", sum_per_line_RE_float_IR8);
 			fprintf (pFile, "\n");
 			
 			fprintf (pFile, "\n");
 			fprintf (pFile, "#################################Error_distributions#########################\n");
 
 			//////////////////////currently 11 categories
-			fprintf (pFile, "F16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			F16_RE_distribution_1000 / (float) total_cache_line_count, 
-			F16_RE_distribution_100 / (float) total_cache_line_count, 
-			F16_RE_distribution_10 / (float) total_cache_line_count,
-			F16_RE_distribution_1 / (float) total_cache_line_count, 
-			F16_RE_distribution_01 / (float) total_cache_line_count, 
-			F16_RE_distribution_001 / (float) total_cache_line_count, 
-			F16_RE_distribution_0001 / (float) total_cache_line_count, 
-			F16_RE_distribution_00001 / (float) total_cache_line_count, 
-			F16_RE_distribution_000001 / (float) total_cache_line_count,
-			F16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			F16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "F16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F16_RE_distribution_1000, F16_RE_distribution_100, F16_RE_distribution_10,
+			F16_RE_distribution_1, F16_RE_distribution_01, F16_RE_distribution_001, F16_RE_distribution_001, F16_RE_distribution_0001, F16_RE_distribution_000001,
+			F16_RE_distribution_0000001, F16_RE_distribution_0);
 			
-			fprintf (pFile, "F8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			F8_RE_distribution_1000 / (float) total_cache_line_count, 
-			F8_RE_distribution_100 / (float) total_cache_line_count, 
-			F8_RE_distribution_10 / (float) total_cache_line_count,
-			F8_RE_distribution_1 / (float) total_cache_line_count, 
-			F8_RE_distribution_01 / (float) total_cache_line_count, 
-			F8_RE_distribution_001 / (float) total_cache_line_count, 
-			F8_RE_distribution_0001 / (float) total_cache_line_count, 
-			F8_RE_distribution_00001 / (float) total_cache_line_count, 
-			F8_RE_distribution_000001 / (float) total_cache_line_count,
-			F8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			F8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "F8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F8_RE_distribution_1000, F8_RE_distribution_100, F8_RE_distribution_10,
+			F8_RE_distribution_1, F8_RE_distribution_01, F8_RE_distribution_001, F8_RE_distribution_001, F8_RE_distribution_0001, F8_RE_distribution_000001,
+			F8_RE_distribution_0000001, F8_RE_distribution_0);
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "B16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			B16_RE_distribution_1000 / (float) total_cache_line_count, 
-			B16_RE_distribution_100 / (float) total_cache_line_count, 
-			B16_RE_distribution_10 / (float) total_cache_line_count,
-			B16_RE_distribution_1 / (float) total_cache_line_count, 
-			B16_RE_distribution_01 / (float) total_cache_line_count, 
-			B16_RE_distribution_001 / (float) total_cache_line_count, 
-			B16_RE_distribution_0001 / (float) total_cache_line_count, 
-			B16_RE_distribution_00001 / (float) total_cache_line_count, 
-			B16_RE_distribution_000001 / (float) total_cache_line_count,
-			B16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			B16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "B16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", B16_RE_distribution_1000, B16_RE_distribution_100, B16_RE_distribution_10,
+			B16_RE_distribution_1, B16_RE_distribution_01, B16_RE_distribution_001, B16_RE_distribution_001, B16_RE_distribution_0001, B16_RE_distribution_000001,
+			B16_RE_distribution_0000001, B16_RE_distribution_0);
 			
-			fprintf (pFile, "B8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			B8_RE_distribution_1000 / (float) total_cache_line_count, 
-			B8_RE_distribution_100 / (float) total_cache_line_count, 
-			B8_RE_distribution_10 / (float) total_cache_line_count,
-			B8_RE_distribution_1 / (float) total_cache_line_count, 
-			B8_RE_distribution_01 / (float) total_cache_line_count, 
-			B8_RE_distribution_001 / (float) total_cache_line_count, 
-			B8_RE_distribution_0001 / (float) total_cache_line_count, 
-			B8_RE_distribution_00001 / (float) total_cache_line_count, 
-			B8_RE_distribution_000001 / (float) total_cache_line_count,
-			B8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			B8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "B8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", B8_RE_distribution_1000, B8_RE_distribution_100, B8_RE_distribution_10,
+			B8_RE_distribution_1, B8_RE_distribution_01, B8_RE_distribution_001, B8_RE_distribution_001, B8_RE_distribution_0001, B8_RE_distribution_000001,
+			B8_RE_distribution_0000001, B8_RE_distribution_0);
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "NF16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			NF16_RE_distribution_1000 / (float) total_cache_line_count, 
-			NF16_RE_distribution_100 / (float) total_cache_line_count, 
-			NF16_RE_distribution_10 / (float) total_cache_line_count,
-			NF16_RE_distribution_1 / (float) total_cache_line_count, 
-			NF16_RE_distribution_01 / (float) total_cache_line_count, 
-			NF16_RE_distribution_001 / (float) total_cache_line_count, 
-			NF16_RE_distribution_0001 / (float) total_cache_line_count, 
-			NF16_RE_distribution_00001 / (float) total_cache_line_count, 
-			NF16_RE_distribution_000001 / (float) total_cache_line_count,
-			NF16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			NF16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "NF16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NF16_RE_distribution_1000, NF16_RE_distribution_100, NF16_RE_distribution_10,
+			NF16_RE_distribution_1, NF16_RE_distribution_01, NF16_RE_distribution_001, NF16_RE_distribution_001, NF16_RE_distribution_0001, NF16_RE_distribution_000001,
+			NF16_RE_distribution_0000001, NF16_RE_distribution_0);
 			
-			fprintf (pFile, "NF8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			NF8_RE_distribution_1000 / (float) total_cache_line_count, 
-			NF8_RE_distribution_100 / (float) total_cache_line_count, 
-			NF8_RE_distribution_10 / (float) total_cache_line_count,
-			NF8_RE_distribution_1 / (float) total_cache_line_count, 
-			NF8_RE_distribution_01 / (float) total_cache_line_count, 
-			NF8_RE_distribution_001 / (float) total_cache_line_count, 
-			NF8_RE_distribution_0001 / (float) total_cache_line_count, 
-			NF8_RE_distribution_00001 / (float) total_cache_line_count, 
-			NF8_RE_distribution_000001 / (float) total_cache_line_count,
-			NF8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			NF8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "NF8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NF8_RE_distribution_1000, NF8_RE_distribution_100, NF8_RE_distribution_10,
+			NF8_RE_distribution_1, NF8_RE_distribution_01, NF8_RE_distribution_001, NF8_RE_distribution_001, NF8_RE_distribution_0001, NF8_RE_distribution_000001,
+			NF8_RE_distribution_0000001, NF8_RE_distribution_0);
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "NB16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			NB16_RE_distribution_1000 / (float) total_cache_line_count, 
-			NB16_RE_distribution_100 / (float) total_cache_line_count, 
-			NB16_RE_distribution_10 / (float) total_cache_line_count,
-			NB16_RE_distribution_1 / (float) total_cache_line_count, 
-			NB16_RE_distribution_01 / (float) total_cache_line_count, 
-			NB16_RE_distribution_001 / (float) total_cache_line_count, 
-			NB16_RE_distribution_0001 / (float) total_cache_line_count, 
-			NB16_RE_distribution_00001 / (float) total_cache_line_count, 
-			NB16_RE_distribution_000001 / (float) total_cache_line_count,
-			NB16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			NB16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "NB16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NB16_RE_distribution_1000, NB16_RE_distribution_100, NB16_RE_distribution_10,
+			NB16_RE_distribution_1, NB16_RE_distribution_01, NB16_RE_distribution_001, NB16_RE_distribution_001, NB16_RE_distribution_0001, NB16_RE_distribution_000001,
+			NB16_RE_distribution_0000001, NB16_RE_distribution_0);
 			
-			fprintf (pFile, "NB8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			NB8_RE_distribution_1000 / (float) total_cache_line_count, 
-			NB8_RE_distribution_100 / (float) total_cache_line_count, 
-			NB8_RE_distribution_10 / (float) total_cache_line_count,
-			NB8_RE_distribution_1 / (float) total_cache_line_count, 
-			NB8_RE_distribution_01 / (float) total_cache_line_count, 
-			NB8_RE_distribution_001 / (float) total_cache_line_count, 
-			NB8_RE_distribution_0001 / (float) total_cache_line_count, 
-			NB8_RE_distribution_00001 / (float) total_cache_line_count, 
-			NB8_RE_distribution_000001 / (float) total_cache_line_count,
-			NB8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			NB8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "NB8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", NB8_RE_distribution_1000, NB8_RE_distribution_100, NB8_RE_distribution_10,
+			NB8_RE_distribution_1, NB8_RE_distribution_01, NB8_RE_distribution_001, NB8_RE_distribution_001, NB8_RE_distribution_0001, NB8_RE_distribution_000001,
+			NB8_RE_distribution_0000001, NB8_RE_distribution_0);
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "IL16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			IL16_RE_distribution_1000 / (float) total_cache_line_count, 
-			IL16_RE_distribution_100 / (float) total_cache_line_count, 
-			IL16_RE_distribution_10 / (float) total_cache_line_count,
-			IL16_RE_distribution_1 / (float) total_cache_line_count, 
-			IL16_RE_distribution_01 / (float) total_cache_line_count, 
-			IL16_RE_distribution_001 / (float) total_cache_line_count, 
-			IL16_RE_distribution_0001 / (float) total_cache_line_count, 
-			IL16_RE_distribution_00001 / (float) total_cache_line_count, 
-			IL16_RE_distribution_000001 / (float) total_cache_line_count,
-			IL16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			IL16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "IL16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IL16_RE_distribution_1000, IL16_RE_distribution_100, IL16_RE_distribution_10,
+			IL16_RE_distribution_1, IL16_RE_distribution_01, IL16_RE_distribution_001, IL16_RE_distribution_001, IL16_RE_distribution_0001, IL16_RE_distribution_000001,
+			IL16_RE_distribution_0000001, IL16_RE_distribution_0);
 			
-			fprintf (pFile, "IL8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			IL8_RE_distribution_1000 / (float) total_cache_line_count, 
-			IL8_RE_distribution_100 / (float) total_cache_line_count, 
-			IL8_RE_distribution_10 / (float) total_cache_line_count,
-			IL8_RE_distribution_1 / (float) total_cache_line_count, 
-			IL8_RE_distribution_01 / (float) total_cache_line_count, 
-			IL8_RE_distribution_001 / (float) total_cache_line_count, 
-			IL8_RE_distribution_0001 / (float) total_cache_line_count, 
-			IL8_RE_distribution_00001 / (float) total_cache_line_count, 
-			IL8_RE_distribution_000001 / (float) total_cache_line_count,
-			IL8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			IL8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "IL8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IL8_RE_distribution_1000, IL8_RE_distribution_100, IL8_RE_distribution_10,
+			IL8_RE_distribution_1, IL8_RE_distribution_01, IL8_RE_distribution_001, IL8_RE_distribution_001, IL8_RE_distribution_0001, IL8_RE_distribution_000001,
+			IL8_RE_distribution_0000001, IL8_RE_distribution_0);
 			fprintf (pFile, "\n");
 			
-			fprintf (pFile, "IR16_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			IR16_RE_distribution_1000 / (float) total_cache_line_count, 
-			IR16_RE_distribution_100 / (float) total_cache_line_count, 
-			IR16_RE_distribution_10 / (float) total_cache_line_count,
-			IR16_RE_distribution_1 / (float) total_cache_line_count, 
-			IR16_RE_distribution_01 / (float) total_cache_line_count, 
-			IR16_RE_distribution_001 / (float) total_cache_line_count, 
-			IR16_RE_distribution_0001 / (float) total_cache_line_count, 
-			IR16_RE_distribution_00001 / (float) total_cache_line_count, 
-			IR16_RE_distribution_000001 / (float) total_cache_line_count,
-			IR16_RE_distribution_0000001 / (float) total_cache_line_count, 
-			IR16_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "IR16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IR16_RE_distribution_1000, IR16_RE_distribution_100, IR16_RE_distribution_10,
+			IR16_RE_distribution_1, IR16_RE_distribution_01, IR16_RE_distribution_001, IR16_RE_distribution_001, IR16_RE_distribution_0001, IR16_RE_distribution_000001,
+			IR16_RE_distribution_0000001, IR16_RE_distribution_0);
 			
-			fprintf (pFile, "IR8_RE_distributions: %f %f %f %f %f %f %f %f %f %f %f\n", 
-			IR8_RE_distribution_1000 / (float) total_cache_line_count, 
-			IR8_RE_distribution_100 / (float) total_cache_line_count, 
-			IR8_RE_distribution_10 / (float) total_cache_line_count,
-			IR8_RE_distribution_1 / (float) total_cache_line_count, 
-			IR8_RE_distribution_01 / (float) total_cache_line_count, 
-			IR8_RE_distribution_001 / (float) total_cache_line_count, 
-			IR8_RE_distribution_0001 / (float) total_cache_line_count, 
-			IR8_RE_distribution_00001 / (float) total_cache_line_count, 
-			IR8_RE_distribution_000001 / (float) total_cache_line_count,
-			IR8_RE_distribution_0000001 / (float) total_cache_line_count, 
-			IR8_RE_distribution_0 / (float) total_cache_line_count);
+			fprintf (pFile, "IR8_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", IR8_RE_distribution_1000, IR8_RE_distribution_100, IR8_RE_distribution_10,
+			IR8_RE_distribution_1, IR8_RE_distribution_01, IR8_RE_distribution_001, IR8_RE_distribution_001, IR8_RE_distribution_0001, IR8_RE_distribution_000001,
+			IR8_RE_distribution_0000001, IR8_RE_distribution_0);
 			fprintf (pFile, "\n");
 		}
 		

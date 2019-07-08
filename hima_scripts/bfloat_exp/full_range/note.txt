@@ -22,6 +22,6 @@
 /////// NB16: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
 /////// NB8: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
 
-			fprintf (pFile, "F16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F16_RE_distribution_1000, F16_RE_distribution_100, F16_RE_distribution_10,
+fprintf (pFile, "F16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F16_RE_distribution_1000, F16_RE_distribution_100, F16_RE_distribution_10,
 			F16_RE_distribution_1, F16_RE_distribution_01, F16_RE_distribution_001, F16_RE_distribution_001, F16_RE_distribution_0001, F16_RE_distribution_000001,
 			F16_RE_distribution_0000001, F16_RE_distribution_0);

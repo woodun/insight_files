@@ -14,7 +14,7 @@ do
 for statistics in 'sum_per_line_RE_float_F16:'
 do
 
-grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_float_two_sides_result$number.txt | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
+grep "$statistics[ ]*[-eE\+0-9\.]*" uniform_int_two_sides_result$number.txt | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "%s " >> $output
 printf "\r\n" >> $output
 
 done #for statistics in

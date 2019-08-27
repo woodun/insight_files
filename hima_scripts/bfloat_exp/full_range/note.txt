@@ -1,10 +1,14 @@
 /////////// truncation schemes: 
 /////////// F32 (1, 8, 23) -> F16 (1, 5, 10) -> F8 (1, 4, 3):
 /////////// F32 (1, 8, 23) -> B16 (1, 8, 7)  -> B8 (1, 5, 2):
+
 /////////// NF32 (1, 8, 23) -> NF16 (1, 5, 10) -> NF8 (1, 4, 3): 
 /////////// NF32 (1, 8, 23) -> NB16 (1, 8, 7) -> NB8 (1, 5, 2):
+
+
 /////////// I32 -> IL16 -> IL8 (left remained):
 /////////// I32 -> IR16 -> IR8 (right remained):
+
 
 /////// F32: 127 to 1, 0 to -126 (254 to 128, 127 to 1), 0 is subnormal, 255 is inf
 /////// F16: 15 to 1, 0 to -14 (30 to 16, 15 to 1), 0 is subnormal, 31 is inf
@@ -22,6 +26,36 @@
 /////// NB16: 127 to 1, 0 to -126 (127 to 1, -0 to -126), 0 is subnormal, 255 is inf
 /////// NB8: 15 to 1, 0 to -14 (15 to 1, -0 to -14), 0 is subnormal, 31 is inf
 
+
 fprintf (pFile, "F16_RE_distributions: %d %d %d %d %d %d %d %d %d %d %d\n", F16_RE_distribution_1000, F16_RE_distribution_100, F16_RE_distribution_10,
 			F16_RE_distribution_1, F16_RE_distribution_01, F16_RE_distribution_001, F16_RE_distribution_001, F16_RE_distribution_0001, F16_RE_distribution_000001,
 			F16_RE_distribution_0000001, F16_RE_distribution_0);
+
+
+
+
+
+
+
+(HPCA 2018)
+Haonan Wang, Fan Luo, Mohamed Ibrahim, Onur Kayiran, Adwait Jog 
+Efficient and Fair Multi-programming in GPUs via Effective Bandwidth Management, 
+In the Proceedings of 24th IEEE Symposium on High Performance Computer Architecture (HPCA), Vienna, Austria, Feb 2018 
+(Acceptance rate: 54/260 ¡Ö 20%) 
+
+
+Hi, I live in Conway gardens apartment and I'm looking for a roommate. Both me and the other tennant are graduate students of WM. Rent is $393 per month plus utility. You can move in at anytime from now on. You can also decide your duration of stay from a semester to a year. You can pay a visit to the house before making the decision. I have about a week to hold this room so please reply to me soon if interested!
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1020,6 +1020,10 @@ int main ( int argc, char *argv[] ) {
 						total_cache_line_count++;
 						
 						/////////////////////////////////per cache line error distribution
+						///////////////////////////////F16
+						temp_per_line_RE_float_F16 = temp_per_line_RE_float_F16 / 32;
+						temp_per_line_distance_float_F16 = temp_per_line_distance_float_F16 / 32;
+						
 						if( temp_per_line_RE_float_F16 > 1000 ){							
 							F16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_F16 > 100 ){							
@@ -1049,6 +1053,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_F16 = 0;
 						temp_per_line_RE_float_F16 = 0;
+						
+						///////////////////////////////F8
+						temp_per_line_RE_float_F8 = temp_per_line_RE_float_F8 / 32;
+						temp_per_line_distance_float_F8 = temp_per_line_distance_float_F8 / 32;
 						
 						if( temp_per_line_RE_float_F8 > 1000 ){							
 							F8_RE_distribution_1000++;							
@@ -1080,6 +1088,10 @@ int main ( int argc, char *argv[] ) {
 						temp_per_line_distance_float_F8 = 0;
 						temp_per_line_RE_float_F8 = 0;
 						
+						///////////////////////////////B16
+						temp_per_line_RE_float_B16 = temp_per_line_RE_float_B16 / 32;
+						temp_per_line_distance_float_B16 = temp_per_line_distance_float_B16 / 32;
+						
 						if( temp_per_line_RE_float_B16 > 1000 ){							
 							B16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_B16 > 100 ){							
@@ -1109,6 +1121,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_B16 = 0;
 						temp_per_line_RE_float_B16 = 0;
+						
+						///////////////////////////////B8
+						temp_per_line_RE_float_B8 = temp_per_line_RE_float_B8 / 32;
+						temp_per_line_distance_float_B8 = temp_per_line_distance_float_B8 / 32;
 						
 						if( temp_per_line_RE_float_B8 > 1000 ){							
 							B8_RE_distribution_1000++;							
@@ -1140,6 +1156,10 @@ int main ( int argc, char *argv[] ) {
 						temp_per_line_distance_float_B8 = 0;
 						temp_per_line_RE_float_B8 = 0;
 						
+						///////////////////////////////NF16
+						temp_per_line_RE_float_NF16 = temp_per_line_RE_float_NF16 / 32;
+						temp_per_line_distance_float_NF16 = temp_per_line_distance_float_NF16 / 32;
+						
 						if( temp_per_line_RE_float_NF16 > 1000 ){				
 							NF16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_NF16 > 100 ){							
@@ -1169,6 +1189,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_NF16 = 0;
 						temp_per_line_RE_float_NF16 = 0;
+						
+						///////////////////////////////NF8
+						temp_per_line_RE_float_NF8 = temp_per_line_RE_float_NF8 / 32;
+						temp_per_line_distance_float_NF8 = temp_per_line_distance_float_NF8 / 32;
 						
 						if( temp_per_line_RE_float_NF8 > 1000 ){							
 							NF8_RE_distribution_1000++;							
@@ -1200,6 +1224,10 @@ int main ( int argc, char *argv[] ) {
 						temp_per_line_distance_float_NF8 = 0;
 						temp_per_line_RE_float_NF8 = 0;
 						
+						///////////////////////////////NB16
+						temp_per_line_RE_float_NB16 = temp_per_line_RE_float_NB16 / 32;
+						temp_per_line_distance_float_NB16 = temp_per_line_distance_float_NB16 / 32;
+						
 						if( temp_per_line_RE_float_NB16 > 1000 ){							
 							NB16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_NB16 > 100 ){							
@@ -1229,6 +1257,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_NB16 = 0;
 						temp_per_line_RE_float_NB16 = 0;
+						
+						///////////////////////////////NB8
+						temp_per_line_RE_float_NB8 = temp_per_line_RE_float_NB8 / 32;
+						temp_per_line_distance_float_NB8 = temp_per_line_distance_float_NB8 / 32;
 						
 						if( temp_per_line_RE_float_NB8 > 1000 ){							
 							NB8_RE_distribution_1000++;							
@@ -1260,6 +1292,10 @@ int main ( int argc, char *argv[] ) {
 						temp_per_line_distance_float_NB8 = 0;
 						temp_per_line_RE_float_NB8 = 0;
 						
+						///////////////////////////////IL16
+						temp_per_line_RE_float_IL16 = temp_per_line_RE_float_IL16 / 32;
+						temp_per_line_distance_float_IL16 = temp_per_line_distance_float_IL16 / 32;
+						
 						if( temp_per_line_RE_float_IL16 > 1000 ){							
 							IL16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_IL16 > 100 ){							
@@ -1289,6 +1325,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_IL16 = 0;
 						temp_per_line_RE_float_IL16 = 0;
+						
+						///////////////////////////////IL8
+						temp_per_line_RE_float_IL8 = temp_per_line_RE_float_IL8 / 32;
+						temp_per_line_distance_float_IL8 = temp_per_line_distance_float_IL8 / 32;
 						
 						if( temp_per_line_RE_float_IL8 > 1000 ){							
 							IL8_RE_distribution_1000++;							
@@ -1320,6 +1360,10 @@ int main ( int argc, char *argv[] ) {
 						temp_per_line_distance_float_IL8 = 0;
 						temp_per_line_RE_float_IL8 = 0;
 						
+						///////////////////////////////IR16
+						temp_per_line_RE_float_IR16 = temp_per_line_RE_float_IR16 / 32;
+						temp_per_line_distance_float_IR16 = temp_per_line_distance_float_IR16 / 32;
+						
 						if( temp_per_line_RE_float_IR16 > 1000 ){							
 							IR16_RE_distribution_1000++;							
 						}else if( temp_per_line_RE_float_IR16 > 100 ){							
@@ -1349,6 +1393,10 @@ int main ( int argc, char *argv[] ) {
 						
 						temp_per_line_distance_float_IR16 = 0;
 						temp_per_line_RE_float_IR16 = 0;
+						
+						///////////////////////////////IR8
+						temp_per_line_RE_float_IR8 = temp_per_line_RE_float_IR8 / 32;
+						temp_per_line_distance_float_IR8 = temp_per_line_distance_float_IR8 / 32;
 						
 						if( temp_per_line_RE_float_IR8 > 1000 ){							
 							IR8_RE_distribution_1000++;							
@@ -2003,6 +2051,35 @@ int main ( int argc, char *argv[] ) {
 			fprintf (pFile, "sum_per_line_RE_float_IR8: %f\n", sum_per_line_RE_float_IR8 / (double) total_cache_line_count );
 			fprintf (pFile, "\n");
 			
+
+			fprintf (pFile, "sum_per_line_distance_float_all: %f %f %f %f %f %f %f %f\n", 
+			sum_per_line_distance_float_F16 / (double) total_cache_line_count, sum_per_line_distance_float_F8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_B16 / (double) total_cache_line_count, sum_per_line_distance_float_B8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_NF16 / (double) total_cache_line_count, sum_per_line_distance_float_NF8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_NB16 / (double) total_cache_line_count, sum_per_line_distance_float_NB8 / (double) total_cache_line_count);
+			
+			fprintf (pFile, "sum_per_line_distance_int_all: %f %f %f %f %f %f %f %f %f %f %f %f\n", 
+			sum_per_line_distance_float_F16 / (double) total_cache_line_count, sum_per_line_distance_float_F8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_B16 / (double) total_cache_line_count, sum_per_line_distance_float_B8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_NF16 / (double) total_cache_line_count, sum_per_line_distance_float_NF8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_NB16 / (double) total_cache_line_count, sum_per_line_distance_float_NB8 / (double) total_cache_line_count, 
+			sum_per_line_distance_float_IL16 / (double) total_cache_line_count, sum_per_line_distance_float_IL8 / (double) total_cache_line_count,
+			sum_per_line_distance_float_IR16 / (double) total_cache_line_count, sum_per_line_distance_float_IR8 / (double) total_cache_line_count);
+			
+			fprintf (pFile, "sum_per_line_RE_float_all: %f %f %f %f %f %f %f %f\n", 
+			sum_per_line_RE_float_F16 / (double) total_cache_line_count, sum_per_line_RE_float_F8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_B16 / (double) total_cache_line_count, sum_per_line_RE_float_B8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_NF16 / (double) total_cache_line_count, sum_per_line_RE_float_NF8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_NB16 / (double) total_cache_line_count, sum_per_line_RE_float_NB8 / (double) total_cache_line_count);
+			
+			fprintf (pFile, "sum_per_line_RE_int_all: %f %f %f %f %f %f %f %f %f %f %f %f\n", 
+			sum_per_line_RE_float_F16 / (double) total_cache_line_count, sum_per_line_RE_float_F8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_B16 / (double) total_cache_line_count, sum_per_line_RE_float_B8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_NF16 / (double) total_cache_line_count, sum_per_line_RE_float_NF8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_NB16 / (double) total_cache_line_count, sum_per_line_RE_float_NB8 / (double) total_cache_line_count, 
+			sum_per_line_RE_float_IL16 / (double) total_cache_line_count, sum_per_line_RE_float_IL8 / (double) total_cache_line_count,
+			sum_per_line_RE_float_IR16 / (double) total_cache_line_count, sum_per_line_RE_float_IR8 / (double) total_cache_line_count);
+			
 			fprintf (pFile, "\n");
 			fprintf (pFile, "#################################Error_distributions#########################\n");
 
@@ -2216,9 +2293,13 @@ int main ( int argc, char *argv[] ) {
 /////////// disable dbi and see the distribution? ##ok. Does not help. Did not see bimodel distribution. Try with int input (stored as float) together with weights (see Squeezenet)?
 /////////// test for cat image only? ##ok. The image do have different center of distribution than weights.
 /////////// bit flips for the first byte only? ##Maybe it is too small to consider.
-/////////// add truncation and distribution of error ##truncation error is only related to the flit itself
-/////////// write extract_mnist.cc 
+/////////// add truncation and distribution of error ##ok
+/////////// write extract_mnist.cc ##ok
+
 /////////// redo 1s and flips exp since new format has been changed
+/////////// add more detailed error distribution and redo exp2
+/////////// if Hongyuan provides more weights later we can also redo exp2
+/////////// oral thesis draft and ppt
 
 /////////// truncation schemes: 
 /////////// F32 (1, 8, 23) -> F16 (1, 5, 10) -> F8 (1, 4, 3):

@@ -18,7 +18,7 @@ do
 cd $mother_dir
 cd $configs_stor1
 cd polybench
-for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D SYR2K
+for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -36,7 +36,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
-for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS
+for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -52,7 +52,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd axbench
-for benchmark in blackscholes convolution jmeint newton-raph srad
+for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -66,7 +66,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd Mars
-for benchmark in 
+for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -78,7 +78,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd lonestar
-for benchmark in 
+for benchmark in bfs bh dmr mst sp sssp 
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -92,7 +92,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd parboil
-for benchmark in histo mm spmv lbm tpacf
+for benchmark in cutcp histo mm spmv sad lbm tpacf
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs
@@ -106,7 +106,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd rodinia
-for benchmark in backprop hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2
+for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
 do
 cd $benchmark
 qsub in01_pbs_$benchmark.pbs

@@ -61,3 +61,11 @@ do
 	    cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/hima/g" | sed -e "s/benchsuite/shoc/g" > shoc/$benchmark/hi_pbs_$benchmark.pbs
 		cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/rhel6:compute/g" | sed -e "s/benchsuite/shoc/g" > shoc/$benchmark/sci_pbs_$benchmark.pbs
 done
+
+#tango
+#6apps
+for benchmark in AlexNet CifarNet GRU LSTM ResNet SqueezeNet
+do
+	    cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/hima/g" | sed -e "s/benchsuite/tango/g" > tango/$benchmark/hi_pbs_$benchmark.pbs
+		cat script_base_general.pbs | sed -e "s/appname/$benchmark/g" | sed -e "s/compute/rhel6:compute/g" | sed -e "s/benchsuite/tango/g" > tango/$benchmark/sci_pbs_$benchmark.pbs
+done

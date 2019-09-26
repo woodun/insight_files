@@ -1,24 +1,18 @@
 #!/bin/sh
 
-#25, 40, 41, 53, 56
-#inference apps: wait for the author or add more inputs by myself?
-#training apps: investigate backprop
-#6apps
-#why can we truncate everything? 1. error is high 2. non-linear distribution of hardware error.
-#For 1, complete experiment for all truncation methods and see error.
-#For 2, This probably needs realistic inputs (images probably will not work because they use integer, unless converted to float). Not sure if intialized input will work. Otherwise currently maybe only Tango has both floating point and realistic inputs.
-#In addition, if using Tango, we need top 1 accuracy. They must add all inputs.
+#8apps
 
 mkdir tango
 cd tango
 
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
+for benchmark in AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 do
 		  mkdir $benchmark
 		  cd $benchmark
-                  rm gpgpu_ptx_sim__$benchmark
-		  ln -s $benchmarks/shoc/bin/Serial/CUDA/$benchmark .
-		  cp $applications/bash-scripts/run_scripts/shoc/mainscript_$benchmark .
+                  rm $benchmark
+		  ln -s $benchmarks/tango/$benchmark/$benchmark .
+		  ln -s $benchmarks/tango/$benchmark/data .
+		  cp $applications/bash-scripts/run_scripts/tango/mainscript_$benchmark .
 		  chmod 777 mainscript_$benchmark
 		  cd ../
 done
@@ -35,7 +29,7 @@ fi
 
 if [ $1 = "--cleanup" ]; then
     echo "Removing existing configs in the following directories:"
-    for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad BFS; do
+    for BMK in AlexNet CifarNet GRU LSTM ResNet SqueezeNet; do
         if [ -f $BMK/gpgpusim.config ]; then
             echo "$BMK"
             OLD_ICNT=`awk '/-inter_config_file/ { print $2 }' $BMK/gpgpusim.config`
@@ -71,7 +65,7 @@ else
     exit 0
 fi
 
-for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad BFS; do
+for BMK in AlexNet CifarNet GRU LSTM ResNet SqueezeNet; do
     if [ -f $BMK/gpgpusim.config ]; then
         echo "Existing symbolic-links to config found in $BMK! Skipping... "
     else
@@ -81,7 +75,3 @@ for BMK in MD QTC Reduction Scan Spmv Stencil2D Triad BFS; do
 		ln -v -s $POWER_CONFIG $BMK
     fi
 done
-
-cd ../
-sh gen_pbs_shoc.sh
-

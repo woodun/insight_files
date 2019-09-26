@@ -117,7 +117,7 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS 
+for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
 do
 cd $benchmark
 grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output

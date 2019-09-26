@@ -126,7 +126,7 @@ qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
-#AlexNet  CifarNet  GRU  LSTM  ResNet  SqueezeNet
+#AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 
 done
 

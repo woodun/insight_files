@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/sim4_test/test2.txt
+output=/stor1/hwang07/sim4_test/test.txt
 mother_dir=/stor1/hwang07/sim4_test
 
 
@@ -11,8 +11,7 @@ do
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
-#test_gtx480 test_titanx
-for configs_stor1 in titanx_baseline titanx_ncache
+for configs_stor1 in test_gtx480 test_titanx
 do
 
 #all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
@@ -125,24 +124,11 @@ grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistic
 cd ..
 done
 
-#all: AlexNet CifarNet GRU LSTM ResNet SqueezeNet
-
-#AlexNet CifarNet GRU LSTM ResNet SqueezeNet
-cd $mother_dir
-cd $configs_stor1
-cd shoc
-for benchmark in AlexNet CifarNet GRU LSTM ResNet SqueezeNet
-do
-cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
-cd ..
-done
 
 printf "\r\n" >> $output
 done
 ######################################################################################################################################
 
-printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output
 printf "\r\n" >> $output

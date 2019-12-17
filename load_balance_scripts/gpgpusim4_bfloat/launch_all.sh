@@ -1,30 +1,28 @@
 #!/bin/sh
 
-#specify your output file
-output=/stor1/hwang07/sim4_test/test2.txt
+#####################################################
 mother_dir=/stor1/hwang07/sim4_test
 
-
-for statistics in 'gpu_tot_ipc ='
-do
-
-printf "%s\r\n" $statistics >> $output
-
-#specify your config path in stor1
+#these configs use half buswidth by default
 #test_gtx480 test_titanx
 for configs_stor1 in titanx_baseline titanx_ncache
 do
 
+#15
 #all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 #removed: (input supposed to be int) 2DCONV_EMBOSS 2DCONV_BLUR
 #removed: (high error) GRAMSCHM
+#modified: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
+#input cannot be changed: 
+
+#GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV 3DCONV GEMM FDTD-2D SYR2K
 cd $mother_dir
 cd $configs_stor1
 cd polybench
 for benchmark in GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -32,13 +30,17 @@ done
 #figures: srad_v1 histo JPEG RAY
 #all: SCP FWT LPS BlackScholes SLA TRA CONS RAY
 #removed: (little float) RAY
+#modified: SCP FWT BlackScholes SLA TRA CONS
+#input cannot be changed: LPS
+
+#SCP FWT LPS BlackScholes SLA TRA CONS
 cd $mother_dir
 cd $configs_stor1
 cd CUDA
 for benchmark in SCP FWT LPS BlackScholes SLA TRA CONS RAY
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -54,7 +56,7 @@ cd axbench
 for benchmark in binarization blackscholes convolution inversek2j jmeint laplacian meanfilter newton-raph sobel srad
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -68,7 +70,7 @@ cd Mars
 for benchmark in SimilarityScore Kmeans MatrixMul InvertedIndex PageViewCount PageViewRank StringMatch WordCount
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in02_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -80,7 +82,7 @@ cd lonestar
 for benchmark in bfs bh dmr mst sp sssp 
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -94,7 +96,7 @@ cd parboil
 for benchmark in cutcp histo mm spmv sad lbm tpacf
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -108,7 +110,7 @@ cd rodinia
 for benchmark in backprop bfs hotspot heartwall cfd streamcluster nw pathfinder lud leukocyte srad_v1 srad_v2 pf_float
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
@@ -118,36 +120,27 @@ done
 cd $mother_dir
 cd $configs_stor1
 cd shoc
-for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS
+for benchmark in MD QTC Reduction Scan Spmv Stencil2D Triad BFS 
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
 #all: AlexNet CifarNet GRU LSTM ResNet SqueezeNet
-
-#AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 cd $mother_dir
 cd $configs_stor1
-cd shoc
+cd tango
 for benchmark in AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 do
 cd $benchmark
-grep -o "$statistics[ ]*[-eE\+0-9\.]*" output_* | tail -1 | sed -e "s/$statistics[ ]*\(-$\)*//g" | xargs printf "0%s " >> $output
+qsub in01_pbs_$benchmark.pbs
 cd ..
 done
 
-printf "\r\n" >> $output
 done
-######################################################################################################################################
 
-printf "\r\n" >> $output
-printf "\r\n" >> $output
-printf "\r\n" >> $output
-printf "\r\n" >> $output
-printf "\r\n" >> $output
-printf "\r\n" >> $output
-printf "\r\n" >> $output
 
-done
+
+
+

@@ -4,8 +4,9 @@
 mother_dir=/stor1/hwang07/sim4_test
 
 #these configs use half buswidth by default
-#test_gtx480 test_titanx
-for configs_stor1 in titanx_baseline titanx_ncache
+#test_gtx480 test_titanx 
+#titanx_baseline
+for configs_stor1 in titanx_ncache
 do
 
 #15

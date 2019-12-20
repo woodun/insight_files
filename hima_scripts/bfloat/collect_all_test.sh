@@ -5,14 +5,14 @@ output=/stor1/hwang07/sim4_test/test2.txt
 mother_dir=/stor1/hwang07/sim4_test
 
 
-for statistics in 'gpu_tot_ipc ='
+for statistics in 'gpu_tot_ipc =' 'L2_total_cache_miss_rate =' 'bw_util=' 'gpu_tot_ipc =' 'gpu_tot_occupancy ='
 do
 
 printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
 #test_gtx480 test_titanx
-for configs_stor1 in titanx_baseline titanx_ncache
+for configs_stor1 in titanx_baseline titanx_ncache titanx_baseline_l1 titanx_ncache_l1
 do
 
 #all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K

@@ -129,7 +129,7 @@ done
 #AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 cd $mother_dir
 cd $configs_stor1
-cd shoc
+cd tango
 for benchmark in AlexNet CifarNet GRU LSTM ResNet SqueezeNet
 do
 cd $benchmark

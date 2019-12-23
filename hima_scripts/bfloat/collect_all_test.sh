@@ -1,9 +1,10 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/sim4_test/test2.txt
+output=/stor1/hwang07/sim4_test/test3.txt
 mother_dir=/stor1/hwang07/sim4_test
 
+pwd
 
 for statistics in 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'bw_util=' 'gpu_tot_ipc =' 'gpu_tot_occupancy =' 'gpgpu_simulation_rate ='
 do

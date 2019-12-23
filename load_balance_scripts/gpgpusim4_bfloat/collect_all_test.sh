@@ -11,7 +11,7 @@ printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
 #test_gtx480 test_titanx
-for configs_stor1 in titanx_baseline titanx_ncache titanx_baseline_l1 titanx_ncache_l1
+for configs_stor1 in titanx_baseline titanx_ncache titanx_baseline_l1 titanx_ncache_l1 titanx_halfncache titanx_halfncache_l1
 do
 
 #all: GESUMMV MVT 2MM 3MM SYRK ATAX BICG 2DCONV_EMBOSS 2DCONV_BLUR 2DCONV 3DCONV GEMM FDTD-2D GRAMSCHM SYR2K

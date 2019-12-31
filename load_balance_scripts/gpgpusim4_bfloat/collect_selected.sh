@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #specify your output file
-output=/stor1/hwang07/sim4_test/test3.txt
+output=/stor1/hwang07/sim4_test/test4.txt
 mother_dir=/stor1/hwang07/sim4_test
 
 for statistics in 'gpu_tot_ipc =' 'L1D_total_cache_miss_rate =' 'L2_total_cache_miss_rate =' 'bw_util=' 'gpu_tot_ipc =' 'gpu_tot_occupancy =' 'gpgpu_simulation_rate ='
@@ -11,7 +11,7 @@ printf "%s\r\n" $statistics >> $output
 
 #specify your config path in stor1
 #test_gtx480 test_titanx
-for configs_stor1 in titanx_baseline titanx_ncache titanx_baseline_l1 titanx_ncache_l1 titanx_halfncache titanx_halfncache_l1 titanx_32bline titanx_32bline_l1
+for configs_stor1 in titanx_baseline titanx_ncache titanx_baseline_l1 titanx_ncache_l1 titanx_halfncache titanx_halfncache_l1 titanx_32bline titanx_32bline_l1 titanx_hybridcache_l1
 do
 
 #15
